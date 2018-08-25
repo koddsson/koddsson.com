@@ -14,20 +14,6 @@
     <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
 
     <script async src="scripts/emoji-favicon.js"></script>
-
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          });
-        });
-      }
-    </script>
   </head>
   <body>
     <div class='container'>
