@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html version='9'>
+  <head>
+    <link rel="icon" data-emoji="👨‍💻" type="image/png">
+    <title>koddsson.com</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="index.css" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+
+    <link href="https://micro.blog/koddsson" rel="me" />
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+    <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
+
+    <script async src="scripts/emoji-favicon.js"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div class='container'>
+      <div class="sidebar vcard">
+        <img src='me.jpg' alt='me' class="photo profile_pic">
+        <div class="section">
+          <h1 class="name"><a class="url fn nolink text-black" href="https://koddsson.com" rel="me">Kristján Oddsson</a></h1>
+          <dl class="post">
+            <dt>Pronouns</dt>
+            <dd>
+              <!-- per http://wiki.zegnat.net/microformats/pronoun -->
+              <a href="https://en.wiktionary.org/wiki/he#Pronoun" class="u-pronoun" lang="en">he</a>
+            </dd>
+            <dt>E-Mail</dt>
+            <dd>
+              <a class="email" href="mailto:koddsson@gmail.com">koddsson@gmail.com</a>
+            </dd>
+            <dt>Location</dt>
+            <dd>
+              <div class="adr">
+                <span class="locality">London</span>
+                <span class="country-name">United Kingdom</span>
+              </div>
+            </dd>
+          </dl>
+        </div>
+        <div class="post">
+          <div style="font-size: 1.3em; margin-bottom: 10px;">Across the internet</div>
+          <a target='_blank' rel="noopener me" href='https://twitter.com/koddsson'>
+            Twitter
+          </a>
+          <a target='_blank' rel="noopener me" href='https://github.com/koddsson'>
+            GitHub
+          </a>
+          <a target='_blank' rel="noopener me" href='https://keybase.io/koddsson'>
+            Keybase
+          </a>
+        </div>
+      </div>
+      <section>
+        <div class='content'>
+          <h2>💻 Some junk I've built</h2>
+          <div class="post">
+            <h3><a href="posts/emoji-favicon/">✨ Emojis as favicons</a></h3>
+            A simple JavaScript snippet to render emojis as favicons on a page.
+          </div>
+          <div class="post">
+            <h3><a href="places/">💺 Places I've been</a></h3>
+            A map of the places I've been. It's pretty incomplete as of yet, both
+            in terms of code and the places I haven't recorded correctly and
+            haven't been yet :)
+          </div>
+          <div class="post">
+            <h3><a href="life-calendar/">📅 Life calendar</a></h3>
+            A pretty depressive calendar that shows my life, if I turn out to be
+            90 years old, with each "lived" day marked green. I added some life
+            events I've had so far on there.
+          </div>
+          <div class="post">
+            <h3><a href="recipes/">🥗 My recipes</a></h3>
+            I collect my recipes here. I really liked my moms recipe book and
+            want to collect my own somewhere. Having it online rather then in a
+            physical book makes more sense to me.
+          </div>
+        </div>
+        <div class='content'>
+          <h2>📝 Notes</h2> 
+          
+<div class="post">
+  <div class="meta">
+    
+  </div>
+  <div class="body">
+    Avocado 🥑 toast 🍞 is the best 😻   
+  </div>
+  <a href="/notes/2018-08-25-0.html" class="timestamp">
+    <time>Sat, 25 Aug 2018 12:37:29 GMT</time>
+  </a>
+</div>
+
+
+<div class="post">
+  <div class="meta">
+    
+  </div>
+  <div class="body">
+    London weather is starting to chill out. I can wear a jumper soon 😍   
+  </div>
+  <a href="/notes/2018-08-23-0.html" class="timestamp">
+    <time>Thu, 23 Aug 2018 18:04:13 GMT</time>
+  </a>
+</div>
+
+
+<div class="post">
+  <div class="meta">
+    
+  </div>
+  <div class="body">
+    🎉 1 WHOLE YEAR AT GITHUB TODAY 🎉
+
+I'm really enjoying working with the awesome people I work with every day.   
+  </div>
+  <a href="/notes/2018-08-22-1.html" class="timestamp">
+    <time>Wed, 22 Aug 2018 12:27:51 GMT</time>
+  </a>
+</div>
+
+
+<div class="post">
+  <div class="meta">
+    
+  </div>
+  <div class="body">
+    Almost noon and I haven't put on trousers yet 💀   
+  </div>
+  <a href="/notes/2018-08-22-0.html" class="timestamp">
+    <time>Wed, 22 Aug 2018 10:39:30 GMT</time>
+  </a>
+</div>
+
+
+<div class="post">
+  <div class="meta">
+    
+  </div>
+  <div class="body">
+    I'm psyched about the IndieWeb. Building compatible tools is fun! 🕺🏻   
+  </div>
+  <a href="/notes/2018-08-21.html" class="timestamp">
+    <time>Tue, 21 Aug 2018 16:48:56 GMT</time>
+  </a>
+</div>
+
+        </div>
+      </section>
+    </div>
+    <p style="text-align:center;">Made by hand and JS in Reykjavík and London.</p>
+  </body>
+</html>

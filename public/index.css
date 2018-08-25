@@ -1,0 +1,127 @@
+ @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #191919;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-width: 320px;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+.container {
+  display: flex;
+  /* height: 100%; */
+}
+
+.sidebar {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 0;
+  flex-basis: 250px;
+}
+
+.sidebar h1 {
+  margin-top: 0;
+}
+
+.sidebar .section {
+  padding-top: 1em;
+}
+
+.sidebar a svg {
+  height: 24px;
+  width: 24px;
+}
+
+.sidebar .icons {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 1.5em;
+}
+
+.content {
+  width: 100%;
+  padding: 0 1em;
+}
+
+dt {
+  font-size: 1.3em;
+}
+
+dd {
+  margin: 10px 10px 10px 0;
+}
+
+.profile_pic {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 10em;
+  display: block;
+}
+
+.name {
+  text-align: center;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-skip: ink;
+}
+
+@media (max-width: 568px) {
+  .container {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .sidebar {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .sidebar .icons {
+    text-align: center;
+  }
+
+  .profile_pic {
+    margin: auto;
+  }
+}
+      
+.body { margin-bottom: 0.83em; }
+.timestamp { text-align: right; }
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.83em;
+  padding: 0.83em;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+.post > h3 {
+  margin-top: 0;
+}
+.post > h3 > a {
+  /*text-decoration: none;*/
+}

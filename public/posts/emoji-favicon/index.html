@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+   <link rel="icon" data-emoji="🛰" type="image/png">
+   <title>Emojis as favicons</title>
+
+   <link rel="stylesheet" href="index.css">
+   <script async src="../../scripts/emoji-favicon.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <h1>Emojis as favicons</h1>
+        <time datetime="2018-03-18T18:45">March 18th 2018</time>
+      </header>
+
+      <p>So I was working on <code><a href="https://jsonresume.io">jsonresume.io</a></code> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</P>
+      <p>I really wanted just to drop a 📝 into a <code>&#x3C;link /&#x3E;</code> tag and call it a day. As far as I knew this wasn't possible, prompting this tweet: </p>
+
+      <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Which technical committee do I need to submit a proposal to in order to get emojis as favicons?  <a href="https://twitter.com/WHATWG?ref_src=twsrc%5Etfw">@WHATWG</a> ?</p>&mdash; Kristján is not getting into the sandwich debate. (@koddsson) <a href="https://twitter.com/koddsson/status/975105753668313088?ref_src=twsrc%5Etfw">March 17, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <p>To make a long story short, I made my way to <code><a href="https://whatwg.org/">whatwg.org</a></code> to figure out how to make a proposal. That lead me to this issue <code><a href="https://github.com/whatwg/html/issues/661">#661</a></code>. That mentions that you can set the favicon dynamically with a data uri.</p>
+
+      <p>Turns out I don't need to do a proposal at all! Even though it's not as easy as <code>&#x3C;link rel="icon" value="🍕" /&#x3E;</code> it's still pretty straightforward if you can write some JavaScript. Here's the code I wrote to set the favicon of this post: </p>
+
+      <p>
+        <pre>
+const canvas = document.createElement('canvas')
+canvas.height = 64
+canvas.width = 64
+
+const ctx = canvas.getContext('2d')
+ctx.font = '64px serif'
+ctx.fillText('🛰', 0, 64)
+console.log(canvas.toDataURL())
+
+const favicon = document.querySelector('link[rel=icon]')
+favicon.href = canvas.toDataURL()</pre> 
+      </p>
+
+      <p>You could even wrap this in a function and dynamically set the favicon.</p>
+
+      <p>Let me know if you enjoyed this post on <a href="https://twitter.com/koddsson">twitter</a> 🙌.</p>
+    
+      <div class="flash flash-warn">
+        The following was added to this post on <time datetime="2018-03-24T22:00">March 24th 2018</time>!
+      </div>
+
+      <p>I refined the script a bit and it ends up looking like this:</p>
+
+      <pre>
+const favicon = document.querySelector("link[rel=icon]");
+
+if (favicon) {
+  const emoji = favicon.getAttribute("data-emoji");
+
+  if (emoji) {
+    const canvas = document.createElement("canvas");
+    canvas.height = 64;
+    canvas.width = 64;
+
+    const ctx = canvas.getContext("2d");
+    ctx.font = "64px serif";
+    ctx.fillText(emoji, 0, 64);
+
+    favicon.href = canvas.toDataURL();
+  }
+}</pre>
+
+      <p>This change means that I only need to include this script and set the emoji I want as a favicon like so:</p>
+
+      <pre>
+&lt;link rel="icon" data-emoji="🛰" type="image/png"&gt;</pre>
+
+      <p>Exactly what I wanted orginally! 🤙</p>
+    </div>
+  </body>
+</html>

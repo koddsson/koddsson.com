@@ -1,0 +1,43 @@
+{
+    "$schema": ".schema.json",
+    "name": "Overnight Oatmeal",
+    "tags": [
+        "Breakfast"
+    ],
+    "ingredients": [
+        {
+            "name": "Oatmeal",
+            "amount": 0.5,
+            "measurement": "cup"
+        },
+        {
+            "name": "Milk",
+            "amount": 0.5,
+            "measurement": "cup"
+        },
+        {
+            "name": "Banana",
+            "amount": 0.5
+        },
+        {
+            "name": "Nuts",
+            "amount": 1,
+            "measurement": "tablespoon"
+        },
+        {
+            "name": "Butter",
+            "amount": 1,
+            "measurement": "tablespoon"
+        },
+        {
+            "name": "Honey",
+            "amount": 0.5,
+            "measurement": "teaspoon"
+        }
+    ],
+    "method": [
+        "Mash the banana",
+        "Mix all ingrediance well in a mason jar",
+        "Store in refrigerator overnight"
+    ]
+}

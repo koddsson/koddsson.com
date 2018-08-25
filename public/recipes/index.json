@@ -1,0 +1,29 @@
+{
+  "recipes": [
+    {
+      "name": "Lasagna",
+      "url": "lasagna.json",
+      "emoji": "🍝"
+    },
+    {
+      "name": "Overnight Oatmeal",
+      "url": "overnightOatmeal.json",
+      "emoji": "🍯"
+    },
+    {
+      "name": "Peanutbutter Oatmeal Bars",
+      "url": "peanutbutterOatmealBars.json",
+      "emoji": "🥜"
+    },
+    {
+      "name": "Pizza Dough",
+      "url": "pizzaDough.json",
+      "emoji": "🍕"
+    },
+    {
+      "name": "Erikas Yakisoba",
+      "url": "yakisoba.json",
+      "emoji": "🍜"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+    "$schema": "../schema.json",
+    "name": "Erikas Yakisoba",
+    "tags": [
+        "Lunch",
+        "Dinner",
+        "Comfort food",
+        "Japanese"
+    ],
+    "description": "Yakisoba (literally fried noodles) is basically a stir fry dish that everybody makes at home in japan for comfort food, or buys at convenience stores or at late-night food stands. if you’re really into carb on carb action, you can also put yakisoba between a baguette or hot dog bun, and it’s called yakisoba pan (yakisoba bread), which is amazing if you’re stoned or hungover. ",
+    "ingredients": [
+        {
+            "name": "Firm Tofu",
+            "amount": 280,
+            "measurement": "gr.",
+            "url": "https://www.ocado.com/webshop/product/The-Tofoo-Co-Naked-Organic-Extra-Firm-Tofu/349669011"
+        },
+        {
+            "name": "Veggies",
+            "amount": 1,
+            "measurement": "???"
+        },
+        {
+            "name": "Noodles",
+            "amount": 1,
+            "measurement": "???"
+        },
+        {
+            "name": "Green onions",
+            "amount": 1,
+            "measurement": "???"
+        },
+        {
+            "name": "Red ginger",
+            "amount": 1,
+            "measurement": "???"
+        },
+        {
+            "name": "Japanese hot mustard",
+            "amount": 1,
+            "measurement": "dollup"
+        }
+    ],
+    "method": [
+      "Fry tofu in the wok until brown (I recommend cutting it with scissors into random bite-sized pieces rather than cutting it into neat squares the way you see in cookbooks, it lets you get a way better texture!) Use rapeseed oil if you can (it cooks at a higher temperature than olive oil and is great for stir fries!) put tofu aside",
+      "Fry up the veggies in oil (classic japanese yakisoba uses snow peas/ mange tout, shredded cabbage, bean sprouts). but this is obviously up to you. we add broccoli a lot as well! And I love carrots in it, but obviously this is all personal preference. put veggies aside",
+      "Fry up the noodles in the wok! you’ll have to slowly break them apart and once they are all separated and browned, combine all the veggie and tofu with it",
+      "Add the provided seasoning packets and mix. THEN, to boost the flavor, add the tonkatsu sauce (brown sauce that japanese people use for everything delicious). if you like the taste of horseradish/ kind of a subtle burn, then i would recommend adding japanese or chinese hot mustard as well… and to mix in a dollop… i think that’s what makes ours extra special, but i know spice s a personal preference 😉",
+      "Add chopped up green onions at the end, garnish with red ginger (always red, never pickled pink sushi ginger)",
+      "Serve and garnish with drizzle of mayo if you want!"
+    ]
+}

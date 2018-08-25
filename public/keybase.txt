@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/koddsson
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://koddsson.com
+  * I am koddsson (https://keybase.io/koddsson) on keybase.
+  * I have a public key ASDwi_uJqSvD3Q_-HXzwzFS1lFeiI0w5tUbP4ayRTJK8Qwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f08bfb89a92bc3dd0ffe1d7cf0cc54b59457a2234c39b546cfe1ac914c92bc430a",
+      "host": "keybase.io",
+      "kid": "0120f08bfb89a92bc3dd0ffe1d7cf0cc54b59457a2234c39b546cfe1ac914c92bc430a",
+      "uid": "ae393b120c856e4390d84973f0f22900",
+      "username": "koddsson"
+    },
+    "merkle_root": {
+      "ctime": 1533557471,
+      "hash": "fa664826993a71b9db8f8b49dbfcde3c7b1ba98897a68a58d9c8d3a33e069bbe0e1e3d2c391e381a21fdee3b39af34494b56b986530cfc6b656e238b2591c8a5",
+      "hash_meta": "02b2c8f18861166caa4a3095866855e8d8b631a002e4add77c0f62c73470fa40",
+      "seqno": 3413958
+    },
+    "service": {
+      "entropy": "KaKF1Eq9swLVtKAhaRgUPBOz",
+      "hostname": "koddsson.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.3.0"
+  },
+  "ctime": 1533557480,
+  "expire_in": 504576000,
+  "prev": "c9225531637af3c562eefdfdf1209e59749195a769478e2a08ff3d1b2054740a",
+  "seqno": 57,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg8Iv7iakrw90P/h188MxUtZRXoiNMObVGz+GskUySvEMKp3BheWxvYWTESpcCOcQgySJVMWN688Vi7v398SCeWXSRladpR44qCP89GyBUdArEIDnPhAwdSq56drJs+H0iRCmEWywo+WFyXHzTj3QwSpyrAgHCo3NpZ8RAOdZZBM7/discQ24cSspMgVIrrC3X7xEbOWhjfgpTpe+XJeo0x24EXlq8wnlba/3SprreyJmZxUUbLJQ/VA+TAahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIE1zyPdTP1SsCG9JVFKSxcY5HHCuQLiGjHhWFCVok3y2o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/koddsson
+
+==================================================================
