@@ -2,6 +2,9 @@ const express = require('express')
 const morgan = require('morgan')
 const fetch = require('node-fetch')
 const bodyParser = require('body-parser')
+const sqlite = require('sqlite')
+
+const dbPromise = sqlite.open('./publishing.db', {Promise})
 
 const app = express()
 app.use(morgan('combined'))
@@ -25,7 +28,14 @@ app.post('/micropub', async (req, res) => {
     return res.status(404).send('Not found')
   }
 
-  res.status(404).send('Not found')
+  const db = await dbPromise
+
+  if (json['like-of']) {
+    await db.run("INSERT INTO favorites VALUES (?)", json['like-of']);
+    return res.status(201).send('Favorited')
+  }
+
+  return res.status(404).send('Not found')
 })
 
 app.listen(3000, () => console.log('Listening on port 3000!'))
