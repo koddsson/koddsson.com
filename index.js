@@ -35,6 +35,8 @@ app.post('/micropub', async (req, res) => {
       "INSERT INTO favorites VALUES (?, DateTime('now'))",
       json['like-of']
     );
+    // TODO: Set this header correctly
+    res.header('Location', 'https://koddsson.com')
     return res.status(201).send('Favorited')
   }
 
