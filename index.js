@@ -11,9 +11,9 @@ app.use(bodyParser.json())
 app.post('/micropub', async (req, res) => {
   const response = await fetch('https://tokens.indieauth.com/token', {
     Accept: 'application/json',
-    Authorization: request.header('Authorization')
+    Authorization: req.header('Authorization')
   })
-  const json = await reponse.json()
+  const json = await response.json()
 
   console.log(req.body)
   console.log(json)
