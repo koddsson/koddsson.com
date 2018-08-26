@@ -33,7 +33,7 @@ app.post('/micropub', async (req, res) => {
 		// TODO: Try and get metadata and add to the table.
     await db.run(
       "INSERT INTO favorites VALUES (?, DateTime('now'))",
-      json['like-of']
+      req.body['like-of']
     );
     // TODO: Set this header more correctly
     res.header('Location', 'https://koddsson.com/favorites')
