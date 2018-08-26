@@ -25,7 +25,7 @@ app.post('/micropub', async (req, res) => {
   console.log(json)
 
   if (json.me !== 'https://koddsson.com') {
-    return res.status(404).send('Not found')
+    return res.status(401).send('Unauthorized')
   }
 
   const db = await dbPromise
