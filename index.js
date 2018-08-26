@@ -12,6 +12,8 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
+app.set('view engine', 'hbs')
+
 app.post('/micropub', async (req, res) => {
   const response = await fetch('https://tokens.indieauth.com/token', {
     headers: {
@@ -21,9 +23,6 @@ app.post('/micropub', async (req, res) => {
   })
   const json = await response.json()
 
-  console.log(req.body)
-  console.log(json)
-
   if (json.me !== 'https://koddsson.com/') {
     return res.status(401).send('Unauthorized')
   }
@@ -31,16 +30,23 @@ app.post('/micropub', async (req, res) => {
   const db = await dbPromise
 
   if (req.body['like-of']) {
+		// TODO: Try and get metadata and add to the table.
     await db.run(
       "INSERT INTO favorites VALUES (?, DateTime('now'))",
       json['like-of']
     );
-    // TODO: Set this header correctly
-    res.header('Location', 'https://koddsson.com')
+    // TODO: Set this header more correctly
+    res.header('Location', 'https://koddsson.com/favorites')
     return res.status(201).send('Favorited')
   }
 
   return res.status(404).send('Not found')
+})
+
+app.get('/favorites', async (req, res) => {
+	const db = await dbPromise
+	const favorites = await db.all('SELECT * FROM favorites')
+  return res.render('favorites', {favorites})
 })
 
 app.listen(3000, () => console.log('Listening on port 3000!'))
