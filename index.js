@@ -13,7 +13,7 @@ app.post('/micropub', async (req, res) => {
     Accept: 'application/json',
     Authorization: req.header('Authorization')
   })
-  const json = await response.json()
+  const json = await response.text()
 
   console.log(req.body)
   console.log(json)
