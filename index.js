@@ -21,6 +21,10 @@ app.post('/micropub', async (req, res) => {
   console.log(req.body)
   console.log(json)
 
+  if (json.me !== 'https://koddsson.com') {
+    return res.status(404).send('Not found')
+  }
+
   res.status(404).send('Not found')
 })
 
