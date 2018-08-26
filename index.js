@@ -31,7 +31,10 @@ app.post('/micropub', async (req, res) => {
   const db = await dbPromise
 
   if (json['like-of']) {
-    await db.run("INSERT INTO favorites VALUES (?)", json['like-of']);
+    await db.run(
+      "INSERT INTO favorites VALUES (?, DateTime('now'))",
+      json['like-of']
+    );
     return res.status(201).send('Favorited')
   }
 
