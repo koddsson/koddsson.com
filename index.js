@@ -15,6 +15,16 @@ app.use(bodyParser.json())
 
 app.set('view engine', 'hbs')
 
+app.get('/', async (req, res) => {
+  const db = await dbPromise
+  const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
+  const notesWithTimestamps = notes.map(note => {
+    note.timestamp = relativeDate(note.slug * 1000)
+    return note;
+  })
+  return res.render('index', {notes: notesWithTimestamps})
+})
+
 app.post('/micropub', async (req, res) => {
   const response = await fetch('https://tokens.indieauth.com/token', {
     headers: {
@@ -65,7 +75,7 @@ app.get('/notes/:slug', async (req, res) => {
   if (!note) {
     return res.status(404).send('Not found')
   }
-  note.timestamp = relativeDate(note.slug + '0000')
+  note.timestamp = relativeDate(note.slug * 1000)
   return res.render('note', note)
 })
 
