@@ -17,7 +17,7 @@ app.set('view engine', 'hbs')
 
 app.get('/', async (req, res) => {
   const db = await dbPromise
-  const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
+  const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC LIMIT 5')
   const notesWithTimestamps = notes.map(note => {
     note.timestamp = relativeDate(note.slug * 1000)
     return note;
