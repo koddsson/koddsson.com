@@ -91,7 +91,7 @@ app.get('/notes/:slug', async (req, res) => {
 
 app.get('/favorites', async (req, res) => {
 	const db = await dbPromise
-	const favorites = await db.all('SELECT * FROM favorites')
+	const favorites = await db.all('SELECT * FROM favorites ORDER BY timestamp DESC')
   return res.render('favorites', {favorites})
 })
 
