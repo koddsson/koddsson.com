@@ -8,6 +8,21 @@
   </head>
   <body style="padding: 1em">
     <h1>📝 Notes</h1>
+
+    {{#each notes}}
+    <div class="post">
+      <div class="meta">
+        
+      </div>
+      <div class="body">
+        {{content}}
+      </div>
+      <a href="/notes/{{slug}}" class="timestamp">
+        <time>{{timestamp}}</time>
+      </a>
+    </div>
+    {{/each}}
+
 <div class="post">
   <div class="meta">
     
