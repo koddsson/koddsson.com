@@ -49,7 +49,7 @@ app.post('/micropub', async (req, res) => {
       req.body['content']
     );
     // TODO: Set this header more correctly
-    res.header('Location', `https://koddsson.com/notes/${slug}`)
+    res.header('Location', `https://koddsson.com/notes/${timestamp}`)
     return res.status(201).send('Note posted')
   }
 
