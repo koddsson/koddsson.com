@@ -40,9 +40,31 @@ app.post('/micropub', async (req, res) => {
     // TODO: Set this header more correctly
     res.header('Location', 'https://koddsson.com/favorites')
     return res.status(201).send('Favorited')
+  } else if (req.body['h'] === 'entry') {
+    const slug = Math.floor(new Date() / 1000)
+    await db.run(
+      "INSERT INTO notes VALUES (?, ?, DateTime('now'))",
+      slug,
+      req.body['content']
+    );
+    // TODO: Set this header more correctly
+    res.header('Location', `https://koddsson.com/notes/${slug}`)
+    return res.status(201).send('Note posted')
   }
 
   return res.status(404).send('Not found')
+})
+
+app.get('/notes/:slug', async (req, res) => {
+  const db = await dbPromise
+  const note = await db.get(
+    "SELECT * FROM notes WHERE slug = ?",
+    req.params.slug
+  );
+  if (!note) {
+    return res.status(404).send('Not found')
+  }
+  return res.render('note', note)
 })
 
 app.get('/favorites', async (req, res) => {
