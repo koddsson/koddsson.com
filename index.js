@@ -29,6 +29,8 @@ app.post('/micropub', async (req, res) => {
 
   const db = await dbPromise
 
+  console.log(req.body)
+
   if (req.body['like-of']) {
 		// TODO: Try and get metadata and add to the table.
     await db.run(
