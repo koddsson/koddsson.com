@@ -3,6 +3,7 @@ const morgan = require('morgan')
 const fetch = require('node-fetch')
 const bodyParser = require('body-parser')
 const sqlite = require('sqlite')
+const relativeDate = require('relative-date')
 
 const dbPromise = sqlite.open('./publishing.db', {Promise})
 
@@ -41,10 +42,10 @@ app.post('/micropub', async (req, res) => {
     res.header('Location', 'https://koddsson.com/favorites')
     return res.status(201).send('Favorited')
   } else if (req.body['h'] === 'entry') {
-    const slug = Math.floor(new Date() / 1000)
+    const timestamp = Math.floor(new Date() / 1000)
     await db.run(
-      "INSERT INTO notes VALUES (?, ?, DateTime('now'))",
-      slug,
+      "INSERT INTO notes VALUES (?, ?)",
+      timestamp,
       req.body['content']
     );
     // TODO: Set this header more correctly
@@ -64,6 +65,7 @@ app.get('/notes/:slug', async (req, res) => {
   if (!note) {
     return res.status(404).send('Not found')
   }
+  note.timestamp = relativeDate(note.slug + '0000')
   return res.render('note', note)
 })
 

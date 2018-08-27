@@ -1,1 +1,19 @@
-{{content}}
+<html>
+  <head>
+    <title>Notes</title>
+    <link rel="icon" data-emoji="📝" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/scripts/emoji-favicon.js"></script>
+    <link rel="stylesheet" href="/index.css">
+  </head>
+  <body style="padding: 1em">
+    <div class="post">
+      <div class="body">
+        {{content}}
+      </div>
+      <a href="/notes/{{slug}}" class="timestamp">
+        <time>{{timestamp}}</time>
+      </a>
+    </div>
+  </body>
+</html>
