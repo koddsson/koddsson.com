@@ -106,6 +106,18 @@ app.post('/micropub', async (req, res) => {
 })
 
 app.get('/notes/:slug', async (req, res) => {
+  const legacyLinks = {
+    '2018-08-25-0.html': 1535200649,
+    '2018-08-23-0.html': 1535047453,
+    '2018-08-22-1.html': 1534940871, 
+    '2018-08-22-0.html': 1534934370,
+    '2018-08-21.html': 1534870136,
+  }
+
+  if (legacyLinks[req.params.slug]) {
+    return res.redirect(301, `/notes/${legacyLinks[req.params.slug]}`)
+  }
+
   const db = await dbPromise
   const note = await db.get(
     "SELECT * FROM notes WHERE slug = ?",
