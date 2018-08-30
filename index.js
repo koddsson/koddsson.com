@@ -25,6 +25,35 @@ app.get('/', async (req, res) => {
   return res.render('index', {notes: notesWithTimestamps})
 })
 
+app.get('/feed.xml', async (req, res) => {
+  const db = await dbPromise
+  const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
+  const items = notes.map(note => {
+    return `
+    <item>
+      <description>${note.content}</description>
+      <pubDate>${new Date(note.slug * 1000).toUTCString()}</pubDate>
+      <link>https://koddsson.com/notes/${note.slug}</link>
+      <guid isPermaLink="true">
+        https://koddsson.com/notes/${note.slug}
+      </guid>
+    </item>`
+  })
+  const xml = `
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>koddsson.com notes</title>
+    <description>notes</description>
+    <link>https://koddsson.com</link>
+    <atom:link href="https://koddsson.com/notes/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>${new Date(notes[0].slug * 1000).toUTCString()}</lastBuildDate>
+    ${items.join('')}
+  </channel>
+</rss>
+`
+  return res.type('application/xml').send(xml)
+})
+
 app.get('/notes', async (req, res) => {
   const db = await dbPromise
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
