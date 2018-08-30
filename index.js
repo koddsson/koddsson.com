@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
   return res.render('index', {notes: notesWithTimestamps})
 })
 
-app.get('/feed.xml', async (req, res) => {
+app.get('/notes/feed.xml', async (req, res) => {
   const db = await dbPromise
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
   const items = notes.map(note => {
