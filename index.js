@@ -122,7 +122,7 @@ app.post('/micropub', async (req, res) => {
     );
 
     await db.run(
-      "INSERT INTO notes VALUES (?, ?, ?)",
+      "INSERT INTO notes VALUES (?, ?)",
       timestamp,
       properties.content
     );
