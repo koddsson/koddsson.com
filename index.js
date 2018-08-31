@@ -110,13 +110,25 @@ app.post('/micropub', async (req, res) => {
     res.header('Location', `https://koddsson.com/notes/${timestamp}`)
     return res.status(201).send('Note posted')
   } else if (req.body['type'].includes('h-entry')) {
-    //{ type: [ 'h-entry' ],
-    //  properties:
-    //   { content: [ 'testing uploading a image' ],
-    //     photo: [ [Object] ] } }
-    //  }
+    const timestamp = Math.floor(new Date() / 1000)
     const properties = req.body.properties
-    console.log(properties.photo)
+		const photo = properties.photo[0]
+
+    await db.run(
+      "INSERT INTO notes VALUES (?, ?, ?)",
+      timestamp,
+      photo.value,
+			photo.alt	
+    );
+
+    await db.run(
+      "INSERT INTO notes VALUES (?, ?, ?)",
+      timestamp,
+      properties.content
+    );
+    // TODO: Set this header more correctly
+    res.header('Location', `https://koddsson.com/notes/${timestamp}`)
+    return res.status(201).send('Note posted')
   }
 
   return res.status(404).send('Not found')
