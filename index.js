@@ -113,6 +113,7 @@ app.post('/micropub', async (req, res) => {
     const timestamp = Math.floor(new Date() / 1000)
     const properties = req.body.properties
     const photo = properties.photo[0]
+    const content = properties.content[0]
 
     await db.run(
       "INSERT INTO photos VALUES (?, ?, ?)",
@@ -124,7 +125,7 @@ app.post('/micropub', async (req, res) => {
     await db.run(
       "INSERT INTO notes VALUES (?, ?)",
       timestamp,
-      properties.content
+      content
     );
     // TODO: Set this header more correctly
     res.header('Location', `https://koddsson.com/notes/${timestamp}`)
