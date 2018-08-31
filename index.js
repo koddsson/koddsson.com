@@ -109,6 +109,14 @@ app.post('/micropub', async (req, res) => {
     // TODO: Set this header more correctly
     res.header('Location', `https://koddsson.com/notes/${timestamp}`)
     return res.status(201).send('Note posted')
+  } else if (req.body['type'].includes('h-entry')) {
+    //{ type: [ 'h-entry' ],
+    //  properties:
+    //   { content: [ 'testing uploading a image' ],
+    //     photo: [ [Object] ] } }
+    //  }
+    const properties = req.body.properties
+    console.log(properties.photo)
   }
 
   return res.status(404).send('Not found')
