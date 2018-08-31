@@ -65,7 +65,6 @@ app.get('/notes', async (req, res) => {
 })
 
 app.get('/micropub', async (req, res) => {
-  console.loog('here')
   if (req.query['q'] === 'config') {
     return res.json({
       "media-endpoint": "https://img.koddsson.com/upload"
