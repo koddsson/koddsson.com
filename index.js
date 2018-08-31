@@ -115,7 +115,7 @@ app.post('/micropub', async (req, res) => {
     const photo = properties.photo[0]
 
     await db.run(
-      "INSERT INTO notes VALUES (?, ?, ?)",
+      "INSERT INTO photos VALUES (?, ?, ?)",
       timestamp,
       photo.value,
       photo.alt 
