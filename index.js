@@ -91,7 +91,7 @@ app.post('/micropub', async (req, res) => {
   console.log(req.body)
 
   if (req.body['like-of']) {
-		// TODO: Try and get metadata and add to the table.
+    // TODO: Try and get metadata and add to the table.
     await db.run(
       "INSERT INTO favorites VALUES (?, DateTime('now'))",
       req.body['like-of']
@@ -112,13 +112,13 @@ app.post('/micropub', async (req, res) => {
   } else if (req.body['type'].includes('h-entry')) {
     const timestamp = Math.floor(new Date() / 1000)
     const properties = req.body.properties
-		const photo = properties.photo[0]
+    const photo = properties.photo[0]
 
     await db.run(
       "INSERT INTO notes VALUES (?, ?, ?)",
       timestamp,
       photo.value,
-			photo.alt	
+      photo.alt 
     );
 
     await db.run(
@@ -160,8 +160,8 @@ app.get('/notes/:slug', async (req, res) => {
 })
 
 app.get('/favorites', async (req, res) => {
-	const db = await dbPromise
-	const favorites = await db.all('SELECT * FROM favorites ORDER BY timestamp DESC')
+  const db = await dbPromise
+  const favorites = await db.all('SELECT * FROM favorites ORDER BY timestamp DESC')
   return res.render('favorites', {favorites})
 })
 
