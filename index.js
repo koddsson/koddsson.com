@@ -64,6 +64,16 @@ app.get('/notes', async (req, res) => {
   return res.render('notes', {notes: notesWithTimestamps})
 })
 
+app.get('/micropub', async (req, res) => {
+  console.loog('here')
+  if (req.query['q'] === 'config') {
+    return res.json({
+      "media-endpoint": "https://img.koddsson.com/upload"
+    })
+  }
+  return res.status(404).send('Not found')
+})
+
 app.post('/micropub', async (req, res) => {
   const response = await fetch('https://tokens.indieauth.com/token', {
     headers: {
