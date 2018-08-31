@@ -10,7 +10,7 @@ const dbPromise = sqlite.open('./publishing.db', {Promise})
 const app = express()
 app.use(morgan('combined'))
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({extended: true, limit: '100mb'}))
 app.use(bodyParser.json())
 
 app.set('view engine', 'hbs')
