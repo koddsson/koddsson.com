@@ -82,19 +82,8 @@
         </div>
         <div class='content'>
           <h2>📝 Notes</h2> 
-
           {{#each notes}}
-          <div class="post">
-            <div class="meta">
-              
-            </div>
-            <div class="body">
-              {{content}}
-            </div>
-            <a href="/notes/{{slug}}" class="timestamp">
-              <time>{{timestamp}}</time>
-            </a>
-          </div>
+            {{> note}}
           {{/each}}
         </div>
       </section>

@@ -4,6 +4,7 @@ const fetch = require('node-fetch')
 const bodyParser = require('body-parser')
 const sqlite = require('sqlite')
 const relativeDate = require('relative-date')
+const hbs = require('hbs');
 
 const dbPromise = sqlite.open('./publishing.db', {Promise})
 
@@ -15,13 +16,16 @@ app.use(bodyParser.json())
 
 app.set('view engine', 'hbs')
 
+hbs.registerPartials(__dirname + '/views/partials');
+
 app.get('/', async (req, res) => {
   const db = await dbPromise
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC LIMIT 5')
-  const notesWithTimestamps = notes.map(note => {
+  const notesWithTimestamps = await Promise.all(notes.map(async note => {
     note.timestamp = relativeDate(note.slug * 1000)
+    note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
     return note;
-  })
+  }))
   return res.render('index', {notes: notesWithTimestamps})
 })
 
@@ -57,10 +61,11 @@ app.get('/notes/feed.xml', async (req, res) => {
 app.get('/notes', async (req, res) => {
   const db = await dbPromise
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
-  const notesWithTimestamps = notes.map(note => {
+  const notesWithTimestamps = await Promise.all(notes.map(async note => {
     note.timestamp = relativeDate(note.slug * 1000)
+    note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
     return note;
-  })
+  }))
   return res.render('notes', {notes: notesWithTimestamps})
 })
 
@@ -157,7 +162,11 @@ app.get('/notes/:slug', async (req, res) => {
     return res.status(404).send('Not found')
   }
   note.timestamp = relativeDate(note.slug * 1000)
-  return res.render('note', note)
+  const photo = await db.get(
+    "SELECT * FROM photos WHERE slug = ?",
+    req.params.slug
+  );
+  return res.render('note', {note, photo})
 })
 
 app.get('/favorites', async (req, res) => {

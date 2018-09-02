@@ -87,6 +87,51 @@ a {
   text-decoration: underline;
   text-decoration-skip: ink;
 }
+      
+.timestamp { text-align: right; }
+
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.83em;
+  padding: 0.83em;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+}
+
+.post.small > .body {
+  display: flex;
+}
+
+.post.small > .body > .image > img {
+  width: 200px;
+}
+
+.post.small > .body > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.post > h3 {
+  margin-top: 0;
+}
+.post > h3 > a {
+  /*text-decoration: none;*/
+}
+
+/* Utilites */
+
+.mb-1 {
+  margin-bottom: 1em;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
 
 @media (max-width: 568px) {
   .container {
@@ -107,21 +152,8 @@ a {
   .profile_pic {
     margin: auto;
   }
-}
-      
-.body { margin-bottom: 0.83em; }
-.timestamp { text-align: right; }
-.post {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 0.83em;
-  padding: 0.83em;
-  border: 1px solid gray;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
-}
-.post > h3 {
-  margin-top: 0;
-}
-.post > h3 > a {
-  /*text-decoration: none;*/
+
+  .post.small > .body > .image > img {
+    width: 100px;
+  }
 }

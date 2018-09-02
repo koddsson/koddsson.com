@@ -8,12 +8,20 @@
   </head>
   <body style="padding: 1em">
     <div class="post">
-      <div class="body">
-        {{content}}
+      {{#if photo}}
+      <div class="image mb-1">
+        <img src="{{photo.url}}" alt="{{photo.alt}}" width="100%">
       </div>
-      <a href="/notes/{{slug}}" class="timestamp">
-        <time>{{timestamp}}</time>
+      {{/if}}
+      <div class="body">
+        {{note.content}}
+      </div>
+      <a href="/notes/{{note.slug}}" class="timestamp">
+        <time>{{note.timestamp}}</time>
       </a>
     </div>
+    <footer>
+
+    </footer>
   </body>
 </html>

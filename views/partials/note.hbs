@@ -1,0 +1,15 @@
+<div class="post small">
+  <div class="body">
+    {{#if photo}}
+    <div class="image">
+      <img src="{{photo.url}}" alt="{{photo.alt}}">
+    </div>
+    {{/if}}
+    <div class="content">
+      <div class="flex-item">{{content}}</div>
+      <a href="/notes/{{slug}}" class="timestamp">
+        <time>{{timestamp}}</time>
+      </a>
+    </div>
+  </div>
+</div>
