@@ -133,6 +133,20 @@ a {
   flex: 1;
 }
 
+.flex-column {
+  flex-direction: column;
+}
+
+.btn {
+  text-align: center;
+  padding: 0.83em;
+  border: 1px solid gray;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  max-width: 40em;
+  margin: auto;
+}
+
 @media (max-width: 568px) {
   .container {
     flex-direction: column;
@@ -155,5 +169,10 @@ a {
 
   .post.small > .body > .image > img {
     width: 100px;
+  }
+
+  .btn {
+    margin: initial;
+    max-width: initial;
   }
 }

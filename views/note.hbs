@@ -6,22 +6,24 @@
     <script src="/scripts/emoji-favicon.js"></script>
     <link rel="stylesheet" href="/index.css">
   </head>
-  <body style="padding: 1em">
-    <div class="post">
-      {{#if photo}}
-      <div class="image mb-1">
-        <img src="{{photo.url}}" alt="{{photo.alt}}" width="100%">
+  <body style="padding: 1em" class="d-flex flex-column">
+    <div style="flex: 1;max-width: 40em;margin: auto;">
+      <div class="post">
+        {{#if photo}}
+        <div class="image mb-1">
+          <img src="{{photo.url}}" alt="{{photo.alt}}" width="100%">
+        </div>
+        {{/if}}
+        <div class="body">
+          {{note.content}}
+        </div>
+        <a href="/notes/{{note.slug}}" class="timestamp">
+          <time>{{note.timestamp}}</time>
+        </a>
       </div>
-      {{/if}}
-      <div class="body">
-        {{note.content}}
-      </div>
-      <a href="/notes/{{note.slug}}" class="timestamp">
-        <time>{{note.timestamp}}</time>
-      </a>
     </div>
-    <footer>
-
-    </footer>
+    <a href="/notes" class="btn">
+      Back to notes
+    </a>
   </body>
 </html>

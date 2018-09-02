@@ -6,11 +6,14 @@
     <script src="/scripts/emoji-favicon.js"></script>
     <link rel="stylesheet" href="/index.css">
   </head>
-  <body style="padding: 1em">
-    <h1>📝 Notes</h1>
+  <body style="padding: 1em" class="d-flex flex-column">
+    <div style="flex: 1;">
+      <h1>📝 Notes</h1>
 
-    {{#each notes}}
-      {{> note}}
-    {{/each}}
+      {{#each notes}}
+        {{> note}}
+      {{/each}}
+    </div>
+    <a href="/" class="btn">Back home</a>
   </body>
 </html>
