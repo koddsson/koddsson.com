@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const sqlite = require('sqlite')
 const relativeDate = require('relative-date')
 const hbs = require('hbs');
+const markdown = require('helper-markdown');
 
 const dbPromise = sqlite.open('./publishing.db', {Promise})
 
@@ -17,6 +18,7 @@ app.use(bodyParser.json())
 app.set('view engine', 'hbs')
 
 hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerHelper('markdown', markdown({linkify: true}));
 
 app.get('/', async (req, res) => {
   const db = await dbPromise
