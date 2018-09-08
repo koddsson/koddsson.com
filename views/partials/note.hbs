@@ -6,7 +6,9 @@
     </div>
     {{/if}}
     <div class="content">
-      <div class="flex-item">{{content}}</div>
+      <div class="flex-item">
+        {{#markdown}}{{content}}{{/markdown}}
+      </div>
       <a href="/notes/{{slug}}" class="timestamp">
         <time>{{timestamp}}</time>
       </a>

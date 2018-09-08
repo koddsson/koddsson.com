@@ -15,7 +15,7 @@
         </div>
         {{/if}}
         <div class="body">
-          {{note.content}}
+          {{#markdown}}{{note.content}}{{/markdown}}
         </div>
         <a href="/notes/{{note.slug}}" class="timestamp">
           <time>{{note.timestamp}}</time>
