@@ -15,6 +15,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "hbs": "^4.0.1",
+    "helper-markdown": "^1.0.0",
     "morgan": "^1.9.0",
     "node-fetch": "^2.2.0",
     "relative-date": "^1.1.3",
