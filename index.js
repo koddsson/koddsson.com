@@ -37,6 +37,7 @@ app.get('/notes/feed.xml', async (req, res) => {
   const items = notes.map(note => {
     return `
     <item>
+      <title>${note.slug}</title>
       <description>${note.content}</description>
       <pubDate>${new Date(note.slug * 1000).toUTCString()}</pubDate>
       <link>https://koddsson.com/notes/${note.slug}</link>
