@@ -34,11 +34,19 @@ app.get('/', async (req, res) => {
 app.get('/notes/feed.xml', async (req, res) => {
   const db = await dbPromise
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
+  const notesWithTimestamps = await Promise.all(notes.map(async note => {
+    note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
+    return note;
+  }))
   const items = notes.map(note => {
+    const photo = note.photo ? `<img src="${note.photo.url}" alt="${note.photo.alt}" />` : ''
     return `
     <item>
       <title>${note.slug}</title>
-      <description>${note.content}</description>
+      <description>
+        ${photo}
+        ${note.content}
+      </description>
       <pubDate>${new Date(note.slug * 1000).toUTCString()}</pubDate>
       <link>https://koddsson.com/notes/${note.slug}</link>
       <guid isPermaLink="true">
