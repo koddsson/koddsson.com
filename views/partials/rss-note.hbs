@@ -1,0 +1,14 @@
+<div class="post small">
+  <div class="body">
+    {{#if photo}}
+    <div class="image">
+      <img src="{{photo.url}}" alt="{{photo.alt}}">
+    </div>
+    {{/if}}
+    <div class="content">
+      <div class="flex-item">
+        {{#markdown}}{{content}}{{/markdown}}
+      </div>
+    </div>
+  </div>
+</div>

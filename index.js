@@ -1,3 +1,4 @@
+const fs = require('fs')
 const express = require('express')
 const morgan = require('morgan')
 const fetch = require('node-fetch')
@@ -7,6 +8,9 @@ const relativeDate = require('relative-date')
 const hbs = require('hbs');
 const markdown = require('helper-markdown');
 const Entities = require('html-entities').XmlEntities;
+const handlebars = require('handlebars')
+
+handlebars.registerHelper('markdown', markdown({linkify: true}));
 
 const entities = new Entities();
 const dbPromise = sqlite.open('./publishing.db', {Promise})
@@ -21,6 +25,8 @@ app.set('view engine', 'hbs')
 
 hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('markdown', markdown({linkify: true}));
+  
+const rssNoteTemplate = handlebars.compile(fs.readFileSync(__dirname + '/views/partials/rss-note.hbs', {encoding: 'utf8'}))
 
 app.get('/', async (req, res) => {
   const db = await dbPromise
@@ -37,15 +43,16 @@ app.get('/notes/feed.xml', async (req, res) => {
   const db = await dbPromise
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
   const notesWithTimestamps = await Promise.all(notes.map(async note => {
+    note.timestamp = relativeDate(note.slug * 1000)
     note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
     return note;
   }))
   const items = notes.map(note => {
-    const photo = note.photo ? entities.encode(`<img src="${note.photo.url}" alt="${note.photo.alt}" />`) : ''
+		console.log(note)
     return `
     <item>
       <title>${note.slug}</title>
-      <description>${photo}${note.content}</description>
+      <description>${entities.encode(rssNoteTemplate(note))}</description>
       <pubDate>${new Date(note.slug * 1000).toUTCString()}</pubDate>
       <link>https://koddsson.com/notes/${note.slug}</link>
       <guid isPermaLink="true">https://koddsson.com/notes/${note.slug}</guid>
