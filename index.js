@@ -39,7 +39,7 @@ app.get('/notes/feed.xml', async (req, res) => {
     return note;
   }))
   const items = notes.map(note => {
-    const photo = note.photo ? `<img src="${note.photo.url}" alt="${note.photo.alt}">` : ''
+    const photo = note.photo ? `<img src="${note.photo.url}" alt="${note.photo.alt}" />` : ''
     return `
     <item>
       <title>${note.slug}</title>
