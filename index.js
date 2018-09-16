@@ -6,7 +6,9 @@ const sqlite = require('sqlite')
 const relativeDate = require('relative-date')
 const hbs = require('hbs');
 const markdown = require('helper-markdown');
+const Entities = require('html-entities').XmlEntities;
 
+const entities = new Entities();
 const dbPromise = sqlite.open('./publishing.db', {Promise})
 
 const app = express()
@@ -39,7 +41,7 @@ app.get('/notes/feed.xml', async (req, res) => {
     return note;
   }))
   const items = notes.map(note => {
-    const photo = note.photo ? `<img src="${note.photo.url}" alt="${note.photo.alt}" />` : ''
+    const photo = note.photo ? entities.encode(`<img src="${note.photo.url}" alt="${note.photo.alt}" />`) : ''
     return `
     <item>
       <title>${note.slug}</title>
