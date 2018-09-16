@@ -39,19 +39,14 @@ app.get('/notes/feed.xml', async (req, res) => {
     return note;
   }))
   const items = notes.map(note => {
-    const photo = note.photo ? `<img src="${note.photo.url}" alt="${note.photo.alt}" />` : ''
+    const photo = note.photo ? `<img src="${note.photo.url}" alt="${note.photo.alt}">` : ''
     return `
     <item>
       <title>${note.slug}</title>
-      <description>
-        ${photo}
-        ${note.content}
-      </description>
+      <description>${photo}${note.content}</description>
       <pubDate>${new Date(note.slug * 1000).toUTCString()}</pubDate>
       <link>https://koddsson.com/notes/${note.slug}</link>
-      <guid isPermaLink="true">
-        https://koddsson.com/notes/${note.slug}
-      </guid>
+      <guid isPermaLink="true">https://koddsson.com/notes/${note.slug}</guid>
     </item>`
   })
   const xml = `
