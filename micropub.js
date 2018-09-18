@@ -3,7 +3,7 @@ const sqlite = require('sqlite')
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const dbPromise = sqlite.open('./publishing.db', {Promise})
+const dbPromise = require('./data')
 
 const app = express()
 app.use(bodyParser.json())
