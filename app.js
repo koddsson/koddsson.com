@@ -48,7 +48,6 @@ app.get('/notes/feed.xml', async (req, res) => {
     return note;
   }))
   const items = notes.map(note => {
-		console.log(note)
     return `
     <item>
       <title>${note.slug}</title>
@@ -107,8 +106,6 @@ app.post('/micropub', async (req, res) => {
   }
 
   const db = await dbPromise
-
-  console.log(req.body)
 
   if (req.body['like-of']) {
     // TODO: Try and get metadata and add to the table.
