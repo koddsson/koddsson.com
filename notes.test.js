@@ -1,5 +1,6 @@
 const request = require('supertest');
 const app = require('./notes')
+const dbPromise = require('./data')
   
 const legacyLinks = {
   '2018-08-25-0.html': 1535200649,
@@ -10,6 +11,22 @@ const legacyLinks = {
 }
 
 describe('GET', () => {
+  beforeAll(async () => {
+    const db = await dbPromise
+    await db.run(
+      "INSERT INTO notes VALUES (?, ?)",
+      Math.floor(new Date() / 1000),
+      'Test note; please ignore'
+    );
+    for (const [slug, id] of Object.entries(legacyLinks)) {
+      await db.run(
+        "INSERT INTO notes VALUES (?, ?)",
+        id,
+        'Test note; please ignore'
+      );
+    }
+  })
+
   test('/', (done) => {
     request(app).get('/').then((response) => {
       expect(response.statusCode).toBe(200);

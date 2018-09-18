@@ -2,15 +2,14 @@ const express = require('express')
 const morgan = require('morgan')
 const fetch = require('node-fetch')
 const bodyParser = require('body-parser')
-const sqlite = require('sqlite')
 const relativeDate = require('relative-date')
 const hbs = require('hbs');
 const markdown = require('helper-markdown');
 
 const micropub = require('./micropub')
 const notes = require('./notes')
+const dbPromise = require('./data')
 
-const dbPromise = sqlite.open('./publishing.db', {Promise})
 const app = express()
 
 app.use(morgan('combined'))

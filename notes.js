@@ -8,7 +8,7 @@ const markdown = require('helper-markdown');
 const Entities = require('html-entities').XmlEntities;
 const handlebars = require('handlebars')
 
-const dbPromise = sqlite.open('./publishing.db', {Promise})
+const dbPromise = require('./data')
 const entities = new Entities();
 
 handlebars.registerHelper('markdown', markdown({linkify: true}));
