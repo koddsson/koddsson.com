@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "DB_HOST='test.db' jest",
+    "test": "rm -rf test.db && DB_HOST='test.db' jest --coverage",
     "start": "node index.js"
   },
   "keywords": [],
@@ -25,7 +25,15 @@
     "sqlite": "^3.0.0"
   },
   "jest": {
-    "coverageDirectory": "coverage"
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
   },
   "devDependencies": {
     "jest": "^23.6.0",

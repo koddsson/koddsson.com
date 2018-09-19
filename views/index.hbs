@@ -82,8 +82,13 @@
         </div>
         <div class='content'>
           <h2>📝 Notes</h2> 
-          {{#each notes}}
-            {{> note}}
+          {{#each feedItems}}
+            {{#if isNote}}
+              {{> note}}
+            {{/if}}
+            {{#if isFavorite}}
+              {{> favorite}}
+            {{/if}}
           {{/each}}
         </div>
       </section>

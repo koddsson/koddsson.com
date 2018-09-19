@@ -3,7 +3,7 @@ const sqlite = require('sqlite')
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const dbPromise = require('./data')
+const getDB = require('./data')
 
 const app = express()
 app.use(bodyParser.json())
@@ -30,7 +30,7 @@ app.post('/', async (req, res) => {
     return res.status(401).send('Unauthorized')
   }
 
-  const db = await dbPromise
+  const db = await getDB()
 
   if (req.body['like-of']) {
     // TODO: Try and get metadata and add to the table.
