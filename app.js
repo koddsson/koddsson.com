@@ -8,7 +8,7 @@ const markdown = require('helper-markdown');
 
 const micropub = require('./micropub')
 const notes = require('./notes')
-const dbPromise = require('./data')
+const getDB = require('./data')
 
 const app = express()
 
@@ -24,21 +24,32 @@ hbs.registerHelper('markdown', markdown({linkify: true}));
   
 
 app.get('/', async (req, res) => {
-  const db = await dbPromise
-  const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC LIMIT 5')
-  const notesWithTimestamps = await Promise.all(notes.map(async note => {
-    note.timestamp = relativeDate(note.slug * 1000)
-    note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
-    return note;
+  const db = await getDB()
+  const feedItems = await db.all(`
+    SELECT url as content, timestamp as slug, 'favorite' as type from favorites
+    UNION ALL
+    SELECT content, slug, 'note' as type FROM notes
+    ORDER BY slug DESC
+    LIMIT 5
+  `)
+  const feedItemsWithTimestamps = await Promise.all(feedItems.map(async item => {
+    item.timestamp = relativeDate(item.slug * 1000)
+    item.isNote = item.type === 'note'
+    item.isFavorite = item.type === 'favorite'
+    /* istanbul ignore else */
+    if (item.isNote) {
+      item.photo = await db.get('SELECT * FROM photos where slug = ?', item.slug)
+    }
+    return item;
   }))
-  return res.render('index', {notes: notesWithTimestamps})
+  return res.render('index', {feedItems: feedItemsWithTimestamps})
 })
 
 app.use('/micropub', micropub)
 app.use('/notes', notes)
 
 app.get('/favorites', async (req, res) => {
-  const db = await dbPromise
+  const db = await getDB()
   const favorites = await db.all('SELECT * FROM favorites ORDER BY timestamp DESC')
   return res.render('favorites', {favorites})
 })

@@ -8,7 +8,7 @@ const markdown = require('helper-markdown');
 const Entities = require('html-entities').XmlEntities;
 const handlebars = require('handlebars')
 
-const dbPromise = require('./data')
+const getDB = require('./data')
 const entities = new Entities();
 
 handlebars.registerHelper('markdown', markdown({linkify: true}));
@@ -23,7 +23,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('markdown', markdown({linkify: true}));
 
 app.get('/', async (req, res) => {
-  const db = await dbPromise
+  const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
   const notesWithTimestamps = await Promise.all(notes.map(async note => {
     note.timestamp = relativeDate(note.slug * 1000)
@@ -34,7 +34,7 @@ app.get('/', async (req, res) => {
 })
 
 app.get('/feed.xml', async (req, res) => {
-  const db = await dbPromise
+  const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
   const notesWithTimestamps = await Promise.all(notes.map(async note => {
     note.timestamp = relativeDate(note.slug * 1000)
@@ -80,7 +80,7 @@ app.get('/:slug', async (req, res) => {
     return res.redirect(301, `/notes/${legacyLinks[req.params.slug]}`)
   }
 
-  const db = await dbPromise
+  const db = await getDB()
   const note = await db.get(
     "SELECT * FROM notes WHERE slug = ?",
     req.params.slug
