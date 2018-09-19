@@ -26,7 +26,7 @@ hbs.registerHelper('markdown', markdown({linkify: true}));
 app.get('/', async (req, res) => {
   const db = await getDB()
   const feedItems = await db.all(`
-    SELECT url as content, timestamp as slug, 'favorite' as type from favorites
+    SELECT url as content, slug, 'favorite' as type from favorites
     UNION ALL
     SELECT content, slug, 'note' as type FROM notes
     ORDER BY slug DESC

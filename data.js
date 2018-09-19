@@ -16,7 +16,8 @@ module.exports = async function() {
       await db.run(`
         CREATE TABLE IF NOT EXISTS favorites (
           url varchar(128),
-          timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+          timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+          slug char(10)
         );
       `)
       await db.run(`

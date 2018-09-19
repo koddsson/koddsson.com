@@ -34,9 +34,11 @@ app.post('/', async (req, res) => {
 
   if (req.body['like-of']) {
     // TODO: Try and get metadata and add to the table.
+    const timestamp = Math.floor(new Date() / 1000)
     await db.run(
-      "INSERT INTO favorites VALUES (?, DateTime('now'))",
-      req.body['like-of']
+      "INSERT INTO favorites VALUES (?, DateTime('now'), ?)",
+      req.body['like-of'],
+      timestamp
     );
     // TODO: Set this header more correctly
     res.header('Location', 'https://koddsson.com/favorites')
