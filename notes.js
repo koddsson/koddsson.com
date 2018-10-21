@@ -42,9 +42,19 @@ app.get('/feed.xml', async (req, res) => {
     return note;
   }))
   const items = notes.map(note => {
+    const date = new Date(note.slug * 1000)
+    let month = date.getMonth() + 1
+    if (month < 10) {
+      month = `0${month}`
+    }
+    let day = date.getDate()
+    if (day < 10) {
+      day = `0${day}`
+    }
+    const timestamp = `${date.getFullYear()}-${month}-${day}`
     return `
     <item>
-      <title>${note.slug}</title>
+      <title>${timestamp}</title>
       <description>${entities.encode(rssNoteTemplate(note))}</description>
       <pubDate>${new Date(note.slug * 1000).toUTCString()}</pubDate>
       <link>https://koddsson.com/notes/${note.slug}</link>
