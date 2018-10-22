@@ -7,9 +7,10 @@ describe('GET', () => {
     const slug = Math.floor(new Date() / 1000)
     const db = await getDB()
     await db.run(
-      "INSERT INTO notes VALUES (?, ?)",
+      "INSERT INTO notes VALUES (?, ?, ?)",
       slug,
-      'Post from app.test.js'
+      'Post from app.test.js',
+      null
     );
     await db.run(
       "INSERT INTO photos VALUES(?, ?, ?)",

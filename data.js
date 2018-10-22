@@ -7,10 +7,12 @@ module.exports = async function() {
   /* istanbul ignore else */
   if (process.env.DB_HOST === 'test.db') {
       const db = await dbPromise
+      // TODO: Read this from SQL files!
       await db.run(`
         CREATE TABLE IF NOT EXISTS notes (
           slug char(10),
-          content varchar(1024)
+          content varchar(1024),
+          geourl varchar(256)
         );
       `)
       await db.run(`

@@ -49,9 +49,10 @@ app.post('/', async (req, res) => {
   } else if (req.body['h'] === 'entry') {
     const timestamp = Math.floor(new Date() / 1000)
     await db.run(
-      "INSERT INTO notes VALUES (?, ?)",
+      "INSERT INTO notes VALUES (?, ?, ?)",
       timestamp,
-      req.body['content']
+      req.body['content'],
+      req.body['location']
     );
     // TODO: Set this header more correctly
     res.header('Location', `https://koddsson.com/notes/${timestamp}`)
@@ -72,9 +73,10 @@ app.post('/', async (req, res) => {
     }
 
     await db.run(
-      "INSERT INTO notes VALUES (?, ?)",
+      "INSERT INTO notes VALUES (?, ?, ?)",
       timestamp,
-      content
+      content,
+      null
     );
     // TODO: Set this header more correctly
     res.header('Location', `https://koddsson.com/notes/${timestamp}`)

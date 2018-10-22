@@ -14,15 +14,17 @@ describe('GET', () => {
   beforeAll(async () => {
     const db = await getDB()
     await db.run(
-      "INSERT INTO notes VALUES (?, ?)",
-      Math.floor(new Date() / 1000),
-      'Post from notes.text.js'
+      "INSERT INTO notes VALUES (?, ?, ?)",
+      Math.floor(new Date('2018-01-01') / 1000),
+      'Post from notes.text.js',
+      null
     );
     for (const [slug, id] of Object.entries(legacyLinks)) {
       await db.run(
-        "INSERT INTO notes VALUES (?, ?)",
+        "INSERT INTO notes VALUES (?, ?, ?)",
         id,
-        'Legacy post!'
+        'Legacy post!',
+        null
       );
     }
   })
