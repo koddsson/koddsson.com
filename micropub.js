@@ -59,15 +59,17 @@ app.post('/', async (req, res) => {
   } else if (req.body['type'] && req.body['type'].includes('h-entry')) {
     const timestamp = Math.floor(new Date() / 1000)
     const properties = req.body.properties
-    const photo = properties.photo[0]
+    const photo = properties.photo && properties.photo[0]
     const content = properties.content[0]
 
-    await db.run(
-      "INSERT INTO photos VALUES (?, ?, ?)",
-      timestamp,
-      photo.value,
-      photo.alt 
-    );
+    if (photo) {
+      await db.run(
+        "INSERT INTO photos VALUES (?, ?, ?)",
+        timestamp,
+        photo.value,
+        photo.alt 
+      );
+    }
 
     await db.run(
       "INSERT INTO notes VALUES (?, ?)",
