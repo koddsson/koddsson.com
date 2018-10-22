@@ -32,6 +32,9 @@ app.post('/', async (req, res) => {
 
   const db = await getDB()
 
+  // Don't remove this. It's good to know what requests look like
+  console.log(req.body)
+
   if (req.body['like-of']) {
     // TODO: Try and get metadata and add to the table.
     const timestamp = Math.floor(new Date() / 1000)
