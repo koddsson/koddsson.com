@@ -13,9 +13,60 @@
 
     <link rel="webmention" href="https://webmention.io/koddsson.com/webmention" />
     <link rel="pingback" href="https://webmention.io/koddsson.com/xmlrpc" />
+        
+    <script>
+      const data = {
+  "links": [
+    {
+      "source": "https://micro.blog/koddsson/1434304",
+      "verified": true,
+      "verified_date": "2018-12-16T21:40:20+00:00",
+      "id": 569888,
+      "private": false,
+      "data": {
+        "author": {
+          "name": "koddsson",
+          "url": "https://micro.blog/koddsson",
+          "photo": "https://webmention.io/avatar/www.gravatar.com/8dea5515003487501ed2127fc4666fc0d78983cf2e1b4d1343feee99ec237eb1.jpg"
+        },
+        "url": "https://micro.blog/koddsson/1434304",
+        "name": null,
+        "content": "<p><a href=\"https://micro.blog/koddsson\">@koddsson</a> more testing!</p>",
+        "published": "2018-12-16T21:40:05+00:00",
+        "published_ts": 1544996405
+      },
+      "activity": {
+        "type": "reply",
+        "sentence": "koddsson commented '@koddsson more testing!' on a post https://koddsson.com/notes/1544907152",
+        "sentence_html": "<a href=\"https://micro.blog/koddsson\">koddsson</a> commented '@koddsson more testing!' on a post <a href=\"https://koddsson.com/notes/1544907152\">https://koddsson.com/notes/1544907152</a>"
+      },
+      "target": "https://koddsson.com/notes/1544907152"
+    }
+  ]
+}
+      //fetch(`https://webmention.io/api/mentions?target=${window.location.origin}${window.location.pathname}`)
+      //  .then(response => response.json())
+      //  .then(json => {
+      //    const
+      //  })
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('#container')
+        for (const comment of data.links) {
+          const t = document.querySelector('template').cloneNode(true).content
+          t.querySelector('.profile-pic').src = comment.data.author.photo
+          t.querySelector('.author').textContent = comment.data.author.name
+          t.querySelector('.author').href = comment.data.author.url
+          t.querySelector('.content').innerHTML = comment.data.content
+
+          t.querySelector('time a').href = comment.data.url
+          t.querySelector('time a').textContent = comment.data.published
+          container.appendChild(t)
+        }
+      })
+    </script>
   </head>
   <body style="padding: 1em" class="d-flex flex-column">
-    <div style="flex: 1;max-width: 40em;margin: auto;">
+    <div id="container" style="flex: 1;max-width: 40em;margin: auto;">
       <div class="post">
         {{#if photo}}
         <div class="image mb-1">
@@ -29,6 +80,21 @@
           <time>{{note.timestamp}}</time>
         </a>
       </div>
+      <h3>Replies</h3>
+      <template>
+        <div class="post d-flex flex-row">
+          <img class="profile-pic mr-1" />
+          <div class="d-flex flex-item flex-column">
+            <div class="content flex-item"></div>
+            <div class="d-flex" style="justify-content: space-between">
+              <a class="author"></a>
+              <time class="timestamp">
+                <a href=""></a>
+              </time>
+            </div>
+          </div>
+        </div>
+      </template>
     </div>
     <a href="/notes" class="btn">
       Back to notes
