@@ -32,7 +32,7 @@ app.post('/', async (req, res) => {
 
   const db = await getDB()
 
-  // Don't remove this. It's good to know what requests look like
+  // Don't remove this. It's good to know what requests look like in the logs
   console.log(req.body)
 
   if (req.body['like-of']) {
