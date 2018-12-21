@@ -2,8 +2,33 @@ const fetch = require('node-fetch')
 const sqlite = require('sqlite')
 const express = require('express')
 const bodyParser = require('body-parser')
+const Twit = require('twit')
 
 const getDB = require('./data')
+
+const T = new Twit({
+  consumer_key:         process.env.CONSUMER_KEY,
+  consumer_secret:      process.env.CONSUMER_SECRET,
+  access_token:         process.env.ACCESS_TOKEN,
+  access_token_secret:  process.env.ACCESS_TOKEN_SECRET,
+  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+  strictSSL:            true,     // optional - requires SSL certificates to be valid.
+})
+
+function tweetNote(note, noteLink) {
+  if ((note.length + noteLink.length + 3) > 280) {
+    const howManyCharsToTake = 280 - (noteLink.length + 3)
+    note = note.substring(0, howManyCharsToTake) + '..'
+  }
+
+  T.post(
+    'statuses/update',
+    { status: `${note} - ${noteLink}` },
+    function(err, data, response) {
+      console.log(err)
+    }
+  )
+}
 
 const app = express()
 app.use(bodyParser.json())
@@ -48,14 +73,19 @@ app.post('/', async (req, res) => {
     return res.status(201).send('Favorited')
   } else if (req.body['h'] === 'entry') {
     const timestamp = Math.floor(new Date() / 1000)
+    const note = req.body['content']
     await db.run(
       "INSERT INTO notes VALUES (?, ?, ?)",
       timestamp,
-      req.body['content'],
+      note,
       req.body['location']
     );
+
+    const noteLink = `https://koddsson.com/notes/${timestamp}`
+    tweetNote(note, noteLink)
+
     // TODO: Set this header more correctly
-    res.header('Location', `https://koddsson.com/notes/${timestamp}`)
+    res.header('Location', noteLink)
     return res.status(201).send('Note posted')
   } else if (req.body['type'] && req.body['type'].includes('h-entry')) {
     const timestamp = Math.floor(new Date() / 1000)
