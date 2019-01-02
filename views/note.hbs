@@ -16,34 +16,59 @@
         
     <script>
       const data = {
-  "links": [
-    {
-      "source": "https://micro.blog/koddsson/1434304",
-      "verified": true,
-      "verified_date": "2018-12-16T21:40:20+00:00",
-      "id": 569888,
-      "private": false,
-      "data": {
-        "author": {
-          "name": "koddsson",
-          "url": "https://micro.blog/koddsson",
-          "photo": "https://webmention.io/avatar/www.gravatar.com/8dea5515003487501ed2127fc4666fc0d78983cf2e1b4d1343feee99ec237eb1.jpg"
-        },
-        "url": "https://micro.blog/koddsson/1434304",
-        "name": null,
-        "content": "<p><a href=\"https://micro.blog/koddsson\">@koddsson</a> more testing!</p>",
-        "published": "2018-12-16T21:40:05+00:00",
-        "published_ts": 1544996405
-      },
-      "activity": {
-        "type": "reply",
-        "sentence": "koddsson commented '@koddsson more testing!' on a post https://koddsson.com/notes/1544907152",
-        "sentence_html": "<a href=\"https://micro.blog/koddsson\">koddsson</a> commented '@koddsson more testing!' on a post <a href=\"https://koddsson.com/notes/1544907152\">https://koddsson.com/notes/1544907152</a>"
-      },
-      "target": "https://koddsson.com/notes/1544907152"
-    }
-  ]
-}
+        "links": [
+          {
+            "source": "https://micro.blog/koddsson/1434304",
+            "verified": true,
+            "verified_date": "2018-12-16T21:40:20+00:00",
+            "id": 569888,
+            "private": false,
+            "data": {
+              "author": {
+                "name": "koddsson",
+                "url": "https://micro.blog/koddsson",
+                "photo": "https://webmention.io/avatar/www.gravatar.com/8dea5515003487501ed2127fc4666fc0d78983cf2e1b4d1343feee99ec237eb1.jpg"
+              },
+              "url": "https://micro.blog/koddsson/1434304",
+              "name": null,
+              "content": "<p><a href=\"https://micro.blog/koddsson\">@koddsson</a> more testing!</p>",
+              "published": "2018-12-16T21:40:05+00:00",
+              "published_ts": 1544996405
+            },
+            "activity": {
+              "type": "reply",
+              "sentence": "koddsson commented '@koddsson more testing!' on a post https://koddsson.com/notes/1544907152",
+              "sentence_html": "<a href=\"https://micro.blog/koddsson\">koddsson</a> commented '@koddsson more testing!' on a post <a href=\"https://koddsson.com/notes/1544907152\">https://koddsson.com/notes/1544907152</a>"
+            },
+            "target": "https://koddsson.com/notes/1544907152"
+          },
+          {
+            "source": "https://brid-gy.appspot.com/like/twitter/koddsson/1080491621874089986/15578573",
+            "verified":true,
+            "verified_date":"2019-01-02T18:06:51+00:00",
+            "id":573328,
+            "private":false,
+            "data": {
+              "author": {
+                "name":"yess_padilla",
+                "url":"https://twitter.com/yess_padilla",
+                "photo":"https://webmention.io/avatar/pbs.twimg.com/aeb223ce53dfcfe8437d0cf954cdf675629db7a051bbab27c111e4940aa9b2bd.jpg"
+              },
+              "url": "https://twitter.com/koddsson/status/1080491621874089986#favorited-by-15578573",
+              "name":null,
+              "content":null,
+              "published":null,
+              "published_ts":null
+            },
+            "activity": {
+              "type":"like",
+              "sentence":"yess_padilla favorited a tweet https://koddsson.com/notes/1546444251",
+              "sentence_html":"<a href=\"https://twitter.com/yess_padilla\">yess_padilla</a> favorited a tweet <a href=\"https://koddsson.com/notes/1546444251\">https://koddsson.com/notes/1546444251</a>"
+            },
+            "target":"https://koddsson.com/notes/1546444251"
+          },
+        ]
+      }
       document.addEventListener('DOMContentLoaded', async () => {
         const response = await fetch(`https://webmention.io/api/mentions?target=${window.location.origin}${window.location.pathname}`)
         const data = await response.json()
