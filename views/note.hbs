@@ -83,17 +83,17 @@
             t.querySelector('time a').href = comment.data.url
             t.querySelector('time a').textContent = comment.verified_date
             container.appendChild(t)
-            return 
-          }
-          const t = document.querySelector('template#comment').cloneNode(true).content
-          t.querySelector('.profile-pic').src = comment.data.author.photo
-          t.querySelector('.author').textContent = comment.data.author.name
-          t.querySelector('.author').href = comment.data.author.url
-          t.querySelector('.content').innerHTML = comment.data.content
+          } else {
+            const t = document.querySelector('template#comment').cloneNode(true).content
+            t.querySelector('.profile-pic').src = comment.data.author.photo
+            t.querySelector('.author').textContent = comment.data.author.name
+            t.querySelector('.author').href = comment.data.author.url
+            t.querySelector('.content').innerHTML = comment.data.content
 
-          t.querySelector('time a').href = comment.data.url
-          t.querySelector('time a').textContent = comment.data.published
-          container.appendChild(t)
+            t.querySelector('time a').href = comment.data.url
+            t.querySelector('time a').textContent = comment.data.published
+            container.appendChild(t)
+          }
         }
       })
     </script>
