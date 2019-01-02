@@ -74,7 +74,18 @@
         const data = await response.json()
         const container = document.querySelector('#container')
         for (const comment of data.links) {
-          const t = document.querySelector('template').cloneNode(true).content
+          if (comment.activity.type === 'like') {
+            const t = document.querySelector('template#like').cloneNode(true).content
+            t.querySelector('.profile-pic').src = comment.data.author.photo
+            t.querySelector('.author').textContent = comment.data.author.name
+            t.querySelector('.author').href = comment.data.author.url
+
+            t.querySelector('time a').href = comment.data.url
+            t.querySelector('time a').textContent = comment.verified_date
+            container.appendChild(t)
+            return 
+          }
+          const t = document.querySelector('template#comment').cloneNode(true).content
           t.querySelector('.profile-pic').src = comment.data.author.photo
           t.querySelector('.author').textContent = comment.data.author.name
           t.querySelector('.author').href = comment.data.author.url
@@ -103,13 +114,28 @@
         </a>
       </div>
       <h3>Replies</h3>
-      <template>
+      <template id="comment">
         <div class="post d-flex flex-row">
           <img class="profile-pic mr-1" />
           <div class="d-flex flex-item flex-column">
             <div class="content flex-item"></div>
             <div class="d-flex" style="justify-content: space-between">
               <a class="author"></a>
+              <time class="timestamp">
+                <a href=""></a>
+              </time>
+            </div>
+          </div>
+        </div>
+      </template>
+      <template id="like">
+        <div class="post d-flex flex-row">
+          <img class="profile-pic small mr-1" />
+          <div class="d-flex flex-item flex-column">
+            <div class="content flex-item">
+              <a class="author"></a> liked this note
+            </div>
+            <div style="text-align: right">
               <time class="timestamp">
                 <a href=""></a>
               </time>
