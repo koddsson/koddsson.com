@@ -106,8 +106,11 @@ app.post('/', async (req, res) => {
       // the image again if we want to upload it to twitter 🙄
 
       // Fetch the image
+      console.log(photo.value)
       const response  = await fetch(photo.value)
+      console.log(response)
       const blob = await response.blob()
+      console.log(blob)
 
       // Convert image to base64
       const reader = new FileReader();
