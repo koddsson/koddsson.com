@@ -110,17 +110,21 @@ app.post('/', async (req, res) => {
 
       // Post the media to Twitter
       T.post('media/upload', { media_data: b64content }, function (err, data, response) {
+        if (err) console.log(err)
         // now we can assign alt text to the media, for use by screen readers and
         // other text-based presentations and interpreters
         const mediaIdStr = data.media_id_string
         const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } }
 
         T.post('media/metadata/create', meta_params, function (err, data, response) {
-          if (!err) {
+          if (err) {
+            console.log(err)
+          } else {
             // now we can reference the media and post a tweet (media will attach to the tweet)
             const params = { status: content, media_ids: [mediaIdStr] }
 
             T.post('statuses/update', params, function (err, data, response) {
+              if (err) console.log(err)
               console.log(data)
             })
           }
