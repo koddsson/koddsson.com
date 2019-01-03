@@ -110,6 +110,8 @@ app.post('/', async (req, res) => {
       const response  = await fetch(photo.value)
       console.log(response)
       const blob = await response.blob()
+      // The filereader package checks for name for some reason :(
+      blob.name = 'foobar'
       console.log(blob)
 
       // Convert image to base64
