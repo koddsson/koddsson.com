@@ -106,7 +106,7 @@ app.post('/', async (req, res) => {
       // the image again if we want to upload it to twitter 🙄
 
       // Fetch the image
-      const b64content = await fetch64.remote('http://domain.com/to/image.jpg')[0]
+      const b64content = await fetch64.remote(photo.value)[0]
 
       // Post the media to Twitter
       T.post('media/upload', { media_data: b64content }, function (err, data, response) {
