@@ -16,19 +16,38 @@ const T = new Twit({
   strictSSL:            true,     // optional - requires SSL certificates to be valid.
 })
 
-function tweetNote(note, noteLink) {
+async function tweetNote(note, noteLink, photo) {
+  const params = {}
   if ((note.length + noteLink.length + 3) > 280) {
     const howManyCharsToTake = 280 - (noteLink.length + 3)
     note = note.substring(0, howManyCharsToTake) + '..'
   }
+  params.status = `${note} - ${noteLink}`
 
-  T.post(
-    'statuses/update',
-    { status: `${note} - ${noteLink}` },
-    function(err, data, response) {
-      console.log(err)
-    }
-  )
+  if (photo) {
+    // Since the image went to the media endpoint and not to the micropub endpoint we need to fetch
+    // the image again if we want to upload it to twitter 🙄
+
+    // Fetch the image
+    const b64content = await fetch64.remote(photo.value)
+
+    // Post the media to Twitter
+    const {data} = await T.post('media/upload', { media: b64content[0] })
+
+    // now we can assign alt text to the media, for use by screen readers and
+    // other text-based presentations and interpreters
+    const mediaIdStr = data.media_id_string
+    const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } }
+    await T.post('media/metadata/create', meta_params)
+
+    // now we can reference the media and post a tweet (media will attach to the tweet)
+    params.media_ids = [mediaIdStr]
+  }
+
+  // Post tweet
+  T.post('statuses/update', params, function(err, data, response) {
+    console.log(err)
+  })
 }
 
 const app = express()
@@ -83,7 +102,7 @@ app.post('/', async (req, res) => {
     );
 
     const noteLink = `https://koddsson.com/notes/${timestamp}`
-    tweetNote(note, noteLink)
+    await tweetNote(note, noteLink)
 
     // TODO: Set this header more correctly
     res.header('Location', noteLink)
@@ -101,35 +120,6 @@ app.post('/', async (req, res) => {
         photo.value,
         photo.alt 
       );
-
-      // Since the image went to the media endpoint and not to the micropub endpoint we need to fetch
-      // the image again if we want to upload it to twitter 🙄
-
-      // Fetch the image
-      const b64content = await fetch64.remote(photo.value)
-
-      // Post the media to Twitter
-      T.post('media/upload', { media: b64content[0] }, function (err, data, response) {
-        if (err) console.log(err)
-        // now we can assign alt text to the media, for use by screen readers and
-        // other text-based presentations and interpreters
-        const mediaIdStr = data.media_id_string
-        const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } }
-
-        T.post('media/metadata/create', meta_params, function (err, data, response) {
-          if (err) {
-            console.log(err)
-          } else {
-            // now we can reference the media and post a tweet (media will attach to the tweet)
-            const params = { status: content, media_ids: [mediaIdStr] }
-
-            T.post('statuses/update', params, function (err, data, response) {
-              if (err) console.log(err)
-              console.log(data)
-            })
-          }
-        })
-      })
     }
 
     await db.run(
@@ -138,8 +128,12 @@ app.post('/', async (req, res) => {
       content,
       null
     );
+
+    const noteLink = `https://koddsson.com/notes/${timestamp}`
+    await tweetNote(content, noteLink, photo)
+
     // TODO: Set this header more correctly
-    res.header('Location', `https://koddsson.com/notes/${timestamp}`)
+    res.header('Location', noteLink)
     return res.status(201).send('Note posted')
   }
 
