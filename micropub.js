@@ -109,7 +109,7 @@ app.post('/', async (req, res) => {
       const b64content = await fetch64.remote(photo.value)[0]
 
       // Post the media to Twitter
-      T.post('media/upload', { media_data: b64content }, function (err, data, response) {
+      T.post('media/upload', { media: b64content }, function (err, data, response) {
         if (err) console.log(err)
         // now we can assign alt text to the media, for use by screen readers and
         // other text-based presentations and interpreters
