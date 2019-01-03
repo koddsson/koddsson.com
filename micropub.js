@@ -100,6 +100,39 @@ app.post('/', async (req, res) => {
         photo.value,
         photo.alt 
       );
+
+      // Since the image went to the media endpoint and not to the micropub endpoint we need to fetch
+      // the image again if we want to upload it to twitter 🙄
+
+      // Fetch the image
+      const response  = await fetch(photo.value)
+      const blob = await response.blob()
+
+      // Convert image to base64
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onloadend = function() {
+        base64content = reader.result;
+
+        // Post the media to Twitter
+        T.post('media/upload', { media_data: b64content }, function (err, data, response) {
+          // now we can assign alt text to the media, for use by screen readers and
+          // other text-based presentations and interpreters
+          const mediaIdStr = data.media_id_string
+          const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } }
+
+          T.post('media/metadata/create', meta_params, function (err, data, response) {
+            if (!err) {
+              // now we can reference the media and post a tweet (media will attach to the tweet)
+              const params = { status: content, media_ids: [mediaIdStr] }
+
+              T.post('statuses/update', params, function (err, data, response) {
+                console.log(data)
+              })
+            }
+          })
+        })
+      }
     }
 
     await db.run(
