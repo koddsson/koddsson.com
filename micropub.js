@@ -3,7 +3,7 @@ const sqlite = require('sqlite')
 const express = require('express')
 const bodyParser = require('body-parser')
 const Twit = require('twit')
-const FileReader = require('filereader')
+const fetch64 = require('fetch-base64');
 
 const getDB = require('./data')
 
@@ -106,39 +106,26 @@ app.post('/', async (req, res) => {
       // the image again if we want to upload it to twitter 🙄
 
       // Fetch the image
-      console.log(photo.value)
-      const response  = await fetch(photo.value)
-      console.log(response)
-      const blob = await response.blob()
-      // The filereader package checks for name for some reason :(
-      blob.name = 'foobar'
-      console.log(blob)
+      const b64content = await fetch64.remote('http://domain.com/to/image.jpg')[0]
 
-      // Convert image to base64
-      const reader = new FileReader();
-      reader.readAsDataURL(blob);
-      reader.onloadend = function() {
-        base64content = reader.result;
+      // Post the media to Twitter
+      T.post('media/upload', { media_data: b64content }, function (err, data, response) {
+        // now we can assign alt text to the media, for use by screen readers and
+        // other text-based presentations and interpreters
+        const mediaIdStr = data.media_id_string
+        const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } }
 
-        // Post the media to Twitter
-        T.post('media/upload', { media_data: b64content }, function (err, data, response) {
-          // now we can assign alt text to the media, for use by screen readers and
-          // other text-based presentations and interpreters
-          const mediaIdStr = data.media_id_string
-          const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } }
+        T.post('media/metadata/create', meta_params, function (err, data, response) {
+          if (!err) {
+            // now we can reference the media and post a tweet (media will attach to the tweet)
+            const params = { status: content, media_ids: [mediaIdStr] }
 
-          T.post('media/metadata/create', meta_params, function (err, data, response) {
-            if (!err) {
-              // now we can reference the media and post a tweet (media will attach to the tweet)
-              const params = { status: content, media_ids: [mediaIdStr] }
-
-              T.post('statuses/update', params, function (err, data, response) {
-                console.log(data)
-              })
-            }
-          })
+            T.post('statuses/update', params, function (err, data, response) {
+              console.log(data)
+            })
+          }
         })
-      }
+      })
     }
 
     await db.run(
