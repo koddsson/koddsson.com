@@ -3,6 +3,7 @@ const sqlite = require('sqlite')
 const express = require('express')
 const bodyParser = require('body-parser')
 const Twit = require('twit')
+const FileReader = require('filereader')
 
 const getDB = require('./data')
 
