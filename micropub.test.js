@@ -53,14 +53,14 @@ describe('POST', () => {
     });
     
     test('note', (done) => {
-      this.request.send({"h": "entry"}).then((response) => {
+      this.request.send({"h": "entry", content: "Very cool tweet"}).then((response) => {
         expect(response.statusCode).toBe(201);
         done();
       });
     });
     
     test('note with photo', (done) => {
-      this.request.send({"type": "h-entry", "properties": {"photo": [{value: null, alt: null}], "content": ""}}).then((response) => {
+      this.request.send({"type": "h-entry", "properties": {"photo": [{value: "https://koddsson.com/me.jpg", alt: "Cool dude"}], "content": ["Very cool photo"]}}).then((response) => {
         expect(response.statusCode).toBe(201);
         done();
       });
