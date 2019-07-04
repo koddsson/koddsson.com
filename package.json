@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "rm -rf test.db && DB_HOST='test.db' jest --silent",
+    "test": "rm -rf test.db && DONT_POST_ON_TWITTER=1 DB_HOST='test.db' jest --silent",
     "start": "node index.js"
   },
   "keywords": [],
@@ -28,15 +28,7 @@
   },
   "jest": {
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "coverageThreshold": {
-      "global": {
-        "branches": 95,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    }
+    "collectCoverage": true
   },
   "devDependencies": {
     "jest": "^24.8.0",
