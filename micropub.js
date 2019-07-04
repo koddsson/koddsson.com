@@ -17,6 +17,10 @@ const T = new Twit({
 })
 
 async function tweetNote(note, noteLink, photo) {
+  if (process.env.DONT_POST_ON_TWITTER) {
+    return
+  }
+
   const params = {}
   if ((note.length + noteLink.length + 3) > 280) {
     const howManyCharsToTake = 280 - (noteLink.length + 3)
