@@ -46,7 +46,7 @@ async function tweetNote(note, noteLink, photo) {
 
   // Post tweet
   T.post('statuses/update', params, function(err, data, response) {
-    console.log(err)
+    throw err
   })
 }
 
