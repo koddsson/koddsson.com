@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 :root {
   --background-color: #ffffff;
@@ -28,7 +28,6 @@ body {
 
 .container {
   display: flex;
-  /* height: 100%; */
 }
 
 .sidebar {
@@ -94,8 +93,7 @@ a {
   flex-direction: column;
   margin-bottom: 0.83em;
   padding: 0.83em;
-  border: 1px solid gray;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .post.small > .body {
@@ -115,7 +113,7 @@ a {
   margin-top: 0;
 }
 .post > h3 > a {
-  /*text-decoration: none;*/
+  text-decoration: none;
 }
 
 /* Utilites */
