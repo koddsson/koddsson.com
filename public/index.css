@@ -27,7 +27,13 @@ body {
 }
 
 .container {
+  height: 100%;
   display: flex;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar {
