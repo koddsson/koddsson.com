@@ -1,0 +1,8 @@
+{
+  "name": "koddsson.com",
+  "short_name": "koddsson.com",
+  "display": "browser",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/"
+}
