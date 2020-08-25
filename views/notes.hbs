@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="/index.css">
   </head>
   <body style="padding: 1em" class="d-flex flex-column">
-    <div style="flex: 1;">
+    <section class="main" style="flex: 1;">
       <h1>📝 Notes</h1>
+      <a href="/" class="mb-1">Go back</a>
 
       {{#each notes}}
         {{> note}}
       {{/each}}
-    </div>
-    <a href="/" class="btn">Back home</a>
+    </section>
   </body>
 </html>

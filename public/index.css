@@ -92,7 +92,7 @@ a {
 /* Utilites */
 
 .mb-1 {
-  margin-bottom: 1em;
+  margin-bottom: 1em !important;
 }
 
 .mr-1 {
