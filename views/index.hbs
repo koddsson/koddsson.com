@@ -3,6 +3,7 @@
   <head>
     <link rel="icon" data-emoji="👨‍💻" type="image/png">
     <title>koddsson.com</title>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Personal website of Kristján Oddsson">
@@ -21,90 +22,42 @@
     <script async src="scripts/emoji-favicon.js"></script>
   </head>
   <body>
-    <div class='container'>
-      <div class="sidebar vcard">
-        <img src='me.jpg' alt='me' class="photo profile_pic">
-        <div class="section">
-          <h1 class="name"><a class="url fn nolink text-black" href="https://koddsson.com" rel="me">Kristján Oddsson</a></h1>
-          <dl class="post">
-            <dt>E-Mail</dt>
-            <dd>
-              <a class="email" href="mailto:koddsson@gmail.com">koddsson@gmail.com</a>
-            </dd>
-            <dt>Location</dt>
-            <dd>
-              <div class="adr">
-                <span class="locality">London</span>,
-                <span class="country-name">United Kingdom</span>
-              </div>
-            </dd>
-            <dt>Pronouns</dt>
-            <dd>
-              <!-- per http://wiki.zegnat.net/microformats/pronoun -->
-              <a href="https://en.wiktionary.org/wiki/he#Pronoun" class="u-pronoun" lang="en">he</a>
-            </dd>
-            <dt>Across the internet</dt>
-            <dd>
-              <ul style="list-style: none; padding: 0; margin: 0">
-                <li>
-                <a target='_blank' rel="noopener me" href='https://twitter.com/koddsson'>
-                  Twitter
-                </a>
-                </li>
-                <li>
-                <a target='_blank' rel="noopener me" href='https://github.com/koddsson'>
-                  GitHub
-                </a>
-                </li>
-                <li>
-                <a target='_blank' rel="noopener me" href='https://keybase.io/koddsson'>
-                  Keybase
-                </a>
-                </li>
-              </ul>
-            </dd>
-          </dl>
-        </div>
+    <section class="main">
+      <h1 class="name">
+        👋🏻 Hey I'm Kristján.
+      </h1>
+      <ul>
+        <li>
+          <!-- per http://wiki.zegnat.net/microformats/pronoun -->
+          I use male pronouns (<a href="https://en.wiktionary.org/wiki/he#Pronoun" class="u-pronoun" lang="en">he</a>).
+        </li>
+        <li>
+          Originally I'm from Reykjavík, Iceland.
+        </li>
+        <li>
+          I'm currently living in <span class="locality">London</span>, <span class="country-name">The United Kingdom</span>.
+        </li>
+        <li>
+          You can e-mail me at <a class="email" href="mailto:hey@koddsson.com">hey@koddsson.com</a>.
+        </li>
+        <li>
+          Once I wrote about how <a href="posts/emoji-favicon/">you can use emojis as favicons.</a>
+        </li>
+        <li>
+          I don't use Twitter but <a href="/notes">I post "micro blog" style notes</a>. You can also <a href="/notes/feed.xml">grab the RSS feed</a>.
+        </li>
+        <li>
+          My latest note is:
+
+          {{#if latestNote.isNote}}
+          {{> note latestNote}}
+          {{/if}}
+          {{#if latestNote.isFavorite}}
+          {{> favorite latestNote}}
+          {{/if}}
+        </li>
       </div>
-      <section class="main">
-        <div class='content px-1'>
-          <h2>💻 Some junk I've built</h2>
-          <div class="post">
-            <h3><a href="posts/emoji-favicon/">Emojis as favicons</a></h3>
-            A simple JavaScript snippet to render emojis as favicons on a page.
-          </div>
-          <div class="post">
-            <h3><a href="places/">Places I've been</a></h3>
-            A map of the places I've been. It's pretty incomplete as of yet, both
-            in terms of code and the places I haven't recorded correctly and
-            haven't been yet :)
-          </div>
-          <div class="post">
-            <h3><a href="life-calendar/">Life calendar</a></h3>
-            A pretty depressive calendar that shows my life, if I turn out to be
-            90 years old, with each "lived" day marked green. I added some life
-            events I've had so far on there.
-          </div>
-          <div class="post">
-            <h3><a href="recipes/">My recipes</a></h3>
-            I collect my recipes here. I really liked my moms recipe book and
-            want to collect my own somewhere. Having it online rather then in a
-            physical book makes more sense to me.
-          </div>
-        </div>
-        <div class='content px-1'>
-          <h2>📝 Notes</h2> 
-          {{#each feedItems}}
-            {{#if isNote}}
-              {{> note}}
-            {{/if}}
-            {{#if isFavorite}}
-              {{> favorite}}
-            {{/if}}
-          {{/each}}
-        </div>
-        <p style="text-align:center;margin-top:auto;">Made by hand and JS in Reykjavík and London.</p>
-      </section>
-    </div>
+      </ul>
+    </section>
   </body>
 </html>

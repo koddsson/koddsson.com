@@ -6,12 +6,12 @@
     </div>
     {{/if}}
     <div class="content">
-      <div class="flex-item">
+      <div class="content-text flex-item">
         {{#markdown}}{{{content}}}{{/markdown}}
       </div>
-      <a href="/notes/{{slug}}" class="timestamp">
-        <time>{{timestamp}}</time>
-      </a>
     </div>
   </div>
+  <a href="/notes/{{slug}}" class="timestamp">
+    <time>{{timestamp}}</time>
+  </a>
 </div>

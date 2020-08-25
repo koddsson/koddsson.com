@@ -1,12 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 :root {
   --background-color: #ffffff;
+  --color-gray: #EEF0F2;
   --text-color: #191919;
+}
+
+section.main {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.main > ul {
+  margin-right: 30px;
+}
+
+.content-text {
+}
+
+li {
+  margin-bottom: 0.5em;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 html, body {
@@ -26,60 +48,8 @@ body {
   -moz-font-feature-settings: "liga" on;
 }
 
-.container {
-  display: flex;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar {
-  background-color: aliceblue;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  flex: 0;
-  flex-basis: 250px;
-}
-
-.sidebar h1 {
-  margin-top: 0;
-}
-
-.sidebar .section {
-  padding-top: 1em;
-}
-
-.sidebar a svg {
-  height: 24px;
-  width: 24px;
-}
-
-.sidebar .icons {
-  text-align: center;
-  margin-top: auto;
-  padding-top: 1.5em;
-}
-
 .content {
   width: 100%;
-}
-
-dt {
-  font-size: 1.3em;
-}
-
-dd {
-  margin: 10px 10px 10px 0;
-}
-
-.profile_pic {
-  margin: 0 auto;
-  border-radius: 50%;
-  width: 10em;
-  display: block;
 }
 
 .name {
@@ -102,6 +72,8 @@ a {
 
 .post.small > .body {
   display: flex;
+  border-left: 5px solid var(--color-gray); 
+  padding-left: 10px;
 }
 
 .post.small > .body > .image > img {
@@ -158,25 +130,6 @@ a {
 }
 
 @media (max-width: 568px) {
-  .container {
-    flex-direction: column;
-    padding: 1em;
-  }
-
-  .sidebar {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-  .sidebar .icons {
-    text-align: center;
-  }
-
-  .profile_pic {
-    margin: auto;
-  }
-
   .post.small > .body > .image > img {
     width: 100px;
   }
@@ -194,10 +147,4 @@ code {
   background-color: rgba(27,31,35,0.05);
   border-radius: 3px;
   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
-}
-
-.profile-pic {
-  height: 100px;
-  width: 100px;
-  object-fit: cover;
 }
