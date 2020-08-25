@@ -43,9 +43,7 @@ app.get("/", async (req, res) => {
       latestNote.slug
     );
   }
-  console.log(latestNote);
-  //return res.render('index', {feedItems: feedItemsWithTimestamps})
-  return res.render("new", { latestNote });
+  return res.render("index", { latestNote });
 });
 
 app.use("/micropub", micropub);
