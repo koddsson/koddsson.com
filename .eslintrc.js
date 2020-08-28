@@ -1,28 +1,32 @@
 module.exports = {
   root: true,
-  parserOptions: {
-    ecmaVersion: 2020,
+  plugins: ['prettier'],
+  rules: {
+    'prettier/prettier': 'error'
   },
-  extends: ["eslint:recommended", "prettier"],
+  parserOptions: {
+    ecmaVersion: 2020
+  },
+  extends: ['eslint:recommended', 'prettier'],
   env: {
     node: true,
-    es6: true,
+    es6: true
   },
   overrides: [
     {
-      files: ["__mocks__/**/*.js", "*.test.js"],
+      files: ['__mocks__/**/*.js', '*.test.js'],
       env: {
-        jest: "true",
+        jest: 'true'
       },
-      rules: {},
+      rules: {}
     },
     {
-      files: ["public/**/*.js"],
+      files: ['public/**/*.js'],
       env: {
         browser: true,
-        es6: true,
+        es6: true
       },
-      rules: {},
-    },
-  ],
-};
+      rules: {}
+    }
+  ]
+}

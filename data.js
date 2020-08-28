@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const dbPromise = sqlite.open(process.env.DB_HOST, {Promise})
 
-module.exports = async function() {
+module.exports = async function () {
   const db = await dbPromise
   // TODO: Read this from SQL files!
   await db.run(`

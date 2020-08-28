@@ -1,8 +1,8 @@
-let fetch = jest.genMockFromModule('node-fetch');
+let fetch = jest.genMockFromModule('node-fetch')
 
-fetch = function(url, options) {
+fetch = function (url, options) {
   return {
-    json: function() {
+    json: function () {
       if (options.headers.Authorization === 'VALID') {
         return {me: 'https://koddsson.com/'}
       } else {
@@ -12,4 +12,4 @@ fetch = function(url, options) {
   }
 }
 
-module.exports = fetch;
+module.exports = fetch
