@@ -1,57 +1,8 @@
 const fetch = require('node-fetch')
 const express = require('express')
 const bodyParser = require('body-parser')
-const Twit = require('twit')
-const fetch64 = require('fetch-base64')
 
 const getDB = require('./data')
-
-const T = new Twit({
-  consumer_key: process.env.CONSUMER_KEY,
-  consumer_secret: process.env.CONSUMER_SECRET,
-  access_token: process.env.ACCESS_TOKEN,
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
-  timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
-  strictSSL: true // optional - requires SSL certificates to be valid.
-})
-
-async function tweetNote(note, noteLink, photo) {
-  if (process.env.DONT_POST_ON_TWITTER) {
-    return
-  }
-
-  const params = {}
-  if (note.length + noteLink.length + 3 > 280) {
-    const howManyCharsToTake = 280 - (noteLink.length + 3)
-    note = note.substring(0, howManyCharsToTake) + '..'
-  }
-  params.status = `${note} - ${noteLink}`
-
-  if (photo) {
-    // Since the image went to the media endpoint and not to the micropub endpoint we need to fetch
-    // the image again if we want to upload it to twitter 🙄
-
-    // Fetch the image
-    const b64content = await fetch64.remote(photo.value)
-
-    // Post the media to Twitter
-    const {data} = await T.post('media/upload', {media: b64content[0]})
-
-    // now we can assign alt text to the media, for use by screen readers and
-    // other text-based presentations and interpreters
-    const mediaIdStr = data.media_id_string
-    const meta_params = {media_id: mediaIdStr, alt_text: {text: photo.alt}}
-    await T.post('media/metadata/create', meta_params)
-
-    // now we can reference the media and post a tweet (media will attach to the tweet)
-    params.media_ids = [mediaIdStr]
-  }
-
-  // Post tweet
-  T.post('statuses/update', params, function (err) {
-    throw err
-  })
-}
 
 const app = express()
 app.use(bodyParser.json())
@@ -96,7 +47,6 @@ app.post('/', async (req, res) => {
     await db.run('INSERT INTO notes VALUES (?, ?, ?)', timestamp, note, req.body['location'])
 
     const noteLink = `https://koddsson.com/notes/${timestamp}`
-    await tweetNote(note, noteLink)
 
     // TODO: Set this header more correctly
     res.header('Location', noteLink)
@@ -114,7 +64,6 @@ app.post('/', async (req, res) => {
     await db.run('INSERT INTO notes VALUES (?, ?, ?)', timestamp, content, null)
 
     const noteLink = `https://koddsson.com/notes/${timestamp}`
-    await tweetNote(content, noteLink, photo)
 
     // TODO: Set this header more correctly
     res.header('Location', noteLink)

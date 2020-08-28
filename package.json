@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && rm -rf test.db && DONT_POST_ON_TWITTER=1 DB_HOST='test.db' jest --silent",
+    "test": "npm run lint && rm -rf test.db && DB_HOST='test.db' jest --silent",
     "start": "node index.js",
     "lint": "eslint ."
   },
