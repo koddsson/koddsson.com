@@ -1,6 +1,5 @@
 const express = require("express");
 const morgan = require("morgan");
-const fetch = require("node-fetch");
 const bodyParser = require("body-parser");
 const relativeDate = require("relative-date");
 const hbs = require("hbs");

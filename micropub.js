@@ -1,128 +1,127 @@
-const fetch = require('node-fetch')
-const sqlite = require('sqlite')
-const express = require('express')
-const bodyParser = require('body-parser')
-const Twit = require('twit')
-const fetch64 = require('fetch-base64');
+const fetch = require("node-fetch");
+const express = require("express");
+const bodyParser = require("body-parser");
+const Twit = require("twit");
+const fetch64 = require("fetch-base64");
 
-const getDB = require('./data')
+const getDB = require("./data");
 
 const T = new Twit({
-  consumer_key:         process.env.CONSUMER_KEY,
-  consumer_secret:      process.env.CONSUMER_SECRET,
-  access_token:         process.env.ACCESS_TOKEN,
-  access_token_secret:  process.env.ACCESS_TOKEN_SECRET,
-  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
-  strictSSL:            true,     // optional - requires SSL certificates to be valid.
-})
+  consumer_key: process.env.CONSUMER_KEY,
+  consumer_secret: process.env.CONSUMER_SECRET,
+  access_token: process.env.ACCESS_TOKEN,
+  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
+  timeout_ms: 60 * 1000, // optional HTTP request timeout to apply to all requests.
+  strictSSL: true, // optional - requires SSL certificates to be valid.
+});
 
 async function tweetNote(note, noteLink, photo) {
   if (process.env.DONT_POST_ON_TWITTER) {
-    return
+    return;
   }
 
-  const params = {}
-  if ((note.length + noteLink.length + 3) > 280) {
-    const howManyCharsToTake = 280 - (noteLink.length + 3)
-    note = note.substring(0, howManyCharsToTake) + '..'
+  const params = {};
+  if (note.length + noteLink.length + 3 > 280) {
+    const howManyCharsToTake = 280 - (noteLink.length + 3);
+    note = note.substring(0, howManyCharsToTake) + "..";
   }
-  params.status = `${note} - ${noteLink}`
+  params.status = `${note} - ${noteLink}`;
 
   if (photo) {
     // Since the image went to the media endpoint and not to the micropub endpoint we need to fetch
     // the image again if we want to upload it to twitter 🙄
 
     // Fetch the image
-    const b64content = await fetch64.remote(photo.value)
+    const b64content = await fetch64.remote(photo.value);
 
     // Post the media to Twitter
-    const {data} = await T.post('media/upload', { media: b64content[0] })
+    const { data } = await T.post("media/upload", { media: b64content[0] });
 
     // now we can assign alt text to the media, for use by screen readers and
     // other text-based presentations and interpreters
-    const mediaIdStr = data.media_id_string
-    const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } }
-    await T.post('media/metadata/create', meta_params)
+    const mediaIdStr = data.media_id_string;
+    const meta_params = { media_id: mediaIdStr, alt_text: { text: photo.alt } };
+    await T.post("media/metadata/create", meta_params);
 
     // now we can reference the media and post a tweet (media will attach to the tweet)
-    params.media_ids = [mediaIdStr]
+    params.media_ids = [mediaIdStr];
   }
 
   // Post tweet
-  T.post('statuses/update', params, function(err, data, response) {
-    throw err
-  })
+  T.post("statuses/update", params, function (err) {
+    throw err;
+  });
 }
 
-const app = express()
-app.use(bodyParser.json())
+const app = express();
+app.use(bodyParser.json());
 
-app.get('/', async (req, res) => {
-  if (req.query['q'] === 'config') {
+app.get("/", async (req, res) => {
+  if (req.query["q"] === "config") {
     return res.json({
-      "media-endpoint": "https://img.koddsson.com/upload"
-    })
+      "media-endpoint": "https://img.koddsson.com/upload",
+    });
   }
-  return res.status(404).send('Not found')
-})
+  return res.status(404).send("Not found");
+});
 
-app.post('/', async (req, res) => {
-  const response = await fetch('https://tokens.indieauth.com/token', {
+app.post("/", async (req, res) => {
+  const response = await fetch("https://tokens.indieauth.com/token", {
     headers: {
-      Accept: 'application/json',
-      Authorization: req.header('Authorization')
-    }
-  })
-  const json = await response.json()
+      Accept: "application/json",
+      Authorization: req.header("Authorization"),
+    },
+  });
+  const json = await response.json();
 
-  if (json.me !== 'https://koddsson.com/') {
-    return res.status(401).send('Unauthorized')
+  if (json.me !== "https://koddsson.com/") {
+    return res.status(401).send("Unauthorized");
   }
 
-  const db = await getDB()
+  const db = await getDB();
 
   // Don't remove this. It's good to know what requests look like in the logs
-  console.log(req.body)
+  console.log(req.body);
 
-  if (req.body['like-of']) {
+  if (req.body["like-of"]) {
     // TODO: Try and get metadata and add to the table.
-    const timestamp = Math.floor(new Date() / 1000)
+    const timestamp = Math.floor(new Date() / 1000);
     await db.run(
       "INSERT INTO favorites VALUES (?, DateTime('now'), ?)",
-      req.body['like-of'],
+      req.body["like-of"],
       timestamp
     );
     // TODO: Set this header more correctly
-    res.header('Location', 'https://koddsson.com/favorites')
-    return res.status(201).send('Favorited')
-  } else if (req.body['h'] === 'entry') {
-    const timestamp = Math.floor(new Date() / 1000)
-    const note = req.body['content']
+    res.header("Location", "https://koddsson.com/favorites");
+    return res.status(201).send("Favorited");
+  } else if (req.body["h"] === "entry") {
+    const timestamp = Math.floor(new Date() / 1000);
+    const note = req.body["content"];
     await db.run(
       "INSERT INTO notes VALUES (?, ?, ?)",
       timestamp,
       note,
-      req.body['location']
+      req.body["location"]
     );
 
-    const noteLink = `https://koddsson.com/notes/${timestamp}`
-    await tweetNote(note, noteLink)
+    const noteLink = `https://koddsson.com/notes/${timestamp}`;
+    await tweetNote(note, noteLink);
 
     // TODO: Set this header more correctly
-    res.header('Location', noteLink)
-    return res.status(201).send('Note posted')
-  } else if (req.body['type'] && req.body['type'].includes('h-entry')) {
-    const timestamp = Math.floor(new Date() / 1000)
-    const properties = req.body.properties
-    const photo = properties.photo && properties.photo[0]
-    const content = properties.content[0]
+    res.header("Location", noteLink);
+    return res.status(201).send("Note posted");
+  } else if (req.body["type"] && req.body["type"].includes("h-entry")) {
+    const timestamp = Math.floor(new Date() / 1000);
+    const properties = req.body.properties;
+    const photo = properties.photo && properties.photo[0];
+    const content = properties.content[0];
 
     if (photo) {
       await db.run(
         "INSERT INTO photos VALUES (?, ?, ?)",
         timestamp,
         photo.value,
-        photo.alt 
+        photo.alt
       );
     }
 
@@ -133,15 +132,15 @@ app.post('/', async (req, res) => {
       null
     );
 
-    const noteLink = `https://koddsson.com/notes/${timestamp}`
-    await tweetNote(content, noteLink, photo)
+    const noteLink = `https://koddsson.com/notes/${timestamp}`;
+    await tweetNote(content, noteLink, photo);
 
     // TODO: Set this header more correctly
-    res.header('Location', noteLink)
-    return res.status(201).send('Note posted')
+    res.header("Location", noteLink);
+    return res.status(201).send("Note posted");
   }
 
-  return res.status(404).send('Not found')
-})
+  return res.status(404).send("Not found");
+});
 
-module.exports = app
+module.exports = app;

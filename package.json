@@ -5,8 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "rm -rf test.db && DONT_POST_ON_TWITTER=1 DB_HOST='test.db' jest --silent",
-    "start": "node index.js"
+    "test": "npm run lint && rm -rf test.db && DONT_POST_ON_TWITTER=1 DB_HOST='test.db' jest --silent",
+    "start": "node index.js",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -31,6 +32,8 @@
     "collectCoverage": true
   },
   "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
     "jest": "^24.9.0",
     "supertest": "^4.0.2"
   }
