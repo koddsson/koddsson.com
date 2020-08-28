@@ -32,7 +32,7 @@ app.post('/', async (req, res) => {
 
   const db = await getDB()
 
-  const categories = req.body['category']
+  const categories = req.body['category'].join(',')
   const slug = req.body['mp-slug']
 
   // Don't remove this. It's good to know what requests look like in the logs
