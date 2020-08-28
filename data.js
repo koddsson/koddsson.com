@@ -8,9 +8,10 @@ module.exports = async function () {
   // TODO: Read this from SQL files!
   await db.run(`
     CREATE TABLE IF NOT EXISTS notes (
-      slug char(10),
+      slug varchar(256),
       content varchar(1024),
-      geourl varchar(256)
+      geourl varchar(256),
+      categories varchar(256)
     );
   `)
   await db.run(`
