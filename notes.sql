@@ -1,5 +1,6 @@
 CREATE TABLE notes (
-  slug char(10),
+  slug varchar(256),
   content varchar(1024),
-  geourl varchar(256)
+  geourl varchar(256),
+  categories varchar(256)
 );

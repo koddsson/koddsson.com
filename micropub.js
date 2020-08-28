@@ -17,19 +17,23 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/', async (req, res) => {
+  // Handle authorization
   const response = await fetch('https://tokens.indieauth.com/token', {
     headers: {
       Accept: 'application/json',
       Authorization: req.header('Authorization')
     }
   })
-  const json = await response.json()
 
+  const json = await response.json()
   if (json.me !== 'https://koddsson.com/') {
     return res.status(401).send('Unauthorized')
   }
 
   const db = await getDB()
+
+  const categories = req.body['category']
+  const slug = req.body['mp-slug']
 
   // Don't remove this. It's good to know what requests look like in the logs
   console.log(req.body)
@@ -43,16 +47,18 @@ app.post('/', async (req, res) => {
     return res.status(201).send('Favorited')
   } else if (req.body['h'] === 'entry') {
     const timestamp = Math.floor(new Date() / 1000)
+    const id = slug || timestamp
     const note = req.body['content']
-    await db.run('INSERT INTO notes VALUES (?, ?, ?)', timestamp, note, req.body['location'])
+    await db.run('INSERT INTO notes VALUES (?, ?, ?, ?)', id, note, req.body['location'], categories)
 
-    const noteLink = `https://koddsson.com/notes/${timestamp}`
+    const noteLink = `https://koddsson.com/notes/${id}`
 
     // TODO: Set this header more correctly
     res.header('Location', noteLink)
     return res.status(201).send('Note posted')
   } else if (req.body['type'] && req.body['type'].includes('h-entry')) {
     const timestamp = Math.floor(new Date() / 1000)
+    const id = slug || timestamp
     const properties = req.body.properties
     const photo = properties.photo && properties.photo[0]
     const content = properties.content[0]
@@ -61,9 +67,9 @@ app.post('/', async (req, res) => {
       await db.run('INSERT INTO photos VALUES (?, ?, ?)', timestamp, photo.value, photo.alt)
     }
 
-    await db.run('INSERT INTO notes VALUES (?, ?, ?)', timestamp, content, null)
+    await db.run('INSERT INTO notes VALUES (?, ?, ?, ?)', id, content, null, categories)
 
-    const noteLink = `https://koddsson.com/notes/${timestamp}`
+    const noteLink = `https://koddsson.com/notes/${id}`
 
     // TODO: Set this header more correctly
     res.header('Location', noteLink)
