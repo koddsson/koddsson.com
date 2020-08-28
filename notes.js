@@ -1,46 +1,46 @@
 const fs = require('fs')
-const sqlite = require('sqlite')
 const express = require('express')
 const bodyParser = require('body-parser')
 const relativeDate = require('relative-date')
-const hbs = require('hbs');
-const markdown = require('helper-markdown');
-const Entities = require('html-entities').XmlEntities;
+const hbs = require('hbs')
+const markdown = require('helper-markdown')
+const Entities = require('html-entities').XmlEntities
 const handlebars = require('handlebars')
 
 const getDB = require('./data')
-const entities = new Entities();
+const entities = new Entities()
 
-handlebars.registerHelper('markdown', markdown({linkify: true}));
-const rssNoteTemplate = handlebars.compile(fs.readFileSync(__dirname + '/views/partials/rss-note.hbs', {encoding: 'utf8'}))
+handlebars.registerHelper('markdown', markdown({linkify: true}))
+const rssNoteTemplate = handlebars.compile(
+  fs.readFileSync(__dirname + '/views/partials/rss-note.hbs', {
+    encoding: 'utf8'
+  })
+)
 
 const app = express()
 app.use(bodyParser.json())
 
 app.set('view engine', 'hbs')
 
-hbs.registerPartials(__dirname + '/views/partials');
-hbs.registerHelper('markdown', markdown({linkify: true}));
+hbs.registerPartials(__dirname + '/views/partials')
+hbs.registerHelper('markdown', markdown({linkify: true}))
 
 app.get('/', async (req, res) => {
   const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
-  const notesWithTimestamps = await Promise.all(notes.map(async note => {
-    note.timestamp = relativeDate(note.slug * 1000)
-    note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
-    return note;
-  }))
+  const notesWithTimestamps = await Promise.all(
+    notes.map(async note => {
+      note.timestamp = relativeDate(note.slug * 1000)
+      note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
+      return note
+    })
+  )
   return res.status(200).render('notes', {notes: notesWithTimestamps})
 })
 
 app.get('/feed.xml', async (req, res) => {
   const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
-  const notesWithTimestamps = await Promise.all(notes.map(async note => {
-    note.timestamp = relativeDate(note.slug * 1000)
-    note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
-    return note;
-  }))
   const items = notes.map(note => {
     const date = new Date(note.slug * 1000)
     let month = date.getMonth() + 1
@@ -76,14 +76,13 @@ app.get('/feed.xml', async (req, res) => {
   return res.type('application/xml').send(xml)
 })
 
-
 app.get('/:slug', async (req, res) => {
   const legacyLinks = {
     '2018-08-25-0.html': 1535200649,
     '2018-08-23-0.html': 1535047453,
-    '2018-08-22-1.html': 1534940871, 
+    '2018-08-22-1.html': 1534940871,
     '2018-08-22-0.html': 1534934370,
-    '2018-08-21.html': 1534870136,
+    '2018-08-21.html': 1534870136
   }
 
   if (legacyLinks[req.params.slug]) {
@@ -91,18 +90,12 @@ app.get('/:slug', async (req, res) => {
   }
 
   const db = await getDB()
-  const note = await db.get(
-    "SELECT * FROM notes WHERE slug = ?",
-    req.params.slug
-  );
+  const note = await db.get('SELECT * FROM notes WHERE slug = ?', req.params.slug)
   if (!note) {
     return res.status(404).send('Not found')
   }
   note.timestamp = relativeDate(note.slug * 1000)
-  const photo = await db.get(
-    "SELECT * FROM photos WHERE slug = ?",
-    req.params.slug
-  );
+  const photo = await db.get('SELECT * FROM photos WHERE slug = ?', req.params.slug)
   return res.render('note', {note, photo})
 })
 
