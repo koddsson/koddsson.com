@@ -25,7 +25,7 @@ app.get('/', async (req, res) => {
   const db = await getDB()
   const latestNote = (
     await db.all(`
-    SELECT url as content, slug, 'favorite' as type from favorites
+    SELECT url as content, slug, 'favorite' as type, slug at timestamp from favorites
     UNION ALL
     SELECT content, slug, 'note' as type, timestamp FROM notes
     ORDER BY slug DESC
