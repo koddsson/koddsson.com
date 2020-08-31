@@ -30,7 +30,7 @@ app.get('/', async (req, res) => {
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
   const notesWithTimestamps = await Promise.all(
     notes.map(async note => {
-      note.timestamp = relativeDate(note.slug * 1000)
+      note.timestamp = relativeDate(note.timestamp * 1000)
       note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
       return note
     })
@@ -42,7 +42,7 @@ app.get('/feed.xml', async (req, res) => {
   const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
   const items = notes.map(note => {
-    const date = new Date(note.slug * 1000)
+    const date = new Date(note.timestamp * 1000)
     let month = date.getMonth() + 1
     if (month < 10) {
       month = `0${month}`
@@ -56,7 +56,7 @@ app.get('/feed.xml', async (req, res) => {
     <item>
       <title>${timestamp}</title>
       <description>${entities.encode(rssNoteTemplate(note))}</description>
-      <pubDate>${new Date(note.slug * 1000).toUTCString()}</pubDate>
+      <pubDate>${new Date(note.timestamp * 1000).toUTCString()}</pubDate>
       <link>https://koddsson.com/notes/${note.slug}</link>
       <guid isPermaLink="true">https://koddsson.com/notes/${note.slug}</guid>
     </item>`
@@ -68,7 +68,7 @@ app.get('/feed.xml', async (req, res) => {
     <description>notes</description>
     <link>https://koddsson.com</link>
     <atom:link href="https://koddsson.com/notes/feed.xml" rel="self" type="application/rss+xml"/>
-    <lastBuildDate>${new Date(notes[0].slug * 1000).toUTCString()}</lastBuildDate>
+    <lastBuildDate>${new Date(notes[0].timestamp * 1000).toUTCString()}</lastBuildDate>
     ${items.join('')}
   </channel>
 </rss>
@@ -94,7 +94,7 @@ app.get('/:slug', async (req, res) => {
   if (!note) {
     return res.status(404).send('Not found')
   }
-  note.timestamp = relativeDate(note.slug * 1000)
+  note.timestamp = relativeDate(note.timetamp * 1000)
   const photo = await db.get('SELECT * FROM photos WHERE slug = ?', req.params.slug)
   return res.render('note', {note, photo})
 })

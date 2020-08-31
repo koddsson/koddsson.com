@@ -49,7 +49,7 @@ app.post('/', async (req, res) => {
     const timestamp = Math.floor(new Date() / 1000)
     const id = slug || timestamp
     const note = req.body['content']
-    await db.run('INSERT INTO notes VALUES (?, ?, ?, ?)', id, note, req.body['location'], categories)
+    await db.run('INSERT INTO notes VALUES (?, ?, ?, ?, ?)', id, note, req.body['location'], categories, timestamp)
 
     const noteLink = `https://koddsson.com/notes/${id}`
 
@@ -67,7 +67,7 @@ app.post('/', async (req, res) => {
       await db.run('INSERT INTO photos VALUES (?, ?, ?)', timestamp, photo.value, photo.alt)
     }
 
-    await db.run('INSERT INTO notes VALUES (?, ?, ?, ?)', id, content, null, categories)
+    await db.run('INSERT INTO notes VALUES (?, ?, ?, ?, ?)', id, content, null, categories, timestamp)
 
     const noteLink = `https://koddsson.com/notes/${id}`
 

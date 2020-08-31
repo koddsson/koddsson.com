@@ -11,7 +11,8 @@ module.exports = async function () {
       slug varchar(256),
       content varchar(1024),
       geourl varchar(256),
-      categories varchar(256)
+      categories varchar(256),
+      timestamp varchar(256)
     );
   `)
   await db.run(`

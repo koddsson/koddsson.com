@@ -27,12 +27,12 @@ app.get('/', async (req, res) => {
     await db.all(`
     SELECT url as content, slug, 'favorite' as type from favorites
     UNION ALL
-    SELECT content, slug, 'note' as type FROM notes
+    SELECT content, slug, 'note' as type, timestamp FROM notes
     ORDER BY slug DESC
     LIMIT 1
   `)
   )[0]
-  latestNote.timestamp = relativeDate(latestNote.slug * 1000)
+  latestNote.timestamp = relativeDate(latestNote.timestamp * 1000)
   latestNote.isNote = latestNote.type === 'note'
   latestNote.isFavorite = latestNote.type === 'favorite'
   /* istanbul ignore else */
