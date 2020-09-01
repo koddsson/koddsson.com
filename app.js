@@ -28,7 +28,7 @@ app.get('/', async (req, res) => {
     SELECT url as content, slug, 'favorite' as type, slug as timestamp from favorites
     UNION ALL
     SELECT content, slug, 'note' as type, timestamp FROM notes
-    ORDER BY slug DESC
+    ORDER BY timestamp DESC
     LIMIT 1
   `)
   )[0]

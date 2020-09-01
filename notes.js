@@ -27,7 +27,7 @@ hbs.registerHelper('markdown', markdown({linkify: true}))
 
 app.get('/', async (req, res) => {
   const db = await getDB()
-  const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
+  const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
   const notesWithTimestamps = await Promise.all(
     notes.map(async note => {
       note.timestamp = relativeDate(note.timestamp * 1000)
@@ -40,7 +40,7 @@ app.get('/', async (req, res) => {
 
 app.get('/feed.xml', async (req, res) => {
   const db = await getDB()
-  const notes = await db.all('SELECT * FROM notes ORDER BY slug DESC')
+  const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
   const items = notes.map(note => {
     const date = new Date(note.timestamp * 1000)
     let month = date.getMonth() + 1
