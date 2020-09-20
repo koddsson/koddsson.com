@@ -1,8 +1,8 @@
-const fetch = require('node-fetch')
-const express = require('express')
-const bodyParser = require('body-parser')
+import fetch from 'node-fetch'
+import express from 'express'
+import bodyParser from 'body-parser'
 
-const getDB = require('./data')
+import {getDB} from './data.js'
 
 const app = express()
 app.use(bodyParser.json())
@@ -79,4 +79,4 @@ app.post('/', async (req, res) => {
   return res.status(404).send('Not found')
 })
 
-module.exports = app
+export default app

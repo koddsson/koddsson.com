@@ -1,13 +1,13 @@
-const express = require('express')
-const morgan = require('morgan')
-const bodyParser = require('body-parser')
-const relativeDate = require('relative-date')
-const hbs = require('hbs')
-const markdown = require('helper-markdown')
+import express from 'express'
+import morgan from 'morgan'
+import bodyParser from 'body-parser'
+import relativeDate from 'relative-date'
+import hbs from 'hbs'
+import markdown from 'helper-markdown'
 
-const micropub = require('./micropub')
-const notes = require('./notes')
-const getDB = require('./data')
+import micropub from './micropub.js'
+import notes from './notes.js'
+import getDB from './data.js'
 
 const app = express()
 
@@ -51,4 +51,4 @@ app.get('/favorites', async (req, res) => {
   return res.render('favorites', {favorites})
 })
 
-module.exports = app
+export default app

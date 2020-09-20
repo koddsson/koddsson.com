@@ -1,14 +1,14 @@
-const fs = require('fs')
-const express = require('express')
-const bodyParser = require('body-parser')
-const relativeDate = require('relative-date')
-const hbs = require('hbs')
-const markdown = require('helper-markdown')
-const Entities = require('html-entities').XmlEntities
-const handlebars = require('handlebars')
+import fs from 'fs'
+import express from 'express'
+import bodyParser from 'body-parser'
+import relativeDate from 'relative-date'
+import hbs from 'hbs'
+import markdown from 'helper-markdown'
+import HTMLEntities from 'html-entities'
+import handlebars from 'handlebars'
 
-const getDB = require('./data')
-const entities = new Entities()
+import {getDB} from './data.js'
+const entities = new HTMLEntities.XmlEntities()
 
 handlebars.registerHelper('markdown', markdown({linkify: true}))
 const rssNoteTemplate = handlebars.compile(
@@ -99,4 +99,4 @@ app.get('/:slug', async (req, res) => {
   return res.render('note', {note, photo})
 })
 
-module.exports = app
+export default app
