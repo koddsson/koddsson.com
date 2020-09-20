@@ -8,6 +8,13 @@ import HTMLEntities from 'html-entities'
 import handlebars from 'handlebars'
 
 import {getDB} from './data.js'
+
+import {fileURLToPath} from 'url'
+import {dirname} from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
 const entities = new HTMLEntities.XmlEntities()
 
 handlebars.registerHelper('markdown', markdown({linkify: true}))
