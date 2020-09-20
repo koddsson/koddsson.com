@@ -7,7 +7,7 @@ import markdown from 'helper-markdown'
 import HTMLEntities from 'html-entities'
 import handlebars from 'handlebars'
 
-import {getDB} from './data.js'
+import * as db from './database.js'
 
 import {fileURLToPath} from 'url'
 import {dirname} from 'path'
@@ -33,7 +33,6 @@ hbs.registerPartials(__dirname + '/views/partials')
 hbs.registerHelper('markdown', markdown({linkify: true}))
 
 app.get('/', async (req, res) => {
-  const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
   const notesWithTimestamps = await Promise.all(
     notes.map(async note => {
@@ -46,7 +45,6 @@ app.get('/', async (req, res) => {
 })
 
 app.get('/feed.xml', async (req, res) => {
-  const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
   const items = notes.map(note => {
     const date = new Date(note.timestamp * 1000)
@@ -96,7 +94,6 @@ app.get('/:slug', async (req, res) => {
     return res.redirect(301, `/notes/${legacyLinks[req.params.slug]}`)
   }
 
-  const db = await getDB()
   const note = await db.get('SELECT * FROM notes WHERE slug = ?', req.params.slug)
   if (!note) {
     return res.status(404).send('Not found')

@@ -7,7 +7,7 @@ import markdown from 'helper-markdown'
 
 import micropub from './micropub.js'
 import notes from './notes.js'
-import getDB from './data.js'
+import * as db from './database.js'
 
 import {fileURLToPath} from 'url'
 import {dirname} from 'path'
@@ -28,7 +28,7 @@ hbs.registerPartials(__dirname + '/views/partials')
 hbs.registerHelper('markdown', markdown({linkify: true}))
 
 app.get('/', async (req, res) => {
-  const db = await getDB()
+  // TODO: Do we need the array accessors here? Seems like this should just be a DB get request.
   const latestNote = (
     await db.all(`
     SELECT url as content, slug, 'favorite' as type, slug as timestamp from favorites
@@ -52,7 +52,6 @@ app.use('/micropub', micropub)
 app.use('/notes', notes)
 
 app.get('/favorites', async (req, res) => {
-  const db = await getDB()
   const favorites = await db.all('SELECT * FROM favorites ORDER BY timestamp DESC')
   return res.render('favorites', {favorites})
 })

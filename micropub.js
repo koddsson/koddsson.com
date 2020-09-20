@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import express from 'express'
 import bodyParser from 'body-parser'
 
-import {getDB} from './data.js'
+import * as db from './database.js'
 
 const app = express()
 app.use(bodyParser.json())
@@ -29,8 +29,6 @@ app.post('/', async (req, res) => {
   if (json.me !== 'https://koddsson.com/') {
     return res.status(401).send('Unauthorized')
   }
-
-  const db = await getDB()
 
   const categories = (req.body['category'] || []).join(',')
   const slug = req.body['mp-slug']
