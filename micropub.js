@@ -1,8 +1,8 @@
-const fetch = require('node-fetch')
-const express = require('express')
-const bodyParser = require('body-parser')
+import fetch from 'node-fetch'
+import express from 'express'
+import bodyParser from 'body-parser'
 
-const getDB = require('./data')
+import * as db from './database.js'
 
 const app = express()
 app.use(bodyParser.json())
@@ -29,8 +29,6 @@ app.post('/', async (req, res) => {
   if (json.me !== 'https://koddsson.com/') {
     return res.status(401).send('Unauthorized')
   }
-
-  const db = await getDB()
 
   const categories = (req.body['category'] || []).join(',')
   const slug = req.body['mp-slug']
@@ -79,4 +77,4 @@ app.post('/', async (req, res) => {
   return res.status(404).send('Not found')
 })
 
-module.exports = app
+export default app

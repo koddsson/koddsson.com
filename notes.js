@@ -1,14 +1,21 @@
-const fs = require('fs')
-const express = require('express')
-const bodyParser = require('body-parser')
-const relativeDate = require('relative-date')
-const hbs = require('hbs')
-const markdown = require('helper-markdown')
-const Entities = require('html-entities').XmlEntities
-const handlebars = require('handlebars')
+import fs from 'fs'
+import express from 'express'
+import bodyParser from 'body-parser'
+import relativeDate from 'relative-date'
+import hbs from 'hbs'
+import markdown from 'helper-markdown'
+import HTMLEntities from 'html-entities'
+import handlebars from 'handlebars'
 
-const getDB = require('./data')
-const entities = new Entities()
+import * as db from './database.js'
+
+import {fileURLToPath} from 'url'
+import {dirname} from 'path'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+
+const entities = new HTMLEntities.XmlEntities()
 
 handlebars.registerHelper('markdown', markdown({linkify: true}))
 const rssNoteTemplate = handlebars.compile(
@@ -26,7 +33,6 @@ hbs.registerPartials(__dirname + '/views/partials')
 hbs.registerHelper('markdown', markdown({linkify: true}))
 
 app.get('/', async (req, res) => {
-  const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
   const notesWithTimestamps = await Promise.all(
     notes.map(async note => {
@@ -39,7 +45,6 @@ app.get('/', async (req, res) => {
 })
 
 app.get('/feed.xml', async (req, res) => {
-  const db = await getDB()
   const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
   const items = notes.map(note => {
     const date = new Date(note.timestamp * 1000)
@@ -89,7 +94,6 @@ app.get('/:slug', async (req, res) => {
     return res.redirect(301, `/notes/${legacyLinks[req.params.slug]}`)
   }
 
-  const db = await getDB()
   const note = await db.get('SELECT * FROM notes WHERE slug = ?', req.params.slug)
   if (!note) {
     return res.status(404).send('Not found')
@@ -99,4 +103,4 @@ app.get('/:slug', async (req, res) => {
   return res.render('note', {note, photo})
 })
 
-module.exports = app
+export default app
