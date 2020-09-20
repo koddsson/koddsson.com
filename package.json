@@ -6,7 +6,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && rm -rf test.db && DB_HOST='test.db' jest --silent",
+    "test": "npm run lint",
     "start": "node -r dotenv/config index.js",
     "lint": "eslint ."
   },
@@ -30,16 +30,11 @@
     "sqlite3": "^5.0.0",
     "twit": "^2.2.11"
   },
-  "jest": {
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
-  },
   "devDependencies": {
     "@github/prettier-config": "0.0.4",
     "eslint": "^7.7.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "jest": "^24.9.0",
     "prettier": "2.1.1",
     "supertest": "^4.0.2"
   }
