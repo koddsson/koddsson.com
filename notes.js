@@ -46,7 +46,8 @@ app.get('/', async (req, res) => {
 
 app.get('/feed.xml', async (req, res) => {
   const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
-  const items = notes.map(async note => {
+  const items = []
+  for (const note of notes) {
     const date = new Date(note.timestamp * 1000)
     let month = date.getMonth() + 1
     if (month < 10) {
@@ -58,15 +59,15 @@ app.get('/feed.xml', async (req, res) => {
     }
     const timestamp = `${date.getFullYear()}-${month}-${day}`
     note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
-    return `
+    items.push(`
     <item>
       <title>${timestamp}</title>
       <description>${entities.encode(rssNoteTemplate(note))}</description>
       <pubDate>${new Date(note.timestamp * 1000).toUTCString()}</pubDate>
       <link>https://koddsson.com/notes/${note.slug}</link>
       <guid isPermaLink="true">https://koddsson.com/notes/${note.slug}</guid>
-    </item>`
-  })
+    </item>`)
+  }
   const xml = `
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
