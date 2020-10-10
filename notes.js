@@ -46,7 +46,7 @@ app.get('/', async (req, res) => {
 
 app.get('/feed.xml', async (req, res) => {
   const notes = await db.all('SELECT * FROM notes ORDER BY timestamp DESC')
-  const items = notes.map(note => {
+  const items = notes.map(async note => {
     const date = new Date(note.timestamp * 1000)
     let month = date.getMonth() + 1
     if (month < 10) {
@@ -57,6 +57,7 @@ app.get('/feed.xml', async (req, res) => {
       day = `0${day}`
     }
     const timestamp = `${date.getFullYear()}-${month}-${day}`
+    note.photo = await db.get('SELECT * FROM photos where slug = ?', note.slug)
     return `
     <item>
       <title>${timestamp}</title>
