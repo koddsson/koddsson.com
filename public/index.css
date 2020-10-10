@@ -148,3 +148,8 @@ code {
   border-radius: 3px;
   font-family: "SFMono-Regular",Consolas,"Liberation Mono",Menlo,Courier,monospace;
 }
+
+.profile-pic {
+  height: 100px;
+  width: 100px;
+}
