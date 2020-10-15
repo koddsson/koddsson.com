@@ -43,6 +43,25 @@ app.post('/', async (req, res) => {
     // TODO: Set this header more correctly
     res.header('Location', 'https://koddsson.com/favorites')
     return res.status(201).send('Favorited')
+  } else if (req.body['in-reply-to']) {
+    const timestamp = Math.floor(new Date() / 1000)
+    const id = slug || timestamp
+    const note = req.body['content']
+    await db.run(
+      'INSERT INTO notes VALUES (?, ?, ?, ?, ?, ?)',
+      id,
+      note,
+      req.body['location'],
+      categories,
+      timestamp,
+      req.body['in-reply-of']
+    )
+
+    const noteLink = `https://koddsson.com/notes/${id}`
+
+    // TODO: Set this header more correctly
+    res.header('Location', noteLink)
+    return res.status(201).send('Note posted')
   } else if (req.body['h'] === 'entry') {
     const timestamp = Math.floor(new Date() / 1000)
     const id = slug || timestamp

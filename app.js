@@ -31,9 +31,9 @@ app.get('/', async (req, res) => {
   // TODO: Do we need the array accessors here? Seems like this should just be a DB get request.
   const latestNote = (
     await db.all(`
-    SELECT url as content, slug, 'favorite' as type, slug as timestamp from favorites
+    SELECT url as content, slug, 'favorite' as type, slug as timestamp, NULL as reply from favorites
     UNION ALL
-    SELECT content, slug, 'note' as type, timestamp FROM notes
+    SELECT content, slug, 'note' as type, timestamp, replyTo as reply FROM notes
     ORDER BY timestamp DESC
     LIMIT 1
   `)

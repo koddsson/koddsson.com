@@ -2,6 +2,7 @@
 
 :root {
   --background-color: #ffffff;
+  --color-light-gray: #fafafa;
   --color-gray: #EEF0F2;
   --text-color: #191919;
 }
@@ -62,7 +63,7 @@ a {
   text-decoration-skip: ink;
 }
       
-.timestamp { text-align: right; }
+.timestamp { float: right;}
 
 .post {
   display: flex;
@@ -71,9 +72,8 @@ a {
 }
 
 .post.small > .body {
-  display: flex;
-  border-left: 5px solid var(--color-gray); 
-  padding-left: 10px;
+  background-color: var(--color-light-gray);
+  padding: 0 20px 20px 20px;
 }
 
 .post.small > .body > .image > img {
