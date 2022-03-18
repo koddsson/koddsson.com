@@ -33,6 +33,13 @@
       header {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 1rem;
+        flex-direction: column;
+      }
+      @media (min-width: 700px) {
+        header {
+          flex-direction: unset;
+        }
       }
       pre.highlight {
         background-color: #f6f8fa;
