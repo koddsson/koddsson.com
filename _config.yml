@@ -31,7 +31,7 @@ twitter_username: koddsson
 github_username:  koddsson
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 
