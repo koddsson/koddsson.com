@@ -62,7 +62,7 @@ if (favicon) {
 This change means that I only need to include this script and set the emoji I want as a favicon like so:
 
 ```html
-<link rel="icon" data-emoji="🛰" type="image/png>
+<link rel="icon" data-emoji="🛰" type="image/png" />
 ```
 
 <p>Exactly what I wanted orginally! 🤙</p>
