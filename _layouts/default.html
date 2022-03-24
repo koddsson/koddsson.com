@@ -21,10 +21,18 @@
           "main"
           "footer";
         padding: 1em;
+        justify-content: space-around;
+        min-width: 320px;
       }
 
       main {
         grid-area: main;
+        display: flex;
+        flex-direction: column;
+        max-width: 920px;
+        position: relative;
+
+        min-width: 0;
       }
 
       header {
@@ -46,8 +54,9 @@
         background-color: #f6f8fa;
         border-radius: 6px;
         padding: 16px;
-        overflow: scroll;
+        overflow: auto;
       }
+
       .notice {
         color: #735c0f;
         background-color: #fffbdd;
