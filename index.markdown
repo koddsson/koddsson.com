@@ -1,5 +1,3 @@
-# Kristján Oddsson
-
 Hey! I'm Kristján, I like working with Web Platform features and hacking on small projects like this web site. You'll find some posts and notes here. I'm currently working at [GitHub](https://github.com/koddsson) as a Web Systems Engineer.
 
 ## Posts

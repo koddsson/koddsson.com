@@ -1,7 +1,6 @@
 ---
 title: Emojis as favicons
 datetime: 2018-03-18T18:45
-layout: post
 ---
 
 <link rel="stylesheet" href="/code-highlight-github.css" />
@@ -65,4 +64,4 @@ This change means that I only need to include this script and set the emoji I wa
 <link rel="icon" data-emoji="🛰" type="image/png" />
 ```
 
-<p>Exactly what I wanted orginally! 🤙</p>
+Exactly what I wanted orginally! 🤙

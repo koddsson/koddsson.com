@@ -15,32 +15,33 @@
         word-wrap: break-word;
 
         display: grid;
-        grid-template-columns: repeat(12, [col-start] 1fr);
         gap: 20px;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+        padding: 1em;
       }
 
       main {
-        padding: 1rem;
-        grid-column: col-start 1 / span 12;
-      }
-
-      @media (min-width: 700px) {
-        main {
-          grid-column: col-start 3 / span 7;
-        }
+        grid-area: main;
       }
 
       header {
+        grid-area: header;
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1rem;
         flex-direction: column;
       }
-      @media (min-width: 700px) {
-        header {
-          flex-direction: unset;
-        }
+
+      footer {
+        grid-area: footer;
       }
+
+      p {
+        margin-bottom: 1em;
+      }
+
       pre.highlight {
         background-color: #f6f8fa;
         border-radius: 6px;
@@ -59,8 +60,14 @@
     <title>{{ page.title | default: site.title }}</title>
   </head>
   <body>
+    <header>
+      <h1>{{ page.title | default: site.title }}</h1>
+      <time datetime="{{ page.datetime }}">{{ page.datetime | date: '%B %d, %Y' }}</time>
+    </header>
     <main>
       {{ content }}
     </main>
+    <footer>
+    </footer>
   </body>
 </html>

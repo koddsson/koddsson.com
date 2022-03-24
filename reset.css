@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
+  margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -39,7 +39,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
