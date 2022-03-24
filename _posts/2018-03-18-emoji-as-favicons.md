@@ -28,7 +28,7 @@ console.log(canvas.toDataURL())
 
 const favicon = document.querySelector('link[rel=icon]')
 favicon.href = canvas.toDataURL()
-  ```
+```
 
 You could even wrap this in a function and dynamically set the favicon.
 
