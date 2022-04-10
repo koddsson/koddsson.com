@@ -1,1 +1,8 @@
-# This has moved to https://github.com/koddsson/web-suite
+# koddsson.com
+
+## Development
+
+```sh
+bundle install
+bundle exec jekyll serve
+```
