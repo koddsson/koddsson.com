@@ -7,7 +7,7 @@
         "budget": 2500
       },
       {
-        "metric": "first-input-delay",
+        "metric": "max-potential-fid",
         "budget": 100
       },
       {
