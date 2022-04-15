@@ -10,8 +10,9 @@ So I was working on [jsonresume.io](https://jsonresume.io) this weekend and real
 
 I really wanted just to drop a 📝 into a `<link />` tag and call it a day. As far as I knew this wasn't possible, prompting this tweet:
 
-<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Which technical committee do I need to submit a proposal to in order to get emojis as favicons?  <a href="https://twitter.com/WHATWG?ref_src=twsrc%5Etfw">@WHATWG</a> ?</p>&mdash; Kristján is not getting into the sandwich debate. (@koddsson) <a href="https://twitter.com/koddsson/status/975105753668313088?ref_src=twsrc%5Etfw">March 17, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote>
+  <p>Which technical committee do I need to submit a proposal to in order to get emojis as favicons?  <a href="https://twitter.com/WHATWG?ref_src=twsrc%5Etfw">@WHATWG</a> ?</p>
+</blockquote>
 
 To make a long story short, I made my way to [whatwg.org](https://whatwg.org/) to figure out how to make a proposal. That lead me to this issue [#661](https://github.com/whatwg/html/issues/661). That mentions that you can set the favicon dynamically with a data uri.
 
