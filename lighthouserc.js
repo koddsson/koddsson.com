@@ -10,7 +10,10 @@ module.exports = {
       preset: "lighthouse:no-pwa",
       assertions: {
         "csp-xss": false,
-        "resource-summary:document:size": ["error", { maxNumericValue: 10 }],
+        "resource-summary:document:size": [
+          "error",
+          { maxNumericValue: 512000 },
+        ],
       },
     },
   },
