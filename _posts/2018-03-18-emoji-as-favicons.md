@@ -1,6 +1,7 @@
 ---
 title: Emojis as favicons
 datetime: 2018-03-18T18:45
+description: "A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji"
 ---
 
 <link rel="stylesheet" href="/code-highlight-github.css" />
