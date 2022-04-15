@@ -6,3 +6,7 @@
 bundle install
 bundle exec jekyll serve
 ```
+
+## Useful links
+
+https://512kb.club/
