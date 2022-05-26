@@ -17,6 +17,7 @@
         display: grid;
         justify-content: space-around;
         min-block-size: unset;
+        padding: var(--size-2);
       }
 
       blockquote, header, p {
@@ -32,6 +33,23 @@
 
       blockquote p {
         margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+        
       }
     </style>
   </head>

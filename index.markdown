@@ -6,20 +6,22 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 
 ## Posts
 
-<ul>
+<ul class="items">
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
+      <time>{{ post.date | timeago }}</time>
     </li>
   {% endfor %}
 </ul>
 
 ## Notes
-<ul>
+
+<ul class="items">
   {% for note in site.notes %}
     <li>
-      <a href="{{ note.url }}">{{ note.date | timeago }}</a>
       {{ note.content }}
+      <a href="{{ note.url }}">{{ note.date | timeago }}</a>
     </li>
   {% endfor %}
 </ul>
