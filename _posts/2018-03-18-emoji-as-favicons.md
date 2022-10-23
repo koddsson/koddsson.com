@@ -67,3 +67,9 @@ This change means that I only need to include this script and set the emoji I wa
 ```
 
 Exactly what I wanted orginally! 🤙
+
+<!-- Include `OpenHeartElement` -->
+<script src="https://unpkg.com/open-heart-element" type="module" defer></script>
+
+<!-- Render `<open-heart>` -->
+<open-heart href="https://open-heart-endpoint.koddsson.workers.dev/?id={{page.path}}" emoji="❤️">♥</open-heart>
