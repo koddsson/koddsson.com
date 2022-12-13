@@ -10,7 +10,9 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
-      <time>{{ post.date | timeago }}</time>
+      <relative-time prefix="" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date_to_xmlschema }}
+      </relative-time>
     </li>
   {% endfor %}
 </ul>
@@ -21,7 +23,9 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
   {% for note in site.notes %}
     <li>
       {{ note.content }}
-      <a href="{{ note.url }}">{{ note.date | timeago }}</a>
+      <a href="{{ note.url }}">
+        <relative-time prefix="" datetime="{{ note.date | date_to_xmlschema }}"></relative-time>
+      </a>
     </li>
   {% endfor %}
 </ul>
