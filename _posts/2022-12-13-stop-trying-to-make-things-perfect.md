@@ -1,3 +1,9 @@
+---
+title: Stop trying to make things perfect
+datetime: 2022-12-13T01:30
+description: "A blog post with some thoughts on perfectionism"
+---
+
 This is a specific thought after watching and reading a bunch on Tom Sacks. I discovered Tom after watching a bunch of Casey Niestat videos and learning that Casey used to work with Tom at his studio in New York.
 
 Since then I've thought about my cooking and my cookbook and I really want to make a physical one. I want to make a cookbook to use in the kitchen. Spring notebook with nothing fancy on it.
