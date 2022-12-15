@@ -1,3 +1,8 @@
+---
+date: 2022-12-15 12:00:00 +0100
+description: "Musings on a cool video I saw today"
+---
+
 I recently came across [this video](https://www.youtube.com/watch?v=v0160IirdL4) from The Browser Company that caught my attention. While the content of the video wasn't particularly interesting to me, the way it was made was.
 
 If you are running macOS (or possibly on a different OS), you already have the tools you need to create a presentation. There's a built-in app called "Screenshot" that you can use for screen recording, and you can also use a web cam preview to show your face, just like the person in the video.

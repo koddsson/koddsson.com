@@ -20,7 +20,8 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 ## Notes
 
 <ul class="items">
-  {% for note in site.notes %}
+  {% assign sorted = site.notes | sort: 'date' | reverse %}
+  {% for note in sorted %}
     <li>
       {{ note.content }}
       <a href="{{ note.url }}">
