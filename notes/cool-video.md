@@ -1,5 +1,7 @@
 ---
-date: 2022-12-15 12:00:00 +0100
+date: 2022-12-15
+layout: default.html
+title: Cool Video
 description: "Musings on a cool video I saw today"
 ---
 

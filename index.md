@@ -1,4 +1,6 @@
 ---
+layout: default.html
+title: "Kristján Oddsson"
 description: "The personal web site of Kristján Oddsson"
 ---
 
@@ -7,26 +9,25 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 ## Posts
 
 <ul class="items">
-  {% for post in site.posts %}
+  {%- for post in collections.posts reversed -%}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <relative-time prefix="" datetime="{{ post.date | date_to_xmlschema }}">
-        {{ post.date | date_to_xmlschema }}
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <relative-time prefix="" datetime="{{ post.date }}">
+        {{ post.date }}
       </relative-time>
     </li>
-  {% endfor %}
+  {%- endfor -%}
 </ul>
 
 ## Notes
 
 <ul class="items">
-  {% assign sorted = site.notes | sort: 'date' | reverse %}
-  {% for note in sorted %}
+  {%- for note in collections.notes reversed -%}
     <li>
       {{ note.content }}
       <a href="{{ note.url }}">
-        <relative-time prefix="" datetime="{{ note.date | date_to_xmlschema }}"></relative-time>
+        <relative-time prefix="" datetime="{{ note.date }}"></relative-time>
       </a>
     </li>
-  {% endfor %}
+  {%- endfor -%}
 </ul>
