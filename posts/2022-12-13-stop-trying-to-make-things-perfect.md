@@ -1,6 +1,7 @@
 ---
 title: Stop trying to make things perfect
-datetime: 2022-12-13T01:30
+layout: default.html
+date: 2022-12-13
 description: "A blog post with some thoughts on perfectionism"
 ---
 

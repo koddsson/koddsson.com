@@ -7,11 +7,13 @@
 
     <link rel="icon" href="/favicon.ico" />
 
-    <title>{{ page.title | default: site.title }}</title>
+    <title>{{ title }}</title>
 
     <style>
       @import "https://unpkg.com/open-props";
       @import "https://unpkg.com/open-props/normalize.min.css";
+      @import "/css/prism-one-light.css";
+      @import "/css/index.css";
 
       body {
         padding: var(--size-1) var(--size-3);
@@ -57,8 +59,8 @@
   </head>
   <body>
     <header>
-      <h1>{{ page.title | default: site.title }}</h1>
-      {% if page.datetime %}<time datetime="{{ page.datetime }}">{{ page.datetime | date: '%B %d, %Y' }}</time>{% endif %}
+      <h1>{{ title }}</h1>
+      {% if date %}<time date="{{ date }}">{{ date | date: '%B %d, %Y' }}</time>{% endif %}
     </header>
     <main>
       {{ content }}

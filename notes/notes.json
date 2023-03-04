@@ -1,0 +1,4 @@
+{
+  "permalink": "notes/{{ page.fileSlug }}/",
+  "tags": ["notes"]
+}

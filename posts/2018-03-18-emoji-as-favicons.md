@@ -1,10 +1,9 @@
 ---
 title: Emojis as favicons
-datetime: 2018-03-18T18:45
+layout: default.html
+date: 2018-03-18
 description: "A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji"
 ---
-
-<link rel="stylesheet" href="/code-highlight-github.css" />
 
 So I was working on [jsonresume.io](https://jsonresume.io) this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.
 
