@@ -1,11 +1,16 @@
-code[class*="language-"] {
-  background: var(--surface-2);
-}
-
 pre[class*="language-"] {
-  background: var(--surface-2);
   border-radius: var(--radius-2);
   padding: var(--size-3);
   overflow: auto;
   max-inline-size: unset;
+  font-size: 1em;
+}
+
+/* The syntax highlighting theme isn't accessible! */
+.token.url, .token.symbol, .token.number, .token.boolean, .token.variable, .token.constant, .token.inserted {
+  color: #23706f;
+}
+
+.token.attr-name, .token.property, .token.regex, .token.entity {
+  color: #b50000;
 }
