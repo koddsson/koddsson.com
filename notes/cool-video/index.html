@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Musings on a cool video I saw today">
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>Cool Video</title>
+
+    <style>
+      @import "https://unpkg.com/open-props";
+      @import "https://unpkg.com/open-props/normalize.min.css";
+      @import "/css/prism-vs.css";
+      @import "/css/index.css";
+
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote, header, p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+        
+      }
+
+    </style>
+    <script type="module">
+      import "https://esm.sh/@github/time-elements@4.0.0"
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Cool Video</h1>
+      <time date="Thu Dec 15 2022 00:00:00 GMT+0000 (Coordinated Universal Time)">December 15, 2022</time>
+    </header>
+    <main>
+      <p>I recently came across <a href="https://www.youtube.com/watch?v=v0160IirdL4">this video</a> from The Browser Company that caught my attention. While the content of the video wasn't particularly interesting to me, the way it was made was.</p>
+<p>If you are running macOS (or possibly on a different OS), you already have the tools you need to create a presentation. There's a built-in app called &quot;Screenshot&quot; that you can use for screen recording, and you can also use a web cam preview to show your face, just like the person in the video.</p>
+<p>In the past, I've used a similar approach with a Codepen by feeding a webcam video stream directly to a <code>&lt;video&gt;</code> tag and then opening the video in picture-in-picture mode to display it borderless while screen recording. It works really well and allows you to easily open files and websites in your presentation, providing additional context for the topics you're discussing. You probably don't need to get any special tools for this, as it's easy to do with the tools that are already available.</p>
+
+    </main>
+    <footer></footer>
+  </body>
+</html>
