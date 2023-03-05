@@ -18,7 +18,8 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPassthroughCopy('css')
+  eleventyConfig.addPassthroughCopy('css');
+  eleventyConfig.addPassthroughCopy('favicon.ico');
   
   return {
     passthroughFileCopy: true,
