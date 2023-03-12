@@ -5,6 +5,9 @@ title: Git Autocorrect
 description: "Autocorrecting git commands"
 ---
 
+<link rel="preconnect" href="https://fosstodon.org">
+<link rel="preconnect" href="https://cdn.fosstodon.org">
+
 I tooted a little git command joke on Fosstodon the other day. 
 
 <toot-embed src="https://fosstodon.org/@koddsson/109958542284187610"></toot-embed>
