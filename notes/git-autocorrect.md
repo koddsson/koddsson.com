@@ -7,7 +7,7 @@ description: "Autocorrecting git commands"
 
 I tooted a little git command joke on Fosstodon the other day. 
 
-<iframe src="https://fosstodon.org/@koddsson/109958542284187610/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://fosstodon.org/embed.js" async="async"></script>
+<toot-embed src="https://fosstodon.org/@koddsson/109958542284187610"></toot-embed>
 
 I imagine that git terminal users like me often mis-type the commands and I'm a fan of injecting humor into my daily life. The way I created the above screenshot is by creating a git alias. Normally you git alias different git commands but you can actually execute any command as a git alias by prepending the command with a exclamation.
 
