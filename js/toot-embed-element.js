@@ -11,8 +11,20 @@ styles.replaceSync(`
     border-radius: 0.5em;
     grid-template:
       "avatar   author-link backlink" max-content
-      "content  content     content"     max-content
+      "content  content     content"  max-content
       / min-content auto auto;
+  }
+}
+
+@supports selector(:--loading) {
+  @media only screen and (max-width: 600px) {
+    :host(:not(:--loading)) {
+      grid-template:
+        "avatar   author-link author-link" max-content
+        "content  content     content"     max-content
+        "backlink backlink    backlink"     max-content
+        / min-content auto auto;
+    }
   }
 }
 @supports not selector(:--loading) {
@@ -27,6 +39,18 @@ styles.replaceSync(`
       "avatar   author-link backlink" max-content
       "content  content     content"     max-content
       / min-content auto auto;
+  }
+}
+    
+@supports not selector(:--loading) {
+  @media only screen and (max-width: 600px) {
+    :host(:not([internals-loading])) {
+      grid-template:
+        "avatar   author-link author-link" max-content
+        "content  content     content"     max-content
+        "backlink backlink    backlink"     max-content
+        / min-content auto auto;
+    }
   }
 }
 [part="avatar"] {
@@ -64,16 +88,6 @@ styles.replaceSync(`
 }
 `)
 
-/**
- * An example Custom Element. This documentation ends up in the
- * README so describe how this elements works here.
- *
- * You can event add examples on the element is used with Markdown.
- *
- * ```
- * <toot-embed></toot-embed>
- * ```
- */
 class TootEmbedElement extends HTMLElement {
   static observeAttributes = ['src']
   #internals
