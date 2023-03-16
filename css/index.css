@@ -18,3 +18,7 @@ pre[class*="language-"] {
 toot-embed {
   border: 1px solid var(--gray-5);
 }
+
+:where(a[href]:visited > code) {
+  color: #6529af;
+}
