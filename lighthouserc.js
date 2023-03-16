@@ -7,14 +7,12 @@ module.exports = {
       target: "temporary-public-storage",
     },
     assert: {
-      preset: "lighthouse:no-pwa",
-      assertions: {
-        "csp-xss": false,
-        "resource-summary:document:size": [
-          "error",
-          { maxNumericValue: 512000 },
-        ],
-      },
-    },
-  },
+      "assertions": {
+        "categories:performance": ["error", {"minScore": 1}],
+        "categories:accessibility": ["error", {"minScore": 1}],
+        "categories:best-practices": ["error", {"minScore": 1}],
+        "categories:seo": ["error", {"minScore": 1}]
+      }
+    }
+  }
 };
