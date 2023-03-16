@@ -168,7 +168,7 @@ class TootEmbedElement extends HTMLElement {
         <relative-time datetime="${created_at}"></relative-time>
       </a>
       <div part="content">${content}</div>
-      <img part="media" src="${media_attachments[0].url}" alt="${media_attachments[0].alt}" />
+      <img part="media" src="${media_attachments[0].url}" alt="${media_attachments[0].description}" />
     `
     this.#internals.states.add('--ready')
     this.#internals.ariaLabel = `${this.#authorLinkPart.textContent} ${this.#contentPart.textContent}`
