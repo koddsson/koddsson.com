@@ -22,3 +22,8 @@ toot-embed {
 :root {
   --brand: var(--indigo-8);
 }
+
+header, main, footer {
+  max-width: 36em;
+  margin: auto;
+}
