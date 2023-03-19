@@ -14,3 +14,11 @@ pre[class*="language-"] {
 .token.attr-name, .token.property, .token.regex, .token.entity {
   color: #b50000;
 }
+
+toot-embed {
+  border: 1px solid var(--gray-5);
+}
+
+:root {
+  --brand: var(--indigo-8);
+}
