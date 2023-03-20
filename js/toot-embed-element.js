@@ -1,5 +1,5 @@
-const html = String.raw
-const styles = new CSSStyleSheet()
+const html = String.raw;
+const styles = new CSSStyleSheet();
 styles.replaceSync(`
 @supports selector(:--loading) {
   :host(:not(:--loading)) {
@@ -86,15 +86,15 @@ styles.replaceSync(`
   width: 100%;
   grid-area: content;
 }
-`)
+`);
 
 class TootEmbedElement extends HTMLElement {
-  static observeAttributes = ['src']
-  #internals
-  #renderRoot
+  static observeAttributes = ['src'];
+  #internals = null;
+  #renderRoot = null;
 
   get src() {
-    return this.getAttribute('src') || ''
+    return this.getAttribute('src') || '';
   }
 
   set src(value) {
