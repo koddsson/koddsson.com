@@ -10,12 +10,14 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 
 <ul class="items">
   {%- for post in collections.posts reversed -%}
-    <li>
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
-      <relative-time prefix="" datetime="{{ post.date }}">
-        {{ post.date }}
-      </relative-time>
-    </li>
+    {% if forloop.index0 < 5 %}
+      <li>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+        <relative-time prefix="" datetime="{{ post.date }}">
+          {{ post.date }}
+        </relative-time>
+      </li>
+    {%- endif -%}
   {%- endfor -%}
 </ul>
 
@@ -23,11 +25,16 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 
 <ul class="items">
   {%- for note in collections.notes reversed -%}
-    <li>
-      {{ note.content }}
-      <a href="{{ note.url }}">
-        <relative-time prefix="" datetime="{{ note.date }}"></relative-time>
-      </a>
-    </li>
+    {% if forloop.index0 < 3 %}
+      <li>
+        {{ note.content }}
+        <a href="{{ note.url }}">
+          <relative-time prefix="" datetime="{{ note.date }}"></relative-time>
+        </a>
+        {% if forloop.last != true %}
+          <div class="divider">⁂</div>
+        {%- endif -%}
+      </li>
+    {%- endif -%}
   {%- endfor -%}
 </ul>

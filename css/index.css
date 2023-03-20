@@ -23,6 +23,12 @@ toot-embed {
   --brand: var(--indigo-8);
 }
 
+.divider {
+  text-align: center; 
+  margin-bottom: var(--size-3);
+  font-size: var(--size-6);
+}
+
 header, main, footer {
   max-width: 36em;
   margin: auto;
