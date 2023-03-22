@@ -23,10 +23,13 @@ toot-embed {
   --brand: var(--indigo-8);
 }
 
-.divider {
-  text-align: center; 
+#notes > li:not(:last-child):after {
+  content: '⁂'; 
+  text-align: center;
   margin-bottom: var(--size-3);
   font-size: var(--size-6);
+  display: block;
+  color: var(--gray-5);
 }
 
 header, main, footer {

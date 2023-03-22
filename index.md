@@ -23,7 +23,7 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 
 ## Notes
 
-<ul class="items">
+<ul class="items" id="notes">
   {%- for note in collections.notes reversed -%}
     {% if forloop.index0 < 3 %}
       <li>
@@ -31,9 +31,6 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
         <a href="{{ note.url }}">
           <relative-time prefix="" datetime="{{ note.date }}"></relative-time>
         </a>
-        {% if forloop.last != true %}
-          <div class="divider">⁂</div>
-        {%- endif -%}
       </li>
     {%- endif -%}
   {%- endfor -%}
