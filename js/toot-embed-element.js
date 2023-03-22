@@ -154,7 +154,6 @@ class TootEmbedElement extends HTMLElement {
   }
 
   #render(json) {
-    console.log(json)
     const {account, url, content, media_attachments, created_at} = json
     const handleURL = new URL(account.url)
     const {handle} = this.#useParams()
