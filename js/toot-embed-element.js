@@ -159,7 +159,7 @@ class TootEmbedElement extends HTMLElement {
     const handleURL = new URL(account.url)
     const {handle} = this.#useParams()
     this.#renderRoot.innerHTML = html`
-      <img part="avatar" src="${account.avatar}" alt="" />
+      <img part="avatar" src="${account.avatar}" loading="lazy" alt="" />
       <a part="author-link" href="${handleURL.href}">
         <span part="author-name">${account.display_name}</span>
         <span part="author-handle">@${handle}@${handleURL.hostname}</span>
@@ -168,7 +168,7 @@ class TootEmbedElement extends HTMLElement {
         <relative-time datetime="${created_at}"></relative-time>
       </a>
       <div part="content">${content}</div>
-      <img part="media" src="${media_attachments[0].url}" alt="${media_attachments[0].description}" />
+      <img part="media" src="${media_attachments[0].url}" loading="lazy" alt="${media_attachments[0].description}" />
     `
     this.#internals.states.add('--ready')
     this.#internals.ariaLabel = `${this.#authorLinkPart.textContent} ${this.#contentPart.textContent}`

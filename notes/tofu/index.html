@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My new dog, Tofu.">
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>Tofu</title>
+
+    <style>
+      @import "https://unpkg.com/open-props";
+      @import "https://unpkg.com/open-props/normalize.min.css";
+      @import "/css/prism-vs.css";
+      @import "/css/index.css";
+
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote, header, p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+
+    </style>
+    <script type="module">
+      // TODO: Fix this
+      import "https://esm.sh/@github/time-elements@4.0.0";
+      import "/js/toot-embed-element.js";
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Tofu</h1>
+      <time date="Wed Mar 22 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">March 22, 2023</time>
+    </header>
+    <main>
+      <p>I got a dog about a week ago. His name is Tofu.</p>
+<img width="640" height="360" alt="My puppy Tofu on the floor being silly looking at the camera. Tofu is black with corse hair and some white spots." loading="lazy" src="/img/tofu.webp">
+
+    </main>
+    <footer></footer>
+  </body>
+</html>
