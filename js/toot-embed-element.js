@@ -89,74 +89,78 @@ styles.replaceSync(`
 `);
 
 class TootEmbedElement extends HTMLElement {
-  static observeAttributes = ['src'];
+  static observeAttributes = ["src"];
   #internals = null;
   #renderRoot = null;
 
   get src() {
-    return this.getAttribute('src') || '';
+    return this.getAttribute("src") || "";
   }
 
   set src(value) {
-    this.setAttribute('src', `${value}`)
+    this.setAttribute("src", `${value}`);
   }
 
   get #contentPart() {
-    return this.#renderRoot.querySelector('[part=content]')
+    return this.#renderRoot.querySelector("[part=content]");
   }
 
   get #authorLinkPart() {
-    return this.#renderRoot.querySelector('[part=author-link]')
+    return this.#renderRoot.querySelector("[part=author-link]");
   }
 
   get #authorNamePart() {
-    return this.#renderRoot.querySelector('[part=author-name]')
+    return this.#renderRoot.querySelector("[part=author-name]");
   }
 
   get #authorHandlePart() {
-    return this.#renderRoot.querySelector('[part=author-handle]')
+    return this.#renderRoot.querySelector("[part=author-handle]");
   }
 
   get #avatarPart() {
-    return this.#renderRoot.querySelector('[part=avatar]')
+    return this.#renderRoot.querySelector("[part=avatar]");
   }
 
   get #backlinkPart() {
-    return this.#renderRoot.querySelector('[part=backlink]')
+    return this.#renderRoot.querySelector("[part=backlink]");
   }
 
   connectedCallback() {
-    this.#internals = this.attachInternals()
-    this.#internals.role = 'article'
-    this.#renderRoot = this.attachShadow({mode: 'open'})
-    this.#renderRoot.adoptedStyleSheets.push(styles)
+    this.#internals = this.attachInternals();
+    this.#internals.role = "article";
+    this.#renderRoot = this.attachShadow({ mode: "open" });
+    this.#renderRoot.adoptedStyleSheets.push(styles);
     if (this.querySelector('script[type="application/json"]')) {
-      return this.#render(JSON.parse(this.querySelector('script[type="application/json"]').textContent))
+      return this.#render(
+        JSON.parse(
+          this.querySelector('script[type="application/json"]').textContent
+        )
+      );
     }
-    if (this.src) this.load()
+    if (this.src) this.load();
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (this.isConnected) return
-    if (this.#renderRoot) return
-    if (oldValue === newValue) return
-    this.load()
+    if (this.isConnected) return;
+    if (this.#renderRoot) return;
+    if (oldValue === newValue) return;
+    this.load();
   }
 
   async load() {
-    this.#internals.states.add('--loading')
-    const {tootId} = this.#useParams()
-    const apiURL = new URL(`/api/v1/statuses/${tootId}`, this.src)
-    const response = await fetch(apiURL)
+    this.#internals.states.add("--loading");
+    const { tootId } = this.#useParams();
+    const apiURL = new URL(`/api/v1/statuses/${tootId}`, this.src);
+    const response = await fetch(apiURL);
 
-    this.#render(await response.json())
-    this.#internals.states.delete('--loading')
+    this.#render(await response.json());
+    this.#internals.states.delete("--loading");
   }
 
   #render(json) {
-    const {account, url, content, media_attachments, created_at} = json
-    const handleURL = new URL(account.url)
-    const {handle} = this.#useParams()
+    const { account, url, content, media_attachments, created_at } = json;
+    const handleURL = new URL(account.url);
+    const { handle } = this.#useParams();
     this.#renderRoot.innerHTML = html`
       <img part="avatar" src="${account.avatar}" loading="lazy" alt="" />
       <a part="author-link" href="${handleURL.href}">
@@ -167,36 +171,43 @@ class TootEmbedElement extends HTMLElement {
         <relative-time datetime="${created_at}"></relative-time>
       </a>
       <div part="content">${content}</div>
-      <img part="media" src="${media_attachments[0].url}" loading="lazy" alt="${media_attachments[0].description}" />
-    `
-    this.#internals.states.add('--ready')
-    this.#internals.ariaLabel = `${this.#authorLinkPart.textContent} ${this.#contentPart.textContent}`
+      <img
+        part="media"
+        src="${media_attachments[0].url}"
+        loading="lazy"
+        alt="${media_attachments[0].description}"
+      />
+    `;
+    this.#internals.states.add("--ready");
+    this.#internals.ariaLabel = `${this.#authorLinkPart.textContent} ${
+      this.#contentPart.textContent
+    }`;
   }
 
-  #shortPattern = RegExp(/\/@([a-z]+)\/(\d+)/)
-  #longPattern = RegExp(/\/users\/([a-z]+)\/statuses\/(\d+)/)
+  #shortPattern = RegExp(/\/@([a-z]+)\/(\d+)/);
+  #longPattern = RegExp(/\/users\/([a-z]+)\/statuses\/(\d+)/);
 
   // Toot URLs can have two different formats:
   // 1. https://indieweb.social/@keithamus/109524390152251545
   // 2. https://indieweb.social/users/keithamus/statuses/109524390152251545
   #useParams() {
     if (this.#shortPattern.test(this.src)) {
-      const [match, handle, tootId] = this.src.match(this.#shortPattern)
-      return {handle, tootId}
+      const [match, handle, tootId] = this.src.match(this.#shortPattern);
+      return { handle, tootId };
     }
 
     if (this.#longPattern.text(this.src)) {
-      const [match, handle, tootId] = this.src.match(this.#longPattern)
-      return {handle, tootId}
+      const [match, handle, tootId] = this.src.match(this.#longPattern);
+      return { handle, tootId };
     }
 
-    throw new Error(`This doesn’t seem to be a toot URL: ${this.src}`)
+    throw new Error(`This doesn’t seem to be a toot URL: ${this.src}`);
   }
 }
 
-export default TootEmbedElement
+export default TootEmbedElement;
 
-if (!window.customElements.get('toot-embed')) {
-  window.TootEmbedElement = TootEmbedElement
-  window.customElements.define('toot-embed', TootEmbedElement)
+if (!window.customElements.get("toot-embed")) {
+  window.TootEmbedElement = TootEmbedElement;
+  window.customElements.define("toot-embed", TootEmbedElement);
 }
