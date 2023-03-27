@@ -13,9 +13,7 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
     {% if forloop.index0 < 5 %}
       <li>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
-        <relative-time prefix="" datetime="{{ post.date }}">
-          {{ post.date }}
-        </relative-time>
+        {% relativeTime post.date %}
       </li>
     {%- endif -%}
   {%- endfor -%}
@@ -29,7 +27,7 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
       <li>
         {{ note.content }}
         <a href="{{ note.url }}">
-          <relative-time prefix="" datetime="{{ note.date }}"></relative-time>
+          {% relativeTime note.date %}
         </a>
       </li>
     {%- endif -%}
