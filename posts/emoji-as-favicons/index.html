@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji" />
 
     <link rel="icon" href="/favicon.ico" />
 
@@ -19,7 +19,9 @@
         padding: var(--size-1) var(--size-3);
       }
 
-      blockquote, header, p {
+      blockquote,
+      header,
+      p {
         margin-bottom: var(--size-3);
       }
 
@@ -50,20 +52,18 @@
       .items > li > a {
         display: block;
       }
-
     </style>
     <script type="module">
-      import "https://cdn.skypack.dev/pin/@github/relative-time-element@v4.2.3-P571T775ek1iSJkEitJm/mode=imports,min/optimized/@github/relative-time-element.js";
       import "/js/toot-embed-element.js";
     </script>
   </head>
   <body>
     <header>
       <h1>Emojis as favicons</h1>
-      <time date="Sun Mar 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">March 18, 2018</time>
+      <time date="Sun Mar 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">March 18, 2018</time
+      >
     </header>
-    <main>
-      <p>So I was working on <a href="https://jsonresume.io">jsonresume.io</a> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</p>
+    <main><p>So I was working on <a href="https://jsonresume.io">jsonresume.io</a> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</p>
 <p>I really wanted just to drop a 📝 into a <code>&lt;link /&gt;</code> tag and call it a day. As far as I knew this wasn't possible, prompting this tweet:</p>
 <blockquote>
   <p>Which technical committee do I need to submit a proposal to in order to get emojis as favicons?  <a href="https://twitter.com/WHATWG?ref_src=twsrc%5Etfw">@WHATWG</a> ?</p>
@@ -83,8 +83,7 @@
 <script src="https://unpkg.com/open-heart-element" type="module" defer></script>
 <!-- Render `<open-heart>` -->
 <p><open-heart href="https://open-heart-endpoint.koddsson.workers.dev/?id=" emoji="❤️">♥</open-heart></p>
-
-    </main>
+</main>
     <footer></footer>
   </body>
 </html>

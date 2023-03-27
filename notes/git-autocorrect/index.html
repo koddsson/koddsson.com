@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Autocorrecting git commands">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Autocorrecting git commands" />
 
     <link rel="icon" href="/favicon.ico" />
 
@@ -19,7 +19,9 @@
         padding: var(--size-1) var(--size-3);
       }
 
-      blockquote, header, p {
+      blockquote,
+      header,
+      p {
         margin-bottom: var(--size-3);
       }
 
@@ -50,20 +52,18 @@
       .items > li > a {
         display: block;
       }
-
     </style>
     <script type="module">
-      import "https://cdn.skypack.dev/pin/@github/relative-time-element@v4.2.3-P571T775ek1iSJkEitJm/mode=imports,min/optimized/@github/relative-time-element.js";
       import "/js/toot-embed-element.js";
     </script>
   </head>
   <body>
     <header>
       <h1>Git Autocorrect</h1>
-      <time date="Sun Mar 05 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">March 05, 2023</time>
+      <time date="Sun Mar 05 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">March 05, 2023</time
+      >
     </header>
-    <main>
-      <link rel="preconnect" href="https://fosstodon.org">
+    <main><link rel="preconnect" href="https://fosstodon.org">
 <link rel="preconnect" href="https://cdn.fosstodon.org">
 <p>I tooted a little git command joke on Fosstodon the other day.</p>
 <p><toot-embed src="https://fosstodon.org/@koddsson/109958542284187610"></toot-embed></p>
@@ -71,8 +71,7 @@
 <pre class="language-sh"><code class="language-sh">$ <span class="token function">git</span> config <span class="token parameter variable">--get</span> alias.ranch<br><span class="token operator">!</span>imgcat ~/Downloads/cowbow-kitten.png</code></pre>
 <p>Someone actually replied to my toot that I should alias common misspellings of commands as their right commands but I've already got <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_help_autocorrect"><code>help.autocorrect</code></a> set on my git config.</p>
 <p>I'm not sure why it's not mentioned in the docs but I've got mine set to <code>-1</code> so that the autocorrect is executed immediately.</p>
-
-    </main>
+</main>
     <footer></footer>
   </body>
 </html>
