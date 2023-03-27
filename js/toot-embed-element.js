@@ -88,6 +88,37 @@ styles.replaceSync(`
 }
 `);
 
+const DAY_MILLISECONDS = 1000 * 60 * 60 * 24;
+const MONTH_MILLISECONDS = DAY_MILLISECONDS * 30;
+const YEAR_MILLISECONDS = MONTH_MILLISECONDS * 12;
+
+const formatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+
+async function relativeTime(time) {
+  const date = new Date(time);
+  const daysDifference = Math.round(
+    (new Date().getTime() - date) / DAY_MILLISECONDS
+  );
+
+  if (daysDifference < 29) {
+    return formatter.format(-daysDifference, "day");
+  }
+
+  const monthsDifference = Math.round(
+    (new Date().getTime() - date) / MONTH_MILLISECONDS
+  );
+
+  if (monthsDifference < 12) {
+    return formatter.format(-monthsDifference, "month");
+  }
+
+  const yearsDifference = Math.round(
+    (new Date().getTime() - date) / YEAR_MILLISECONDS
+  );
+
+  return formatter.format(-yearsDifference, "year");
+}
+
 class TootEmbedElement extends HTMLElement {
   static observeAttributes = ["src"];
   #internals = null;
@@ -168,7 +199,7 @@ class TootEmbedElement extends HTMLElement {
         <span part="author-handle">@${handle}@${handleURL.hostname}</span>
       </a>
       <a part="backlink" href="${url}" rel="bookmark">
-        <relative-time datetime="${created_at}"></relative-time>
+        <time>${relativeTime(created_at)}</time>
       </a>
       <div part="content">${content}</div>
       <img
