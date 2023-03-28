@@ -184,11 +184,11 @@ class TootEmbedElement extends HTMLElement {
     const apiURL = new URL(`/api/v1/statuses/${tootId}`, this.src);
     const response = await fetch(apiURL);
 
-    this.#render(await response.json());
+    await this.#render(await response.json());
     this.#internals.states.delete("--loading");
   }
 
-  #render(json) {
+  async #render(json) {
     const { account, url, content, media_attachments, created_at } = json;
     const handleURL = new URL(account.url);
     const { handle } = this.#useParams();
@@ -199,7 +199,7 @@ class TootEmbedElement extends HTMLElement {
         <span part="author-handle">@${handle}@${handleURL.hostname}</span>
       </a>
       <a part="backlink" href="${url}" rel="bookmark">
-        <time>${relativeTime(created_at)}</time>
+        <time>${await relativeTime(created_at)}</time>
       </a>
       <div part="content">${content}</div>
       <img
