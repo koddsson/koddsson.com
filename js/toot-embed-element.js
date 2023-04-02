@@ -1,3 +1,5 @@
+import 'https://cdn.skypack.dev/element-internals-polyfill';
+
 const html = String.raw;
 const styles = new CSSStyleSheet();
 styles.replaceSync(`
