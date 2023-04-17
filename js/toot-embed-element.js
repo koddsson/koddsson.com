@@ -195,7 +195,7 @@ class TootEmbedElement extends HTMLElement {
     const handleURL = new URL(account.url);
     const { handle } = this.#useParams();
     this.#renderRoot.innerHTML = html`
-      <img part="avatar" src="${account.avatar}" loading="lazy" alt="" />
+      <img part="avatar" src="${account.avatar}" alt="" />
       <a part="author-link" href="${handleURL.href}">
         <span part="author-name">${account.display_name}</span>
         <span part="author-handle">@${handle}@${handleURL.hostname}</span>
