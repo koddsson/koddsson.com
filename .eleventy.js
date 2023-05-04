@@ -72,6 +72,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/web-vitals/dist/web-vitals.js": "assets/web-vitals.js",
+  });
 
   return {
     passthroughFileCopy: true,

@@ -14,5 +14,8 @@
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-img": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0"
+  },
+  "dependencies": {
+    "web-vitals": "^3.3.1"
   }
 }
