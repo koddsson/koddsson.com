@@ -36,3 +36,13 @@ header, main, footer {
   max-width: 36em;
   margin: auto;
 }
+
+@supports (view-transition-name: name) {
+  header {
+    view-transition-name: header;
+  }
+  
+  main {
+    view-transition-name: main;
+  }
+}
