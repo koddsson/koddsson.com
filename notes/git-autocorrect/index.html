@@ -96,7 +96,8 @@
 <p>I tooted a little git command joke on Fosstodon the other day.</p>
 <p><toot-embed src="https://fosstodon.org/@koddsson/109958542284187610"></toot-embed></p>
 <p>I imagine that git terminal users like me often mis-type the commands and I'm a fan of injecting humor into my daily life. The way I created the above screenshot is by creating a git alias. Normally you git alias different git commands but you can actually execute any command as a git alias by prepending the command with a exclamation.</p>
-<pre class="language-sh"><code class="language-sh">$ <span class="token function">git</span> config <span class="token parameter variable">--get</span> alias.ranch<br><span class="token operator">!</span>imgcat ~/Downloads/cowbow-kitten.png</code></pre>
+<pre class="language-sh"><code class="language-sh">$ <span class="token function">git</span> config <span class="token parameter variable">--get</span> alias.ranch
+<span class="token operator">!</span>imgcat ~/Downloads/cowbow-kitten.png</code></pre>
 <p>Someone actually replied to my toot that I should alias common misspellings of commands as their right commands but I've already got <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration#_help_autocorrect"><code>help.autocorrect</code></a> set on my git config.</p>
 <p>I'm not sure why it's not mentioned in the docs but I've got mine set to <code>-1</code> so that the autocorrect is executed immediately.</p>
 </main>
