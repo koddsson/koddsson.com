@@ -2,6 +2,7 @@ module.exports = {
   ci: {
     collect: {
       staticDistDir: "./_site",
+      puppeteerScript: "./puppeteer.js",
     },
     upload: {
       target: "temporary-public-storage",
