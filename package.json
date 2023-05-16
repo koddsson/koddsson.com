@@ -1,11 +1,13 @@
 {
   "name": "koddsson.com",
   "version": "1.0.0",
-  "description": "## Development",
+  "description": "",
   "private": true,
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "start": "npx @11ty/eleventy --serve",
+    "test": "npm run test:performance",
+    "test:performance": "lhci autorun"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +15,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.0",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@lhci/cli": "^0.12.0"
   },
   "dependencies": {
     "web-vitals": "^3.3.1"
