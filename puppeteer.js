@@ -1,4 +1,7 @@
 module.exports = async (browser, context) => {
+  // launch browser for LHCI
+  const page = await browser.newPage();
+
   // Intercept API response and pass mock data for Puppeteer
   await page.setRequestInterception(true);
   page.on('request', request => {
@@ -11,4 +14,7 @@ module.exports = async (browser, context) => {
       request.continue();
     }
   });
+
+  // close session for next run
+  await page.close();
 };
