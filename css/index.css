@@ -16,7 +16,7 @@ pre[class*="language-"] {
 }
 
 toot-embed {
-  border: 1px solid var(--gray-5);
+  display: block;
 }
 
 :root {
