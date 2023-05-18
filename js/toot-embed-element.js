@@ -4,7 +4,7 @@ const html = String.raw;
 const styles = new CSSStyleSheet();
 styles.replaceSync(`
 @supports selector(:--loading) {
-  :host(:not(:--loading)) {
+  :host(:not(:--loading)) > #grid {
     display: grid;
     max-inline-size: 36em;
     padding: 0.5em;
@@ -20,7 +20,7 @@ styles.replaceSync(`
 
 @supports selector(:--loading) {
   @media only screen and (max-width: 600px) {
-    :host(:not(:--loading)) {
+    :host(:not(:--loading)) > #grid {
       grid-template:
         "avatar   author-link author-link" max-content
         "content  content     content"     max-content
@@ -30,7 +30,7 @@ styles.replaceSync(`
   }
 }
 @supports not selector(:--loading) {
-  :host(:not([internals-loading])) {
+  :host(:not([internals-loading])) > #grid {
     display: grid;
     max-inline-size: 36em;
     padding: 0.5em;
@@ -46,7 +46,7 @@ styles.replaceSync(`
     
 @supports not selector(:--loading) {
   @media only screen and (max-width: 600px) {
-    :host(:not([internals-loading])) {
+    :host(:not([internals-loading])) > #grid {
       grid-template:
         "avatar   author-link author-link" max-content
         "content  content     content"     max-content
@@ -195,20 +195,22 @@ class TootEmbedElement extends HTMLElement {
     const handleURL = new URL(account.url);
     const { handle } = this.#useParams();
     this.#renderRoot.innerHTML = html`
-      <img part="avatar" src="${account.avatar}" loading="lazy" alt="" />
-      <a part="author-link" href="${handleURL.href}">
-        <span part="author-name">${account.display_name}</span>
-        <span part="author-handle">@${handle}@${handleURL.hostname}</span>
-      </a>
-      <a part="backlink" href="${url}" rel="bookmark">
-        <time>${await relativeTime(created_at)}</time>
-      </a>
-      <div part="content">${content}</div>
-      <img
-        part="media"
-        src="${media_attachments[0].url}"
-        alt="${media_attachments[0].description}"
-      />
+      <div id="grid">
+        <img part="avatar" src="${account.avatar}" loading="lazy" alt="" />
+        <a part="author-link" href="${handleURL.href}">
+          <span part="author-name">${account.display_name}</span>
+          <span part="author-handle">@${handle}@${handleURL.hostname}</span>
+        </a>
+        <a part="backlink" href="${url}" rel="bookmark">
+          <time>${await relativeTime(created_at)}</time>
+        </a>
+        <div part="content">${content}</div>
+        <img
+          part="media"
+          src="${media_attachments[0].url}"
+          alt="${media_attachments[0].description}"
+        />
+      </div>
     `;
     this.#internals.states.add("--ready");
     this.#internals.ariaLabel = `${this.#authorLinkPart.textContent} ${
