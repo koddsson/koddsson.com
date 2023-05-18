@@ -1,8 +1,11 @@
+const puppeteer = require('puppeteer');
+
 module.exports = {
   ci: {
     collect: {
       staticDistDir: "./_site",
       puppeteerScript: "./puppeteer.js",
+      chromePath: puppeteer.executablePath(),
     },
     upload: {
       target: "temporary-public-storage",
