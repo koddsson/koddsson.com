@@ -37,6 +37,10 @@ header, main, footer {
   margin: auto;
 }
 
+:where(ol) {
+  margin-bottom: var(--size-3);
+}
+
 @supports (view-transition-name: name) {
   header {
     view-transition-name: header;
