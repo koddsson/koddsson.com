@@ -6,6 +6,7 @@ module.exports = {
       staticDistDir: "./_site",
       puppeteerScript: "./puppeteer.js",
       chromePath: puppeteer.executablePath(),
+      numberOfRuns: process.env.CI ? 3 : 1,
     },
     upload: {
       target: "temporary-public-storage",
