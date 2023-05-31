@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="How I implemented MPA View Transitions on koddsson.com" />
+    <meta name="view-transition" content="same-origin">
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>Implementing View Transitions on koddsson.com</title>
+
+    <style>
+      @import "/css/open-props.min.css";
+      @import "/css/normalize.min.css";
+      @import "/css/prism-vs.css";
+      @import "/css/index.css";
+
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote,
+      header,
+      p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+    </script>
+    <script type="module" defer>
+      import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+        
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+      
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onFID(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Implementing View Transitions on koddsson.com</h1>
+      <time date="Wed May 31 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">May 31, 2023</time
+      >
+    </header>
+    <main><p>Welcome to a development journey post for my personal website, koddsson.com. Today, we'll explore how I implemented view transitions to enhance the user interface and provide a more engaging browsing experience. The changes were made in a <a href="https://github.com/koddsson/koddsson.com/pull/53">Pull Request titled &quot;Implement View Transitions!&quot;</a>.</p>
+<p>View transitions are a key part of modern web design, adding visual continuity and smoothness when moving between different views or pages on a website. They can greatly improve the user experience by reducing visual abruptness and providing a sense of spatial awareness. Inspired by this, I decided it was time to introduce this feature to my own website, koddsson.com.</p>
+<p>The process of implementing view transitions involved changes in <a href="https://github.com/koddsson/koddsson.com/pull/53/commits/4faeb48632e1494751add39e80a1a380db938a0b">two main files</a>.</p>
+<ol>
+<li><code>_layouts/default.html</code>: Here, I introduced a meta tag <code>&lt;meta name=&quot;view-transition&quot; content=&quot;same-origin&quot;&gt;</code> to set the view transition property. This tag indicates that we want to enable transitions for navigations to and from this page.</li>
+<li><code>css/index.css</code>: This file saw a more substantial change. I added a CSS <code>@supports</code> rule that checks if the browser supports the property <code>view-transition-name</code>. If it does, two new properties are set: <code>view-transition-name: header;</code> under the <code>header</code> section and <code>view-transition-name: main;</code> under the <code>main</code> section. These properties enable the transitions for the <code>header</code> and <code>main</code> views.</li>
+</ol>
+<p>Creating this Pull Request was a process of research, trial-and-error, and testing. I started by researching how view transitions could be implemented and found the <a href="https://github.com/WICG/view-transitions/blob/main/explainer.md">explainer document</a> to be extremely helpful. After writing the code, I thoroughly tested it to ensure it worked as expected. The Pull Request passed all six checks before being merged, confirming the changes didn't regress the performance or accessibility of the page in any way that <a href="https://github.com/GoogleChrome/lighthouse-ci">Lighthouse CI</a> can detect.</p>
+<p><picture><source type="image/webp" srcset="/img/github-lighthouse-checks-screenshot-300w.webp 300w, /img/github-lighthouse-checks-screenshot-600w.webp 600w" sizes="(max-width: 600px) 480px, 800px"><source type="image/jpeg" srcset="/img/github-lighthouse-checks-screenshot-300w.jpeg 300w, /img/github-lighthouse-checks-screenshot-600w.jpeg 600w" sizes="(max-width: 600px) 480px, 800px"><img alt="Screenshot of github.com pull request checks showing 6 lighthouse checks that are all passing." loading="lazy" decoding="async" src="/img/github-lighthouse-checks-screenshot-300w.jpeg" width="600" height="197"></picture></p>
+<p>The view transitions have significantly improved the visual experience of browsing koddsson.com. The transitions between different views are now smooth and engaging. And according to <a href="https://github.com/WICG/view-transitions/blob/main/explainer.md">the View Transitions explainer</a> these transitions also: &quot;[...] lower the cognitive load by helping users <a href="https://www.smashingmagazine.com/2013/10/smart-transitions-in-user-experience-design/">stay in context</a> as they navigate from Page-A to Page-B, and <a href="https://wp-rocket.me/blog/perceived-performance-need-optimize/#:~:text=1.%20Use%20activity%20and%20progress%20indicators">reduce the perceived latency</a> of loading.&quot; I encourage you to visit the website and experience these transitions firsthand.</p>
+<p>Looking ahead, I plan to continue refining these transitions and exploring other ways to enhance the site's user interface.</p>
+<p>In this post, we've delved into the process of implementing view transitions on koddsson.com. I hope this glimpse into my development process has been informative and interesting. As always, I welcome your feedback and questions. Happy browsing!</p>
+</main>
+    <footer></footer>
+  </body>
+</html>
