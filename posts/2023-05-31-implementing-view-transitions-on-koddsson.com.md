@@ -20,6 +20,25 @@ Creating this Pull Request was a process of research, trial-and-error, and testi
 
 The view transitions have significantly improved the visual experience of browsing koddsson.com. The transitions between different views are now smooth and engaging. And according to [the View Transitions explainer](https://github.com/WICG/view-transitions/blob/main/explainer.md) these transitions also: "\[...\] lower the cognitive load by helping users [stay in context](https://www.smashingmagazine.com/2013/10/smart-transitions-in-user-experience-design/) as they navigate from Page-A to Page-B, and [reduce the perceived latency](https://wp-rocket.me/blog/perceived-performance-need-optimize/#:~:text=1.%20Use%20activity%20and%20progress%20indicators) of loading." I encourage you to visit the website and experience these transitions firsthand.
 
+<div class="info">
+You need to browse the website using Chrome and have these two experimental flags enable to be able to view these transitions:
+
+
+```
+chrome://flags#view-transition
+chrome://flags#view-transition-on-navigation
+```
+</div>
+
 Looking ahead, I plan to continue refining these transitions and exploring other ways to enhance the site's user interface.
 
 In this post, we've delved into the process of implementing view transitions on koddsson.com. I hope this glimpse into my development process has been informative and interesting. As always, I welcome your feedback and questions. Happy browsing!
+
+<div style="font-size: var(--size-fluid-3);">Changelog</div>
+
+<ol style="margin: 0; padding: 0; list-style: none; font-size: var(--font-size-1);">
+    <li style="display: flex;max-inline-size: unset; padding-inline-start: unset;">
+        <span style="font-family: var(--font-mono); margin-right: var(--size-3);">May 30, 2023</span>
+        <span style="flex: 1;">Add instruction on how to enable View Transitions.</span>
+    </li>
+</ol>
