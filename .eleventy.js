@@ -1,11 +1,13 @@
-const path = require("path");
+const path = require("node:path");
+const util = require('node:util');
+const crypto = require('node:crypto')
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt, sizes) {
   const metadata = await Image(src, {
-    widths: [300, 600],
+    widths: [300, 600, "auto"],
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
       const name = path.basename(src, extension);
@@ -74,6 +76,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy({
     "node_modules/web-vitals/dist/web-vitals.js": "assets/web-vitals.js",
+  });
+   
+  eleventyConfig.addFilter('jsonify', function(value) {
+      return util.inspect(value);
   });
 
   return {

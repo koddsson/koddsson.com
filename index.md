@@ -19,6 +19,11 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
   {%- endfor -%}
 </ul>
 
+## Images
+
+{% assign image = images[0] %}
+<a href="/images/{{image.id}}">{{image.meta.caption}} • {% relativeTime image.uploaded %}</a>
+
 ## Notes
 
 <ul class="items" id="notes">
