@@ -12,7 +12,7 @@ eleventyComputed:
 
 {% assign url = image.variants[0] %}
 <figure>
-  {% image url, image.meta.alt, "(max-width: 600px) 480px, 800px" %}
+  {% image url, image.meta.alt, "(max-width: 600px) 480px, 800px", "eager" %}
   <figcaption>
     {% relativeTime image.uploaded %}
   </figcaption>

@@ -5,7 +5,7 @@ const crypto = require('node:crypto')
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
 
-async function imageShortcode(src, alt, sizes) {
+async function imageShortcode(src, alt, sizes, loading = 'lazy') {
   const metadata = await Image(src, {
     widths: [300, 600, "auto"],
     filenameFormat: function (id, src, width, format, options) {
@@ -19,7 +19,7 @@ async function imageShortcode(src, alt, sizes) {
   const imageAttributes = {
     alt,
     sizes,
-    loading: "lazy",
+    loading,
     decoding: "async",
   };
 
