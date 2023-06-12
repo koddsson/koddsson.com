@@ -25,7 +25,9 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 {%- for image in images reversed -%}
     {% if forloop.index0 < 5 %}
     <li>
-<a href="/images/{{image.id}}">{{image.meta.caption}} • {% relativeTime image.uploaded %}</a>
+        <a href="/images/{{image.id}}" style="min-height: 48px;">
+            {{ image.meta.caption }} • {{ image.meta.alt }} • {% relativeTime image.uploaded %}
+        </a>
     </li>
     {%- endif -%}
 {%- endfor -%}
