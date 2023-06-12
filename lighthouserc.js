@@ -5,6 +5,7 @@ module.exports = {
     collect: {
       staticDistDir: "./_site",
       puppeteerScript: "./puppeteer.js",
+      puppeteerLaunchOptions: { headless: 'new' },
       chromePath: puppeteer.executablePath(),
       numberOfRuns: process.env.CI ? 3 : 1,
     },
