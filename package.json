@@ -7,7 +7,7 @@
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
     "test": "npm run test:performance",
-    "test:performance": "lhci autorun"
+    "test:performance": "lhci autorun --config=./lighthouserc.js"
   },
   "keywords": [],
   "author": "",
