@@ -21,8 +21,15 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 
 ## Images
 
-{% assign image = images[0] %}
+<ul class="items" id="images">
+{%- for image in images reversed -%}
+    {% if forloop.index0 < 5 %}
+    <li>
 <a href="/images/{{image.id}}">{{image.meta.caption}} • {% relativeTime image.uploaded %}</a>
+    </li>
+    {%- endif -%}
+{%- endfor -%}
+</ul>
 
 ## Notes
 
