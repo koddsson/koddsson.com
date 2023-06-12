@@ -1,6 +1,8 @@
 const path = require("node:path");
 const util = require('node:util');
 const crypto = require('node:crypto')
+const url = require('node:url')
+const slugify = require('slugify');
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
@@ -10,7 +12,7 @@ async function imageShortcode(src, alt, sizes, loading = 'lazy') {
     widths: [300, 600, "auto"],
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
-      const name = path.basename(src, extension);
+      const name = slugify(url.parse(src).pathname);
 
       return `${name}-${width}w.${format}`;
     }
