@@ -31,6 +31,9 @@ jobs:
       - name: Run script
         run: node scripts/index.mjs '${{ inputs.filepath }}' '${{ inputs.filedata }}'
 
+      - name: Build site
+        run: npm run build
+
       - name: Push changes
         run: |
           git config user.email '${{ inputs.email }}'
