@@ -1,20 +1,20 @@
 const path = require("node:path");
-const util = require('node:util');
-const crypto = require('node:crypto')
-const url = require('node:url')
+const util = require("node:util");
+const crypto = require("node:crypto");
+const url = require("node:url");
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
 
-async function imageShortcode(src, alt, sizes, loading = 'lazy') {
+async function imageShortcode(src, alt, sizes, loading = "lazy") {
   const metadata = await Image(src, {
     widths: [300, 600, "auto"],
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
-      const name = crypto.createHash('md5').update(src).digest("hex");
+      const name = crypto.createHash("md5").update(src).digest("hex");
 
       return `${name}-${width}w.${format}`;
-    }
+    },
   });
 
   const imageAttributes = {
@@ -69,6 +69,14 @@ module.exports = function (eleventyConfig) {
     jsTruthy: true,
   });
 
+  eleventyConfig.addFilter("first", function (array) {
+    return array[0];
+  });
+
+  eleventyConfig.addFilter("last", function (array) {
+    return array.at(-1);
+  });
+
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
@@ -78,9 +86,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "node_modules/web-vitals/dist/web-vitals.js": "assets/web-vitals.js",
   });
-   
-  eleventyConfig.addFilter('jsonify', function(value) {
-      return util.inspect(value);
+
+  eleventyConfig.addFilter("jsonify", function (value) {
+    return util.inspect(value);
   });
 
   return {
