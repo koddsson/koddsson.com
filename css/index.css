@@ -1,3 +1,12 @@
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: var(--font-size-6);
+  }
+  h2 {
+    font-size: var(--font-size-4);
+  }
+}
+
 pre[class*="language-"] {
   border-radius: var(--radius-2);
   padding: var(--size-3);
