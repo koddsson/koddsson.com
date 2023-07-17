@@ -20,6 +20,6 @@
     "puppeteer": "^20.7.4"
   },
   "dependencies": {
-    "web-vitals": "^3.3.2"
+    "web-vitals": "^3.4.0"
   }
 }
