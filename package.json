@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "",
-  "keywords": [],
+  "keywords": ["Personal Website", "Eleventy"],
   "license": "MIT",
   "author": "",
   "scripts": {
