@@ -5,7 +5,7 @@
   "description": "The personal website of Kristján Oddsson",
   "keywords": ["Personal Website", "Eleventy"],
   "license": "MIT",
-  "author": "",
+  "author": "Kristján Oddsson <hi@koddsson.com>",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
