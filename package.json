@@ -16,6 +16,8 @@
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@koddsson/eslint-config": "^0.1.2",
+    "@koddsson/prettier-config": "^2.0.0",
     "@lhci/cli": "^0.12.0",
     "puppeteer": "^20.8.2"
   },
