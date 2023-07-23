@@ -9,13 +9,11 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 ## Posts
 
 <ul class="items">
-  {%- for post in collections.posts reversed -%}
-    {% if forloop.index0 < 5 %}
-      <li>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-        {% relativeTime post.date %}
-      </li>
-    {%- endif -%}
+  {%- for post in collections.lastFivePosts -%}
+    <li>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      {% relativeTime post.date %}
+    </li>
   {%- endfor -%}
 </ul>
 

@@ -63,6 +63,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addAsyncShortcode("relativeTime", relativeTime);
 
+  eleventyConfig.addCollection("lastFivePosts", function (collectionApi) {
+    return collectionApi
+      .getAllSorted()
+      .reverse()
+      .filter((page) => page.data.tags?.includes("posts") && !page.data.draft)
+      .slice(0, 5);
+  });
+
   eleventyConfig.setLiquidOptions({
     // Display dates in UTC (so they don't risk being off by one day)
     timezoneOffset: 0,
