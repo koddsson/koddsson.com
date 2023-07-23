@@ -146,9 +146,9 @@ Now I can import the file and create some sheets with the data!
 {% image "./img/Histogram of datetime.svg", "", "(max-width: 600px) 480px, 800px" %}
 These are pretty minimal charts but they are currently working for my use cases. I'm planning on finding a even better solution but at least now I can actually view the data with charts.
 
-| Largest Contentful Paint (LCP) | Interaction to Next Paint (INP) | Cumulative Layout Shift (CLS) |
-|--|--|--|
-| {% image "./img/LCP ratings.svg", "", "(max-width: 600px) 480px, 800px" %} | {% image "./img/INP ratings.svg", "", "(max-width: 600px) 480px, 800px" %} | {% image "./img/CLS ratings.svg", "", "(max-width: 600px) 480px, 800px" %} |
+{% image "./img/LCP ratings.svg", "", "(max-width: 600px) 480px, 800px" %}
+{% image "./img/INP ratings.svg", "", "(max-width: 600px) 480px, 800px" %}
+{% image "./img/CLS ratings.svg", "", "(max-width: 600px) 480px, 800px" %}
 
 ## Looking Forward
 Web performance is a continuous journey, not a destination. Looking ahead, I plan to continue explore other ways to enhance the site's user interface. Web performance is a vital area that needs constant attention and optimisation, but the results are definitely worth looking into.
