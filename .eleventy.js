@@ -9,6 +9,7 @@ const Image = require("@11ty/eleventy-img");
 async function imageShortcode(src, alt, sizes, loading = "lazy") {
   const metadata = await Image(src, {
     widths: [300, 600, "auto"],
+    formats: ["webp", "jpeg", "auto"],
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
       const name = crypto.createHash("md5").update(src).digest("hex");
