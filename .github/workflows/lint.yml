@@ -1,0 +1,7 @@
+on: [push]
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: koddsson/action@main

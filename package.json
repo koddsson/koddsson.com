@@ -1,25 +1,28 @@
 {
   "name": "koddsson.com",
   "version": "1.0.0",
-  "description": "",
   "private": true,
+  "description": "The personal website of Kristján Oddsson",
+  "keywords": ["Personal Website", "Eleventy"],
+  "license": "MIT",
+  "author": "Kristján Oddsson <hi@koddsson.com>",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
     "test": "npm run test:performance",
     "test:performance": "lhci autorun --config=./lighthouserc.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "prettier": "@koddsson/prettier-config",
+  "dependencies": {
+    "web-vitals": "^3.4.0"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-img": "^3.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@koddsson/eslint-config": "^0.1.2",
+    "@koddsson/prettier-config": "^2.0.0",
     "@lhci/cli": "^0.12.0",
     "puppeteer": "^20.8.2"
-  },
-  "dependencies": {
-    "web-vitals": "^3.4.0"
   }
 }
