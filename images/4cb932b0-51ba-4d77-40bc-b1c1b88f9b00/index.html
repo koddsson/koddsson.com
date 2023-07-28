@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The personal web site of Kristján Oddsson" />
+    <meta name="view-transition" content="same-origin">
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>This guy needed to be sedated so the vet could get a foxtail from his ear 😩</title>
+
+    <style>
+      @import "/css/open-props.min.css";
+      @import "/css/normalize.min.css";
+      @import "/css/prism-vs.css";
+      @import "/css/index.css";
+
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote,
+      header,
+      p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+    </script>
+    <script type="module" defer>
+      import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+        
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+      
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onFID(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>This guy needed to be sedated so the vet could get a foxtail from his ear 😩</h1>
+      
+    </header>
+    <main><figure>
+  <picture><source type="image/webp" srcset="/img/acce779a82052bcbc97936fc3b42ba85-300w.webp 300w, /img/acce779a82052bcbc97936fc3b42ba85-576w.webp 576w" sizes="(max-width: 600px) 480px, 800px"><source type="image/jpeg" srcset="/img/acce779a82052bcbc97936fc3b42ba85-300w.jpeg 300w, /img/acce779a82052bcbc97936fc3b42ba85-576w.jpeg 576w" sizes="(max-width: 600px) 480px, 800px"><img alt="A close up of my dogs face on a operating table. He appears to be knocked out with his eyes slightly opens and his tongue slightly sticking out of his mouth." loading="eager" decoding="async" src="/img/acce779a82052bcbc97936fc3b42ba85-300w.jpeg" width="576" height="768"></picture>
+  <figcaption>
+    <time>yesterday</time>
+  </figcaption>
+</figure>
+</main>
+    <footer></footer>
+  </body>
+</html>
