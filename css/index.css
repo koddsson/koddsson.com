@@ -92,3 +92,10 @@ not including links to the current domain */
 .info > pre {
   margin-top: var(--size-2);
 }
+
+small {
+  font-size: var(--font-size-00);
+  display: block;
+  max-inline-size: unset;
+  color: var(--gray-7);
+}
