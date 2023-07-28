@@ -31,6 +31,9 @@ jobs:
       - name: Run script
         run: node scripts/index.mjs '${{ inputs.filepath }}' '${{ inputs.filedata }}'
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Build site
         run: npm run build
 
