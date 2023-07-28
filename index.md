@@ -10,9 +10,9 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 
 <ul class="items">
   {%- for post in collections.lastFivePosts -%}
-    <li>
+    <li style="margin-bottom: var(--size-2);">
       <a href="{{ post.url }}">{{ post.data.title }}</a>
-      {% relativeTime post.date %}
+      <small>{{post.data.description}}</small>
     </li>
   {%- endfor -%}
 </ul>
@@ -22,10 +22,11 @@ Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform 
 <ul class="items" id="images">
 {%- for image in images reversed -%}
     {% if forloop.index0 < 5 %}
-    <li>
-        <a href="/images/{{image.id}}" style="min-height: 48px;">
-            {{ image.meta.caption }} • {{ image.meta.alt }} • {% relativeTime image.uploaded %}
+    <li style="margin-bottom: var(--size-2);">
+        <a href="/images/{{image.id}}">
+            {{ image.meta.caption }}
         </a>
+        <small>{{image.meta.alt}}</small>
     </li>
     {%- endif -%}
 {%- endfor -%}
