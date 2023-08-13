@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 
-module.exports = {
+const settings = {
   ci: {
     collect: {
       staticDistDir: "./_site",
@@ -22,3 +22,13 @@ module.exports = {
     }
   }
 };
+
+if (process.env.GITHUB_ACTION) {
+  settings.ci.collect.settings = {
+    throttling: {
+      cpuSlowdownMultiplier: 1.7,
+    },
+  };
+}
+
+module.exports = settings;
