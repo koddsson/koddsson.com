@@ -1,10 +1,10 @@
-----
--draft: true
--title: Web Performance — From the Lab to the Field
--layout: default.html
--date: 2023-08-13
--description: "In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI. The post emphasizes the continuous pursuit of better web performance to create seamless and impressive online experiences for my users."
-----
+---
+draft: true
+title: Web Performance — From the Lab to the Field
+layout: default.html
+date: 2023-08-13
+description: "In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI. The post emphasizes the continuous pursuit of better web performance to create seamless and impressive online experiences for my users."
+---
 
 The advent of the internet and the rise of digital technologies have transformed the way we live, work, and play. As we find ourselves increasingly reliant on web applications, the importance of Web Performance has never been more evident. In this post, we'll go over some basics of Web Performance, why Web Performance matters, and look at some real production data, how to collect it, and analyse it.
 ## Understanding Web Performance and the need for speed
