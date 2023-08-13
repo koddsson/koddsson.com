@@ -1,5 +1,4 @@
 ---
-draft: true
 title: Web Performance — From the Lab to the Field
 layout: default.html
 date: 2023-08-13
