@@ -3,6 +3,15 @@ const util = require("node:util");
 const crypto = require("node:crypto");
 const url = require("node:url");
 
+const markdownIt = require("markdown-it");
+const markdownItFootnote = require("markdown-it-footnote");
+  
+const markdownLib =  markdownIt({
+  html: true, // Enable HTML tags in source
+  breaks: true,  // Convert '\n' in paragraphs into <br>
+  linkify: true // Autoconvert URL-like text to links
+}).use(markdownItFootnote);
+
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
 
@@ -61,6 +70,9 @@ async function relativeTime(time) {
 }
 
 module.exports = function (eleventyConfig) {
+  // set the library to process markdown files
+  eleventyConfig.setLibrary("md", markdownLib);
+
   eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addAsyncShortcode("relativeTime", relativeTime);
 
