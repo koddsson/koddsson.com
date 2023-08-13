@@ -9,11 +9,11 @@ description: "In this post, I delve into the world of web performance and its pr
 The advent of the internet and the rise of digital technologies have transformed the way we live, work, and play. As we find ourselves increasingly reliant on web applications, the importance of web performance has never been more evident. In this post, we'll go over some basics of Web Performance, why Web Performance matters, and look at some real production data, how to collect it, and analyze it.
 
 ## Understanding Web Performance and the need for speed
-Web Performance is the amalgamation of objective measurements and the perceived user experience of load time and runtime. It encapsulates how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions. It is crucial to minimize the loading and response times and add additional features to mask latency, making the experience as available and interactive as possible, as soon as possible[^mdn-web-performance].
+Web Performance is the amalgamation of objective measurements and the perceived user experience of load time and runtime. It encapsulates how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions. It is crucial to minimize the loading and response times, making the experience as available and interactive as possible, as soon as possi​ble[^mdn-web-performance].
 
-To ensure optimal web performance, it's essential to test and analyze it both in controlled lab environments and in real-world field conditions.
+To ensure optimal web performance, it's essential to test and analyse in a controlled lab environments _and_ in real-world field conditions.
 
-Improving your startup performance is often one of the highest value performance optimisations that can be made. Users prefer web experiences that are fast to load and smooth to interact with. Good user experience includes ensuring your app loads quickly. The longer it takes for a site to respond, the more users will abandon the...
+Improving the loading performance of a Web App is often one of the highest value performance optimisations that can be made. Users prefer web experiences that are fast to load and smooth to interact with. Good user experience includes ensuring your app loads quickly. The longer it takes for a site to respond, the more users will abandon the app for better user experiences.
 
 ### Testing in the Lab
 In the lab, controlled experiments can be conducted to measure web performance under specific conditions. This involves using various tools and techniques to simulate user interactions, network conditions, and device capabilities. By conducting tests in the lab, developers can gain valuable insights into the performance bottlenecks of their web applications and identify areas for improvement.
@@ -140,7 +140,7 @@ try {
 }
 ```
 
-Now I can import the file and create some sheets with the data!
+Now I can import the CSV or JSON files into a charting library and start creating charts that help me (and other potential stakeholders) to visualise and better understand the data. I just used Google Sheets since I can easily import CSV into sheets and start graphing that imported data.
 
 {% image "./img/Count of rating.svg", "", "(max-width: 600px) 480px, 800px" %}
 {% image "./img/Histogram of datetime.svg", "", "(max-width: 600px) 480px, 800px" %}
