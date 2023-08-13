@@ -5,8 +5,10 @@ const url = require("node:url");
 
 const markdownIt = require("markdown-it");
 const markdownItFootnote = require("markdown-it-footnote");
-  
-const markdownLib =  markdownIt({ html: true }).use(markdownItFootnote);
+
+const markdownLib = markdownIt({ html: true, linkify: true }).use(
+  markdownItFootnote,
+);
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
@@ -43,7 +45,7 @@ const formatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 async function relativeTime(time) {
   const date = new Date(time);
   const daysDifference = Math.round(
-    (new Date().getTime() - date) / DAY_MILLISECONDS
+    (new Date().getTime() - date) / DAY_MILLISECONDS,
   );
 
   if (daysDifference < 29) {
@@ -51,7 +53,7 @@ async function relativeTime(time) {
   }
 
   const monthsDifference = Math.round(
-    (new Date().getTime() - date) / MONTH_MILLISECONDS
+    (new Date().getTime() - date) / MONTH_MILLISECONDS,
   );
 
   if (monthsDifference < 12) {
@@ -59,7 +61,7 @@ async function relativeTime(time) {
   }
 
   const yearsDifference = Math.round(
-    (new Date().getTime() - date) / YEAR_MILLISECONDS
+    (new Date().getTime() - date) / YEAR_MILLISECONDS,
   );
 
   return `<time>${formatter.format(-yearsDifference, "year")}</time>`;
