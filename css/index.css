@@ -94,7 +94,7 @@ not including links to the current domain */
 }
 
 small {
-  font-size: var(--font-size-00);
+  font-size: var(--font-size-0);
   display: block;
   max-inline-size: unset;
   color: var(--gray-7);
