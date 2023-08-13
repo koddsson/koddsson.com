@@ -6,11 +6,7 @@ const url = require("node:url");
 const markdownIt = require("markdown-it");
 const markdownItFootnote = require("markdown-it-footnote");
   
-const markdownLib =  markdownIt({
-  html: true, // Enable HTML tags in source
-  breaks: true,  // Convert '\n' in paragraphs into <br>
-  linkify: true // Autoconvert URL-like text to links
-}).use(markdownItFootnote);
+const markdownLib =  markdownIt({ html: true }).use(markdownItFootnote);
 
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const Image = require("@11ty/eleventy-img");
