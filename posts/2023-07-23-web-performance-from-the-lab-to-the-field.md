@@ -2,7 +2,7 @@
 -draft: true
 -title: Web Performance — From the Lab to the Field
 -layout: default.html
--date: 2023-07-23
+-date: 2023-08-13
 -description: "In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI. The post emphasizes the continuous pursuit of better web performance to create seamless and impressive online experiences for my users."
 ----
 
