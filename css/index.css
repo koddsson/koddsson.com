@@ -29,7 +29,9 @@ toot-embed {
 }
 
 :root {
-  --brand: var(--indigo-8);
+  /* Colors links red */
+  --brand: var(--red-8);
+  --link-visited: var(--red-10);
 }
 
 #notes > li:not(:last-child):after {
