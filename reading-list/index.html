@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="I've been reading some solid books and blog posts on Software Engineering that I wan't to share here for reference" />
+    <meta name="view-transition" content="same-origin">
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>My favourite Software Engineering readings</title>
+
+    <style>
+      @import "/css/open-props.min.css";
+      @import "/css/normalize.min.css";
+      @import "/css/prism-vs.css";
+      @import "/css/index.css";
+
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote,
+      header,
+      p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+    </script>
+    <script type="module" defer>
+      import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+        
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+      
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onFID(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>My favourite Software Engineering readings</h1>
+      <time date="Fri Sep 22 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">September 22, 2023</time
+      >
+    </header>
+    <main><p>I have a high standard for books I'll generally reccomend to other software engineering. I read a bunch of more other books but they might be just OK or more specific so I don't want to reccomend it.</p>
+<p>I plan on updating this list over time</p>
+<h2>Site Reliability Engineering</h2>
+<p><a href="https://www.goodreads.com/book/show/27968891-site-reliability-engineering">https://www.goodreads.com/book/show/27968891-site-reliability-engineering</a></p>
+<p>Probably the origin of the term &quot;Site Reliability Engineering&quot;. Useful to most software engineering and not just SREs.</p>
+<h2>The Grug Brained Developer</h2>
+<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+<p>A no-nonsense take on modern day software engineering with a focus on simplicity and how to handle communication with different stakeholders.</p>
+<h2>Software Engineering at Google</h2>
+<p><a href="https://www.goodreads.com/book/show/48816586-software-engineering-at-google">https://www.goodreads.com/book/show/48816586-software-engineering-at-google</a></p>
+<p>A great resource for software engineers based off learned lessons from Google. Pretty down-to earth suggestions with great rationals behind each one. Has suggestions on how to implement systems and solutions to your codebase.</p>
+</main>
+    <footer></footer>
+  </body>
+</html>
