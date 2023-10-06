@@ -27,4 +27,8 @@ https://www.goodreads.com/book/show/48816586-software-engineering-at-google
 
 A great resource for software engineers based off learned lessons from Google. Pretty down-to earth suggestions with great rationals behind each one. Has suggestions on how to implement systems and solutions to your codebase.
 
+## Building a resilient frontend using progressive enhancement
 
+https://www.gov.uk/service-manual/technology/using-progressive-enhancement
+
+A great resource for why someone might write a service with progressive enhancements. The rational is solid and comes from a trusted source.
