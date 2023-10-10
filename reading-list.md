@@ -32,3 +32,9 @@ A great resource for software engineers based off learned lessons from Google. P
 https://www.gov.uk/service-manual/technology/using-progressive-enhancement
 
 A great resource for why someone might write a service with progressive enhancements. The rational is solid and comes from a trusted source.
+
+## How GitHub Engineering communicates
+
+https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md
+
+My time as a GitHub engineer really shaped my professional (and personal) life. While mostly focused on the work at GitHub the guide has a ton of good information that you can adapt to your organization. The guide is a especially great resource on asynchronous work which often gets conflated with remote work.
