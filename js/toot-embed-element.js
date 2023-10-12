@@ -1,4 +1,4 @@
-import 'https://cdn.skypack.dev/element-internals-polyfill';
+import 'https://cdn.skypack.dev/pin/element-internals-polyfill@v1.3.8-ij8kOFAM4dgXpppBu19H/mode=imports,min/optimized/element-internals-polyfill.js';
 
 const html = String.raw;
 const styles = new CSSStyleSheet();
