@@ -17,7 +17,7 @@
     "@11ty/eleventy-img": "^3.1.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@lhci/cli": "^0.12.0",
-    "puppeteer": "^21.5.1",
+    "puppeteer": "^21.5.2",
     "markdown-it": "^13.0.2",
     "markdown-it-footnote": "^3.0.3"
   },
