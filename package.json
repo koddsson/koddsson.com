@@ -19,7 +19,7 @@
     "@lhci/cli": "^0.13.0",
     "puppeteer": "^21.6.1",
     "markdown-it": "^14.0.0",
-    "markdown-it-footnote": "^3.0.3"
+    "markdown-it-footnote": "^4.0.0"
   },
   "dependencies": {
     "web-vitals": "^3.5.1"
