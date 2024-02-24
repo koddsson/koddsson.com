@@ -4,7 +4,16 @@ title: "Kristján Oddsson"
 description: "The personal web site of Kristján Oddsson"
 ---
 
-Hey! I'm Kristján and my pronouns are he/him. I like working with Web Platform features and hacking on small projects like this web site. You'll find some posts and notes here. I'm currently working at [ING](https://ing.nl/) as a Software Engineer and post recipies that I like to cook on [koddsson.cooking](http://koddsson.cooking).
+A software engineer with a penchant for working with Web Platform features and hacking on small projects has created posts and notes on this website.
+
+<ul class="vertical-list">
+  <li><a href="https://github.com/koddsson">GitHub</a></li>
+  <li><a href="https://x.com/koddsson">X</a></li>
+  <li><a href="https://read.cv/koddsson">ReadCV</a></li>
+  <li><a href="https://linkedin.com/in/koddsson">LinkedIn</a></li>
+  <li><a href="https://koddsson.cooking">koddsson.cooking</a></li>
+</ul>
+
 
 ## Posts
 
