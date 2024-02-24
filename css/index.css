@@ -92,3 +92,7 @@ nav.vertical {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+nav.vertical > a {
+  padding: var(--size-2);
+}
