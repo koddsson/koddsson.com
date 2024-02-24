@@ -6,13 +6,14 @@ description: "The personal web site of Kristján Oddsson"
 
 A software engineer with a penchant for working with Web Platform features and hacking on small projects has created posts and notes on this website.
 
-<ul class="vertical-list">
-  <li><a href="https://github.com/koddsson">GitHub</a></li>
-  <li><a href="https://x.com/koddsson">X</a></li>
-  <li><a href="https://read.cv/koddsson">ReadCV</a></li>
-  <li><a href="https://linkedin.com/in/koddsson">LinkedIn</a></li>
-  <li><a href="https://koddsson.cooking">koddsson.cooking</a></li>
-</ul>
+<nav class="vertical" aria-label="Socials">
+  <a href="https://github.com/koddsson">GitHub</a>
+  <a href="https://x.com/koddsson">X</a>
+  <a href="https://read.cv/koddsson">ReadCV</a>
+  <a href="https://linkedin.com/in/koddsson">LinkedIn</a>
+  <a href="https://koddsson.cooking">koddsson.cooking</a>
+  <a href="https://koddsson.cooking">koddsson.cooking</a>
+</nav>
 
 
 ## Posts
