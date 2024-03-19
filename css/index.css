@@ -96,3 +96,7 @@ nav.vertical {
 nav.vertical > a {
   padding: var(--size-2);
 }
+
+.items > li {
+  max-inline-size: unset;
+}
