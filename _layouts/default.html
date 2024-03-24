@@ -68,7 +68,10 @@
       release: "koddsson.com@0.0.1",
       integrations: [
         Sentry.browserTracingIntegration(),
-        Sentry.replayIntegration(),
+        Sentry.replayIntegration({
+          maskAllText: false,
+          blockAllMedia: false,
+        }),
       ],
 
       // Set tracesSampleRate to 1.0 to capture 100%
