@@ -54,6 +54,34 @@
         display: block;
       }
     </style>
+    <script
+      src="https://browser.sentry-cdn.com/7.108.0/bundle.tracing.min.js"
+      integrity="sha384-rmH0ko26EgFqgOkF0Gw/+4tXWlJjdACzub78Rf2YbCQx9758FCgacld7J+n6xYKM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+    Sentry.init({
+      dsn: "https://a93fd45d498b1902e94265fb7baeecbe@o4506947669065728.ingest.us.sentry.io/4506947670376448",
+
+      // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+      // if your build tool supports it.
+      release: "koddsson.com@0.0.1",
+      integrations: [
+        Sentry.browserTracingIntegration(),
+        Sentry.replayIntegration(),
+      ],
+
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 1.0,
+
+      // Capture Replay for 10% of all sessions,
+      // plus for 100% of sessions with an error
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
+    });
+    </script>
     <script type="importmap">
       {
         "imports": {
@@ -93,7 +121,7 @@
     <main><figure>
   <picture><source type="image/webp" srcset="/img/8193be4a8215b2bbf40ef0763541c1bf-300w.webp 300w, /img/8193be4a8215b2bbf40ef0763541c1bf-576w.webp 576w" sizes="(max-width: 600px) 480px, 800px"><img alt="My dog Tofu is behind our curtains and peeking his head through. It looks like he has a hood on. In the foreground is his crate and our sofa." loading="eager" decoding="async" src="/img/8193be4a8215b2bbf40ef0763541c1bf-300w.jpeg" width="576" height="768" srcset="/img/8193be4a8215b2bbf40ef0763541c1bf-300w.jpeg 300w, /img/8193be4a8215b2bbf40ef0763541c1bf-576w.jpeg 576w" sizes="(max-width: 600px) 480px, 800px"></picture>
   <figcaption>
-    <time>9 months ago</time>
+    <time>10 months ago</time>
   </figcaption>
 </figure>
 </main>

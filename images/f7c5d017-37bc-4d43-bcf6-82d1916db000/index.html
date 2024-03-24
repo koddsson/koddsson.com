@@ -54,6 +54,34 @@
         display: block;
       }
     </style>
+    <script
+      src="https://browser.sentry-cdn.com/7.108.0/bundle.tracing.min.js"
+      integrity="sha384-rmH0ko26EgFqgOkF0Gw/+4tXWlJjdACzub78Rf2YbCQx9758FCgacld7J+n6xYKM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+    Sentry.init({
+      dsn: "https://a93fd45d498b1902e94265fb7baeecbe@o4506947669065728.ingest.us.sentry.io/4506947670376448",
+
+      // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+      // if your build tool supports it.
+      release: "koddsson.com@0.0.1",
+      integrations: [
+        Sentry.browserTracingIntegration(),
+        Sentry.replayIntegration(),
+      ],
+
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 1.0,
+
+      // Capture Replay for 10% of all sessions,
+      // plus for 100% of sessions with an error
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
+    });
+    </script>
     <script type="importmap">
       {
         "imports": {
@@ -93,7 +121,7 @@
     <main><figure>
   <picture><source type="image/webp" srcset="/img/1764547acb8ed58f619832739d7edb08-300w.webp 300w, /img/1764547acb8ed58f619832739d7edb08-576w.webp 576w" sizes="(max-width: 600px) 480px, 800px"><img alt="A black and white dog laying in their side on a gray mattress. The dogs body extends past the edge of the bed in a way where one would think he would have fallen off the edge by now." loading="eager" decoding="async" src="/img/1764547acb8ed58f619832739d7edb08-300w.jpeg" width="576" height="768" srcset="/img/1764547acb8ed58f619832739d7edb08-300w.jpeg 300w, /img/1764547acb8ed58f619832739d7edb08-576w.jpeg 576w" sizes="(max-width: 600px) 480px, 800px"></picture>
   <figcaption>
-    <time>3 months ago</time>
+    <time>4 months ago</time>
   </figcaption>
 </figure>
 </main>
