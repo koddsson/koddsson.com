@@ -9,6 +9,12 @@ I have a high standard for books I'll generally reccomend to other software engi
 
 I plan on updating this list over time
 
+## Crafting Interpreters
+
+https://craftinginterpreters.com
+
+Free-to-read-online book on writing your own interpreter from tokenizing to evaluating code. The book walks you through writing a interpreter for the "Lox" programming language. My implementation is located at https://github.com/koddsson/lox-interpreter.
+
 ## Site Reliability Engineering
 
 https://www.goodreads.com/book/show/27968891-site-reliability-engineering
