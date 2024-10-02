@@ -28,18 +28,11 @@ A software engineer with a penchant for working with Web Platform features and h
 
 ## Images
 
-<ul class="items" id="images">
+<div class="image-grid">
 {%- for image in images reversed -%}
-    {% if forloop.index0 < 5 %}
-    <li style="margin-bottom: var(--size-2);">
-        <a href="/images/{{image.id}}">
-            {{ image.meta.caption }}
-        </a>
-        <small>{{image.meta.alt}}</small>
-    </li>
-    {%- endif -%}
+{% if forloop.index0 < 9 %} {% assign url = image.variants[0] %} <a href="/images/{{image.id}}"> {% image url, image.meta.alt, "(max-width: 600px) 480px, 800px", "eager" %} </a> {%- endif -%}
 {%- endfor -%}
-</ul>
+</div>
 
 ## Notes
 
