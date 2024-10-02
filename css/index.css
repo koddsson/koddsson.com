@@ -100,3 +100,17 @@ nav.vertical > a {
 .items > li {
   max-inline-size: unset;
 }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.image-grid img {
+  object-fit: cover;
+  height: 250px;
+  width: 250px;
+}
