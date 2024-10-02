@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="TODO" />
+    <meta name="view-transition" content="same-origin">
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>How to load extra seed data in Rails.</title>
+
+    <style>
+      @import "/css/open-props.min.css";
+      @import "/css/normalize.min.css";
+      @import "/css/prism-vs.css";
+      @import "/css/index.css";
+
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote,
+      header,
+      p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+    </style>
+    <script
+      src="https://browser.sentry-cdn.com/7.108.0/bundle.tracing.replay.min.js"
+      integrity="sha384-AMN2ZMEVm70vKmEMdD260FN3xoIBL1Ud8kl1CgcTurPLuZGry+KLrChw8BRQQbBm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+    Sentry.init({
+      dsn: "https://a93fd45d498b1902e94265fb7baeecbe@o4506947669065728.ingest.us.sentry.io/4506947670376448",
+
+      // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+      // if your build tool supports it.
+      release: "koddsson.com@0.0.1",
+      integrations: [
+        Sentry.browserTracingIntegration(),
+        Sentry.replayIntegration({
+          maskAllText: false,
+          blockAllMedia: false,
+        }),
+      ],
+
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 1.0,
+
+      // Capture Replay for 10% of all sessions,
+      // plus for 100% of sessions with an error
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
+    });
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+    </script>
+    <script type="module" defer>
+      import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+        
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+      
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onFID(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>How to load extra seed data in Rails.</h1>
+      <time date="Wed Oct 02 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">October 02, 2024</time
+      >
+    </header>
+    <main><h1>somet</h1>
+</main>
+    <footer></footer>
+  </body>
+</html>
