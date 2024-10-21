@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A example of a dynamic bookmark which directs you to the Pull Request view for the last 7 days" />
+    <meta name="view-transition" content="same-origin">
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>Last 7 days of Pull Requests</title>
+
+    <style>
+      @import "/css/open-props.min.css";
+      @import "/css/normalize.min.css";
+      @import "/css/prism-vs.css";
+      @import "/css/index.css";
+
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote,
+      header,
+      p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+    </style>
+    <script
+      src="https://browser.sentry-cdn.com/7.108.0/bundle.tracing.replay.min.js"
+      integrity="sha384-AMN2ZMEVm70vKmEMdD260FN3xoIBL1Ud8kl1CgcTurPLuZGry+KLrChw8BRQQbBm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+    Sentry.init({
+      dsn: "https://a93fd45d498b1902e94265fb7baeecbe@o4506947669065728.ingest.us.sentry.io/4506947670376448",
+
+      // Alternatively, use `process.env.npm_package_version` for a dynamic release version
+      // if your build tool supports it.
+      release: "koddsson.com@0.0.1",
+      integrations: [
+        Sentry.browserTracingIntegration(),
+        Sentry.replayIntegration({
+          maskAllText: false,
+          blockAllMedia: false,
+        }),
+      ],
+
+      // Set tracesSampleRate to 1.0 to capture 100%
+      // of transactions for performance monitoring.
+      // We recommend adjusting this value in production
+      tracesSampleRate: 1.0,
+
+      // Capture Replay for 10% of all sessions,
+      // plus for 100% of sessions with an error
+      replaysSessionSampleRate: 0.1,
+      replaysOnErrorSampleRate: 1.0,
+    });
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+    </script>
+    <script type="module" defer>
+      import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+        
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+      
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onFID(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Last 7 days of Pull Requests</h1>
+      <time date="Mon Oct 21 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">October 21, 2024</time
+      >
+    </header>
+    <main><p>Since bookmarks can be JavaScript we can dynamically create a URL based on some data. In this case the data is the current date. We'll use that to create a GitHub search filter for pull requests created in the last 7 days.</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> today <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> lastWeek <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setDate</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> created <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">[</span>lastWeek<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lastWeek<span class="token punctuation">.</span><span class="token function">getUTCMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> lastWeek<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>
+    <span class="token string">"-"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>today<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getUTCMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> today<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">".."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> url <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span><span class="token string">"https://github.com/pulls"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> params <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URLSearchParams</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+params<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token string">"q"</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">is:pr author:koddsson is:closed created:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>created<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+url<span class="token punctuation">.</span>search <span class="token operator">=</span> params<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> url<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Then we just need to compress the JavaScript, URL encode it, stick the <code>javascript:</code> protocol in front of the script and stick it in a URL. You can drag that into your bookmarks bar and now you have a easy shortcut to the work you did last week, ready for your next Monday standup!</p>
+<p><a href="javascript:(function()%7Bconst%20today%20%3D%20new%20Date()%3B%0Aconst%20lastWeek%20%3D%20new%20Date(new%20Date().setDate(new%20Date().getDate()-7))%3B%0A%0Aconst%20created%20%3D%20%5B%20%0A%20%20%20%20%5BlastWeek.getFullYear()%2C%20lastWeek.getUTCMonth()%20%2B%201%2C%20lastWeek.getDate()%5D.join('-')%2C%0A%20%20%20%20%5Btoday.getFullYear()%2C%20today.getUTCMonth()%20%2B%201%2C%20today.getDate()%5D.join('-')%2C%0A%5D.join('..')%3B%0A%0Aconst%20url%20%3D%20new%20URL('https%3A%2F%2Fgithub.com%2Fpulls')%3B%0Aconst%20params%20%3D%20new%20URLSearchParams()%3B%0A%0Aparams.set('q'%2C%20%60is%3Apr%20author%3Akoddsson%20is%3Aclosed%20created%3A%24%7Bcreated%7D%60)%3B%0A%0Aurl.search%20%3D%20params.toString()%3B%0A%0Awindow.location.href%20%3D%20url.toString()%3B%7D)()%3B">Last 7 days of PRs</a>.</p>
+<p>Note that you'll need to update user name (<code>author:koddsson</code>) in the original script and then recreate the bookmarklet again to get <em>your</em> pull requests. I used <a href="https://caiorss.github.io/bookmarklet-maker/">https://caiorss.github.io/bookmarklet-maker/</a> to create my bookmarklet.</p>
+</main>
+    <footer></footer>
+  </body>
+</html>
