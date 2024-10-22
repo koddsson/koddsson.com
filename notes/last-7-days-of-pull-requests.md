@@ -12,16 +12,17 @@ const today = new Date();
 const lastWeek = new Date(new Date().setDate(new Date().getDate() - 7));
 
 const created = [
-  [lastWeek.getFullYear(), lastWeek.getUTCMonth() + 1, lastWeek.getDate()].join(
-    "-",
-  ),
+  [lastWeek.getFullYear(), lastWeek.getUTCMonth() + 1, lastWeek.getDate()].join("-"),
   [today.getFullYear(), today.getUTCMonth() + 1, today.getDate()].join("-"),
 ].join("..");
 
 const url = new URL("https://github.com/pulls");
 const params = new URLSearchParams();
 
-params.set("q", `is:pr author:@me is:closed created:${created}`);
+params.set(
+  "q", 
+  'is:pr author:@me is:closed created:' + created
+);
 
 url.search = params.toString();
 
