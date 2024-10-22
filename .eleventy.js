@@ -1,16 +1,16 @@
-const path = require("node:path");
-const util = require("node:util");
-const crypto = require("node:crypto");
+import path from "node:path";
+import util from "node:util";
+import crypto from "node:crypto";
 
-const markdownIt = require("markdown-it");
-const markdownItFootnote = require("markdown-it-footnote");
+import markdownIt from "markdown-it";
+import markdownItFootnote from "markdown-it-footnote";
+
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import Image from "@11ty/eleventy-img";
 
 const markdownLib = markdownIt({ html: true, linkify: true }).use(
   markdownItFootnote,
 );
-
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(src, alt, sizes, loading = "lazy") {
   const metadata = await Image(src, {
@@ -66,7 +66,7 @@ async function relativeTime(time) {
   return `<time>${formatter.format(-yearsDifference, "year")}</time>`;
 }
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   // set the library to process markdown files
   eleventyConfig.setLibrary("md", markdownLib);
 
@@ -118,4 +118,4 @@ module.exports = function (eleventyConfig) {
       layouts: "_layouts",
     },
   };
-};
+}
