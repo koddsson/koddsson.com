@@ -1,6 +1,8 @@
-# Gift Ideas
+---
+layout: default.html
+---
 
-<meta name="generator" content="{{ eleventy.generator }}">
+# Gift Ideas
 
 Sometimes people want to buy me things and I feel like I'm terrible at coming up with ideas on the spot. Here's where I'll collect some ideas of gifts that I'd love to receive.
 
