@@ -1,10 +1,10 @@
-import 'https://cdn.skypack.dev/pin/element-internals-polyfill@v1.3.8-ij8kOFAM4dgXpppBu19H/mode=imports,min/optimized/element-internals-polyfill.js';
+import "https://cdn.skypack.dev/pin/element-internals-polyfill@v1.3.8-ij8kOFAM4dgXpppBu19H/mode=imports,min/optimized/element-internals-polyfill.js";
 
 const html = String.raw;
 const styles = new CSSStyleSheet();
 styles.replaceSync(`
-@supports selector(:--loading) {
-  :host(:not(:--loading)) > #grid {
+@supports selector(:state(loading)) {
+  :host(:not(:state(loading))) > #grid {
     display: grid;
     max-inline-size: 36em;
     padding: 0.5em;
@@ -18,9 +18,9 @@ styles.replaceSync(`
   }
 }
 
-@supports selector(:--loading) {
+@supports selector(:state(loading)) {
   @media only screen and (max-width: 600px) {
-    :host(:not(:--loading)) > #grid {
+    :host(:not(:state(loading))) > #grid {
       grid-template:
         "avatar   author-link author-link" max-content
         "content  content     content"     max-content
@@ -29,7 +29,7 @@ styles.replaceSync(`
     }
   }
 }
-@supports not selector(:--loading) {
+@supports not selector(:state(loading)) {
   :host(:not([internals-loading])) > #grid {
     display: grid;
     max-inline-size: 36em;
@@ -44,7 +44,7 @@ styles.replaceSync(`
   }
 }
     
-@supports not selector(:--loading) {
+@supports not selector(:state(loading)) {
   @media only screen and (max-width: 600px) {
     :host(:not([internals-loading])) > #grid {
       grid-template:
@@ -99,7 +99,7 @@ const formatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 async function relativeTime(time) {
   const date = new Date(time);
   const daysDifference = Math.round(
-    (new Date().getTime() - date) / DAY_MILLISECONDS
+    (new Date().getTime() - date) / DAY_MILLISECONDS,
   );
 
   if (daysDifference < 29) {
@@ -107,7 +107,7 @@ async function relativeTime(time) {
   }
 
   const monthsDifference = Math.round(
-    (new Date().getTime() - date) / MONTH_MILLISECONDS
+    (new Date().getTime() - date) / MONTH_MILLISECONDS,
   );
 
   if (monthsDifference < 12) {
@@ -115,7 +115,7 @@ async function relativeTime(time) {
   }
 
   const yearsDifference = Math.round(
-    (new Date().getTime() - date) / YEAR_MILLISECONDS
+    (new Date().getTime() - date) / YEAR_MILLISECONDS,
   );
 
   return formatter.format(-yearsDifference, "year");
@@ -166,8 +166,8 @@ class TootEmbedElement extends HTMLElement {
     if (this.querySelector('script[type="application/json"]')) {
       return this.#render(
         JSON.parse(
-          this.querySelector('script[type="application/json"]').textContent
-        )
+          this.querySelector('script[type="application/json"]').textContent,
+        ),
       );
     }
     if (this.src) this.load();
@@ -213,9 +213,8 @@ class TootEmbedElement extends HTMLElement {
       </div>
     `;
     this.#internals.states.add("--ready");
-    this.#internals.ariaLabel = `${this.#authorLinkPart.textContent} ${
-      this.#contentPart.textContent
-    }`;
+    this.#internals.ariaLabel =
+      `${this.#authorLinkPart.textContent} ${this.#contentPart.textContent}`;
   }
 
   #shortPattern = RegExp(/\/@([a-z]+)\/(\d+)/);
