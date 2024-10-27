@@ -1,5 +1,6 @@
 :root {
-  --brand: var(--indigo-8);
+  --brand: var(--indigo-2);
+  --link-visited: var(--purple-4);
 }
 
 html {
