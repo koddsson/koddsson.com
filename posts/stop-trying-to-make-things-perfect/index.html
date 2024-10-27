@@ -101,15 +101,16 @@
     </script>
     <script type="module">
       import "/js/toot-embed-element.js";
+      import "/js/tick-rs-element.js";
     </script>
     <script type="module" defer>
       import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
-        
+
       const endpoint = 'https://vitals.koddsson.workers.dev/';
 
       function sendToAnalytics(metric) {
         const body = JSON.stringify(metric);
-      
+
         // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
         (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
           fetch(endpoint, {body, method: 'POST', keepalive: true});
@@ -134,6 +135,9 @@
 <p>To illustrate this point, consider the example of my mom's old cookbook. She used to collect newspaper clippings with recipes and handwritten notes, and would mark the good ones with &quot;Great!&quot; and add notes to the margins. This was not a fancy or professionally-designed cookbook, but it was functional and effective for her needs. It also allowed for flexibility and growth - she could easily add new recipes or make changes to existing ones by adding pages or making notes in the margins. This is the kind of cookbook I want to create for myself - one that is functional, flexible, and easy to use in the kitchen.</p>
 <p>In conclusion, I think it's important to remember that perfectionism is often the enemy of creativity and productivity. Instead of trying to make everything perfect before we start, we should just get started and see where it takes us. By embracing the philosophy of &quot;just make the thing,&quot; we can open ourselves up to new possibilities and creative growth.</p>
 </main>
-    <footer></footer>
+    <footer>
+      <tick-rs id="feeXo4YTT5uP"></tick-rs>
+      <div>Number of visitors</div>
+    </footer>
   </body>
 </html>

@@ -101,15 +101,16 @@
     </script>
     <script type="module">
       import "/js/toot-embed-element.js";
+      import "/js/tick-rs-element.js";
     </script>
     <script type="module" defer>
       import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
-        
+
       const endpoint = 'https://vitals.koddsson.workers.dev/';
 
       function sendToAnalytics(metric) {
         const body = JSON.stringify(metric);
-      
+
         // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
         (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
           fetch(endpoint, {body, method: 'POST', keepalive: true});
@@ -132,6 +133,9 @@
     <main><p>My new personal website is written in Jekyll! I think it's much simpler than the one I had before where I wrote everything from scratch!</p>
 <p>It draws heavily from <a href="https://muan.co/">Mu-Ans site</a>. I really like Mu-Ans eye for design and web development.</p>
 </main>
-    <footer></footer>
+    <footer>
+      <tick-rs id="feeXo4YTT5uP"></tick-rs>
+      <div>Number of visitors</div>
+    </footer>
   </body>
 </html>

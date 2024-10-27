@@ -101,15 +101,16 @@
     </script>
     <script type="module">
       import "/js/toot-embed-element.js";
+      import "/js/tick-rs-element.js";
     </script>
     <script type="module" defer>
       import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
-        
+
       const endpoint = 'https://vitals.koddsson.workers.dev/';
 
       function sendToAnalytics(metric) {
         const body = JSON.stringify(metric);
-      
+
         // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
         (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
           fetch(endpoint, {body, method: 'POST', keepalive: true});
@@ -176,6 +177,9 @@ favicon<span class="token punctuation">.</span>href <span class="token operator"
 <!-- Render `<open-heart>` -->
 <p><open-heart href="https://open-heart-endpoint.koddsson.workers.dev/?id=" emoji="❤️">♥</open-heart></p>
 </main>
-    <footer></footer>
+    <footer>
+      <tick-rs id="feeXo4YTT5uP"></tick-rs>
+      <div>Number of visitors</div>
+    </footer>
   </body>
 </html>
