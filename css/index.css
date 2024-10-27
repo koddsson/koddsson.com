@@ -114,3 +114,8 @@ nav.vertical > a {
   height: 250px;
   width: 250px;
 }
+
+footer {
+  text-align: center;
+  margin-bottom: var(--size-4);
+}

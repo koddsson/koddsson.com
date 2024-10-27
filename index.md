@@ -14,7 +14,6 @@ A software engineer with a penchant for working with Web Platform features and h
   <a href="https://koddsson.cooking">koddsson.cooking</a>
 </nav>
 
-
 ## Posts
 
 <ul class="items">
