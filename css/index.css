@@ -1,3 +1,7 @@
+:root {
+  --brand: var(--indigo-8);
+}
+
 html {
   font-size: var(--font-size-2);
 }
@@ -30,10 +34,6 @@ pre[class*="language-"] {
 
 toot-embed {
   display: block;
-}
-
-:root {
-  --brand: var(--indigo-8);
 }
 
 #notes > li:not(:last-child):after {
@@ -84,7 +84,7 @@ small {
   font-size: var(--font-size-0);
   display: block;
   max-inline-size: unset;
-  color: var(--gray-7);
+  color: var(--text-2);
 }
 
 nav.vertical {
