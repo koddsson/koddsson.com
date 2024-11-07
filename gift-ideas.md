@@ -11,3 +11,4 @@ Sometimes people want to buy me things and I feel like I'm terrible at coming up
 - [Any of the various garums, vinegars or sauces (so long it's vegan/vegetarian) from Noma](https://nomaprojects.com/collections)
 - [Any of the Tom Sachs stuff from his website](https://store.tomsachs.com/)
 - [Any of the Brumm Brumm prints from their website](https://brumm.is/collections/our-prints). I particularly like the Icelandic foods.
+- [I love all these Icelandic maps](https://mapsoficeland.shop/product-category/iceland-maps/)
