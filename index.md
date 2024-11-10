@@ -11,7 +11,7 @@ A software engineer with a penchant for working with Web Platform features and h
   <a href="https://x.com/koddsson">Twitter</a>
   <a href="https://read.cv/koddsson">ReadCV</a>
   <a href="https://linkedin.com/in/koddsson">LinkedIn</a>
-  <a href="https://koddsson.cooking">koddsson.cooking</a>
+  <a href="https://github.com/koddsson/cooking">koddsson.cooking</a>
 </nav>
 
 ## Posts
