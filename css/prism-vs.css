@@ -1,3 +1,7 @@
+:root {
+  --class-name: #1c6073;
+}
+
 /**
  * VS theme by Andrew Lock (https://andrewlock.net)
  * Inspired by Visual Studio syntax coloring
@@ -127,7 +131,7 @@ code[class*="language-css"] {
 
 .token.class-name,
 .language-json .token.property {
-	color: #2B91AF;
+	color: var(--class-name);
 }
 
 .token.tag,
