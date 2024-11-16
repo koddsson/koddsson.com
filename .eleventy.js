@@ -7,6 +7,7 @@ import markdownItFootnote from "markdown-it-footnote";
 
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import Image from "@11ty/eleventy-img";
+import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 
 const markdownLib = markdownIt({ html: true, linkify: true }).use(
   markdownItFootnote,
@@ -96,9 +97,10 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addPlugin(postcssPlugin);
+
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("CNAME");
