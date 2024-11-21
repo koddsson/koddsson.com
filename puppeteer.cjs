@@ -1,5 +1,7 @@
 module.exports = async (browser, context) => {
   browser.on("targetcreated", async (target) => {
+    if (target.type() !== "page") return;
+
     const page = await target.page();
 
     // Intercept API response and pass mock data for Puppeteer
