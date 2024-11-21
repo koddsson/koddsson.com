@@ -13,3 +13,4 @@ Sometimes people want to buy me things and I feel like I'm terrible at coming up
 - [Any of the Brumm Brumm prints from their website](https://brumm.is/collections/our-prints). I particularly like the Icelandic foods.
 - [I love all these Icelandic maps](https://mapsoficeland.shop/product-category/iceland-maps/).
 - Turns out Iceland is **cold** so I think I could use some wind/water/whatever proof trousers. [These are nice](https://www.66north.com/is/skalafell-bibs/p/W41254?color=910&size=XL).
+- I'm a big Mac Miller fan and love all [his merch](https://shopuk.macmillerswebsite.com/).
