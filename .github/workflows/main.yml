@@ -16,12 +16,12 @@ jobs:
         run: |
           npm ci
           npm run build          
-      
-      # - name: run Lighthouse CI
-      #   run: |
-      #     npm run test:performance
-      #   env:
-      #     LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: run Lighthouse CI
+        run: |
+          npm run test:performance
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
