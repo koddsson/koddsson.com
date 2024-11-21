@@ -8,7 +8,7 @@
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
     "test": "echo \"No tests defined locally\"",
-    "test:performance": "lhci autorun --config=./lighthouserc.js"
+    "test:performance": "lhci autorun --config=./lighthouserc.cjs"
   },
   "keywords": [],
   "author": "",
