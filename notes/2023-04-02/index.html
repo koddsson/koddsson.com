@@ -61,37 +61,6 @@
         display: block;
       }
     </style>
-    <script
-      src="https://browser.sentry-cdn.com/7.108.0/bundle.tracing.replay.min.js"
-      integrity="sha384-AMN2ZMEVm70vKmEMdD260FN3xoIBL1Ud8kl1CgcTurPLuZGry+KLrChw8BRQQbBm"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-    Sentry.init({
-      dsn: "https://a93fd45d498b1902e94265fb7baeecbe@o4506947669065728.ingest.us.sentry.io/4506947670376448",
-
-      // Alternatively, use `process.env.npm_package_version` for a dynamic release version
-      // if your build tool supports it.
-      release: "koddsson.com@0.0.1",
-      integrations: [
-        Sentry.browserTracingIntegration(),
-        Sentry.replayIntegration({
-          maskAllText: false,
-          blockAllMedia: false,
-        }),
-      ],
-
-      // Set tracesSampleRate to 1.0 to capture 100%
-      // of transactions for performance monitoring.
-      // We recommend adjusting this value in production
-      tracesSampleRate: 1.0,
-
-      // Capture Replay for 10% of all sessions,
-      // plus for 100% of sessions with an error
-      replaysSessionSampleRate: 0.1,
-      replaysOnErrorSampleRate: 1.0,
-    });
-    </script>
     <script type="importmap">
       {
         "imports": {
