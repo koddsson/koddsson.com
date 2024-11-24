@@ -1,5 +1,7 @@
 ---
 layout: default.html
+title: "Gift Ideas"
+description: "Some gift ideas for me"
 ---
 
 # Gift Ideas
