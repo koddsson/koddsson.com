@@ -112,9 +112,9 @@ nav.vertical > a {
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 10px;
+  grid-template-rows: 250px 250px 250px;
+  grid-template-columns: 250px 250px 250px;
+  gap: 10px;
 }
 
 .image-grid img {
