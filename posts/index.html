@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A list of posts I've written" />
+    <meta name="view-transition" content="same-origin">
+    <meta name="generator" content="Eleventy v3.0.0">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/posts/" />
+    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg" />
+    <meta property="og:logo" content="/favicon.ico" />
+
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>Posts</title>
+    <meta property="og:title" content="Posts" />
+
+    <link rel="stylesheet" href="/css/open-props.min.css">
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/prism-vs.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <style>
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote,
+      header,
+      p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+      import "/js/tick-rs-element.js";
+    </script>
+    <script type="module" defer>
+      import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onFID(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Posts</h1>
+      
+    </header>
+    <main><a href="/posts/web-performance-from-the-lab-to-the-field/">
+<h3>Web Performance — From the Lab to the Field</h3>
+<small>In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI.</small>
+</a>
+<a href="/posts/implementing-view-transitions-on-koddsson.com/">
+<h3>Implementing View Transitions on koddsson.com</h3>
+<small>How I implemented MPA View Transitions on koddsson.com</small>
+</a>
+<a href="/posts/stop-trying-to-make-things-perfect/">
+<h3>Stop trying to make things perfect</h3>
+<small>A blog post with some thoughts on perfectionism</small>
+</a>
+<a href="/posts/emoji-as-favicons/">
+<h3>Emojis as favicons</h3>
+<small>A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji</small>
+</a>
+</main>
+    <footer>
+      <tick-rs id="feeXo4YTT5uP"></tick-rs>
+      <div>Number of visitors</div>
+    </footer>
+  </body>
+</html>
