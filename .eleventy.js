@@ -78,8 +78,21 @@ export default async function (eleventyConfig) {
     return collectionApi
       .getAllSorted()
       .reverse()
-      .filter((page) => page.data.tags?.includes("posts") && !page.data.draft)
+      .filter((page) => {
+        return page.data.tags?.includes("posts") && !page.data.draft &&
+          page.url !== "/posts/";
+      })
       .slice(0, 5);
+  });
+
+  eleventyConfig.addCollection("filteredPosts", function (collectionApi) {
+    return collectionApi
+      .getAllSorted()
+      .reverse()
+      .filter((page) => {
+        return page.data.tags?.includes("posts") && !page.data.draft &&
+          page.url !== "/posts/";
+      });
   });
 
   eleventyConfig.setLiquidOptions({
