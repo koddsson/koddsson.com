@@ -122,7 +122,12 @@ export default async function (eleventyConfig) {
   });
 
   eleventyConfig.addFilter("jsonify", function (value) {
-    return util.inspect(value);
+    const output = util.inspect(value, {
+      compact: false,
+      depth: 5,
+      breakLength: 80,
+    });
+    return `<pre>${output}</pre>`;
   });
 
   return {
