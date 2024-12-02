@@ -42,7 +42,7 @@ A software engineer with a penchant for working with Web Platform features and h
 
 <ul class="items" id="notes">
   {%- for note in collections.notes reversed -%}
-    {% if forloop.index0 < 3 %}
+    {% if forloop.index0 < 3 and note.url != '/notes/' %}
       <li>
         {{ note.content }}
         <a href="{{ note.url }}">
