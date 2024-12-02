@@ -25,6 +25,8 @@ A software engineer with a penchant for working with Web Platform features and h
   {%- endfor -%}
 </ul>
 
+[See more posts](/posts/)
+
 ## Images
 
 <div class="image-grid">
@@ -33,6 +35,8 @@ A software engineer with a penchant for working with Web Platform features and h
   {%- endif -%}
 {%- endfor -%}
 </div>
+
+[See more images](/images/)
 
 ## Notes
 
@@ -48,3 +52,5 @@ A software engineer with a penchant for working with Web Platform features and h
     {%- endif -%}
   {%- endfor -%}
 </ul>
+
+[See more notes](/notes/)
