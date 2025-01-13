@@ -15,7 +15,7 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^5.0.0",
+    "@11ty/eleventy-img": "^6.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "@jgarber/eleventy-plugin-postcss": "^1.0.1",
     "@lhci/cli": "^0.14.0",
