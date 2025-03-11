@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A example of a dynamic bookmark which directs you to the Pull Request view for the last 7 days" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A example of a dynamic bookmark which directs you to the Pull Request view for the last 7 days">
     <meta name="view-transition" content="same-origin">
     <meta name="generator" content="Eleventy v3.0.0">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="/notes/last-7-days-of-pull-requests/" />
-    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg" />
-    <meta property="og:logo" content="/favicon.ico" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/notes/last-7-days-of-pull-requests/">
+    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg">
+    <meta property="og:logo" content="/favicon.ico">
 
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico">
 
     <title>Last 7 days of Pull Requests</title>
-    <meta property="og:title" content="Last 7 days of Pull Requests" />
+    <meta property="og:title" content="Last 7 days of Pull Requests">
 
     <link rel="stylesheet" href="/css/open-props.min.css">
     <link rel="stylesheet" href="/css/normalize.min.css">
@@ -72,7 +72,7 @@
       import "/js/toot-embed-element.js";
       import "/js/tick-rs-element.js";
     </script>
-    <script type="module" defer>
+    <script type="module" defer="">
       import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -96,8 +96,7 @@
   <body>
     <header>
       <h1>Last 7 days of Pull Requests</h1>
-      <time date="Mon Oct 21 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">October 21, 2024</time
-      >
+      <time date="Mon Oct 21 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">October 21, 2024</time>
     </header>
     <main><p>Since bookmarks can be JavaScript we can dynamically create a URL based on some data. In this case the data is the current date. We'll use that to create a GitHub search filter for pull requests created in the last 7 days.</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> today <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>

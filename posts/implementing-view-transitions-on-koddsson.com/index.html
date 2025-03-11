@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="How I implemented MPA View Transitions on koddsson.com" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="How I implemented MPA View Transitions on koddsson.com">
     <meta name="view-transition" content="same-origin">
     <meta name="generator" content="Eleventy v3.0.0">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="/posts/implementing-view-transitions-on-koddsson.com/" />
-    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg" />
-    <meta property="og:logo" content="/favicon.ico" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/posts/implementing-view-transitions-on-koddsson.com/">
+    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg">
+    <meta property="og:logo" content="/favicon.ico">
 
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico">
 
     <title>Implementing View Transitions on koddsson.com</title>
-    <meta property="og:title" content="Implementing View Transitions on koddsson.com" />
+    <meta property="og:title" content="Implementing View Transitions on koddsson.com">
 
     <link rel="stylesheet" href="/css/open-props.min.css">
     <link rel="stylesheet" href="/css/normalize.min.css">
@@ -72,7 +72,7 @@
       import "/js/toot-embed-element.js";
       import "/js/tick-rs-element.js";
     </script>
-    <script type="module" defer>
+    <script type="module" defer="">
       import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -96,8 +96,7 @@
   <body>
     <header>
       <h1>Implementing View Transitions on koddsson.com</h1>
-      <time date="Wed May 31 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">May 31, 2023</time
-      >
+      <time date="Wed May 31 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">May 31, 2023</time>
     </header>
     <main><p>Welcome to a development journey post for my personal website, koddsson.com. Today, we'll explore how I implemented view transitions to enhance the user interface and provide a more engaging browsing experience. The changes were made in a <a href="https://github.com/koddsson/koddsson.com/pull/53">Pull Request titled &quot;Implement View Transitions!&quot;</a>.</p>
 <p>View transitions are a key part of modern web design, adding visual continuity and smoothness when moving between different views or pages on a website. They can greatly improve the user experience by reducing visual abruptness and providing a sense of spatial awareness. Inspired by this, I decided it was time to introduce this feature to my own website, koddsson.com.</p>
@@ -107,7 +106,7 @@
 <li><code>css/index.css</code>: This file saw a more substantial change. I added a CSS <code>@supports</code> rule that checks if the browser supports the property <code>view-transition-name</code>. If it does, two new properties are set: <code>view-transition-name: header;</code> under the <code>header</code> section and <code>view-transition-name: main;</code> under the <code>main</code> section. These properties enable the transitions for the <code>header</code> and <code>main</code> views.</li>
 </ol>
 <p>Creating this Pull Request was a process of research, trial-and-error, and testing. I started by researching how view transitions could be implemented and found the <a href="https://github.com/WICG/view-transitions/blob/main/explainer.md">explainer document</a> to be extremely helpful. After writing the code, I thoroughly tested it to ensure it worked as expected. The Pull Request passed all six checks before being merged, confirming the changes didn't regress the performance or accessibility of the page in any way that <a href="https://github.com/GoogleChrome/lighthouse-ci">Lighthouse CI</a> can detect.</p>
-<p><picture><source type="image/webp" srcset="/img/da908fccf8d9bd11b1d49dad73c9aa11-300w.webp 300w, /img/da908fccf8d9bd11b1d49dad73c9aa11-600w.webp 600w, /img/da908fccf8d9bd11b1d49dad73c9aa11-813w.webp 813w" sizes="(max-width: 600px) 480px, 800px"><source type="image/png" srcset="/img/da908fccf8d9bd11b1d49dad73c9aa11-300w.png 300w, /img/da908fccf8d9bd11b1d49dad73c9aa11-600w.png 600w, /img/da908fccf8d9bd11b1d49dad73c9aa11-813w.png 813w" sizes="(max-width: 600px) 480px, 800px"><img src="/img/da908fccf8d9bd11b1d49dad73c9aa11-300w.jpeg" alt="Screenshot of github.com pull request checks showing 6 lighthouse checks that are all passing." loading="lazy" decoding="async" width="813" height="268" srcset="/img/da908fccf8d9bd11b1d49dad73c9aa11-300w.jpeg 300w, /img/da908fccf8d9bd11b1d49dad73c9aa11-600w.jpeg 600w, /img/da908fccf8d9bd11b1d49dad73c9aa11-813w.jpeg 813w" sizes="(max-width: 600px) 480px, 800px"></picture></p>
+<picture><source type="image/webp" srcset="/img/z_1DWLkWA_-813.webp 813w"><img src="/img/z_1DWLkWA_-813.jpeg" alt="Screenshot of github.com pull request checks showing 6 lighthouse checks that are all passing." width="813" height="268"></picture>
 <p>The view transitions have significantly improved the visual experience of browsing koddsson.com. The transitions between different views are now smooth and engaging. And according to <a href="https://github.com/WICG/view-transitions/blob/main/explainer.md">the View Transitions explainer</a> these transitions also: &quot;[...] lower the cognitive load by helping users <a href="https://www.smashingmagazine.com/2013/10/smart-transitions-in-user-experience-design/">stay in context</a> as they navigate from Page-A to Page-B, and <a href="https://wp-rocket.me/blog/perceived-performance-need-optimize/#:~:text=1.%20Use%20activity%20and%20progress%20indicators">reduce the perceived latency</a> of loading.&quot; I encourage you to visit the website and experience these transitions firsthand.</p>
 <div class="info">
 You need to browse the website using Chrome and have these two experimental flags enable to be able to view these transitions:

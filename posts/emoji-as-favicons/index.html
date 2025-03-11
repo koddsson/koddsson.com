@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji">
     <meta name="view-transition" content="same-origin">
     <meta name="generator" content="Eleventy v3.0.0">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="/posts/emoji-as-favicons/" />
-    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg" />
-    <meta property="og:logo" content="/favicon.ico" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/posts/emoji-as-favicons/">
+    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg">
+    <meta property="og:logo" content="/favicon.ico">
 
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico">
 
     <title>Emojis as favicons</title>
-    <meta property="og:title" content="Emojis as favicons" />
+    <meta property="og:title" content="Emojis as favicons">
 
     <link rel="stylesheet" href="/css/open-props.min.css">
     <link rel="stylesheet" href="/css/normalize.min.css">
@@ -72,7 +72,7 @@
       import "/js/toot-embed-element.js";
       import "/js/tick-rs-element.js";
     </script>
-    <script type="module" defer>
+    <script type="module" defer="">
       import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -96,8 +96,7 @@
   <body>
     <header>
       <h1>Emojis as favicons</h1>
-      <time date="Sun Mar 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">March 18, 2018</time
-      >
+      <time date="Sun Mar 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">March 18, 2018</time>
     </header>
     <main><p>So I was working on <a href="https://jsonresume.io">jsonresume.io</a> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</p>
 <p>I really wanted just to drop a 📝 into a <code>&lt;link /&gt;</code> tag and call it a day. As far as I knew this wasn't possible, prompting this tweet:</p>
@@ -142,7 +141,7 @@ favicon<span class="token punctuation">.</span>href <span class="token operator"
 <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">data-emoji</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>🛰<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>image/png<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span></code></pre>
 <p>Exactly what I wanted orginally! 🤙</p>
 <!-- Include `OpenHeartElement` -->
-<script src="https://unpkg.com/open-heart-element" type="module" defer></script>
+<script src="https://unpkg.com/open-heart-element" type="module" defer=""></script>
 <!-- Render `<open-heart>` -->
 <p><open-heart href="https://open-heart-endpoint.koddsson.workers.dev/?id=" emoji="❤️">♥</open-heart></p>
 </main>
