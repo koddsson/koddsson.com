@@ -31,7 +31,7 @@ A software engineer with a penchant for working with Web Platform features and h
 
 <div class="image-grid">
 {%- for image in images reversed -%}
-  {% if forloop.index0 < 9 %} {% assign url = image.variants[0] %} {% assign url = url | replace: "public", "homepage" %} <a href="/images/{{image.id}}"> {% image url, image.meta.alt, "(max-width: 600px) 480px, 800px", "eager" %} </a>
+  {% if forloop.index0 < 9 %} {% assign url = image.variants[0] %} {% assign url = url | replace: "public", "homepage" %} <a href="/images/{{image.id}}"> <img src="{{ url }}" alt="{{ image.meta.alt }}"> </a>
   {%- endif -%}
 {%- endfor -%}
 </div>
