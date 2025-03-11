@@ -29,9 +29,9 @@ Let's take a look at how we implemented these principles on my website, koddsson
 ### Testing in the Lab
 For the pull request checks I used Lighthouse CI running in GitHub Actions. Lighthouse CI runs the same Lighthouse audits as you might have already run in your Chrome DevTools so they might look familiar. These audits provide detailed metrics and diagnostics related to page load times, network requests, rendering, and other performance-related aspects. These checks are then reported back to the Pull Request so I can make sure that I haven't regressed on any of the performance metrics.
 
-{% image "./img/web-perf1.png", "", "(max-width: 600px) 480px, 800px" %}
-{% image "./img/web-perf2.png", "", "(max-width: 600px) 480px, 800px" %}
-{% image "./img/web-perf3.png", "", "(max-width: 600px) 480px, 800px" %}
+<img src="/imgs/web-perf1.png" alt="">
+<img src="/imgs/web-perf2.png" alt="">
+<img src="/imgs/web-perf3.png" alt="">
 
 By running Lighthouse audits in the lab, I'm able to identify performance bottlenecks and areas for improvement. The critical performance indicators, such as Time to First Byte (TTFB), First Contentful Paint (FCP), and Time to Interactive (TTI), allowed us to assess and optimise Web Performance. This iterative process of testing, analysing, and optimising in the lab helped me improve the site's speed and responsiveness.
 ### Testing in the Field
@@ -64,7 +64,7 @@ onTTFB(sendToAnalytics);
 
 If you have your browser network monitor open while visiting http://koddsson.com you should see the data being sent:
 
-{% image "./img/web-perf4.png", "", "(max-width: 600px) 480px, 800px" %}
+<img src="/imgs/web-perf4.png" alt="">
 
 The data gets sent to a [Cloudflare Worker®](https://workers.cloudflare.com/) which saves the values sent to a database. I won't put the whole worker in this post but here's the bit that accepts a POST request:
 
@@ -93,7 +93,7 @@ To gain a deeper understanding of the collected Web Performance data, visualisin
 
 At this point though the data is all just dumped into a database which makes it hard to gleam insights about Web Performance about it.
 
-{% image "./img/web-perf5.png", "", "(max-width: 600px) 480px, 800px" %}
+<img src="/imgs/web-perf5.png" alt="">
 
 It would be really good if I could explore and graph this data for insights and overview. First we need to export the data in some easy way in a portable format. JSON seems like a logical choice so I added a endpoint the fetches all the data and some convenience filtering by the metric type.
 
@@ -135,13 +135,14 @@ try {
 
 Now I can import the CSV files into Google Sheets and start creating charts that help me (and other potential stakeholders) to visualise and better understand the data.
 
-{% image "./img/Count of rating.svg", "", "(max-width: 600px) 480px, 800px" %}
-{% image "./img/Histogram of datetime.svg", "", "(max-width: 600px) 480px, 800px" %}
+<img src="/imgs/Count of rating.svg" alt="">
+<img src="/imgs/Histogram of datetime.svg" alt="">
+
 These are pretty minimal charts but they are currently working for my use cases. I'm planning on finding a even better solution but at least now I can actually view the data with charts.
 
-{% image "./img/LCP ratings.svg", "", "(max-width: 600px) 480px, 800px" %}
-{% image "./img/INP ratings.svg", "", "(max-width: 600px) 480px, 800px" %}
-{% image "./img/CLS ratings.svg", "", "(max-width: 600px) 480px, 800px" %}
+<img src="/imgs/LCP ratings.svg" alt="">
+<img src="/imgs/INP ratings.svg" alt="">
+<img src="/imgs/CLS ratings.svg" alt="">
 
 ## Looking Forward
 Web performance is a continuous journey, not a destination. Looking ahead, I plan to continue explore other ways to enhance the site's user interface. Web Performance is a vital area that needs constant attention and optimisation, but the results are definitely wo​rth looking into.

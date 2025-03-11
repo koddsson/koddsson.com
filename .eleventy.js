@@ -6,35 +6,12 @@ import markdownIt from "markdown-it";
 import markdownItFootnote from "markdown-it-footnote";
 
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import Image from "@11ty/eleventy-img";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 
 const markdownLib = markdownIt({ html: true }).use(
   markdownItFootnote,
 );
-
-async function imageShortcode(src, alt, sizes, loading = "lazy") {
-  const metadata = await Image(src, {
-    widths: [300, 600, "auto"],
-    formats: ["webp", "jpeg", "auto"],
-    filenameFormat: function (id, src, width, format, options) {
-      const extension = path.extname(src);
-      const name = crypto.createHash("md5").update(src).digest("hex");
-
-      return `${name}-${width}w.${format}`;
-    },
-  });
-
-  const imageAttributes = {
-    alt,
-    sizes,
-    loading,
-    decoding: "async",
-  };
-
-  // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-  return Image.generateHTML(metadata, imageAttributes);
-}
 
 const DAY_MILLISECONDS = 1000 * 60 * 60 * 24;
 const MONTH_MILLISECONDS = DAY_MILLISECONDS * 30;
@@ -71,7 +48,6 @@ export default async function (eleventyConfig) {
   // set the library to process markdown files
   eleventyConfig.setLibrary("md", markdownLib);
 
-  eleventyConfig.addAsyncShortcode("image", imageShortcode);
   eleventyConfig.addAsyncShortcode("relativeTime", relativeTime);
 
   eleventyConfig.addCollection("lastFivePosts", function (collectionApi) {
@@ -111,6 +87,7 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(postcssPlugin);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin);
 
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("assets");
