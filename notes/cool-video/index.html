@@ -73,7 +73,7 @@
       import "/js/tick-rs-element.js";
     </script>
     <script type="module" defer="">
-      import {onLCP, onFID, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+      import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
 
@@ -86,7 +86,6 @@
       }
 
       onCLS(sendToAnalytics);
-      onFID(sendToAnalytics);
       onLCP(sendToAnalytics);
       onINP(sendToAnalytics);
       onFCP(sendToAnalytics);
