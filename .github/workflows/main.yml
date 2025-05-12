@@ -1,5 +1,7 @@
 name: CI
 on: [push, workflow_dispatch]
+permissions:
+  contents: write
 jobs:
   lhci:
     name: Lighthouse
