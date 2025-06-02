@@ -25,6 +25,6 @@
     "puppeteer": "24.10.0"
   },
   "dependencies": {
-    "web-vitals": "^5.0.1"
+    "web-vitals": "^5.0.2"
   }
 }
