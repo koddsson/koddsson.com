@@ -18,7 +18,7 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.1",
     "@jgarber/eleventy-plugin-postcss": "^3.0.1",
-    "@lhci/cli": "^0.14.0",
+    "@lhci/cli": "^0.15.0",
     "cssnano": "^7.0.7",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
