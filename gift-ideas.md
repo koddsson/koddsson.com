@@ -18,3 +18,4 @@ Sometimes people want to buy me things and I feel like I'm terrible at coming up
 - I'm a big Mac Miller fan and love all [his merch](https://shopuk.macmillerswebsite.com/).
 - ~~I make coffee out of a Hario V60 most mornings but it usually get's cold before I can drink it all. I really want to replace my glass Hario servers with [these insulated ones](https://kaffitar.is/collections/hario/products/hario-v60-hitakanna-svort) to keep them warm.~~
   - I got this for my birthday 2025!
+- It's been a _while_ since I got some tattoos and I need a new one.
