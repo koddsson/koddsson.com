@@ -22,7 +22,7 @@
     "cssnano": "^7.1.1",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
-    "puppeteer": "24.22.3"
+    "puppeteer": "24.23.0"
   },
   "dependencies": {
     "web-vitals": "^5.1.0"
