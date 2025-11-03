@@ -19,7 +19,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "@jgarber/eleventy-plugin-postcss": "^3.0.1",
     "@lhci/cli": "^0.15.1",
-    "cssnano": "^7.1.1",
+    "cssnano": "^7.1.2",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
     "puppeteer": "24.26.1"
