@@ -6,12 +6,11 @@ description: "My Strava activities"
 ---
 
 {% if activities.size > 0 %}
-<ul>
+<ul class="items">
   {%- for activity in activities reversed -%}
     <li>
-      <strong>{{ activity.object_type }}</strong> - {% if activity.aspect_type == "create" %}New activity created{% elsif activity.aspect_type == "update" %}Activity updated{% elsif activity.aspect_type == "delete" %}Activity deleted{% endif %}
-      <br>
-      <small>ID: {{ activity.object_id }} | Time: {{ activity.event_time }}</small>
+      <strong>{{ activity.object_type | capitalize }}</strong> - {% if activity.aspect_type == "create" %}New activity created{% elsif activity.aspect_type == "update" %}Activity updated{% elsif activity.aspect_type == "delete" %}Activity deleted{% endif %}<br>
+      <small><a href="https://www.strava.com/activities/{{ activity.object_id }}" target="_blank" rel="noopener">View on Strava</a> | Time: {{ activity.event_time }}</small>
     </li>
   {%- endfor -%}
 </ul>
