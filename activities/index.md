@@ -10,7 +10,7 @@ description: "My Strava activities"
   {%- for activity in activities reversed -%}
     <li>
       <strong>{{ activity.object_type | capitalize }}</strong> - {% if activity.aspect_type == "create" %}New activity created{% elsif activity.aspect_type == "update" %}Activity updated{% elsif activity.aspect_type == "delete" %}Activity deleted{% endif %}<br>
-      <small><a href="https://www.strava.com/activities/{{ activity.object_id }}" target="_blank" rel="noopener">View on Strava</a> | Time: {{ activity.event_time }}</small>
+      <small><a href="https://www.strava.com/activities/{{ activity.object_id }}" target="_blank" rel="noopener">View on Strava</a> | {{ activity.event_time | formatUnixTime }}</small>
     </li>
   {%- endfor -%}
 </ul>

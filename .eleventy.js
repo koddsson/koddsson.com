@@ -44,11 +44,24 @@ async function relativeTime(time) {
   return `<time>${formatter.format(-yearsDifference, "year")}</time>`;
 }
 
+function formatUnixTime(timestamp) {
+  const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+  return date.toLocaleString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+}
+
 export default async function (eleventyConfig) {
   // set the library to process markdown files
   eleventyConfig.setLibrary("md", markdownLib);
 
   eleventyConfig.addAsyncShortcode("relativeTime", relativeTime);
+
+  eleventyConfig.addFilter("formatUnixTime", formatUnixTime);
 
   eleventyConfig.addCollection("lastFivePosts", function (collectionApi) {
     return collectionApi

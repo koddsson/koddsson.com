@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies & build
         run: |
-          PUPPETEER_SKIP_DOWNLOAD=true npm ci
+          npm ci
           npm run build          
 
       - name: Push changes
