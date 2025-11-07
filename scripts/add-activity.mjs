@@ -46,4 +46,3 @@ try {
   console.error('Error: Failed to write activities.json:', error.message)
   process.exit(1)
 }
-
