@@ -1,0 +1,37 @@
+on:
+  workflow_dispatch:
+    inputs:
+      activity_data:
+        description: "Stringify JSON data of the Strava webhook event"
+        type: string
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 20
+
+      - name: Add activity to data file
+        run: node scripts/add-activity.mjs '${{ inputs.activity_data }}'
+
+      - name: Install dependencies & build
+        run: |
+          PUPPETEER_SKIP_DOWNLOAD=true npm ci
+          npm run build          
+
+      - name: Push changes
+        run: |
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git config user.name 'github-actions[bot]'
+          git add .
+          git commit -m "Add Strava activity from webhook" || echo "Nothing to commit"
+          git fetch origin main
+          git push origin HEAD:main
