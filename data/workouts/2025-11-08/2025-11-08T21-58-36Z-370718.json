@@ -2,7 +2,7 @@
   "activity": null,
   "payload": {
     "aspect_type": "update",
-    "event_time": 1762639116,
+    "event_time": 1762639169,
     "object_id": 370718,
     "object_type": "athlete",
     "owner_id": 370718,
@@ -11,6 +11,6 @@
       "authorized": "false"
     }
   },
-  "received_at": "2025-11-08T21:58:36.252Z",
+  "received_at": "2025-11-08T21:59:29.911Z",
   "source": "strava"
 }
