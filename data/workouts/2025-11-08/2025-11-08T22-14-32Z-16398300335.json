@@ -1,0 +1,186 @@
+{
+  "activity": {
+    "achievement_count": 0,
+    "athlete": {
+      "id": 370718,
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "available_zones": [
+      "pace"
+    ],
+    "average_speed": 0,
+    "best_efforts": [],
+    "calories": 0,
+    "comment_count": 0,
+    "commute": false,
+    "description": "",
+    "device_name": "Strava App",
+    "display_hide_heartrate_option": false,
+    "distance": 0,
+    "elapsed_time": 11,
+    "elev_high": 82.5,
+    "elev_low": 82.5,
+    "embed_token": "a86294783cf3f9a01ec3f3a91bf800d3d6d65fa3",
+    "end_latlng": [
+      63.93,
+      -21.01
+    ],
+    "external_id": "8D5AB7B8-41FB-4942-B5AA-859CC85C3FBB-activity.fit",
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear_id": null,
+    "has_heartrate": false,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "hide_from_home": false,
+    "id": 16398300335,
+    "kudos_count": 0,
+    "laps": [
+      {
+        "activity": {
+          "id": 16398300335,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_speed": 0,
+        "device_watts": false,
+        "distance": 0,
+        "elapsed_time": 13,
+        "end_index": 3,
+        "id": 58444782724,
+        "lap_index": 1,
+        "max_speed": 0,
+        "moving_time": 10,
+        "name": "Lap 1",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 1,
+        "start_date": "2025-11-08T22:14:15Z",
+        "start_date_local": "2025-11-08T22:14:15Z",
+        "start_index": 0,
+        "total_elevation_gain": 0
+      }
+    ],
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": false,
+    "map": {
+      "id": "a16398300335",
+      "polyline": "qpdeK|lf_C??",
+      "resource_state": 3,
+      "summary_polyline": "qpdeK|lf_C??"
+    },
+    "max_speed": 0,
+    "moving_time": 0,
+    "name": "Night Run",
+    "perceived_exertion": null,
+    "photo_count": 0,
+    "photos": {
+      "count": 0,
+      "primary": null
+    },
+    "pr_count": 0,
+    "prefer_perceived_exertion": null,
+    "private": false,
+    "resource_state": 3,
+    "segment_efforts": [],
+    "similar_activities": {
+      "average_speed": 0,
+      "effort_count": 0,
+      "frequency_milestone": null,
+      "max_average_speed": 0,
+      "mid_average_speed": 0,
+      "min_average_speed": 0,
+      "pr_rank": null,
+      "resource_state": 2,
+      "trend": {
+        "current_activity_index": null,
+        "direction": 0,
+        "max_speed": 0,
+        "mid_speed": 0,
+        "min_speed": 0,
+        "speeds": []
+      }
+    },
+    "splits_metric": [
+      {
+        "average_grade_adjusted_speed": 0,
+        "average_speed": 0,
+        "distance": 0,
+        "elapsed_time": 11,
+        "elevation_difference": 0,
+        "moving_time": 0,
+        "pace_zone": 1,
+        "split": 1
+      }
+    ],
+    "splits_standard": [
+      {
+        "average_grade_adjusted_speed": 0,
+        "average_speed": 0,
+        "distance": 0,
+        "elapsed_time": 11,
+        "elevation_difference": 0,
+        "moving_time": 0,
+        "pace_zone": 1,
+        "split": 1
+      }
+    ],
+    "sport_type": "Run",
+    "start_date": "2025-11-08T22:14:15Z",
+    "start_date_local": "2025-11-08T22:14:15Z",
+    "start_latlng": [
+      63.93,
+      -21.01
+    ],
+    "stats_visibility": [
+      {
+        "type": "heart_rate",
+        "visibility": "everyone"
+      },
+      {
+        "type": "pace",
+        "visibility": "everyone"
+      },
+      {
+        "type": "power",
+        "visibility": "everyone"
+      },
+      {
+        "type": "speed",
+        "visibility": "everyone"
+      },
+      {
+        "type": "calories",
+        "visibility": "everyone"
+      }
+    ],
+    "timezone": "(GMT+00:00) Atlantic/Reykjavik",
+    "total_elevation_gain": 0,
+    "total_photo_count": 0,
+    "trainer": false,
+    "type": "Run",
+    "upload_id": 17484236542,
+    "upload_id_str": "17484236542",
+    "utc_offset": 0,
+    "visibility": "everyone",
+    "workout_type": null
+  },
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1762640071,
+    "object_id": 16398300335,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2025-11-08T22:14:32.135Z",
+  "source": "strava"
+}
