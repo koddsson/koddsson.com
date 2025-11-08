@@ -1,0 +1,16 @@
+{
+  "activity": null,
+  "payload": {
+    "aspect_type": "update",
+    "event_time": 1762639116,
+    "object_id": 370718,
+    "object_type": "athlete",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {
+      "authorized": "false"
+    }
+  },
+  "received_at": "2025-11-08T21:58:36.252Z",
+  "source": "strava"
+}
