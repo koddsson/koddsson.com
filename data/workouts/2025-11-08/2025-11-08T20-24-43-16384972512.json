@@ -1,0 +1,15 @@
+{
+  "payload": {
+    "aspect_type": "update",
+    "event_time": 1762633483,
+    "object_id": 16384972512,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {
+      "title": "Hawk tua’"
+    }
+  },
+  "received_at": "2025-11-08T20:24:43.445Z",
+  "source": "strava"
+}
