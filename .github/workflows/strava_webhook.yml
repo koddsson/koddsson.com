@@ -1,0 +1,117 @@
+name: Save Strava webhook payload
+
+on:
+  repository_dispatch:
+    types: [strava_webhook]
+
+permissions:
+  contents: write
+
+jobs:
+  save_workout:
+    name: Save Strava webhook payload as workout JSON
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Ensure jq is available
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+
+      - name: Parse event and save workout file
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          set -euo pipefail
+
+          # Dump the raw event for debugging
+          echo "GITHUB_EVENT_PATH=$GITHUB_EVENT_PATH"
+          cat "$GITHUB_EVENT_PATH" > /tmp/event.json
+
+          # Prefer client_payload when present (repository_dispatch puts payload there)
+          if jq -e '.client_payload' /tmp/event.json >/dev/null 2>&1; then
+            jq '.client_payload' /tmp/event.json > /tmp/payload.json
+          else
+            # Fallback to using entire event if client_payload absent
+            jq '.' /tmp/event.json > /tmp/payload.json
+          fi
+
+          # If payloadPreview exists (stringified JSON from some callers), parse it and attach as .payload
+          if jq -e 'has("payloadPreview")' /tmp/payload.json >/dev/null 2>&1; then
+            preview=$(jq -r '.payloadPreview' /tmp/payload.json)
+            # Try to parse the preview JSON string, otherwise keep as raw string
+            if echo "$preview" | jq '.' >/dev/null 2>&1; then
+              echo "$preview" | jq '.' > /tmp/payload_preview_parsed.json
+              # Merge: keep top-level fields and replace/attach payload with parsed preview
+              jq -s '.[0] + {payload: .[1]}' /tmp/payload.json /tmp/payload_preview_parsed.json > /tmp/payload_final.json
+            else
+              # Not valid JSON: include as string field
+              jq --arg pp "$preview" '. + {payloadPreview_raw: $pp}' /tmp/payload.json > /tmp/payload_final.json
+            fi
+          else
+            cp /tmp/payload.json /tmp/payload_final.json
+          fi
+
+          # Ensure there is a received_at timestamp somewhere; if not add one
+          if ! jq -e 'has("received_at") or ( .payload and (.payload | has("received_at")) )' /tmp/payload_final.json >/dev/null 2>&1; then
+            now=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+            jq --arg t "$now" '. + {received_at: $t}' /tmp/payload_final.json > /tmp/payload_final2.json
+            mv /tmp/payload_final2.json /tmp/payload_final.json
+          fi
+
+          # Extract a timestamp to use in filename (prefer top-level received_at then payload.received_at)
+          ts=$(jq -r '.received_at // .payload.received_at // empty' /tmp/payload_final.json)
+          if [ -z "$ts" ] || [ "$ts" = "null" ]; then
+            ts=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          fi
+          # Sanitize timestamp to not contain ":" and drop fractional seconds for filename
+          ts_safe=$(echo "$ts" | sed 's/[:]/-/g' | sed 's/\..*//')
+
+          # Try to find a small id for filename (common Strava fields)
+          uid=$(jq -r '.payload.activity_id // .payload.object_id // .payload.id // .payload.id_str // empty' /tmp/payload_final.json)
+          if [ -z "$uid" ] || [ "$uid" = "null" ]; then
+            uid=$(date -u +"%s")
+          fi
+
+          # Create directory partitioned by date
+          date_dir=$(echo "$ts_safe" | cut -dT -f1)
+          target_dir="data/workouts/${date_dir}"
+          mkdir -p "$target_dir"
+
+          # Use compact JSON storage but pretty enough to inspect
+          filename="${target_dir}/${ts_safe}-${uid}.json"
+          jq '.' /tmp/payload_final.json > "$filename"
+
+          echo "Saved webhook payload to $filename"
+          ls -la "$target_dir"
+
+      - name: Commit and push workout file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage only the workouts directory to avoid accidentally committing other changes
+          git add data/workouts || true
+
+          # Commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add Strava webhook workout: ${GITHUB_RUN_ID} ${GITHUB_RUN_NUMBER}" || true
+            # Push back to the repository using the provided token
+            # The default checkout should be on the default branch; pushing HEAD is safe.
+            git push origin HEAD
+          fi
+
+      - name: Output saved file path (debug)
+        if: always()
+        run: |
+          echo "Workouts files:"
+          find data/workouts -type f -maxdepth 3 -print || echo "no files"
