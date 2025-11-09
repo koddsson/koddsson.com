@@ -94,6 +94,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("data/workouts/**/*.svg");
   eleventyConfig.addPassthroughCopy({
     "node_modules/web-vitals/dist/web-vitals.js": "assets/web-vitals.js",
   });
