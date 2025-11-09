@@ -25,6 +25,7 @@
     "puppeteer": "24.27.0"
   },
   "dependencies": {
+    "@mapbox/polyline": "^1.2.1",
     "web-vitals": "^5.1.0"
   }
 }

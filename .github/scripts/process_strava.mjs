@@ -29,6 +29,7 @@ import fsSync from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 import { fileURLToPath } from 'url';
+import polyline from '@mapbox/polyline';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -182,6 +183,103 @@ async function ensureDataRoot() {
   }
 }
 
+/**
+ * Generate SVG from encoded polyline string
+ * @param {string} encodedPolyline - Encoded polyline string from Strava
+ * @returns {string|null} - SVG string or null if generation fails
+ */
+function generateSVG(encodedPolyline) {
+  if (!encodedPolyline || typeof encodedPolyline !== 'string') {
+    return null;
+  }
+
+  try {
+    const geo = polyline.toGeoJSON(encodedPolyline);
+    const coords = geo.coordinates;
+
+    if (!coords || coords.length === 0) {
+      return null;
+    }
+
+    const lons = coords.map(([x]) => x);
+    const lats = coords.map(([, y]) => y);
+    const minLon = Math.min(...lons);
+    const maxLon = Math.max(...lons);
+    const minLat = Math.min(...lats);
+    const maxLat = Math.max(...lats);
+    const w = maxLon - minLon;
+    const h = maxLat - minLat;
+
+    // Handle edge case where there's no variation in coordinates
+    if (w === 0 || h === 0) {
+      return null;
+    }
+
+    const d = coords
+      .map(
+        ([x, y], i) =>
+          `${i ? 'L' : 'M'}${(((x - minLon) / w) * 1000).toFixed(2)},${(
+            ((maxLat - y) / h) * 1000
+          ).toFixed(2)}`
+      )
+      .join(' ');
+
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <path d="${d}" fill="none" stroke="#fc4c02" stroke-width="2" />
+</svg>`;
+  } catch (err) {
+    console.error('Failed to generate SVG from polyline:', err?.message || err);
+    return null;
+  }
+}
+
+/**
+ * Extract polyline from payload and generate SVG file
+ * @param {string} jsonFilePath - Path to the JSON file
+ * @param {object} payloadObj - The payload object
+ */
+async function generateAndSaveSVG(jsonFilePath, payloadObj) {
+  try {
+    // Try to find polyline in various locations
+    let encodedPolyline = null;
+    
+    // Check activity.map.polyline (most common for detailed activity data)
+    if (payloadObj.activity?.map?.polyline) {
+      encodedPolyline = payloadObj.activity.map.polyline;
+    }
+    // Check map.polyline (alternative structure)
+    else if (payloadObj.map?.polyline) {
+      encodedPolyline = payloadObj.map.polyline;
+    }
+    // Check payload.activity.map.polyline
+    else if (payloadObj.payload?.activity?.map?.polyline) {
+      encodedPolyline = payloadObj.payload.activity.map.polyline;
+    }
+    // Check payload.map.polyline
+    else if (payloadObj.payload?.map?.polyline) {
+      encodedPolyline = payloadObj.payload.map.polyline;
+    }
+
+    if (!encodedPolyline) {
+      console.log('No polyline data found in payload, skipping SVG generation');
+      return;
+    }
+
+    const svg = generateSVG(encodedPolyline);
+    if (!svg) {
+      console.log('Failed to generate SVG from polyline data');
+      return;
+    }
+
+    // Save SVG with same base name as JSON file
+    const svgPath = jsonFilePath.replace(/\.json$/, '.svg');
+    await fs.writeFile(svgPath, svg, { encoding: 'utf8' });
+    console.log('Generated SVG:', svgPath);
+  } catch (err) {
+    console.error('Error generating/saving SVG:', err?.message || err);
+  }
+}
+
 async function main() {
   const eventPath = process.argv[2] || process.env.GITHUB_EVENT_PATH;
   if (!eventPath) {
@@ -246,6 +344,7 @@ async function main() {
       if (existing) {
         await writeJsonFile(existing, payloadObj);
         console.log('Aspect=update: updated existing file:', existing);
+        await generateAndSaveSVG(existing, payloadObj);
         return;
       }
       console.log('Aspect=update: no existing file found for uid, creating new file.');
@@ -268,16 +367,19 @@ async function main() {
           const altFilename = path.join(targetDir, `${tsSafe}-${uid}-${suffix}.json`);
           await writeJsonFile(altFilename, payloadObj);
           console.log('File with same name existed; wrote alternate file:', altFilename);
+          await generateAndSaveSVG(altFilename, payloadObj);
         } else {
           console.log('File already exists with identical content:', filename);
         }
       } catch (err) {
         await writeJsonFile(filename, payloadObj);
         console.log('Wrote payload to', filename, '(overwrote existing due to error comparing files)');
+        await generateAndSaveSVG(filename, payloadObj);
       }
     } else {
       await writeJsonFile(filename, payloadObj);
       console.log('Saved payload to', filename);
+      await generateAndSaveSVG(filename, payloadObj);
     }
   } catch (err) {
     console.error('Unexpected error while processing payload:', err?.message || err);
