@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My Strava activities">
+    <meta name="view-transition" content="same-origin">
+    <meta name="generator" content="Eleventy v3.1.2">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/workouts/">
+    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg">
+    <meta property="og:logo" content="/favicon.ico">
+
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Workouts</title>
+    <meta property="og:title" content="Workouts">
+
+    <link rel="stylesheet" href="/css/open-props.min.css">
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/prism-vs.css">
+    <link rel="stylesheet" href="/css/index.css">
+
+    <style>
+      body {
+        padding: var(--size-1) var(--size-3);
+      }
+
+      blockquote,
+      header,
+      p {
+        margin-bottom: var(--size-3);
+      }
+
+      pre.highlight {
+        background: var(--surface-2);
+        border-radius: var(--radius-2);
+        padding: var(--size-3);
+        overflow: auto;
+        max-inline-size: unset;
+      }
+
+      blockquote p {
+        margin-bottom: 0;
+      }
+
+      .items {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin-bottom: var(--size-2);
+      }
+
+      .items > li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .items > li > a {
+        display: block;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+      import "/js/tick-rs-element.js";
+    </script>
+    <script type="module" defer="">
+      import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Workouts</h1>
+      
+    </header>
+    <main><style>
+  .workout-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .workout-item {
+    border: 1px solid var(--surface-3);
+    border-radius: var(--radius-2);
+    padding: var(--size-3);
+    margin-bottom: var(--size-3);
+    display: flex;
+    gap: var(--size-3);
+  }
+  
+  .workout-svg {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .workout-svg svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .workout-details {
+    flex-grow: 1;
+  }
+  
+  .workout-title {
+    margin: 0 0 var(--size-2) 0;
+    font-size: var(--font-size-4);
+  }
+  
+  .workout-stats {
+    display: flex;
+    gap: var(--size-3);
+    flex-wrap: wrap;
+    margin-top: var(--size-2);
+  }
+  
+  .workout-stat {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .workout-stat-label {
+    font-size: var(--font-size-0);
+    color: var(--text-2);
+  }
+  
+  .workout-stat-value {
+    font-size: var(--font-size-2);
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .workout-item {
+      flex-direction: column;
+    }
+    
+    .workout-svg {
+      width: 100%;
+      height: 250px;
+    }
+  }
+</style>
+<ul class="workout-list">
+<p><li class="workout-item"></li></p>
+<p></p><div class="workout-svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+<path d="M276.31,769.69 L275.60,766.69 L275.42,762.48 L273.98,757.07 L272.91,755.86 L244.93,755.86 L240.63,757.67 L234.00,763.68 L227.36,768.49 L207.28,779.31 L202.62,784.13 L197.24,791.94 L186.66,785.33 L181.82,777.51 L181.46,770.90 L181.64,767.29 L181.64,764.28 L180.38,761.88 L177.51,759.47 L171.24,760.07 L168.91,758.87 L153.49,740.23 L147.21,731.21 L139.14,714.97 L128.56,697.53 L125.34,693.33 L110.81,667.47 L98.44,648.83 L86.96,633.19 L79.43,621.17 L67.42,606.73 L66.70,601.32 L66.70,599.52 L65.99,597.11 L64.37,595.31 L60.43,593.51 L53.97,593.51 L50.03,589.90 L31.38,564.04 L26.36,558.03 L22.77,552.01 L10.40,500.90 L1.61,457.61 L0.00,451.59 L0.18,448.59 L6.99,436.56 L14.34,433.55 L18.29,428.74 L17.75,420.32 L8.43,374.62 L7.89,369.81 L7.71,360.79 L8.25,352.98 L10.22,343.96 L12.01,336.74 L15.06,328.32 L23.85,311.49 L24.74,303.67 L25.10,297.65 L21.88,292.84 L24.74,283.82 L32.81,262.18 L40.70,250.75 L42.68,247.14 L45.01,241.13 L45.36,236.32 L44.29,225.50 L48.41,215.27 L51.64,205.65 L52.90,197.84 L54.87,190.62 L57.20,180.40 L57.02,164.76 L59.53,157.55 L62.76,152.74 L67.24,147.93 L80.15,141.91 L90.19,132.89 L96.83,129.28 L104.18,126.88 L109.20,121.47 L117.81,108.24 L122.65,102.22 L125.16,101.62 L131.79,102.22 L136.09,104.03 L145.06,117.26 L152.05,122.67 L159.58,127.48 L175.54,129.89 L182.54,131.69 L198.31,138.30 L204.23,143.11 L225.93,149.13 L235.25,154.54 L237.40,153.94 L242.07,147.93 L251.39,147.32 L257.84,145.52 L269.32,140.71 L274.70,137.10 L280.44,129.28 L290.66,110.04 L301.60,93.21 L303.03,91.40 L306.08,91.40 L309.66,92.00 L312.71,90.80 L324.01,79.98 L327.06,80.58 L337.10,84.79 L342.48,84.19 L346.78,79.37 L351.44,75.77 L363.46,76.97 L369.02,73.36 L379.06,62.54 L392.15,52.92 L398.78,50.51 L417.61,46.90 L440.92,33.67 L449.35,29.46 L478.39,12.03 L486.64,10.22 L505.29,2.41 L515.69,0.00 L526.27,0.60 L542.76,4.21 L543.12,9.02 L542.05,14.43 L541.33,22.85 L540.08,52.92 L539.72,61.94 L540.79,76.97 L539.90,83.58 L539.36,98.62 L539.54,102.22 L541.15,108.84 L550.48,114.25 L552.81,117.26 L565.54,122.07 L584.90,123.27 L594.58,125.08 L600.32,128.68 L604.81,128.68 L607.14,130.49 L612.52,131.09 L622.38,128.08 L631.52,129.28 L637.62,128.68 L651.25,129.28 L660.03,126.88 L668.10,127.48 L689.26,120.87 L696.79,120.26 L702.53,121.47 L712.75,114.25 L717.41,114.25 L719.92,113.05 L737.85,99.22 L748.97,93.21 L753.27,86.59 L755.07,85.39 L759.73,85.39 L766.00,82.38 L767.80,87.79 L768.69,89.00 L771.38,87.79 L801.86,69.75 L815.13,63.74 L818.00,62.54 L822.31,64.34 L825.35,63.74 L828.04,66.15 L832.53,89.00 L833.60,96.21 L834.86,115.45 L835.40,133.49 L836.83,164.76 L836.11,173.18 L834.86,181.60 L833.96,191.82 L833.60,202.04 L833.78,210.46 L832.89,227.30 L832.89,243.54 L833.06,253.16 L834.50,264.58 L834.68,270.60 L831.99,310.88 L831.63,326.52 L830.55,342.15 L830.37,349.97 L829.84,357.19 L830.55,364.40 L830.55,370.41 L830.20,372.82 L830.73,376.43 L830.73,381.84 L830.02,386.65 L831.27,392.66 L830.02,399.28 L828.94,409.50 L829.12,441.37 L829.30,449.19 L828.58,473.24 L828.04,478.65 L826.43,484.67 L826.61,487.07 L830.20,495.49 L834.50,500.30 L856.73,508.12 L880.94,515.33 L902.28,526.76 L918.59,540.59 L926.48,546.60 L941.37,561.03 L947.82,567.65 L955.89,577.87 L975.61,604.93 L985.30,622.37 L1000.00,652.44 L998.74,654.84 L956.79,693.33 L945.85,705.95 L929.89,721.59 L913.57,735.42 L907.12,739.63 L885.24,764.28 L865.70,779.92 L854.22,791.34 L845.44,802.77 L839.70,809.38 L810.83,835.24 L796.31,849.67 L794.69,852.07 L794.51,854.48 L793.62,856.28 L789.49,860.49 L781.24,868.91 L756.32,891.16 L726.38,914.61 L708.45,925.44 L693.38,933.25 L660.57,944.68 L643.00,948.29 L636.54,948.89 L631.34,945.28 L627.22,940.47 L622.74,940.47 L612.52,952.50 L607.67,956.10 L602.47,957.91 L596.74,959.11 L583.83,957.91 L571.45,961.52 L558.36,962.72 L541.69,969.93 L531.47,969.33 L523.04,966.93 L515.87,970.54 L506.72,976.55 L493.81,977.75 L482.34,984.37 L475.88,986.17 L470.68,986.17 L462.61,982.56 L454.72,981.36 L448.09,982.56 L442.71,986.77 L429.26,987.97 L417.97,993.99 L413.13,995.19 L405.77,993.39 L399.14,992.78 L385.69,995.19 L370.63,989.18 L355.57,987.37 L347.68,979.56 L320.96,966.33 L311.28,954.90 L297.11,941.07 L288.15,926.04 L282.05,919.42 L277.03,914.01 L268.07,910.40 L266.99,911.00 L265.55,915.21 L264.12,915.81 L262.33,918.82 L262.15,920.02 L263.94,926.64 L268.96,938.06 L272.91,941.67 L277.93,944.68 L281.87,948.89 L283.49,951.89 L287.79,964.52 L286.53,966.33 L275.60,971.14 L213.38,982.56 L207.46,982.56 L190.96,987.97 L168.73,991.58 L156.18,992.18 L150.80,989.78 L145.42,985.57 L136.81,989.18 L130.54,995.19 L128.56,994.59 L122.47,997.59 L116.73,997.59 L108.48,1000.00 L88.04,990.98 L76.92,987.37 L67.96,985.57 L59.89,980.76 L49.67,978.95 L36.76,971.74 L30.48,966.93 L29.23,963.92 L29.59,959.71 L32.45,948.29 L36.22,938.06 L40.52,929.65 L43.39,920.02 L44.29,915.81 L44.83,904.99 L45.90,895.97 L47.52,891.16 L52.36,880.94 L57.38,874.32 L60.96,865.90 L62.04,859.89 L62.22,857.49 L62.40,850.27 L61.86,839.45 L64.01,831.63 L67.06,826.22 L73.16,819.00 L75.85,811.18 L77.82,810.58 L110.45,810.58 L114.94,805.17 L116.91,803.97 L117.81,804.57 L121.75,809.98 L134.48,834.64 L138.25,831.03 L142.55,824.41 L145.78,821.41 L146.85,821.41 L150.80,826.82 L159.23,842.45 L175.00,863.50 L176.26,862.90 L178.41,861.09 L187.56,846.06 L194.19,832.23 L194.55,828.02 L189.35,821.41 L182.89,808.78 L182.71,806.98 L182.71,804.57 L186.48,798.56 L191.86,793.14 L197.42,782.32 L204.77,775.11 L209.79,771.50 L224.13,765.48 L243.68,751.05 L245.65,750.45 L250.31,749.85 L275.60,755.26 L276.49,762.48 L276.49,767.89 L277.03,772.70 L280.44,781.12 L283.13,790.14 L289.76,806.37 L297.11,820.20 L300.88,824.41" fill="none" stroke="#fc4c02" stroke-width="2"></path>
+</svg>
+</div><p></p>
+<p></p><div class="workout-details">
+<h3 class="workout-title">First 10k after (second) injury</h3>
+<time>November 09, 2025 at 05:49 PM</time><p></p>
+<p></p><div class="workout-stats"><p></p>
+<p></p><div class="workout-stat">
+<span class="workout-stat-label">Distance</span>
+<span class="workout-stat-value">10.01 km</span>
+</div><p></p>
+<p></p><div class="workout-stat">
+<span class="workout-stat-label">Duration</span>
+<span class="workout-stat-value">56.8 min</span>
+</div><p></p>
+<p></p><div class="workout-stat">
+<span class="workout-stat-label">Avg Speed</span>
+<span class="workout-stat-value">10.6 km/h</span>
+</div><p></p>
+<p></p><div class="workout-stat">
+<span class="workout-stat-label">Elevation Gain</span>
+<span class="workout-stat-value">29 m</span>
+</div><p></p>
+<p></p><div class="workout-stat">
+<span class="workout-stat-label">Avg Heart Rate</span>
+<span class="workout-stat-value">166 bpm</span>
+</div><p></p>
+<p></p></div>
+</div>
+
+</ul><p></p>
+</main>
+    <footer>
+      <tick-rs id="feeXo4YTT5uP"></tick-rs>
+      <div>Number of visitors</div>
+    </footer>
+  </body>
+</html>
