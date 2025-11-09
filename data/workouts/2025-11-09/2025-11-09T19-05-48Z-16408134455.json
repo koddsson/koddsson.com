@@ -1,6 +1,6 @@
 {
   "activity": {
-    "achievement_count": 0,
+    "achievement_count": 3,
     "athlete": {
       "id": 370718,
       "resource_state": 1
@@ -180,7 +180,7 @@
     "calories": 788,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 10011.4,
@@ -527,20 +527,35 @@
     "max_heartrate": 187,
     "max_speed": 4.78,
     "moving_time": 3408,
-    "name": "Afternoon Run",
+    "name": "First 10k after (second) injury",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 3,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "86e2265c-a9cd-46bb-9f68-21af5ecdd29a",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/jQfOCTqnUcjEdz5qbbYyBovG44o5Mfu2c1FBfmjv2f0-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/jQfOCTqnUcjEdz5qbbYyBovG44o5Mfu2c1FBfmjv2f0-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
-    "pr_count": 0,
+    "pr_count": 1,
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
     "segment_efforts": [
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 16408134455,
           "resource_state": 1,
@@ -562,7 +577,7 @@
         "max_heartrate": 175,
         "moving_time": 111,
         "name": "Árvegur (Brú að Bankavegi)",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -598,7 +613,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 16408134455,
           "resource_state": 1,
@@ -620,7 +641,7 @@
         "max_heartrate": 175,
         "moving_time": 162,
         "name": "Langholt 3 (Austurvegur-Engjavegur)",
-        "pr_rank": null,
+        "pr_rank": 1,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -656,7 +677,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 16408134455,
           "resource_state": 1,
@@ -678,7 +705,7 @@
         "max_heartrate": 180,
         "moving_time": 470,
         "name": "suðurhólar selfoss",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -968,24 +995,26 @@
     "suffer_score": 134,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 29,
-    "total_photo_count": 0,
+    "total_photo_count": 3,
     "trainer": false,
     "type": "Run",
     "upload_id": 17494193105,
     "upload_id_str": "17494193105",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1762715147,
+    "aspect_type": "update",
+    "event_time": 1762715530,
     "object_id": 16408134455,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "First 10k after (second) injury"
+    }
   },
-  "received_at": "2025-11-09T19:05:48.108Z",
+  "received_at": "2025-11-09T19:12:11.062Z",
   "source": "strava"
 }
