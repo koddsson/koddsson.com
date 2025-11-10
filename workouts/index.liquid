@@ -1,0 +1,120 @@
+---
+permalink: /workouts/index.html
+layout: default
+title: "Workouts"
+description: "My Strava activities"
+---
+
+<style>
+    .workout-svg {
+        width: 200px;
+        height: 200px;
+    }
+
+    .workout-svg svg {
+        width: 100%;
+        height: 100%;
+        padding: var(--size-2);
+    }
+
+    .workout-details {
+        flex-grow: 1;
+    }
+
+    .workout-title {
+        margin: 0 0 var(--size-2) 0;
+        font-size: var(--font-size-4);
+    }
+
+    .workout-stats {
+        display: flex;
+        gap: var(--size-3);
+        flex-wrap: wrap;
+        margin-top: var(--size-2);
+        justify-content: space-between;
+    }
+
+    .workout-stat {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .workout-stat-label {
+        font-size: var(--font-size-0);
+        color: var(--text-2);
+    }
+
+    .workout-stat-value {
+        font-size: var(--font-size-2);
+        font-weight: bold;
+    }
+
+    .workout-item {
+        background: white;
+        display: flex;
+        padding: var(--size-3);
+    }
+
+    @media (max-width: 768px) {
+        .workout-item {
+            flex-direction: column;
+        }
+        .workout-svg {
+            width: 100%;
+            height: 250px;
+            margin-bottom: var(--size-2);
+        }
+    }
+</style>
+
+{%- for workout in workouts -%}
+{% assign activity = workout.data.activity %}
+{% if activity %}
+<div class="workout-item">
+    {% if workout.svgPath %}
+    <div class="workout-svg">{% include workout.svgPath %}</div>
+    {% endif %}
+    <div class="workout-details">
+        <h3 class="workout-title">{{ activity.name }}</h3>
+        <time>{{ activity.start_date | date: '%B %d, %Y at %H:%M' }} UTC</time>
+
+        <div class="workout-stats">
+            {% if activity.distance %}
+            <div class="workout-stat">
+                <span class="workout-stat-label">Distance</span>
+                <span class="workout-stat-value"
+                >{{ activity.distance | divided_by: 1000.0 | round: 2 }}
+                    km</span
+                >
+            </div>
+            {% endif %} {% if activity.moving_time %}
+            <div class="workout-stat">
+                <span class="workout-stat-label">Duration</span>
+                {% assign total_seconds = activity.moving_time %}
+                {% assign minutes = total_seconds | divided_by: 60 | floor %}
+                {% assign seconds = total_seconds | modulo: 60 | round %}
+                {% assign padded_seconds = seconds | prepend: "0" | slice: -2, 2 %}
+                <span class="workout-stat-value">{{ minutes }}:{{ padded_seconds }}</span>
+            </div>
+            {% endif %} {% if activity.average_speed %}
+            <div class="workout-stat">
+                <span class="workout-stat-label">Pace</span>
+                <span class="workout-stat-value">
+                    {% assign pace = 1000 | divided_by: activity.average_speed | divided_by: 60 %}
+                    {% assign minutes = pace | floor %}
+                    {% assign seconds = pace | minus: minutes | times: 60 | round %}
+                    {{ minutes }}:{{ seconds | prepend: "0" | slice: -2, 2 }} /km
+                </span>
+            </div>
+            {% endif %} {% if activity.average_heartrate %}
+            <div class="workout-stat">
+                <span class="workout-stat-label">Avg Heart Rate</span>
+                <span class="workout-stat-value"
+                >{{ activity.average_heartrate | round }} bpm</span
+                >
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endif %} {%- endfor -%}
