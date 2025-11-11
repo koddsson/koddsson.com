@@ -1,0 +1,58 @@
+name: Generate Race Calendar
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate_calendar:
+    name: Generate ICS calendar from Race Calendar data
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Run processor script
+        env:
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
+        run: |
+          set -euo pipefail
+          if [ ! -f .github/scripts/generate_calendar.mjs ]; then
+            echo "Error: .github/scripts/generate_calendar.mjs not found"
+            ls -la .github || true
+            exit 1
+          fi
+
+          node .github/scripts/generate_calendar.mjs
+
+      - name: Commit and push workout file
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage only the race calendar to avoid accidentally committing other changes
+          git add assets/race-calendar.ics || true
+
+          # Commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add Race Calendar: ${GITHUB_RUN_ID} ${GITHUB_RUN_NUMBER}" || true
+            # Push back to the repository using the provided token
+            # The default checkout should be on the default branch; pushing HEAD is safe.
+            git push origin HEAD
+          fi
