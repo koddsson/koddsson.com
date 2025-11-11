@@ -16,7 +16,7 @@ const events = json.map(({data}) => {
   }
 })
 
-fs.writeFile('assets/calendar.ics', createCalendar(events));
+fs.writeFile('assets/race-calendar.ics', createCalendar(events));
 
 function addHour(timeStr) {
   if (!timeStr) return null;
