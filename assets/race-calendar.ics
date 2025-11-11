@@ -1,0 +1,593 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Koddsson//Race Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-TIMEZONE:Atlantic/Reykjavik
+
+BEGIN:VEVENT
+UID:2rp6xt8yxrn@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251113T193000
+DTEND;TZID=Atlantic/Reykjavik:20251113T203000
+SUMMARY:Powerade vetrarhlaupin 2025-2026 (2 af 6)
+LOCATION:Árbæjarlaug, Fylkisvegur, Reykjavík, Iceland
+DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls verða hlaupin sex og verða þau haldin annan fimmtudag í mánuði, frá október fram í mars. Hlaupið er 10 kílómetra hringur í Elliðaárdalnum.
+
+https://www.vetrarhlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:yy89pwgvjl9@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251118T200000
+DTEND;TZID=Atlantic/Reykjavik:20251118T210000
+SUMMARY:Flandrasprettur 2025-2026 (Nóvember)
+LOCATION:Íþróttamiðstöðin, Borgarnes, Iceland
+DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum Flandrasprettum yfir vetrarmánuðina frá október til mars, þ.e.a.s. 6 sprettum á ári. Sprettirnir eru hlaupnir þriðja þriðjudagskvöld hvers mánaðar og vegalengdin er 5 km með upphaf og endi við Íþróttamiðstöðina í Borgarnesi.
+
+https://hlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:omzidwrgfm@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251126T173000
+DTEND;TZID=Atlantic/Reykjavik:20251126T183000
+SUMMARY:Vetrarhlaup UFA 2025-2026 (2 af 5)
+LOCATION:LYST, Lystigarðurinn, Eyrarlandsvegur, Akureyri, Iceland
+DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skráning á staðnum frá kl. 17.00.
+
+https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
+END:VEVENT
+BEGIN:VEVENT
+UID:qjrig9dhuvr@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251129T090000
+DTEND;TZID=Atlantic/Reykjavik:20251129T100000
+SUMMARY:Kirkjuhlaup Kópavogs ()
+LOCATION:Kópavogskirkja, Hamraborg, Kópavogur, Iceland
+DESCRIPTION:Þjóðkirkjusöfnuðurnir í Kópavogi efna nú í tólfta sinn til hlaups á milli kirkna og kapella í Kópavogi í samvinnu við hlaupahóp Breiðabliks. Safnast er saman í Kópavogskirkju, Siggi prestur tekur vel á móti okkur og sunginn er jólasálmur. Kannski fáum við leynigest sem hjálpar okkur með sönginn en ef ekki þá bara syngjum við hátt, hver með sínu nefi.
+
+https://fb.me/e/3Hd6hcyHb
+END:VEVENT
+BEGIN:VEVENT
+UID:j929l9wg1g@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251211T193000
+DTEND;TZID=Atlantic/Reykjavik:20251211T203000
+SUMMARY:Powerade vetrarhlaupin 2025-2026 (3 af 6)
+LOCATION:Árbæjarlaug, Fylkisvegur, Reykjavík, Iceland
+DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls verða hlaupin sex og verða þau haldin annan fimmtudag í mánuði, frá október fram í mars. Hlaupið er 10 kílómetra hringur í Elliðaárdalnum.
+
+https://www.vetrarhlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:7xak144esic@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251214T130000
+DTEND;TZID=Atlantic/Reykjavik:20251214T140000
+SUMMARY:Kaldárhlaupið (undefined)
+LOCATION:Bílastæði Helgafell, Kaldárselsvegur, Hafnarfjörður, Iceland
+DESCRIPTION:Haldið 2024 í tilefni af Hátíð Hamraskotslækjar
+
+https://vefblad.fjardarfrettir.is/p/fjardarfrettir/5-12-2024/a/hatidj-hamarskotslaekjar/6849/1750175/59025185
+END:VEVENT
+BEGIN:VEVENT
+UID:jdzc3r6c2ce@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251216T200000
+DTEND;TZID=Atlantic/Reykjavik:20251216T210000
+SUMMARY:Flandrasprettur 2025-2026 (Desember)
+LOCATION:Íþróttamiðstöðin, Borgarnes, Iceland
+DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum Flandrasprettum yfir vetrarmánuðina frá október til mars, þ.e.a.s. 6 sprettum á ári. Sprettirnir eru hlaupnir þriðja þriðjudagskvöld hvers mánaðar og vegalengdin er 5 km með upphaf og endi við Íþróttamiðstöðina í Borgarnesi.
+
+https://hlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:4jyul9lcqcx@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251226T100000
+DTEND;TZID=Atlantic/Reykjavik:20251226T110000
+SUMMARY:Kirkjuhlaup TSK ()
+LOCATION:Seltjarnarneskirkja, v/Kirkjubraut, Seltjarnarnes, Iceland
+DESCRIPTION:Trimmklúbbur Seltjarnarness (TKS) stendur fyrir kirkjuhlaupi á annan í jólum líkt og gert hefur verið frá árinu 2010. Þátttaka í hlaupið hefur verið gríðarlega góð síðustu ár enda um einstakan viðburð að ræða líkt og sjá má af frétt mbl.is um hlaupið frá árinu 2018.
+
+https://hlaup.is/vidburdir/kirkjuhlaup-tks-26-12-2024/
+END:VEVENT
+BEGIN:VEVENT
+UID:idr6c81qngr@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251226T100000
+DTEND;TZID=Atlantic/Reykjavik:20251226T110000
+SUMMARY:Kirkjuhlaup Skokkhóps Hauka og Ástjarnarkirkju ()
+LOCATION:Ástjarnarkirkja, Kirkjuvellir, Hafnarfjörður, Iceland
+DESCRIPTION:Skokkhópur Hauka og Ástjarnarkirkja bjóða öllum í árlegt Kirkjuhlaup sem hefst kl. 10 með stuttri hugvekju í safnaðarheimili Ástjarnarkirkju á Kirkjuvöllum 1. Eftir hlaup verður boðið upp á heitt kakó og veitingar í safnaðarheimili Ástjarnarkirkju. Verið öll velkomin! 
+
+https://hafnarfjordur.is/vidburdur/kirkjuhlaup-skokkhops-hauka-og-astjarnarkirkju/
+END:VEVENT
+BEGIN:VEVENT
+UID:k5i6xdwgpv@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251231T130000
+DTEND;TZID=Atlantic/Reykjavik:20251231T140000
+SUMMARY:Gamlárshlaup ÍR ()
+LOCATION:Harpa Concert Hall and Conference Centre, Austurbakki, Reykjavík, Iceland
+DESCRIPTION:Gamlárshlaup ÍR er fastur liður í lífi margra hlaupara og hlaupahópa.
+
+https://netskraning.is/gamlarshlaupir/
+END:VEVENT
+BEGIN:VEVENT
+UID:ew43j480di@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20251231T110000
+DTEND;TZID=Atlantic/Reykjavik:20251231T120000
+SUMMARY:Gamlárshlaup UFA ()
+LOCATION:Bautinn Restaurant, Hafnarstræti, Akureyri, Iceland
+DESCRIPTION:Gamlárshlaup er hlaupið á gamlársdag ár hvert á Akureyri
+
+https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/gamlarshlaup
+END:VEVENT
+BEGIN:VEVENT
+UID:w2yp8u8no8f@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260103T090000
+DTEND;TZID=Atlantic/Reykjavik:20260103T100000
+SUMMARY:Nýárshlaup UltraForm (Ultraform)
+LOCATION:Ultraform Grafarvogi, Gylfaflöt, Reykjavík, Iceland
+DESCRIPTION:undefined
+
+https://www.instagram.com/ultraform.is/p/DEKS4z3A0zy/n%C3%BD%C3%A1rshlaup-ultraform-er-skemmtileg-%C3%A1skorun-sem-hugsu%C3%B0-er-fyrir-alla-hlaupara-%C3%BEar/?next=%2Fromhic1807%2Ffeed%2F&hl=cs
+END:VEVENT
+BEGIN:VEVENT
+UID:e3nzgakpkzt@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260106T193000
+DTEND;TZID=Atlantic/Reykjavik:20260106T203000
+SUMMARY:Powerade vetrarhlaupin 2025-2026 (4 af 6)
+LOCATION:Árbæjarlaug, Fylkisvegur, Reykjavík, Iceland
+DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls verða hlaupin sex og verða þau haldin annan fimmtudag í mánuði, frá október fram í mars. Hlaupið er 10 kílómetra hringur í Elliðaárdalnum.
+
+https://www.vetrarhlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:fwtyihkvnqg@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260120T200000
+DTEND;TZID=Atlantic/Reykjavik:20260120T210000
+SUMMARY:Flandrasprettur 2025-2026 (Janúar)
+LOCATION:Íþróttamiðstöðin, Borgarnes, Iceland
+DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum Flandrasprettum yfir vetrarmánuðina frá október til mars, þ.e.a.s. 6 sprettum á ári. Sprettirnir eru hlaupnir þriðja þriðjudagskvöld hvers mánaðar og vegalengdin er 5 km með upphaf og endi við Íþróttamiðstöðina í Borgarnesi.
+
+https://hlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:nchzisy3van@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260128T173000
+DTEND;TZID=Atlantic/Reykjavik:20260128T183000
+SUMMARY:Vetrarhlaup UFA 2025-2026 (3 af 5)
+LOCATION:LYST, Lystigarðurinn, Eyrarlandsvegur, Akureyri, Iceland
+DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skráning á staðnum frá kl. 17.00.
+
+https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
+END:VEVENT
+BEGIN:VEVENT
+UID:udvxz7jnuik@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260207T180000
+DTEND;TZID=Atlantic/Reykjavik:20260207T190000
+SUMMARY:Norðurljósahlaupið (undefined)
+LOCATION:Listasafn Íslands, The National Gallery of Iceland, Fríkirkjuvegur, Reykjavík, Iceland
+DESCRIPTION:Norðurljósahlaupið er 4-5 km hlaupaupplifun um miðbæ Reykjavíkur. Slepptu fram af þér beislinu þegar þú upplifir upplýstar götur Reykjavíkurborgar. Þátttakendur fá allir stemmingspoka með upplýstum glaðningi líkt og armband og andlitsmálning. Þannig verður þú hluti af sýningunni frá byrjun til enda. Þetta er skemmtiskokk eða ganga um miðbæ Reykjavíkur þar sem þátttakendur munu upplifa borgina í nýju ljósi. Upplifðu spennuna, orkuna og andrúmsloftið. Finndu taktinn þegar blikkandi ljósin vísa þér veginn á skemmtistöðvarnar sem með fjölbreytileika sínum leiðast í tónlist og lýsingu. Hlaupið er hluti af Vetrarhátíð Reykjavíkurborgar.
+
+https://www.nordurljosahlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:uo9enpaeyw@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260212T193000
+DTEND;TZID=Atlantic/Reykjavik:20260212T203000
+SUMMARY:Powerade vetrarhlaupin 2025-2026 (5 af 6)
+LOCATION:Árbæjarlaug, Fylkisvegur, Reykjavík, Iceland
+DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls verða hlaupin sex og verða þau haldin annan fimmtudag í mánuði, frá október fram í mars. Hlaupið er 10 kílómetra hringur í Elliðaárdalnum.
+
+https://www.vetrarhlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:u7vfc9zlvd@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260217T200000
+DTEND;TZID=Atlantic/Reykjavik:20260217T210000
+SUMMARY:Flandrasprettur 2025-2026 (Febrúar)
+LOCATION:Íþróttamiðstöðin, Borgarnes, Iceland
+DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum Flandrasprettum yfir vetrarmánuðina frá október til mars, þ.e.a.s. 6 sprettum á ári. Sprettirnir eru hlaupnir þriðja þriðjudagskvöld hvers mánaðar og vegalengdin er 5 km með upphaf og endi við Íþróttamiðstöðina í Borgarnesi.
+
+https://hlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:q0kuysy117@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260225T173000
+DTEND;TZID=Atlantic/Reykjavik:20260225T183000
+SUMMARY:Vetrarhlaup UFA 2025-2026 (4 af 5)
+LOCATION:LYST, Lystigarðurinn, Eyrarlandsvegur, Akureyri, Iceland
+DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skráning á staðnum frá kl. 17.00.
+
+https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
+END:VEVENT
+BEGIN:VEVENT
+UID:wc9scuviv5q@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260312T193000
+DTEND;TZID=Atlantic/Reykjavik:20260312T203000
+SUMMARY:Powerade vetrarhlaupin 2025-2026 (6 af 6)
+LOCATION:Árbæjarlaug, Fylkisvegur, Reykjavík, Iceland
+DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls verða hlaupin sex og verða þau haldin annan fimmtudag í mánuði, frá október fram í mars. Hlaupið er 10 kílómetra hringur í Elliðaárdalnum.
+
+https://www.vetrarhlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:95f8jtpn2ow@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260317T200000
+DTEND;TZID=Atlantic/Reykjavik:20260317T210000
+SUMMARY:Flandrasprettur 2025-2026 (Mars)
+LOCATION:Íþróttamiðstöðin, Borgarnes, Iceland
+DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum Flandrasprettum yfir vetrarmánuðina frá október til mars, þ.e.a.s. 6 sprettum á ári. Sprettirnir eru hlaupnir þriðja þriðjudagskvöld hvers mánaðar og vegalengdin er 5 km með upphaf og endi við Íþróttamiðstöðina í Borgarnesi.
+
+https://hlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:li9ht62v97@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260325T173000
+DTEND;TZID=Atlantic/Reykjavik:20260325T183000
+SUMMARY:Vetrarhlaup UFA 2025-2026 (5 af 5)
+LOCATION:LYST, Lystigarðurinn, Eyrarlandsvegur, Akureyri, Iceland
+DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skráning á staðnum frá kl. 17.00.
+
+https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
+END:VEVENT
+BEGIN:VEVENT
+UID:v406cheq97@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260423T120000
+DTEND;TZID=Atlantic/Reykjavik:20260423T130000
+SUMMARY:Víðavangshlaup ÍR (Vorboði lífs og gleði)
+LOCATION:Lækjargata, Reykjavík, Iceland
+DESCRIPTION:Víðavangshlaupið er eitt vinsælasta og fjölmennasta 5 km keppnishlaupið sem fram fer á Íslandi enda er hlaupið í hjarta Reykjavíkurborgar þar sem hlaupaleiðin liggur um miðbæ hennar. Hlaupið fór fyrst fram árið 1916 og hefur farið fram ætíð síðan og oftast á Sumardaginn fyrsta fyrir utan 2021 þegar hlaupið var í maí vegna covid takmarkana.
+
+https://netskraning.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:2lx3r3ytjgq@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260425T090000
+DTEND;TZID=Atlantic/Reykjavik:20260425T100000
+SUMMARY:Vormaraþon Félags maraþonhlaupara (The Reykjavik Spring Marathon)
+LOCATION:Hitt húsið, Rafstöðvarvegur, Reykjavík, Iceland
+DESCRIPTION:Félag maraþonhlaupara hefur í yfir 20 ár haldið vor- og haustmaraþon og hafa þessi hlaup fyrir löngu skipað sér fastan sess og njóta sívaxandi vinsælda. Reynt hefur verið að skapa hlýja og afslappaða stemningu í kringum hlaupin. Leiðin liggur í fallegu umhverfi eftir helstu stígum borgarinnar eins fjarri allri bílaumferð og frekast er unnt. Boðið er upp á tvær vegalengdir heilt og hálft maraþon.
+
+https://marathonhlaup.is/is/
+END:VEVENT
+BEGIN:VEVENT
+UID:bzn99qce5j4@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260502T121500
+DTEND;TZID=Atlantic/Reykjavik:20260502T131500
+SUMMARY:The Puffin Run  (undefined)
+LOCATION:Port of Vestmannaeyjar, Ægisgata, Vestmannaeyjar, Iceland
+DESCRIPTION:20 km langt utanvegahlaup í einstöku landslagi og útsýni hinna ægifögru Vestmannaeyja.
+
+https://thepuffinrun.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:j0r72rp8o18@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260509T090000
+DTEND;TZID=Atlantic/Reykjavik:20260509T100000
+SUMMARY:Bakgarður 101 / Backyard 101 (24 klst hlaup)
+LOCATION:Helluvað, Reykjavík, Iceland
+DESCRIPTION:Bakgarður 101 er systurkeppni Bakgarðs Náttúruhlaupa sem fer fram í Heiðmörk í september ár hvert. 
+
+https://natturuhlaup.is/keppnishlaup/bakgardur-101/
+END:VEVENT
+BEGIN:VEVENT
+UID:67akskapz4b@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260514T110000
+DTEND;TZID=Atlantic/Reykjavik:20260514T120000
+SUMMARY:Fjölnishlaupið (undefined)
+LOCATION:Íþróttahús Grafarvogs, Dalhús, Reykjavík, Iceland
+DESCRIPTION:Fjölnishlaup á Uppstigningardag frá Íþróttamiðstöðinni í Grafarvogi við Dalhús.
+
+https://netskraning.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:55kkd80cudh@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260516T110000
+DTEND;TZID=Atlantic/Reykjavik:20260516T120000
+SUMMARY:Hamingjuhlaupið (Samtökin 78 - Happiness Run)
+LOCATION:Elliðaárstöð, Rafstöðvarvegur, Reykjavík, Iceland
+DESCRIPTION:Hefur þig alltaf dreymt um að hlaupa í gegnum confetti? Svitna með glimmer í andlitinu? Að Páll Óskar segi þér að þú sért fabjúlös í hlaupagallanum? Samtökin 78 kynna með stolti Hamingjuhlaupið sem fer fram þann 17. maí 2025, á alþjóðlegum degi gegn hinseginfordómum.
+
+https://www.corsa.is/is/hamingjuhlaupid
+END:VEVENT
+BEGIN:VEVENT
+UID:mriy99k0pdq@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260516T090000
+DTEND;TZID=Atlantic/Reykjavik:20260516T100000
+SUMMARY:Akrafjall Ultra (Ultraform)
+LOCATION:UltraForm Akranes, Ægisbraut, Akranes, Iceland
+DESCRIPTION:Akrafjall Ultra er utanvegahlaup haldið á Akranesi er því aðgengilegt fyrir flesta sem vilja prófa utanvegahlaup nálægt höfuðborgarsvæðinu. Allar vegalengdir gefa ITRA stig og eru er því viðurkennd sem forhlaup fyrir Laugavegshlaupið sem dæmi.
+
+https://netskraning.is/akrafjallultra/
+END:VEVENT
+BEGIN:VEVENT
+UID:0ryh60mg7mw@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260516T100000
+DTEND;TZID=Atlantic/Reykjavik:20260516T110000
+SUMMARY:Stjörnuhlaup Sport 24 (undefined)
+LOCATION:Miðgarður - fjölnota Íþróttahús, Vetrarbraut, Garðabær, Iceland
+DESCRIPTION:Stjörnuhlaupið er utanvegahlaup í fallegu umhverfi í landi Vífilsstaða og Heiðmörk. Hlaupið hefur verið árlegur viðburður í Garðabæ síðan 2012 sem sameinar keppnisanda, gleði, hreyfingu og útivist. 
+
+https://netskraning.is
+END:VEVENT
+BEGIN:VEVENT
+UID:qoljcqqj3pm@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260525T100000
+DTEND;TZID=Atlantic/Reykjavik:20260525T110000
+SUMMARY:Hvítasunnuhlaup Hauka og Brooks (undefined)
+LOCATION:Ásvellir - Haukar, Ásvellir, Hafnarfjörður, Iceland
+DESCRIPTION:Hvítasunnuhlaup Hauka, Brooks og heilsubæjarins Hafnarfjarðar,  er glæsilegt utanvegahlaup um fallegt uppland Hafnarfjarðar. Hlaupið byrjar og endar á Ásvöllum í Hafnarfirði, og er val um þrjár hlaupaleiðir 14 km, 17,5 km og 22 km. Hlaupið hefur verið skipulagt og unnið í sjálfboðavinnu af félögum í Skokkhópi Hauka sem telur um 100 félaga.
+
+https://www.hvitasunnuhlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:ybst2al4pbt@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260530T110000
+DTEND;TZID=Atlantic/Reykjavik:20260530T120000
+SUMMARY:Mýrdalshlaupið / The Mýrdalshlaup Trail Run (undefined)
+LOCATION:Víkurfjara Black Sand Beach, Vik, Iceland
+DESCRIPTION:Mýrdalshlaupið er utanvegahlaup í mikilli náttúrufegurð haldið árlega í Vík í Mýrdal. Þrjár vegalengdir í boði, 21 km, 10 km og 3 km
+
+https://myrdalshlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:6yxiabdi4sk@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260605T180000
+DTEND;TZID=Atlantic/Reykjavik:20260605T190000
+SUMMARY:Hengill Ultra Trail - 106K (Víkingamótin)
+LOCATION:Breiðamörk, Hveragerði, Iceland
+DESCRIPTION:Hengill Ultra Trail is the largest trail running event in Iceland taking place only 30 minutes from Reykjavík and 65 minutes from the International Airport.
+
+https://www.vikingamot.is/hengill-ultra/
+END:VEVENT
+BEGIN:VEVENT
+UID:k0i8n710ofo@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260606T080000
+DTEND;TZID=Atlantic/Reykjavik:20260606T090000
+SUMMARY:Hengill Ultra (undefined)
+LOCATION:Breiðamörk, Hveragerði, Iceland
+DESCRIPTION:undefined
+
+https://www.vikingamot.is/hengill-ultra/
+END:VEVENT
+BEGIN:VEVENT
+UID:p09lr8gw88s@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260611T200000
+DTEND;TZID=Atlantic/Reykjavik:20260611T210000
+SUMMARY:Hafnarfjarðarhlaupið (undefined)
+LOCATION:Thorsplan, Hafnarfjörður, Iceland
+DESCRIPTION:Hlaupin verður leið frá miðbænum um íbúða- og atvinnusvæði hafnarinnar. Hafnarfjarðarhöfn og Eimskip opna sérstaklega tollsvæði til að búa til möguleika á einni hröðustu götuhlaupabraut landsins. Boðið er upp á tvær vegalengdir, 5 km og 10 km. Hlaupið er haldið af Frjálsíþróttadeild FH í samvinnu við Hafnarfjarðarbæ og fleiri styrktaraðila.
+
+https://hlaup.is/vidburdir/hafnarfjardarhlaupid-11-06-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:goquzgcvl1t@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260620T201500
+DTEND;TZID=Atlantic/Reykjavik:20260620T211500
+SUMMARY:Sólstöðuhlaup Skógarbaðanna (undefined)
+LOCATION:Svalbarðsströnd Swimming Pool, Svalbarðseyri, Iceland
+DESCRIPTION:Sólstöðuhlaup Æskunnar og Skógarbaðanna er utanvegahlaup fyrir alla. Sólstöðuhlaupið sem verður formlega stofnað á sumarsólstöðum í júní 2025. 
+
+https://www.aeskan.com/solstoduhlaupid
+END:VEVENT
+BEGIN:VEVENT
+UID:f6v2hyyt1uv@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260625T210000
+DTEND;TZID=Atlantic/Reykjavik:20260625T220000
+SUMMARY:Miðnæturhlaup Suzuki ()
+LOCATION:Laugardalsholl Sport Centre, Engjavegur, Reykjavík, Iceland
+DESCRIPTION:Miðnæturhlaup Suzuki er hlaup sem haldið hefur verið árlega síðan 1993. 
+
+https://www.midnaeturhlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:w43twux8xwa@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260625T173000
+DTEND;TZID=Atlantic/Reykjavik:20260625T183000
+SUMMARY:Hólmsheiðarhlaup UltraForm (undefined)
+LOCATION:Ultraform Grafarvogi, Gylfaflöt, Reykjavík, Iceland
+DESCRIPTION:Hlaupið er utanvegahlaup, en haldið á höfuðborgarsvæðinu og er því aðgengilegt fyrir alla sem vilja prófa utanvegahlaup. Hlaupið (22 km) gefur ITRA stig og er því viðurkennt sem forhlaup fyrir Laugavegshlaupið.
+
+https://ultraform.is/holmsheidarhlaup-a-hofudborgarsvaedinu/
+END:VEVENT
+BEGIN:VEVENT
+UID:fbthdzoa20e@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260627T073000
+DTEND;TZID=Atlantic/Reykjavik:20260627T083000
+SUMMARY:Iceland Volcano Marathon (undefined)
+LOCATION:Vogafjós, Iceland
+DESCRIPTION:Hlaupið hefst við rætur Hverfjalls og leiðir keppendur í átt að Mývatni í nánd við jarðhitasvæði, hvera og hraungrýti eins langt og augað eygir.  Finnið svartan hraunsandinn við hvert fótstig, upplifið hinar dularfullu Dimmuborgir og sjáið gufustrókana rísa er við þjótum framhjá Jarðböðunum. Hlaupið endar við Voga Ferðaþjónustu. 
+
+https://iceland-volcano-marathon.com/skr%C3%A1ning-%C3%AD-iceland-volcano-marathon?fbclid=IwZXh0bgNhZW0CMTEAAR1rsYamW6ItcC3OBGuGySUS-SItIlvVlBK1Ki77FiLTYVa21TARlJOWgwg_aem_jsq3slapqlu6PkSuVUMEqg
+END:VEVENT
+BEGIN:VEVENT
+UID:nx3l4d94yll@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260627T090000
+DTEND;TZID=Atlantic/Reykjavik:20260627T100000
+SUMMARY:Hafnarfjall Ultra (undefined)
+LOCATION:Menntaskóli Borgarfjarðar, Borgarbraut, Borgarnes, Iceland
+DESCRIPTION:Hlaupahópurinn Flandri Borgarnesi stendur fyrir mögnuðu utanvegahlaupi. Hafnarfjall 7 tindar ultra.
+
+https://netskraning.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:cs2ptu5b1y@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260627T130000
+DTEND;TZID=Atlantic/Reykjavik:20260627T140000
+SUMMARY:Öræfahlaupið - Kristínartindar (undefined)
+LOCATION:Skaftafell, Skaftafell, Iceland
+DESCRIPTION:Öræfahlaupið er 23 km utanvegahlaup þar sem hlaupið er í stórbrotnu umhverfi í Skaftafelli sem er hluti af Vatnajökulsþjóðgarðinum. Hlaupið hefst við þjónustumiðstöðina í  Skaftafelli  en hlaupaleiðin liggur um Kristínartinda þar sem frábært útsýni er um fjalllendi Öræfanna og þaðan er hlaupið inn í Morsárdalinn áður en haldið er til baka að þjónustumiðstöðinni í Skaftafelli.
+
+https://www.instagram.com/oraefahlaupid/
+END:VEVENT
+BEGIN:VEVENT
+UID:oc045h6mtcs@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260704T110000
+DTEND;TZID=Atlantic/Reykjavik:20260704T120000
+SUMMARY:Dyrfjallahlaupið (undefined)
+LOCATION:Borgarfjörður eystri, Bakkagerði, Iceland
+DESCRIPTION:Dyrfjallahlaupið er hlaupahátíð á Borgarfirði eystra þar sem boðið er upp á keppnisleiðir fyrir hlaupara á öllu getustigum.Við bjóðum upp á 50 km Ultra hlaup með 2600 m hækkun sem liggur um Loðmundarfjörð, Húsavík, Breiðuvík og Brúnavík og endar við smábátahöfnina Í Borgarfirði eystra. Einnig bjóðum við upp á 12 og 24 km leiðir um Víknaslóðir sem er einstakt svæði með ljósum líparítfjöllum og skriðum, í bland við dökka og tignarlega basalttinda.
+
+https://dyrfjallahlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:5xvseu8f5b2@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260711T090000
+DTEND;TZID=Atlantic/Reykjavik:20260711T100000
+SUMMARY:Laugavegur Ultra Marathon (Laugavegshlaupið)
+LOCATION:Landmannalaugar, Iceland
+DESCRIPTION:Laugavegshlaupið er 55 km utanvegahlaup en Laugavegurinn tengir saman Landmannalaugar og Þórsmörk á sunnanverðu hálendi Íslands, tvær sannkallaðar náttúruperlur. Göngugarpar eru venjulega 4 daga á leið sinni um Laugaveginn en hröðustu hlaupararnir fara leiðina á 4-5 klukkustundum.
+
+https://www.laugavegshlaup.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:27v11k9hf3s@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260718T090000
+DTEND;TZID=Atlantic/Reykjavik:20260718T100000
+SUMMARY:Fjögurra Skóga Hlaupið (undefined)
+LOCATION:Vaglaskógur, Iceland
+DESCRIPTION:Einstakar hlaupaleiðir við allra hæfi í sólkistu norðlenskra dala. Fjögurra skóga hlaupið er ein af stærri fjáröflunum sem Björgunarsveitinni Þingey stendur fyrir.
+
+https://thinghlaup.wordpress.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:n2zyso4gcdi@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260725T080000
+DTEND;TZID=Atlantic/Reykjavik:20260725T090000
+SUMMARY:Kerlingafjöll Ultra (undefined)
+LOCATION:Highland Base at Kerlingarfjöll, Selfoss, Iceland
+DESCRIPTION:Mögnuð hlaupaupplifun sem fer fram í hjarta hálendisins.
+
+https://kerlingarfjoll.is/kerlingarfjoll-ultra
+END:VEVENT
+BEGIN:VEVENT
+UID:e0gty8igxjb@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260729T200000
+DTEND;TZID=Atlantic/Reykjavik:20260729T210000
+SUMMARY:Adidas Boost hlaupið (undefined)
+LOCATION:Rafstöðvarvegur, Reykjavík, Iceland
+DESCRIPTION:Adidas Boost hlaupið er 10km almenningshlaup. Skemmtileg og hröð braut í Elliðaárdal og Fossvogsdal.
+
+https://hlaup.is/vidburdir/adidas-boost-hlaupid-30-07-2025/
+END:VEVENT
+BEGIN:VEVENT
+UID:9gn7mtinw0g@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260808T120000
+DTEND;TZID=Atlantic/Reykjavik:20260808T130000
+SUMMARY:5VH Trail Run (Fimmvörðuhálshlaup Náttúruhlaupa)
+LOCATION:Skógar, Iceland
+DESCRIPTION:Fimmvörðuháls hiking trail is one of the most beautiful and popular hiking routes in Iceland. Running it is an experience you never forget. Iceland Trail Race Trip where the registration fee of 5VH Trail Run is included. Don’t register here if you get the package. https://www.arcticrunning.is/iceland-trail-race-trip
+
+https://natturuhlaup.is/en/keppnishlaup/5vh-trail-run/
+END:VEVENT
+BEGIN:VEVENT
+UID:qp5vhd30ux@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260808T080000
+DTEND;TZID=Atlantic/Reykjavik:20260808T090000
+SUMMARY:Rauðavatn Ultra (3-6-12-24 klst og 100km)
+LOCATION:Rauðavatn, Reykjavík, Iceland
+DESCRIPTION:Rauðavatn Ultra er hlaup sem haldið verður í annað 2026. Hlaupið er 90 % götuhlaup og 10 % utanvegahlaup. Hlaupið er Íslandsmeistaramót í 100 km hlaupi og samhliða því er keppt í 3/6/12 og 24 klst hlaupum.
+
+https://netskraning.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:acavjpqwrha@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260815T090000
+DTEND;TZID=Atlantic/Reykjavik:20260815T100000
+SUMMARY:Fjarðarhlaupið (undefined)
+LOCATION:Ólafsfjörður, Iceland
+DESCRIPTION:Fjallahlaup frá Siglufirði til Ólafsfjarðar. Ræst verður frá Sigló Hótel og hlaupið sem leið liggur inn Hólsdal í Siglufirði og upp í Hólsskarð. Þar er stefnan tekin niður Ámárdal, niður í Héðinsfjörð að Héðinsfjarðargöngum. Þá er stefnan sett á Víkurdal yfir Rauðskörð og niður Ytri-árdal að Kleifum í Ólafsfirði. Endamark er í miðbæ Ólafsfjarðar
+
+https://netskraning.is/fjardarhlaupid/
+END:VEVENT
+BEGIN:VEVENT
+UID:0bmz058ge7pj@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260822T084000
+DTEND;TZID=Atlantic/Reykjavik:20260822T094000
+SUMMARY:Reykjavíkurmaraþon Íslandsbanka (undefined)
+LOCATION:Lækjargata, Reykjavík, Iceland
+DESCRIPTION:Reykjavíkurmaraþon Íslandsbanka - 42.2 km - 21.1 km - 10 km - skemmtiskokk
+
+https://www.rmi.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:5p9jbhl2jwt@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20260830
+SUMMARY:The Color Run (undefined)
+LOCATION:Kópavogsdalur, Kópavogur, Iceland
+DESCRIPTION:Litríkasti viðburður ársins snýr aftur! 10 ára afmæli Color run á íslandi 2025! 
+
+https://colorrun.is/
+END:VEVENT
+BEGIN:VEVENT
+UID:g087cycyimh@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260905T120000
+DTEND;TZID=Atlantic/Reykjavik:20260905T130000
+SUMMARY:Þórsgata Volcano Trail Run (Þórsgötuhlaupið)
+LOCATION:Húsadalur, Þórsmörk, Þórsmerkurvegur, Iceland
+DESCRIPTION:Þórsgata Volcano Trail Run er eitt vinsælasta utanvegahlaup ársins. Boðið verður upp á tvær vegalengdir sem báðar liggja um bestu útsýnisstaði Þórsmerkur.
+
+https://volcanotrails.is/boka/ferdir-vidburdir/thorsgata-volcano-trail-run/
+END:VEVENT
+BEGIN:VEVENT
+UID:pns9pk4ru2s@koddsson.com
+DTSTAMP:20251111T113427Z
+DTSTART;TZID=Atlantic/Reykjavik:20260910T180000
+DTEND;TZID=Atlantic/Reykjavik:20260910T190000
+SUMMARY:Vatnsendahlaup HK (undefined)
+LOCATION:Kórinn, Kópavogur, Iceland
+DESCRIPTION:Vatnsendahlaup HK verður haldið í september – Hlaupið verður frá Kórnum við Vallakór 12 í Kópavogi. Hlaupin er 10 km utanvegaleið á fjölbreyttum stígum sem fáir hafa hlaupið við jaðar Heiðmerkur. Boðið verður uppá tímatöku og er ein drykkjarstöð á leiðinni. 
+
+https://www.facebook.com/vatnsendahlaupHK
+END:VEVENT
+
+
+END:VCALENDAR
