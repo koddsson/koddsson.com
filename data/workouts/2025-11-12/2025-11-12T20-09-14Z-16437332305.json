@@ -442,7 +442,7 @@
     "max_heartrate": 181,
     "max_speed": 4.583,
     "moving_time": 1789,
-    "name": "Easy + Stridess",
+    "name": "Easy + Strides",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
@@ -642,15 +642,15 @@
   },
   "payload": {
     "aspect_type": "update",
-    "event_time": 1762978153,
+    "event_time": 1762978245,
     "object_id": 16437332305,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
     "updates": {
-      "title": "Easy + Stridess"
+      "title": "Easy + Strides"
     }
   },
-  "received_at": "2025-11-12T20:09:14.007Z",
+  "received_at": "2025-11-12T20:10:45.976Z",
   "source": "strava"
 }
