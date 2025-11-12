@@ -23,6 +23,8 @@ jobs:
           node-version: "24"
           cache: "npm"
 
+      - run: npm install
+
       - name: Run processor script
         env:
           GITHUB_EVENT_PATH: ${{ github.event_path }}

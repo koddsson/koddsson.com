@@ -24,11 +24,12 @@
  * - Conservative matching for delete/update to reduce false positives.
  */
 
-import fs from 'fs/promises';
-import fsSync from 'fs';
-import path from 'path';
-import crypto from 'crypto';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs/promises';
+import fsSync from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+
 import polyline from '@mapbox/polyline';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -242,7 +243,7 @@ async function generateAndSaveSVG(jsonFilePath, payloadObj) {
   try {
     // Try to find polyline in various locations
     let encodedPolyline = null;
-    
+
     // Check activity.map.polyline (most common for detailed activity data)
     if (payloadObj.activity?.map?.polyline) {
       encodedPolyline = payloadObj.activity.map.polyline;
