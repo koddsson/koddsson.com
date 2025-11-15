@@ -157,7 +157,7 @@
     "calories": 645,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 8010.3,
@@ -178,7 +178,7 @@
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 16456845633,
-    "kudos_count": 0,
+    "kudos_count": 3,
     "laps": [
       {
         "activity": {
@@ -473,12 +473,21 @@
     "max_heartrate": 177,
     "max_speed": 3.65,
     "moving_time": 2901,
-    "name": "Afternoon Run",
+    "name": "Easy run",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "47a6352a-ee68-4310-9c8a-4329bbae0094",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/RVAHz5tpAAS2ka993f3k4NGvckfQEx9RMonJCOseS_I-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/RVAHz5tpAAS2ka993f3k4NGvckfQEx9RMonJCOseS_I-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -952,24 +961,26 @@
     "suffer_score": 85,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 9,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 17543219029,
     "upload_id_str": "17543219029",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1763138428,
+    "aspect_type": "update",
+    "event_time": 1763213401,
     "object_id": 16456845633,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Easy run"
+    }
   },
-  "received_at": "2025-11-14T16:40:29.293Z",
+  "received_at": "2025-11-15T13:30:02.101Z",
   "source": "strava"
 }
