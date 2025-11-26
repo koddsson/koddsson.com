@@ -7,6 +7,7 @@ description: "Some gift ideas for me"
 Sometimes people want to buy me things and I feel like I'm terrible at coming up with ideas on the spot. Here's where I'll collect some ideas of gifts that I'd love to receive.
 
 - A [Vecct Second Skin Longsleeve](https://vecct.store/products/second-skin-longsleeve) ~~or a [Arc Jacket Black](https://vecct.store/products/a)~~ (I bought myself a running jacket) for running in.
+- The [OpenRun Pro 2](https://shokz.com/products/openrunpro2). I'm planning on longer runs this year (2026) and some marathons and ultras don't allow you to use the normal AirPods or what-not. These are supposedly very good.
 - ~~[Shrigley Embroidered Pocket "We love fermentation" T-Shirt from Noma - €49,95](https://nomaprojects.com/products/we-love-fermentation-t-shirt?variant=41378907422925).~~ This seems like it's not being sold any more.
 - [Noma 2.0: Vegetable, Forest, Ocean Gift Set - €105,95](https://nomaprojects.com/products/noma-2-0-gift-set?variant=41312659996877).
 - [Any of the various garums, vinegars or sauces (so long it's vegan) from Noma](https://nomaprojects.com/collections).
