@@ -157,7 +157,7 @@
     "calories": 465,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 7011.6,
@@ -442,12 +442,21 @@
     "max_heartrate": 163,
     "max_speed": 6.033,
     "moving_time": 2551,
-    "name": "Afternoon Run",
+    "name": "Road to 55k starts today!!",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "58808072-cc3d-487d-8f45-7a68e554c3cb",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/KuPoCmQTtC-ZSIi5rOWoeZfg7GfevZIYaYxl1R83jrw-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/KuPoCmQTtC-ZSIi5rOWoeZfg7GfevZIYaYxl1R83jrw-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -834,24 +843,26 @@
     "suffer_score": 33,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 16,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 17661923684,
     "upload_id_str": "17661923684",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1764178564,
+    "aspect_type": "update",
+    "event_time": 1764179021,
     "object_id": 16574190036,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Road to 55k starts today!!"
+    }
   },
-  "received_at": "2025-11-26T17:36:05.319Z",
+  "received_at": "2025-11-26T17:43:42.265Z",
   "source": "strava"
 }
