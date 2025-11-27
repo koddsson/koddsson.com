@@ -18,7 +18,7 @@
     "calories": 461,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "Maybe I just need to get used to it but the HEAT inside the gym was killing me 🥵💀📉",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 5580,
@@ -36,7 +36,7 @@
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 16584429014,
-    "kudos_count": 0,
+    "kudos_count": 1,
     "laps": [
       {
         "activity": {
@@ -393,12 +393,21 @@
     "max_heartrate": 172,
     "max_speed": 3.064,
     "moving_time": 2249,
-    "name": "Afternoon Run",
+    "name": "Attempted rolling 300s on a treadmill.",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "5b38d572-f6be-44e4-a2b4-72d85e1a8baa",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/6LuF3_L0mLd3t2MGQ6-hJkkQexzeVNN0pxu6JTkIj3U-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/6LuF3_L0mLd3t2MGQ6-hJkkQexzeVNN0pxu6JTkIj3U-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -555,24 +564,26 @@
     "suffer_score": 54,
     "timezone": "(GMT+00:00) Africa/Abidjan",
     "total_elevation_gain": 0,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": true,
     "type": "Run",
     "upload_id": 17672331326,
     "upload_id_str": "17672331326",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1764265905,
+    "aspect_type": "update",
+    "event_time": 1764268222,
     "object_id": 16584429014,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Attempted rolling 300s on a treadmill."
+    }
   },
-  "received_at": "2025-11-27T17:51:46.021Z",
+  "received_at": "2025-11-27T18:30:22.622Z",
   "source": "strava"
 }
