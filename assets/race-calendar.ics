@@ -6,19 +6,8 @@ METHOD:PUBLISH
 X-WR-TIMEZONE:Atlantic/Reykjavik
 
 BEGIN:VEVENT
-UID:zof5p27rz8@koddsson.com
-DTSTAMP:20251126T050748Z
-DTSTART;TZID=Atlantic/Reykjavik:20251126T173000
-DTEND;TZID=Atlantic/Reykjavik:20251126T183000
-SUMMARY:Vetrarhlaup UFA 2025-2026 (2 af 5)
-LOCATION:LYST, Lystigarðurinn, Eyrarlandsvegur, Akureyri, Iceland
-DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skráning á staðnum frá kl. 17.00.
-
-https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
-END:VEVENT
-BEGIN:VEVENT
-UID:fzehe98q86s@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:mq50kikksda@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251129T090000
 DTEND;TZID=Atlantic/Reykjavik:20251129T100000
 SUMMARY:Kirkjuhlaup Kópavogs ()
@@ -28,8 +17,8 @@ DESCRIPTION:Þjóðkirkjusöfnuðurnir í Kópavogi efna nú í tólfta sinn til
 https://fb.me/e/3Hd6hcyHb
 END:VEVENT
 BEGIN:VEVENT
-UID:1bfxnhg2vh8@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:mpecf3d1u0j@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251211T193000
 DTEND;TZID=Atlantic/Reykjavik:20251211T203000
 SUMMARY:Powerade vetrarhlaupin 2025-2026 (3 af 6)
@@ -39,8 +28,8 @@ DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls v
 https://www.vetrarhlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:sk6knwx5bec@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:wsp7g1l9qd@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251214T130000
 DTEND;TZID=Atlantic/Reykjavik:20251214T140000
 SUMMARY:Kaldárhlaupið (undefined)
@@ -50,8 +39,8 @@ DESCRIPTION:Haldið 2024 í tilefni af Hátíð Hamraskotslækjar
 https://vefblad.fjardarfrettir.is/p/fjardarfrettir/5-12-2024/a/hatidj-hamarskotslaekjar/6849/1750175/59025185
 END:VEVENT
 BEGIN:VEVENT
-UID:vxdjp9tee4@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:r7nhhren5v@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251216T200000
 DTEND;TZID=Atlantic/Reykjavik:20251216T210000
 SUMMARY:Flandrasprettur 2025-2026 (Desember)
@@ -61,8 +50,8 @@ DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum F
 https://hlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:uh3gfzyh2gh@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:a2j1lt413g@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251226T100000
 DTEND;TZID=Atlantic/Reykjavik:20251226T110000
 SUMMARY:Kirkjuhlaup TSK ()
@@ -72,8 +61,8 @@ DESCRIPTION:Trimmklúbbur Seltjarnarness (TKS) stendur fyrir kirkjuhlaupi á ann
 https://hlaup.is/vidburdir/kirkjuhlaup-tks-26-12-2024/
 END:VEVENT
 BEGIN:VEVENT
-UID:zse011sed0e@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:lti0esl1mw@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251226T100000
 DTEND;TZID=Atlantic/Reykjavik:20251226T110000
 SUMMARY:Kirkjuhlaup Skokkhóps Hauka og Ástjarnarkirkju ()
@@ -83,8 +72,8 @@ DESCRIPTION:Skokkhópur Hauka og Ástjarnarkirkja bjóða öllum í árlegt Kirk
 https://hafnarfjordur.is/vidburdur/kirkjuhlaup-skokkhops-hauka-og-astjarnarkirkju/
 END:VEVENT
 BEGIN:VEVENT
-UID:uwrpd4ggg3@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:fwmuklesrau@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251231T130000
 DTEND;TZID=Atlantic/Reykjavik:20251231T140000
 SUMMARY:Gamlárshlaup ÍR ()
@@ -94,8 +83,8 @@ DESCRIPTION:Gamlárshlaup ÍR er fastur liður í lífi margra hlaupara og hlaup
 https://netskraning.is/gamlarshlaupir/
 END:VEVENT
 BEGIN:VEVENT
-UID:ns9sy3uc64@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:azw4ey1iusj@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20251231T110000
 DTEND;TZID=Atlantic/Reykjavik:20251231T120000
 SUMMARY:Gamlárshlaup UFA ()
@@ -105,8 +94,8 @@ DESCRIPTION:Gamlárshlaup er hlaupið á gamlársdag ár hvert á Akureyri
 https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/gamlarshlaup
 END:VEVENT
 BEGIN:VEVENT
-UID:ockwhwxszc@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:gbyyb8w8xq@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260104T090000
 DTEND;TZID=Atlantic/Reykjavik:20260104T100000
 SUMMARY:Nýárshlaup UltraForm (Ultraform)
@@ -116,8 +105,8 @@ DESCRIPTION:undefined
 https://www.instagram.com/ultraform.is/p/DEKS4z3A0zy/n%C3%BD%C3%A1rshlaup-ultraform-er-skemmtileg-%C3%A1skorun-sem-hugsu%C3%B0-er-fyrir-alla-hlaupara-%C3%BEar/?next=%2Fromhic1807%2Ffeed%2F&hl=cs
 END:VEVENT
 BEGIN:VEVENT
-UID:3ajbvto4r5l@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:2r03y4ouvcp@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260108T193000
 DTEND;TZID=Atlantic/Reykjavik:20260108T203000
 SUMMARY:Powerade vetrarhlaupin 2025-2026 (4 af 6)
@@ -127,8 +116,8 @@ DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls v
 https://www.vetrarhlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:adnkrstsbgq@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:qv2h5swtnui@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260120T200000
 DTEND;TZID=Atlantic/Reykjavik:20260120T210000
 SUMMARY:Flandrasprettur 2025-2026 (Janúar)
@@ -138,8 +127,8 @@ DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum F
 https://hlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:r25loarn2pj@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:ft73zg8uqwh@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260128T173000
 DTEND;TZID=Atlantic/Reykjavik:20260128T183000
 SUMMARY:Vetrarhlaup UFA 2025-2026 (3 af 5)
@@ -149,8 +138,8 @@ DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skránin
 https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
 END:VEVENT
 BEGIN:VEVENT
-UID:m6xi1a049uc@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:msjw3z7o4k@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260207T180000
 DTEND;TZID=Atlantic/Reykjavik:20260207T190000
 SUMMARY:Norðurljósahlaupið (undefined)
@@ -160,8 +149,8 @@ DESCRIPTION:Norðurljósahlaupið er 4-5 km hlaupaupplifun um miðbæ Reykjavík
 https://www.nordurljosahlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:26rs7ggdn78@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:h1mjhl85eku@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260212T193000
 DTEND;TZID=Atlantic/Reykjavik:20260212T203000
 SUMMARY:Powerade vetrarhlaupin 2025-2026 (5 af 6)
@@ -171,8 +160,8 @@ DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls v
 https://www.vetrarhlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:uvrxrsulbld@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:56so8u8dld3@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260217T200000
 DTEND;TZID=Atlantic/Reykjavik:20260217T210000
 SUMMARY:Flandrasprettur 2025-2026 (Febrúar)
@@ -182,8 +171,8 @@ DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum F
 https://hlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:30lq3lev737@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:fdkazxnsm37@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260225T173000
 DTEND;TZID=Atlantic/Reykjavik:20260225T183000
 SUMMARY:Vetrarhlaup UFA 2025-2026 (4 af 5)
@@ -193,8 +182,8 @@ DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skránin
 https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
 END:VEVENT
 BEGIN:VEVENT
-UID:99gg4vbozsc@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:9om8700jrlr@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260312T193000
 DTEND;TZID=Atlantic/Reykjavik:20260312T203000
 SUMMARY:Powerade vetrarhlaupin 2025-2026 (6 af 6)
@@ -204,8 +193,8 @@ DESCRIPTION:Powerade Vetrarhlaupið verður á sínum stað næsta vetur. Alls v
 https://www.vetrarhlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:ghrtym3yufj@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:fy67r541nm9@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260317T200000
 DTEND;TZID=Atlantic/Reykjavik:20260317T210000
 SUMMARY:Flandrasprettur 2025-2026 (Mars)
@@ -215,8 +204,8 @@ DESCRIPTION:Hlaupahópurinn Flandri í Borgarnesi stendur fyrir mánaðarlegum F
 https://hlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:winoqz75trk@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:f1ucau4i7xs@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260325T173000
 DTEND;TZID=Atlantic/Reykjavik:20260325T183000
 SUMMARY:Vetrarhlaup UFA 2025-2026 (5 af 5)
@@ -226,8 +215,8 @@ DESCRIPTION:Öll hlaupin byrja kl. 17.30 í Lystigarðinum á Akureyri. Skránin
 https://www.ufa.is/is/langhlaupa-og-thrithrautardeild/gotuhlaup/vetrarhlaup
 END:VEVENT
 BEGIN:VEVENT
-UID:es82d2wnupk@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:cxu9l5kpjir@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260423T120000
 DTEND;TZID=Atlantic/Reykjavik:20260423T130000
 SUMMARY:Víðavangshlaup ÍR (Vorboði lífs og gleði)
@@ -237,8 +226,8 @@ DESCRIPTION:Víðavangshlaupið er eitt vinsælasta og fjölmennasta 5 km keppni
 https://netskraning.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:g9jd3fuguti@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:tgtjetfkadj@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260425T090000
 DTEND;TZID=Atlantic/Reykjavik:20260425T100000
 SUMMARY:Vormaraþon Félags maraþonhlaupara (The Reykjavik Spring Marathon)
@@ -248,8 +237,8 @@ DESCRIPTION:Félag maraþonhlaupara hefur í yfir 20 ár haldið vor- og haustma
 https://marathonhlaup.is/is/
 END:VEVENT
 BEGIN:VEVENT
-UID:hggoq18z9qj@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:iqgbh2qxk5r@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260502T121500
 DTEND;TZID=Atlantic/Reykjavik:20260502T131500
 SUMMARY:The Puffin Run  (undefined)
@@ -259,8 +248,8 @@ DESCRIPTION:20 km langt utanvegahlaup í einstöku landslagi og útsýni hinna �
 https://thepuffinrun.com/
 END:VEVENT
 BEGIN:VEVENT
-UID:c9nguebuvl5@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:x4njvw41m9k@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260509T090000
 DTEND;TZID=Atlantic/Reykjavik:20260509T100000
 SUMMARY:Bakgarður 101 / Backyard 101 (24 klst hlaup)
@@ -270,8 +259,8 @@ DESCRIPTION:Bakgarður 101 er systurkeppni Bakgarðs Náttúruhlaupa sem fer fra
 https://natturuhlaup.is/keppnishlaup/bakgardur-101/
 END:VEVENT
 BEGIN:VEVENT
-UID:3lf2ewtun2a@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:roy906pekkq@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260514T110000
 DTEND;TZID=Atlantic/Reykjavik:20260514T120000
 SUMMARY:Fjölnishlaupið (undefined)
@@ -281,8 +270,8 @@ DESCRIPTION:Fjölnishlaup á Uppstigningardag frá Íþróttamiðstöðinni í G
 https://netskraning.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:7gtu1uflobk@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:631z79z4aik@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260516T110000
 DTEND;TZID=Atlantic/Reykjavik:20260516T120000
 SUMMARY:Hamingjuhlaupið (Samtökin 78 - Happiness Run)
@@ -292,8 +281,8 @@ DESCRIPTION:Hefur þig alltaf dreymt um að hlaupa í gegnum confetti? Svitna me
 https://www.corsa.is/is/hamingjuhlaupid
 END:VEVENT
 BEGIN:VEVENT
-UID:u5qous8ke6@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:z3q8n8q4j4@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260516T090000
 DTEND;TZID=Atlantic/Reykjavik:20260516T100000
 SUMMARY:Akrafjall Ultra (Ultraform)
@@ -303,8 +292,8 @@ DESCRIPTION:Akrafjall Ultra er utanvegahlaup haldið á Akranesi er því aðgen
 https://netskraning.is/akrafjallultra/
 END:VEVENT
 BEGIN:VEVENT
-UID:6qfzy46vvvv@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:2ivdzd94hy7@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260516T100000
 DTEND;TZID=Atlantic/Reykjavik:20260516T110000
 SUMMARY:Stjörnuhlaup Sport 24 (undefined)
@@ -314,8 +303,8 @@ DESCRIPTION:Stjörnuhlaupið er utanvegahlaup í fallegu umhverfi í landi Vífi
 https://netskraning.is
 END:VEVENT
 BEGIN:VEVENT
-UID:fft2yezkh8u@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:syz9zedwhzp@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260525T100000
 DTEND;TZID=Atlantic/Reykjavik:20260525T110000
 SUMMARY:Hvítasunnuhlaup Hauka og Brooks (undefined)
@@ -325,8 +314,8 @@ DESCRIPTION:Hvítasunnuhlaup Hauka, Brooks og heilsubæjarins Hafnarfjarðar,  e
 https://www.hvitasunnuhlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:j2zcxorf3w@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:wvnu1945yt@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260530T110000
 DTEND;TZID=Atlantic/Reykjavik:20260530T120000
 SUMMARY:Mýrdalshlaupið / The Mýrdalshlaup Trail Run (undefined)
@@ -336,8 +325,8 @@ DESCRIPTION:Mýrdalshlaupið er utanvegahlaup í mikilli náttúrufegurð haldi�
 https://myrdalshlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:svtors95nwi@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:3hq1809z8hi@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260605T180000
 DTEND;TZID=Atlantic/Reykjavik:20260605T190000
 SUMMARY:Hengill Ultra Trail - 106K (Víkingamótin)
@@ -347,8 +336,8 @@ DESCRIPTION:Hengill Ultra Trail is the largest trail running event in Iceland ta
 https://www.vikingamot.is/hengill-ultra/
 END:VEVENT
 BEGIN:VEVENT
-UID:9qtv12edvet@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:j9uiwsownqj@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260606T080000
 DTEND;TZID=Atlantic/Reykjavik:20260606T090000
 SUMMARY:Hengill Ultra (undefined)
@@ -358,8 +347,8 @@ DESCRIPTION:undefined
 https://www.vikingamot.is/hengill-ultra/
 END:VEVENT
 BEGIN:VEVENT
-UID:vta1yxaxsrk@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:lpzkgob6f@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260611T200000
 DTEND;TZID=Atlantic/Reykjavik:20260611T210000
 SUMMARY:Hafnarfjarðarhlaupið (undefined)
@@ -369,8 +358,8 @@ DESCRIPTION:Hlaupin verður leið frá miðbænum um íbúða- og atvinnusvæði
 https://hlaup.is/vidburdir/hafnarfjardarhlaupid-11-06-2026/
 END:VEVENT
 BEGIN:VEVENT
-UID:yqj1sop76nm@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:zxd94y0dzyp@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260613T110000
 DTEND;TZID=Atlantic/Reykjavik:20260613T120000
 SUMMARY:Gullspretturinn (undefined)
@@ -380,8 +369,8 @@ DESCRIPTION:Hlaupið er í kringum Laugarvatn yfir ár, mýrar og móa með frj�
 https://gullspretturinn.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:6ody0yfaet8@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:xrzs63o38ed@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;VALUE=DATE:20260620
 DTEND;VALUE=DATE:20260621
 SUMMARY:Snæfellsjökulshlaupið (undefined)
@@ -391,8 +380,8 @@ DESCRIPTION:Hlaupaleiðin er um 22 km. Langstærsti hluti hlaupsins er malarvegu
 https://www.instagram.com/snaefellsjokulshlaupid
 END:VEVENT
 BEGIN:VEVENT
-UID:6jzjxxp5a3o@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:orj5q6pg9bh@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260620T201500
 DTEND;TZID=Atlantic/Reykjavik:20260620T211500
 SUMMARY:Sólstöðuhlaup Skógarbaðanna (undefined)
@@ -402,8 +391,8 @@ DESCRIPTION:Sólstöðuhlaup Æskunnar og Skógarbaðanna er utanvegahlaup fyrir
 https://www.aeskan.com/solstoduhlaupid
 END:VEVENT
 BEGIN:VEVENT
-UID:1upy4yerfke@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:c77qmpoor7t@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260625T210000
 DTEND;TZID=Atlantic/Reykjavik:20260625T220000
 SUMMARY:Miðnæturhlaup Suzuki ()
@@ -413,8 +402,8 @@ DESCRIPTION:Miðnæturhlaup Suzuki er hlaup sem haldið hefur verið árlega sí
 https://www.midnaeturhlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:0tx5rle3o9x@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:eqf18ju6uvt@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260625T173000
 DTEND;TZID=Atlantic/Reykjavik:20260625T183000
 SUMMARY:Hólmsheiðarhlaup UltraForm (undefined)
@@ -424,8 +413,8 @@ DESCRIPTION:Hlaupið er utanvegahlaup, en haldið á höfuðborgarsvæðinu og e
 https://ultraform.is/holmsheidarhlaup-a-hofudborgarsvaedinu/
 END:VEVENT
 BEGIN:VEVENT
-UID:meulii1uvmj@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:3jxb0t6st3q@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260627T073000
 DTEND;TZID=Atlantic/Reykjavik:20260627T083000
 SUMMARY:Iceland Volcano Marathon (undefined)
@@ -435,8 +424,8 @@ DESCRIPTION:Hlaupið hefst við rætur Hverfjalls og leiðir keppendur í átt a
 https://iceland-volcano-marathon.com/skr%C3%A1ning-%C3%AD-iceland-volcano-marathon?fbclid=IwZXh0bgNhZW0CMTEAAR1rsYamW6ItcC3OBGuGySUS-SItIlvVlBK1Ki77FiLTYVa21TARlJOWgwg_aem_jsq3slapqlu6PkSuVUMEqg
 END:VEVENT
 BEGIN:VEVENT
-UID:fivc3w6bb1w@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:5e8i6tbr53r@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260627T090000
 DTEND;TZID=Atlantic/Reykjavik:20260627T100000
 SUMMARY:Hafnarfjall Ultra (undefined)
@@ -446,8 +435,8 @@ DESCRIPTION:Hlaupahópurinn Flandri Borgarnesi stendur fyrir mögnuðu utanvegah
 https://netskraning.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:8fl7x9c6mmo@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:g59xbt2yd95@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260627T130000
 DTEND;TZID=Atlantic/Reykjavik:20260627T140000
 SUMMARY:Öræfahlaupið - Kristínartindar (undefined)
@@ -457,8 +446,8 @@ DESCRIPTION:Öræfahlaupið er 23 km utanvegahlaup þar sem hlaupið er í stór
 https://www.instagram.com/oraefahlaupid/
 END:VEVENT
 BEGIN:VEVENT
-UID:eyebn346ga@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:nggtkk2a7wi@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260704T120000
 DTEND;TZID=Atlantic/Reykjavik:20260704T130000
 SUMMARY:Þorvaldsdalsskokkið (undefined)
@@ -468,8 +457,8 @@ DESCRIPTION:Þorvaldsdalsskokkið er elsta óbyggðahlaup á Íslandi. Hlaupið 
 https://thorvaldsdalur.umse.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:uhjn0qz5epj@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:mck43rxlze@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260704T110000
 DTEND;TZID=Atlantic/Reykjavik:20260704T120000
 SUMMARY:Dyrfjallahlaupið (undefined)
@@ -479,8 +468,8 @@ DESCRIPTION:Dyrfjallahlaupið er hlaupahátíð á Borgarfirði eystra þar sem 
 https://dyrfjallahlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:s9kzxda8b1m@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:s6lr2ab8ibb@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260709T200000
 DTEND;TZID=Atlantic/Reykjavik:20260709T210000
 SUMMARY:Jarðvarmahlaup ON (Jarðhitagarðurinn)
@@ -490,8 +479,8 @@ DESCRIPTION:undefined
 https://netskraning.is
 END:VEVENT
 BEGIN:VEVENT
-UID:0fxqb64wgj4o@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:3w04b1zmmxo@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260711T090000
 DTEND;TZID=Atlantic/Reykjavik:20260711T100000
 SUMMARY:Laugavegur Ultra Marathon (Laugavegshlaupið)
@@ -501,8 +490,8 @@ DESCRIPTION:Laugavegshlaupið er 55 km utanvegahlaup en Laugavegurinn tengir sam
 https://www.laugavegshlaup.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:qyf3kxm9y5@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:37di013f3vc@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260718T090000
 DTEND;TZID=Atlantic/Reykjavik:20260718T100000
 SUMMARY:Fjögurra Skóga Hlaupið (undefined)
@@ -512,8 +501,8 @@ DESCRIPTION:Einstakar hlaupaleiðir við allra hæfi í sólkistu norðlenskra d
 https://thinghlaup.wordpress.com/
 END:VEVENT
 BEGIN:VEVENT
-UID:miootp3efno@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:4skqp2qqbee@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260725T080000
 DTEND;TZID=Atlantic/Reykjavik:20260725T090000
 SUMMARY:Kerlingafjöll Ultra (undefined)
@@ -523,8 +512,8 @@ DESCRIPTION:Mögnuð hlaupaupplifun sem fer fram í hjarta hálendisins.
 https://kerlingarfjoll.is/kerlingarfjoll-ultra
 END:VEVENT
 BEGIN:VEVENT
-UID:uwbpgxvf7v@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:umu48dmupbg@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260725T090000
 DTEND;TZID=Atlantic/Reykjavik:20260725T100000
 SUMMARY:Pósthlaupið (undefined)
@@ -534,8 +523,8 @@ DESCRIPTION:Pósthlaupið er 50 km utanvegahlaup frá Hrútafirði yfir í Búð
 https://hlaup.is/vidburdir/posthlaupid-26-07-2025/
 END:VEVENT
 BEGIN:VEVENT
-UID:vad86811j4@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:qxry03lygx@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260729T200000
 DTEND;TZID=Atlantic/Reykjavik:20260729T210000
 SUMMARY:Adidas Boost hlaupið (undefined)
@@ -545,8 +534,8 @@ DESCRIPTION:Adidas Boost hlaupið er 10km almenningshlaup. Skemmtileg og hröð 
 https://hlaup.is/vidburdir/adidas-boost-hlaupid-30-07-2025/
 END:VEVENT
 BEGIN:VEVENT
-UID:cdozygtddob@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:1ni7gt2lw54@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260731T210000
 DTEND;TZID=Atlantic/Reykjavik:20260731T220000
 SUMMARY:Súlur Vertical (Krakkahlaup, Gyðjan, Tröllið, Súlur, Fálkinn, Krakkahlaup)
@@ -556,8 +545,8 @@ DESCRIPTION:Súlur Vertical var fyrst haldið árið 2016 að frumkvæði Þorbe
 https://www.sulurvertical.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:rxdy95i9x9q@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:6dckrkqw92h@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260808T120000
 DTEND;TZID=Atlantic/Reykjavik:20260808T130000
 SUMMARY:5VH Trail Run (Fimmvörðuhálshlaup Náttúruhlaupa)
@@ -567,8 +556,8 @@ DESCRIPTION:Fimmvörðuháls hiking trail is one of the most beautiful and popul
 https://natturuhlaup.is/en/keppnishlaup/5vh-trail-run/
 END:VEVENT
 BEGIN:VEVENT
-UID:b66vgheyn9q@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:ejx52x4k81n@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260808T080000
 DTEND;TZID=Atlantic/Reykjavik:20260808T090000
 SUMMARY:Rauðavatn Ultra (3-6-12-24 klst og 100km)
@@ -578,8 +567,8 @@ DESCRIPTION:Rauðavatn Ultra er hlaup sem haldið verður í annað 2026. Hlaupi
 https://netskraning.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:ntrp1uclh1c@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:oah812y2j4k@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260815T100000
 DTEND;TZID=Atlantic/Reykjavik:20260815T110000
 SUMMARY:Trékyllisheiðin (undefined)
@@ -589,8 +578,8 @@ DESCRIPTION:Trékyllisheiðin er utanvegahlaup sem fer fram á Ströndum. Skíð
 https://trekyllisheidin.com/
 END:VEVENT
 BEGIN:VEVENT
-UID:945resv0r0q@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:318d8pfpnug@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260815T090000
 DTEND;TZID=Atlantic/Reykjavik:20260815T100000
 SUMMARY:Fjarðarhlaupið (undefined)
@@ -600,8 +589,8 @@ DESCRIPTION:Fjallahlaup frá Siglufirði til Ólafsfjarðar. Ræst verður frá 
 https://netskraning.is/fjardarhlaupid/
 END:VEVENT
 BEGIN:VEVENT
-UID:kuo8dmqdzmq@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:zkwkzl7plxe@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260822T084000
 DTEND;TZID=Atlantic/Reykjavik:20260822T094000
 SUMMARY:Reykjavíkurmaraþon Íslandsbanka (undefined)
@@ -611,8 +600,8 @@ DESCRIPTION:Reykjavíkurmaraþon Íslandsbanka - 42.2 km - 21.1 km - 10 km - ske
 https://www.rmi.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:8nd4b8sc1s6@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:18shg4fv72i@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;VALUE=DATE:20260829
 DTEND;VALUE=DATE:20260830
 SUMMARY:The Color Run (undefined)
@@ -622,8 +611,8 @@ DESCRIPTION:Litríkasti viðburður ársins snýr aftur! 10 ára afmæli Color r
 https://colorrun.is/
 END:VEVENT
 BEGIN:VEVENT
-UID:tkb080pif5f@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:76o0uu8jlqv@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260905T120000
 DTEND;TZID=Atlantic/Reykjavik:20260905T130000
 SUMMARY:Þórsgata Volcano Trail Run (Þórsgötuhlaupið)
@@ -633,8 +622,8 @@ DESCRIPTION:Þórsgata Volcano Trail Run er eitt vinsælasta utanvegahlaup ársi
 https://volcanotrails.is/boka/ferdir-vidburdir/thorsgata-volcano-trail-run/
 END:VEVENT
 BEGIN:VEVENT
-UID:v3qlskufa4h@koddsson.com
-DTSTAMP:20251126T050748Z
+UID:pqhndxoic5@koddsson.com
+DTSTAMP:20251127T050802Z
 DTSTART;TZID=Atlantic/Reykjavik:20260909T180000
 DTEND;TZID=Atlantic/Reykjavik:20260909T190000
 SUMMARY:Vatnsendahlaup HK (undefined)
