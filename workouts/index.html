@@ -143,11 +143,18 @@
     }
 
     .workout-item {
-        background: white;
+        background: var(--stone-0);
         display: flex;
         padding: var(--size-3);
         margin-bottom: var(--size-3);
-        border: var(--border-size-2) solid var(--stone-10);
+        border: var(--border-size-2) solid var(--stone-6);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .workout-item {
+            background: var(--stone-11);
+            border-color: var(--stone-7);
+        }
     }
 
     path {
@@ -165,6 +172,49 @@
         }
     }
 </style>
+
+<div class="workout-item">
+    
+    <div class="workout-details">
+        <h3 class="workout-title">Attempted rolling 300s on a treadmill.</h3>
+        <time>November 27, 2025 at 17:08 UTC</time>
+
+        <div class="workout-stats">
+            
+            <div class="workout-stat">
+                <span class="workout-stat-label">Distance</span>
+                <span class="workout-stat-value">5.58
+                    km</span>
+            </div>
+             
+            <div class="workout-stat">
+                <span class="workout-stat-label">Duration</span>
+                
+                
+                
+                
+                <span class="workout-stat-value">37:29</span>
+            </div>
+             
+            <div class="workout-stat">
+                <span class="workout-stat-label">Pace</span>
+                <span class="workout-stat-value">
+                    
+                    
+                    
+                    6:43 /km
+                </span>
+            </div>
+             
+            <div class="workout-stat">
+                <span class="workout-stat-label">Avg Heart Rate</span>
+                <span class="workout-stat-value">154 bpm</span>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
 
 <div class="workout-item">
     
