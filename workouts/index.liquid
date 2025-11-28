@@ -50,11 +50,18 @@ description: "My Strava activities"
     }
 
     .workout-item {
-        background: white;
+        background: var(--stone-0);
         display: flex;
         padding: var(--size-3);
         margin-bottom: var(--size-3);
-        border: var(--border-size-2) solid var(--stone-10);
+        border: var(--border-size-2) solid var(--stone-6);
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .workout-item {
+            background: var(--stone-11);
+            border-color: var(--stone-7);
+        }
     }
 
     path {
