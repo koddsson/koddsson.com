@@ -18,7 +18,7 @@
     "calories": 865,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 11320,
@@ -424,12 +424,21 @@
     "max_heartrate": 173,
     "max_speed": 3.458,
     "moving_time": 4103,
-    "name": "Afternoon Run",
+    "name": "12k on the treadmill (very hot)",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 4,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "84e846c5-ec05-46c1-af48-5fba4ac2f7e1",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/WDhlZMzY7oJaj7XlsQKunEwuUS-MRD7jfd-2oH_PXKA-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/WDhlZMzY7oJaj7XlsQKunEwuUS-MRD7jfd-2oH_PXKA-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -718,7 +727,7 @@
     "suffer_score": 104,
     "timezone": "(GMT+00:00) Africa/Abidjan",
     "total_elevation_gain": 0,
-    "total_photo_count": 0,
+    "total_photo_count": 4,
     "trainer": true,
     "type": "Run",
     "upload_id": 17699334012,
@@ -728,14 +737,16 @@
     "workout_type": null
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1764513316,
+    "aspect_type": "update",
+    "event_time": 1764531346,
     "object_id": 16610906611,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "12k on the treadmill (very hot)"
+    }
   },
-  "received_at": "2025-11-30T14:35:17.609Z",
+  "received_at": "2025-11-30T19:35:47.374Z",
   "source": "strava"
 }
