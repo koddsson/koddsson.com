@@ -227,26 +227,30 @@ description: "My Strava activities"
 document.querySelectorAll('.workout-carousel').forEach(carousel => {
     const inner = carousel.querySelector('.workout-carousel-inner');
     const dots = carousel.querySelectorAll('.workout-carousel-dot');
+    const items = carousel.querySelectorAll('.workout-carousel-item');
     
     if (dots.length === 0) return;
     
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            const items = carousel.querySelectorAll('.workout-carousel-item');
             if (items[index]) {
                 items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
             }
         });
     });
     
+    let scrollTimeout;
     inner.addEventListener('scroll', () => {
-        const scrollLeft = inner.scrollLeft;
-        const itemWidth = inner.offsetWidth;
-        const activeIndex = Math.round(scrollLeft / itemWidth);
-        
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === activeIndex);
-        });
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const scrollLeft = inner.scrollLeft;
+            const itemWidth = inner.offsetWidth;
+            const activeIndex = Math.round(scrollLeft / itemWidth);
+            
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === activeIndex);
+            });
+        }, 50);
     });
 });
 </script>
