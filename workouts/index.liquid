@@ -167,7 +167,7 @@ description: "My Strava activities"
             {% endif %}
             {% if has_photo %}
             <div class="workout-carousel-item">
-                <img src="{{ activity.photos.primary.urls['600'] }}" alt="Photo from {{ activity.name }}" loading="lazy" eleventy:ignore>
+                <img src="{{ activity.photos.primary.urls['600'] }}" alt="Photo from {{ activity.name }}" loading="lazy">
             </div>
             {% endif %}
         </div>
