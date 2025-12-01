@@ -119,6 +119,7 @@ description: "My Strava activities"
     .workout-item {
         background: var(--stone-0);
         display: flex;
+        gap: var(--size-3);
         padding: var(--size-3);
         margin-bottom: var(--size-3);
         border: var(--border-size-2) solid var(--stone-6);
@@ -228,9 +229,9 @@ document.querySelectorAll('.workout-carousel').forEach(carousel => {
     const inner = carousel.querySelector('.workout-carousel-inner');
     const dots = carousel.querySelectorAll('.workout-carousel-dot');
     const items = carousel.querySelectorAll('.workout-carousel-item');
-    
+
     if (dots.length === 0) return;
-    
+
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             if (items[index]) {
@@ -238,7 +239,7 @@ document.querySelectorAll('.workout-carousel').forEach(carousel => {
             }
         });
     });
-    
+
     let scrollTimeout;
     inner.addEventListener('scroll', () => {
         clearTimeout(scrollTimeout);
@@ -246,7 +247,7 @@ document.querySelectorAll('.workout-carousel').forEach(carousel => {
             const scrollLeft = inner.scrollLeft;
             const itemWidth = inner.offsetWidth;
             const activeIndex = Math.round(scrollLeft / itemWidth);
-            
+
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === activeIndex);
             });
