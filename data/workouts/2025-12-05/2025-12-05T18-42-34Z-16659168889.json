@@ -157,7 +157,7 @@
     "calories": 617,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 8008,
@@ -178,7 +178,7 @@
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 16659168889,
-    "kudos_count": 0,
+    "kudos_count": 1,
     "laps": [
       {
         "activity": {
@@ -442,12 +442,21 @@
     "max_heartrate": 176,
     "max_speed": 5.44,
     "moving_time": 2950,
-    "name": "Afternoon Run",
+    "name": "Easy run in the dark and 20 different types of ice and snow",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 3,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "3F1C86AD-B19A-4E0C-8ECF-E893BFB23A33",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/X9GnlVtGEnhzBAzz5lko4gPoaQk7T_wAK6RT_4X-UQ4-96x128.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/X9GnlVtGEnhzBAzz5lko4gPoaQk7T_wAK6RT_4X-UQ4-576x768.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -903,7 +912,7 @@
     "suffer_score": 70,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 10.2,
-    "total_photo_count": 0,
+    "total_photo_count": 3,
     "trainer": false,
     "type": "Run",
     "upload_id": 17748300641,
@@ -913,14 +922,16 @@
     "workout_type": null
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1764960153,
+    "aspect_type": "update",
+    "event_time": 1764969732,
     "object_id": 16659168889,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Easy run in the dark and 20 different types of ice and snow"
+    }
   },
-  "received_at": "2025-12-05T18:42:34.071Z",
+  "received_at": "2025-12-05T21:22:13.301Z",
   "source": "strava"
 }
