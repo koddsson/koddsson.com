@@ -18,7 +18,7 @@
     "calories": 713,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "The watch is never calibrated correctly so it always looks like I’m not hitting my goals 💀",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 9040,
@@ -36,7 +36,7 @@
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 16705635661,
-    "kudos_count": 0,
+    "kudos_count": 1,
     "laps": [
       {
         "activity": {
@@ -455,12 +455,21 @@
     "max_heartrate": 187,
     "max_speed": 3.82,
     "moving_time": 3325,
-    "name": "Afternoon Run",
+    "name": "Treadmill runs",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "fc48104a-ffae-4f31-8e57-11a083f5589c",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/sNlwz7P8-LBZWu9b8If1Kf64gn_ubcJjgOx9Zeti1Fo-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/sNlwz7P8-LBZWu9b8If1Kf64gn_ubcJjgOx9Zeti1Fo-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -694,24 +703,26 @@
     "suffer_score": 93,
     "timezone": "(GMT+00:00) Africa/Abidjan",
     "total_elevation_gain": 0,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": true,
     "type": "Run",
     "upload_id": 17795487658,
     "upload_id_str": "17795487658",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1765388811,
+    "aspect_type": "update",
+    "event_time": 1765395922,
     "object_id": 16705635661,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Treadmill runs"
+    }
   },
-  "received_at": "2025-12-10T17:46:51.712Z",
+  "received_at": "2025-12-10T19:45:22.915Z",
   "source": "strava"
 }
