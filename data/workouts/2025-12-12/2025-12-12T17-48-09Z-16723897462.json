@@ -18,7 +18,7 @@
     "calories": 587,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 7511.4,
@@ -300,12 +300,21 @@
     "max_heartrate": 168,
     "max_speed": 2.794,
     "moving_time": 2850,
-    "name": "Afternoon Run",
+    "name": "Treadmill because I wasn’t feeling the dark and gloomy weather",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "67fe1830-8759-4dd9-adc1-437ecd1d4e54",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/vt3pcV-1ErcI1e6zSJZMCEmz2CdLfV2l1tInfkdoPzk-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/vt3pcV-1ErcI1e6zSJZMCEmz2CdLfV2l1tInfkdoPzk-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -506,24 +515,26 @@
     "suffer_score": 63,
     "timezone": "(GMT+00:00) Africa/Abidjan",
     "total_elevation_gain": 0,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": true,
     "type": "Run",
     "upload_id": 17813962927,
     "upload_id_str": "17813962927",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1765561689,
+    "aspect_type": "update",
+    "event_time": 1765569405,
     "object_id": 16723897462,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Treadmill because I wasn’t feeling the dark and gloomy weather"
+    }
   },
-  "received_at": "2025-12-12T17:48:09.685Z",
+  "received_at": "2025-12-12T19:56:46.185Z",
   "source": "strava"
 }
