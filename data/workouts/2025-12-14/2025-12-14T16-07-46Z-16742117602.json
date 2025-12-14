@@ -18,7 +18,7 @@
     "calories": 1231,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "I thought it was more important to finish rather than hit the pace targets so I just kept the same pace on the threadmill throughout. Happy to finish the run even though the plan said to increase the pace progressively. In great news; I was able to drink all my carb mix and I actually wanted more. Stark contrast from last time where I had a really hard time feeling good and keeping it down.",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 16000,
@@ -548,12 +548,21 @@
     "max_heartrate": 189,
     "max_speed": 3.007,
     "moving_time": 5780,
-    "name": "Afternoon Run",
+    "name": "100minutes on the threadmill",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 2,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "178c484c-3888-4d13-a4c9-68b4d121335d",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/lHIq4ZXC4e9OA6jeDJzktI41IqTW9bG_UZLBV7sJk3k-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/lHIq4ZXC4e9OA6jeDJzktI41IqTW9bG_UZLBV7sJk3k-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -886,24 +895,26 @@
     "suffer_score": 198,
     "timezone": "(GMT+00:00) Africa/Abidjan",
     "total_elevation_gain": 0,
-    "total_photo_count": 0,
+    "total_photo_count": 2,
     "trainer": true,
     "type": "Run",
     "upload_id": 17832466951,
     "upload_id_str": "17832466951",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1765728465,
+    "aspect_type": "update",
+    "event_time": 1765728953,
     "object_id": 16742117602,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "100minutes on the threadmill"
+    }
   },
-  "received_at": "2025-12-14T16:07:46.734Z",
+  "received_at": "2025-12-14T16:15:54.046Z",
   "source": "strava"
 }
