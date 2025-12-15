@@ -246,7 +246,7 @@ async function fetchActivityPhotos(activityId, accessToken) {
   }
 
   try {
-    const url = `https://www.strava.com/api/v3/activities/${activityId}/photos?photo_sources=true&size=600`;
+    const url = `https://www.strava.com/api/v3/activities/${activityId}/photos?photo_sources=true`;
     console.log(`Fetching photos for activity ${activityId} from Strava API...`);
     
     const response = await fetch(url, {

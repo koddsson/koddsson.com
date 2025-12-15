@@ -170,9 +170,7 @@ Collect all photo URLs from either activity.photos.all (API response) or activit
 {%- endcomment -%}
 {% if activity.photos.all %}
   {% for photo in activity.photos.all %}
-    {% if photo.urls[600] %}
-      {% assign photo_urls = photo_urls | push: photo.urls[600] %}
-    {% elsif photo.urls['600'] %}
+    {% if photo.urls['600'] %}
       {% assign photo_urls = photo_urls | push: photo.urls['600'] %}
     {% endif %}
   {% endfor %}
@@ -209,7 +207,7 @@ Collect all photo URLs from either activity.photos.all (API response) or activit
             <button class="workout-carousel-dot active" aria-label="View route map"></button>
             {% endif %}
             {% for photo_url in photo_urls %}
-            <button class="workout-carousel-dot{% if has_svg == false and forloop.first %} active{% endif %}" aria-label="View photo {{ forloop.index }}"></button>
+            <button class="workout-carousel-dot{% unless has_svg %}{% if forloop.first %} active{% endif %}{% endunless %}" aria-label="View photo {{ forloop.index }}"></button>
             {% endfor %}
         </div>
         {% endif %}
