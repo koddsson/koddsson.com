@@ -235,6 +235,41 @@ function generateSVG(encodedPolyline) {
 }
 
 /**
+ * Fetch all photos for an activity from Strava API
+ * @param {string} activityId - The Strava activity ID
+ * @param {string} accessToken - Strava API access token
+ * @returns {Promise<Array|null>} - Array of photo objects or null on failure
+ */
+async function fetchActivityPhotos(activityId, accessToken) {
+  if (!activityId || !accessToken) {
+    return null;
+  }
+
+  try {
+    const url = `https://www.strava.com/api/v3/activities/${activityId}/photos?photo_sources=true&size=600`;
+    console.log(`Fetching photos for activity ${activityId} from Strava API...`);
+    
+    const response = await fetch(url, {
+      headers: {
+        'Authorization': `Bearer ${accessToken}`
+      }
+    });
+
+    if (!response.ok) {
+      console.error(`Failed to fetch photos: ${response.status} ${response.statusText}`);
+      return null;
+    }
+
+    const photos = await response.json();
+    console.log(`Fetched ${photos.length} photos from Strava API`);
+    return photos;
+  } catch (err) {
+    console.error('Error fetching photos from Strava API:', err?.message || err);
+    return null;
+  }
+}
+
+/**
  * Extract polyline from payload and generate SVG file
  * @param {string} jsonFilePath - Path to the JSON file
  * @param {object} payloadObj - The payload object
@@ -330,6 +365,26 @@ async function main() {
   let uid = pickUidFromPayload(payloadObj);
   if (typeof uid === 'number') uid = String(uid);
   if (!uid) uid = shortHash(payloadObj);
+
+  // Fetch all photos from Strava API if we have an activity ID and access token
+  const stravaAccessToken = process.env.STRAVA_ACCESS_TOKEN;
+  if (stravaAccessToken && payloadObj.activity?.id) {
+    const activityId = payloadObj.activity.id;
+    const photoCount = payloadObj.activity.photos?.count || 0;
+    
+    // Only fetch if there are multiple photos (more than just primary)
+    if (photoCount > 1) {
+      const allPhotos = await fetchActivityPhotos(activityId, stravaAccessToken);
+      if (allPhotos && allPhotos.length > 0) {
+        // Store all photos in the payload for display
+        if (!payloadObj.activity.photos) {
+          payloadObj.activity.photos = {};
+        }
+        payloadObj.activity.photos.all = allPhotos;
+        console.log(`Stored ${allPhotos.length} photos for activity ${activityId}`);
+      }
+    }
+  }
 
   try {
     await ensureDataRoot();
