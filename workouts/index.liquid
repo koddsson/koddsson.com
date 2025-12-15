@@ -180,7 +180,7 @@ description: "My Strava activities"
     </div>
     {% endif %}
     <div class="workout-details">
-        <h3 class="workout-title">{{ activity.name }}</h3>
+        <h3 class="workout-title"><a href="https://www.strava.com/activities/{{ activity.id }}" target="_blank" rel="noopener noreferrer">{{ activity.name }}</a></h3>
         <time>{{ activity.start_date | date: '%B %d, %Y at %H:%M' }} UTC</time>
 
         <div class="workout-stats">
