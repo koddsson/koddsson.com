@@ -16,7 +16,7 @@
     "average_temp": 26,
     "best_efforts": [],
     "calories": 1231,
-    "comment_count": 0,
+    "comment_count": 1,
     "commute": false,
     "description": "I thought it was more important to finish rather than hit the pace targets so I just kept the same pace on the threadmill throughout. Happy to finish the run even though the plan said to increase the pace progressively. In great news; I was able to drink all my carb mix and I actually wanted more. Stark contrast from last time where I had a really hard time feeling good and keeping it down.",
     "device_name": "Garmin fēnix 5",
@@ -36,7 +36,7 @@
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 16742117602,
-    "kudos_count": 0,
+    "kudos_count": 3,
     "laps": [
       {
         "activity": {
@@ -548,11 +548,11 @@
     "max_heartrate": 189,
     "max_speed": 3.007,
     "moving_time": 5780,
-    "name": "100minutes on the threadmill",
+    "name": "100minutes on the treadmill",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 2,
+      "count": 6,
       "primary": {
         "media_type": 1,
         "source": 1,
@@ -565,8 +565,9 @@
       "use_primary_photo": true
     },
     "pr_count": 0,
-    "prefer_perceived_exertion": null,
+    "prefer_perceived_exertion": false,
     "private": false,
+    "private_note": "",
     "resource_state": 3,
     "segment_efforts": [],
     "similar_activities": {
@@ -895,7 +896,7 @@
     "suffer_score": 198,
     "timezone": "(GMT+00:00) Africa/Abidjan",
     "total_elevation_gain": 0,
-    "total_photo_count": 2,
+    "total_photo_count": 6,
     "trainer": true,
     "type": "Run",
     "upload_id": 17832466951,
@@ -906,15 +907,15 @@
   },
   "payload": {
     "aspect_type": "update",
-    "event_time": 1765728953,
+    "event_time": 1765794256,
     "object_id": 16742117602,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
     "updates": {
-      "title": "100minutes on the threadmill"
+      "title": "100minutes on the treadmill"
     }
   },
-  "received_at": "2025-12-14T16:15:54.046Z",
+  "received_at": "2025-12-15T10:24:17.215Z",
   "source": "strava"
 }
