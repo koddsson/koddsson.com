@@ -18,7 +18,7 @@
     "calories": 302,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "Woke up feeling not great but figured some running would do me good but stopped after the first interval. Got some worrying pain in my calf and I’m scared shitless of injuring myself again so I just scrapped it and will try again next time. \n\nIt’s a bit annoying because I feel like a couple of runs recently I haven’t been able to hit the targets that I feel like I can hit but I’m hoping it will result in a greater overall improvement.",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 3820,
@@ -207,7 +207,7 @@
     "max_heartrate": 164,
     "max_speed": 3.867,
     "moving_time": 1561,
-    "name": "Afternoon Run",
+    "name": "Scrapped intervals",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
@@ -365,17 +365,19 @@
     "upload_id_str": "17859801553",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1765992467,
+    "aspect_type": "update",
+    "event_time": 1765992653,
     "object_id": 16769199192,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Scrapped intervals"
+    }
   },
-  "received_at": "2025-12-17T17:27:48.230Z",
+  "received_at": "2025-12-17T17:30:53.807Z",
   "source": "strava"
 }
