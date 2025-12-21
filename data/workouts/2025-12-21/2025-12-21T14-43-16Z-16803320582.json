@@ -238,7 +238,7 @@
     "calories": 1358,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "Kind of difficult run at the HM pace at the end BUT I can do it and sustain the pace for the long time. Feeling a bit battered now and am gonna eat every carb in the house.",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 18011.2,
@@ -833,12 +833,21 @@
     "max_heartrate": 187,
     "max_speed": 3.629,
     "moving_time": 6139,
-    "name": "Lunch Run",
+    "name": "I can overcome and do difficult things",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 3,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "7EDF8DE0-91B6-4B30-B424-EA890D91EDA0",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/I617iatqWdg4u61pzpDj2u4fRmHyvo59EQ1Gq4LC8tk-96x128.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/I617iatqWdg4u61pzpDj2u4fRmHyvo59EQ1Gq4LC8tk-576x768.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -1475,24 +1484,26 @@
     "suffer_score": 236,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 16,
-    "total_photo_count": 0,
+    "total_photo_count": 3,
     "trainer": false,
     "type": "Run",
     "upload_id": 17894436134,
     "upload_id_str": "17894436134",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1766328195,
+    "aspect_type": "update",
+    "event_time": 1766328467,
     "object_id": 16803320582,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "I can overcome and do difficult things"
+    }
   },
-  "received_at": "2025-12-21T14:43:16.362Z",
+  "received_at": "2025-12-21T14:47:48.084Z",
   "source": "strava"
 }
