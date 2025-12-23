@@ -161,11 +161,30 @@ description: "My Strava activities"
 {% assign activity = workout.data.activity %}
 {% if activity %}
 {% assign has_svg = false %}
-{% assign has_photo = false %}
+{% assign has_photos = false %}
+{% assign photo_urls = "" | split: "" %}
 {% if workout.svgPath %}{% assign has_svg = true %}{% endif %}
-{% if activity.photos.primary.urls %}{% assign has_photo = true %}{% endif %}
+
+{%- comment -%}
+Collect all photo URLs from either activity.photos.all (API response) or activity.photos.primary (webhook)
+{%- endcomment -%}
+{% if activity.photos.all %}
+  {% for photo in activity.photos.all %}
+    {% if photo.urls['600'] %}
+      {% assign photo_urls = photo_urls | push: photo.urls['600'] %}
+    {% endif %}
+  {% endfor %}
+  {% if photo_urls.size > 0 %}{% assign has_photos = true %}{% endif %}
+{% elsif activity.photos.primary.urls %}
+  {% assign photo_urls = photo_urls | push: activity.photos.primary.urls['600'] %}
+  {% assign has_photos = true %}
+{% endif %}
+
 {% assign has_carousel = false %}
-{% if has_svg or has_photo %}{% assign has_carousel = true %}{% endif %}
+{% if has_svg or has_photos %}{% assign has_carousel = true %}{% endif %}
+{% assign total_items = 0 %}
+{% if has_svg %}{% assign total_items = total_items | plus: 1 %}{% endif %}
+{% if has_photos %}{% assign total_items = total_items | plus: photo_urls.size %}{% endif %}
 
 <div class="workout-item">
     {% if has_carousel %}
@@ -174,16 +193,22 @@ description: "My Strava activities"
             {% if has_svg %}
             <div class="workout-carousel-item">{% include workout.svgPath %}</div>
             {% endif %}
-            {% if has_photo %}
-            <div class="workout-carousel-item">
-                <img src="{{ activity.photos.primary.urls['600'] }}" alt="Photo from {{ activity.name }}" loading="lazy">
-            </div>
+            {% if has_photos %}
+              {% for photo_url in photo_urls %}
+              <div class="workout-carousel-item">
+                  <img src="{{ photo_url }}" alt="Photo {{ forloop.index }} from {{ activity.name }}" loading="lazy">
+              </div>
+              {% endfor %}
             {% endif %}
         </div>
-        {% if has_svg and has_photo %}
+        {% if total_items > 1 %}
         <div class="workout-carousel-dots">
+            {% if has_svg %}
             <button class="workout-carousel-dot active" aria-label="View route map"></button>
-            <button class="workout-carousel-dot" aria-label="View photo"></button>
+            {% endif %}
+            {% for photo_url in photo_urls %}
+            <button class="workout-carousel-dot{% unless has_svg %}{% if forloop.first %} active{% endif %}{% endunless %}" aria-label="View photo {{ forloop.index }}"></button>
+            {% endfor %}
         </div>
         {% endif %}
     </div>
