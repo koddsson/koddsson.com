@@ -157,7 +157,7 @@
     "calories": 576,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 8012.7,
@@ -178,7 +178,7 @@
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 16846840843,
-    "kudos_count": 0,
+    "kudos_count": 1,
     "laps": [
       {
         "activity": {
@@ -442,12 +442,21 @@
     "max_heartrate": 169,
     "max_speed": 3.825,
     "moving_time": 2917,
-    "name": "Afternoon Run",
+    "name": "Don’t feel so hot but the run is good",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 3,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "2ea70428-9631-4555-bd30-574b68c8f196",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/BBikwY9Mu0C429ucxuU3oTNKphhNd0sdNp_SOWWouDw-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/BBikwY9Mu0C429ucxuU3oTNKphhNd0sdNp_SOWWouDw-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -781,24 +790,26 @@
     "suffer_score": 55,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 9,
-    "total_photo_count": 0,
+    "total_photo_count": 3,
     "trainer": false,
     "type": "Run",
     "upload_id": 17938611543,
     "upload_id_str": "17938611543",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1766769064,
+    "aspect_type": "update",
+    "event_time": 1766769615,
     "object_id": 16846840843,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Don’t feel so hot but the run is good"
+    }
   },
-  "received_at": "2025-12-26T17:11:05.550Z",
+  "received_at": "2025-12-26T17:20:16.198Z",
   "source": "strava"
 }
