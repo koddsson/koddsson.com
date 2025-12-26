@@ -442,7 +442,7 @@
     "max_heartrate": 169,
     "max_speed": 3.825,
     "moving_time": 2917,
-    "name": "Don’t feel so hot but the run is good",
+    "name": "Don’t feel so hot but the run was good",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
@@ -797,19 +797,19 @@
     "upload_id_str": "17938611543",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": 0
+    "workout_type": null
   },
   "payload": {
     "aspect_type": "update",
-    "event_time": 1766769615,
+    "event_time": 1766769702,
     "object_id": 16846840843,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
     "updates": {
-      "title": "Don’t feel so hot but the run is good"
+      "title": "Don’t feel so hot but the run was good"
     }
   },
-  "received_at": "2025-12-26T17:20:16.198Z",
+  "received_at": "2025-12-26T17:21:43.323Z",
   "source": "strava"
 }
