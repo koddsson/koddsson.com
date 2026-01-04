@@ -1,6 +1,6 @@
 {
   "activity": {
-    "achievement_count": 0,
+    "achievement_count": 4,
     "athlete": {
       "id": 370718,
       "resource_state": 1
@@ -296,7 +296,7 @@
     "calories": 1500,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "VERY COLD. Struggled to enjoy at times but I think managed to win the mental battle 🤘\n\nSub 2-hour was the goal and really happy to smash it.",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 21109,
@@ -1015,18 +1015,284 @@
     "max_heartrate": 183,
     "max_speed": 4.25,
     "moving_time": 6984,
-    "name": "Lunch Run",
+    "name": "Is it a half marathon if it’s just me?",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "0e564b91-7bf8-4851-9ebf-c7a7cc46d883",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/AtwuIg4un10IcnFzYt6JMRjaKC6Uf0ZYd8F6-EwO1SU-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/AtwuIg4un10IcnFzYt6JMRjaKC6Uf0ZYd8F6-EwO1SU-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
-    "pr_count": 0,
+    "pr_count": 3,
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
-    "segment_efforts": [],
+    "segment_efforts": [
+      {
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 16935300023,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 81.4,
+        "average_heartrate": 169,
+        "device_watts": false,
+        "distance": 504.9,
+        "elapsed_time": 161,
+        "end_index": 138,
+        "hidden": false,
+        "id": 3442903958046410000,
+        "kom_rank": null,
+        "max_heartrate": 180,
+        "moving_time": 161,
+        "name": "Eyravegur sprettur",
+        "pr_rank": 1,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 504.9,
+          "elevation_high": 7.6,
+          "elevation_low": 6.4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.924639,
+            -21.030353
+          ],
+          "hazardous": false,
+          "id": 35918610,
+          "maximum_grade": 3.8,
+          "name": "Eyravegur sprettur",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.928051,
+            -21.02395
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-04T12:37:21Z",
+        "start_date_local": "2026-01-04T12:37:21Z",
+        "start_index": 92,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 16935300023,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 81.4,
+        "average_heartrate": 176.2,
+        "device_watts": false,
+        "distance": 1613.6,
+        "elapsed_time": 529,
+        "end_index": 253,
+        "hidden": false,
+        "id": 3442903958046260000,
+        "kom_rank": null,
+        "max_heartrate": 181,
+        "moving_time": 529,
+        "name": "Hjólastígur",
+        "pr_rank": 1,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -1.6,
+          "city": "Selfoss",
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 1613.6,
+          "elevation_high": 17.2,
+          "elevation_low": -9,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.914762,
+            -21.047863
+          ],
+          "hazardous": false,
+          "id": 26136167,
+          "maximum_grade": 0,
+          "name": "Hjólastígur",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.926094,
+            -21.027829
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-04T12:38:56Z",
+        "start_date_local": "2026-01-04T12:38:56Z",
+        "start_index": 122,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 16935300023,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 81.5,
+        "average_heartrate": 174.5,
+        "device_watts": false,
+        "distance": 344.6,
+        "elapsed_time": 117,
+        "end_index": 177,
+        "hidden": false,
+        "id": 3442903958044490000,
+        "kom_rank": null,
+        "max_heartrate": 178,
+        "moving_time": 117,
+        "name": "Broadway",
+        "pr_rank": 1,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 344.6,
+          "elevation_high": 14.6,
+          "elevation_low": 12.4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.921476,
+            -21.035965
+          ],
+          "hazardous": false,
+          "id": 36448332,
+          "maximum_grade": 9.8,
+          "name": "Broadway",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.924006,
+            -21.032186
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-04T12:40:36Z",
+        "start_date_local": "2026-01-04T12:40:36Z",
+        "start_index": 146,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 16935300023,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 83,
+        "average_heartrate": 165.3,
+        "device_watts": false,
+        "distance": 485.9,
+        "elapsed_time": 157,
+        "end_index": 1368,
+        "hidden": false,
+        "id": 3442903958047080000,
+        "kom_rank": null,
+        "max_heartrate": 171,
+        "moving_time": 157,
+        "name": "Eyravegur sprettur2",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.3,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 485.9,
+          "elevation_high": 7.4,
+          "elevation_low": 5.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.927995,
+            -21.024067
+          ],
+          "hazardous": false,
+          "id": 35918502,
+          "maximum_grade": 2.9,
+          "name": "Eyravegur sprettur2",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.924691,
+            -21.030254
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-04T14:13:54Z",
+        "start_date_local": "2026-01-04T14:13:54Z",
+        "start_index": 1337,
+        "visibility": "everyone"
+      }
+    ],
     "similar_activities": {
       "average_speed": 3.02247995418099,
       "effort_count": 1,
@@ -1479,24 +1745,26 @@
     "suffer_score": 275,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 23,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 18028443295,
     "upload_id_str": "18028443295",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1767537076,
+    "aspect_type": "update",
+    "event_time": 1767537294,
     "object_id": 16935300023,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Is it a half marathon if it’s just me?"
+    }
   },
-  "received_at": "2026-01-04T14:31:17.340Z",
+  "received_at": "2026-01-04T14:34:55.765Z",
   "source": "strava"
 }
