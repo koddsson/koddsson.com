@@ -32,10 +32,20 @@ To run the script locally, you need a Strava API access token with `activity:rea
 # Install dependencies
 npm install
 
-# Dry run to see which workouts would be updated
-node scripts/backfill-workout-photos.mjs --dry-run
+# Dry run to see which workouts would be updated (no token required)
+npm run backfill-photos:dry-run
 
 # Run the actual backfill (requires STRAVA_ACCESS_TOKEN)
+STRAVA_ACCESS_TOKEN=your_token_here npm run backfill-photos
+```
+
+Alternatively, you can run the script directly:
+
+```bash
+# Dry run
+node scripts/backfill-workout-photos.mjs --dry-run
+
+# Actual run
 STRAVA_ACCESS_TOKEN=your_token_here node scripts/backfill-workout-photos.mjs
 ```
 
