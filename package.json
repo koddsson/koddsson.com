@@ -8,9 +8,7 @@
     "build": "npx @11ty/eleventy",
     "start": "npx @11ty/eleventy --serve",
     "test": "echo \"No tests defined locally\"",
-    "test:performance": "lhci autorun --config=./lighthouserc.cjs",
-    "backfill-photos": "node scripts/backfill-workout-photos.mjs",
-    "backfill-photos:dry-run": "node scripts/backfill-workout-photos.mjs --dry-run"
+    "test:performance": "lhci autorun --config=./lighthouserc.cjs"
   },
   "keywords": [],
   "author": "",
