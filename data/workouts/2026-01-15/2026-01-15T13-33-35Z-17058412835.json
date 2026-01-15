@@ -111,7 +111,7 @@
     "calories": 245,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "Calf has been acting up since on Monday. Didn’t want to push it further so I walked home.",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 3093.1,
@@ -272,18 +272,144 @@
     "max_heartrate": 181,
     "max_speed": 3.82,
     "moving_time": 1140,
-    "name": "Afternoon Run",
+    "name": "Failed progressive run ❌",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "3db77cac-a841-4176-96bb-4ac03cff5548",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/0vDwxV1THKcKUUJalByI0iLDh3m1-odoYFESmFHHMn0-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/0vDwxV1THKcKUUJalByI0iLDh3m1-odoYFESmFHHMn0-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
-    "segment_efforts": [],
+    "segment_efforts": [
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17058412835,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80,
+        "average_heartrate": 173.1,
+        "device_watts": false,
+        "distance": 981.2,
+        "elapsed_time": 369,
+        "end_index": 986,
+        "hidden": false,
+        "id": 3446875717530030000,
+        "kom_rank": null,
+        "max_heartrate": 178,
+        "moving_time": 369,
+        "name": "Allsherjargoði 2",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.2,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 981.2,
+          "elevation_high": 16.8,
+          "elevation_low": 14.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.930483,
+            -20.977621
+          ],
+          "hazardous": false,
+          "id": 38970167,
+          "maximum_grade": 1.3,
+          "name": "Allsherjargoði 2",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.923631,
+            -20.989912
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-15T13:23:05Z",
+        "start_date_local": "2026-01-15T13:23:05Z",
+        "start_index": 617,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17058412835,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80,
+        "average_heartrate": 172.9,
+        "device_watts": false,
+        "distance": 295.7,
+        "elapsed_time": 112,
+        "end_index": 919,
+        "hidden": false,
+        "id": 3446875717529510000,
+        "kom_rank": null,
+        "max_heartrate": 176,
+        "moving_time": 112,
+        "name": "Goðastígur sprettur",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 295.7,
+          "elevation_high": 30.2,
+          "elevation_low": 27.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.929256,
+            -20.979999
+          ],
+          "hazardous": false,
+          "id": 35807302,
+          "maximum_grade": 5.4,
+          "name": "Goðastígur sprettur",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.927233,
+            -20.983848
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-15T13:26:15Z",
+        "start_date_local": "2026-01-15T13:26:15Z",
+        "start_index": 807,
+        "visibility": "everyone"
+      }
+    ],
     "similar_activities": {
       "average_speed": 2.71324561403509,
       "effort_count": 1,
@@ -406,24 +532,26 @@
     "suffer_score": 39,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 2,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 18152698602,
     "upload_id_str": "18152698602",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1768484014,
+    "aspect_type": "update",
+    "event_time": 1768485293,
     "object_id": 17058412835,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Failed progressive run ❌"
+    }
   },
-  "received_at": "2026-01-15T13:33:35.330Z",
+  "received_at": "2026-01-15T13:54:54.024Z",
   "source": "strava"
 }
