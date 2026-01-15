@@ -63,13 +63,13 @@ async function findWorkoutsNeedingBackfill(workoutsDir) {
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
     
-    const yearPath = path.join(workoutsDir, entry.name);
-    const files = await fs.readdir(yearPath);
+    const datePath = path.join(workoutsDir, entry.name);
+    const files = await fs.readdir(datePath);
     
     for (const file of files) {
       if (!file.endsWith('.json')) continue;
       
-      const filePath = path.join(yearPath, file);
+      const filePath = path.join(datePath, file);
       
       try {
         const content = await fs.readFile(filePath, 'utf-8');
@@ -79,7 +79,7 @@ async function findWorkoutsNeedingBackfill(workoutsDir) {
         // - has multiple photos (count > 1)
         // - does not have photos.all array
         const photoCount = workout.activity?.photos?.count || 0;
-        const hasAll = workout.activity?.photos?.all !== undefined && workout.activity?.photos?.all !== null;
+        const hasAll = Array.isArray(workout.activity?.photos?.all);
         
         if (photoCount > 1 && !hasAll) {
           needsBackfill.push({
