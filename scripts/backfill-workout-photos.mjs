@@ -58,35 +58,39 @@ async function fetchActivityPhotos(activityId, accessToken) {
 async function findWorkoutsNeedingBackfill(workoutsDir) {
   const needsBackfill = [];
   
-  const years = await fs.readdir(workoutsDir);
+  const entries = await fs.readdir(workoutsDir, { withFileTypes: true });
   
-  for (const yearDir of years) {
-    const yearPath = path.join(workoutsDir, yearDir);
-    const stat = await fs.stat(yearPath);
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
     
-    if (!stat.isDirectory()) continue;
-    
+    const yearPath = path.join(workoutsDir, entry.name);
     const files = await fs.readdir(yearPath);
     
     for (const file of files) {
       if (!file.endsWith('.json')) continue;
       
       const filePath = path.join(yearPath, file);
-      const content = await fs.readFile(filePath, 'utf-8');
-      const workout = JSON.parse(content);
       
-      // Check if this workout needs backfilling:
-      // - has multiple photos (count > 1)
-      // - does not have photos.all array
-      const photoCount = workout.activity?.photos?.count || 0;
-      const hasAll = workout.activity?.photos?.all !== undefined && workout.activity?.photos?.all !== null;
-      
-      if (photoCount > 1 && !hasAll) {
-        needsBackfill.push({
-          filePath,
-          activityId: workout.activity.id,
-          photoCount
-        });
+      try {
+        const content = await fs.readFile(filePath, 'utf-8');
+        const workout = JSON.parse(content);
+        
+        // Check if this workout needs backfilling:
+        // - has multiple photos (count > 1)
+        // - does not have photos.all array
+        const photoCount = workout.activity?.photos?.count || 0;
+        const hasAll = workout.activity?.photos?.all !== undefined && workout.activity?.photos?.all !== null;
+        
+        if (photoCount > 1 && !hasAll) {
+          needsBackfill.push({
+            filePath,
+            activityId: workout.activity.id,
+            photoCount
+          });
+        }
+      } catch (err) {
+        console.error(`Error reading or parsing ${filePath}:`, err.message);
+        // Continue processing other files
       }
     }
   }

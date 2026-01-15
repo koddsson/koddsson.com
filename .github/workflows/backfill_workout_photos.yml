@@ -32,8 +32,6 @@ jobs:
           node scripts/backfill-workout-photos.mjs
 
       - name: Commit and push updated workout files
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           set -euo pipefail
           git config user.name "GitHub Actions"
