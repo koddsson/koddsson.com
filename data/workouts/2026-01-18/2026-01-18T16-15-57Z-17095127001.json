@@ -180,7 +180,7 @@
     "calories": 896,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "I think I’m getting the hang of these slow runs!! \n\nAlso took a 2k shortcut because of the weather and somewhat miserability. I think it was the right call in a effort to protect my calf.",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 11612.8,
@@ -201,7 +201,7 @@
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 17095127001,
-    "kudos_count": 0,
+    "kudos_count": 1,
     "laps": [
       {
         "activity": {
@@ -589,11 +589,11 @@
     "max_heartrate": 175,
     "max_speed": 9.5,
     "moving_time": 4896,
-    "name": "Afternoon Run",
+    "name": "Birthday run! 🎂",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 1,
+      "count": 3,
       "primary": {
         "media_type": 1,
         "source": 1,
@@ -1003,24 +1003,26 @@
     "suffer_score": 112,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 198,
-    "total_photo_count": 1,
+    "total_photo_count": 3,
     "trainer": false,
     "type": "Run",
     "upload_id": 18189815911,
     "upload_id_str": "18189815911",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1768752956,
+    "aspect_type": "update",
+    "event_time": 1768758497,
     "object_id": 17095127001,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Birthday run! 🎂"
+    }
   },
-  "received_at": "2026-01-18T16:15:57.423Z",
+  "received_at": "2026-01-18T17:48:18.224Z",
   "source": "strava"
 }
