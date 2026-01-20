@@ -1,0 +1,102 @@
+{
+  "activity": {
+    "achievement_count": 0,
+    "athlete": {
+      "id": 370718,
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "available_zones": [],
+    "average_speed": 0,
+    "calories": 0,
+    "comment_count": 0,
+    "commute": false,
+    "description": "Laugavegur Ultra Marathon 55km Plan (Week 2/26)\n\n3 sets of:\n• Floating Heel Drop\n• Press Up\n• Squat to Calf Raise\n• Side Leg Swings\n\n3 sets of:\n• Barbell Hip Thrust\n• Straight Leg Deadlift\n\n3 sets of:\n• Single Arm Clean and Press\n• Loaded Walking Calf Raises\n\n2 sets of:\n• Staggered Stance (B-Stance) Hip Thrusts\n• Short Lever Copenhagen Plank\n\n2 sets of:\n• Banded Toe Raise\n• Diagonal Toe Tap",
+    "device_name": "Runna",
+    "display_hide_heartrate_option": false,
+    "distance": 0,
+    "elapsed_time": 2926,
+    "embed_token": "6f493ffb8d661e1041d9c4127cbe4ecfe4e51758",
+    "end_latlng": [],
+    "external_id": null,
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear_id": null,
+    "has_heartrate": false,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "hide_from_home": false,
+    "id": 17120069125,
+    "kudos_count": 0,
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": true,
+    "map": {
+      "id": "a17120069125",
+      "polyline": "",
+      "resource_state": 3,
+      "summary_polyline": ""
+    },
+    "max_speed": 0,
+    "moving_time": 2926,
+    "name": "Lower Body Strength Session with Runna ✅",
+    "perceived_exertion": null,
+    "photo_count": 0,
+    "photos": {
+      "count": 0,
+      "primary": null
+    },
+    "pr_count": 0,
+    "prefer_perceived_exertion": null,
+    "private": false,
+    "resource_state": 3,
+    "segment_efforts": [],
+    "sport_type": "Workout",
+    "start_date": "2026-01-20T16:07:31Z",
+    "start_date_local": "2026-01-20T16:07:31Z",
+    "start_latlng": [],
+    "stats_visibility": [
+      {
+        "type": "heart_rate",
+        "visibility": "everyone"
+      },
+      {
+        "type": "pace",
+        "visibility": "everyone"
+      },
+      {
+        "type": "power",
+        "visibility": "everyone"
+      },
+      {
+        "type": "speed",
+        "visibility": "everyone"
+      },
+      {
+        "type": "calories",
+        "visibility": "everyone"
+      }
+    ],
+    "timezone": "(GMT+00:00) Atlantic/Reykjavik",
+    "total_elevation_gain": 0,
+    "total_photo_count": 0,
+    "trainer": false,
+    "type": "Workout",
+    "upload_id": null,
+    "utc_offset": 0,
+    "visibility": "everyone",
+    "workout_type": null
+  },
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1768941691,
+    "object_id": 17120069125,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2026-01-20T20:41:32.624Z",
+  "source": "strava"
+}
