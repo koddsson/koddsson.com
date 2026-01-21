@@ -1,6 +1,6 @@
 {
   "activity": {
-    "achievement_count": 0,
+    "achievement_count": 4,
     "athlete": {
       "id": 370718,
       "resource_state": 1
@@ -180,7 +180,7 @@
     "calories": 855,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "Calf is getting better and I’m trying to run slow. Feel like it’s working and the calf getting better.",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 10469.2,
@@ -1581,18 +1581,275 @@
     "max_heartrate": 181,
     "max_speed": 3.88,
     "moving_time": 4525,
-    "name": "Afternoon Run",
+    "name": "Hill repeat",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
       "count": 0,
       "primary": null
     },
-    "pr_count": 0,
+    "pr_count": 1,
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
-    "segment_efforts": [],
+    "segment_efforts": [
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17130172147,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.1,
+        "average_heartrate": 152.9,
+        "device_watts": false,
+        "distance": 350.2,
+        "elapsed_time": 138,
+        "end_index": 523,
+        "hidden": false,
+        "id": 3449121584458510000,
+        "kom_rank": null,
+        "max_heartrate": 159,
+        "moving_time": 138,
+        "name": "Endasprettur í Brúarhlaupinu",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.4,
+          "city": "Selfoss",
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 350.2,
+          "elevation_high": 385.4,
+          "elevation_low": 380.2,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.935219,
+            -21.000998
+          ],
+          "hazardous": false,
+          "id": 21451297,
+          "maximum_grade": 4.6,
+          "name": "Endasprettur í Brúarhlaupinu",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.932095,
+            -21.001326
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-21T16:46:14Z",
+        "start_date_local": "2026-01-21T16:46:14Z",
+        "start_index": 385,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 3,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17130172147,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 63.2,
+        "average_heartrate": 164.4,
+        "device_watts": false,
+        "distance": 264.8,
+        "elapsed_time": 106,
+        "end_index": 1793,
+        "hidden": false,
+        "id": 3449121584461080000,
+        "kom_rank": null,
+        "max_heartrate": 171,
+        "moving_time": 103,
+        "name": "Brekkuspretturinn",
+        "pr_rank": 3,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 4.4,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 264.8,
+          "elevation_high": 27.4,
+          "elevation_low": 15.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.952549,
+            -20.990454
+          ],
+          "hazardous": false,
+          "id": 35569698,
+          "maximum_grade": 13.8,
+          "name": "Brekkuspretturinn",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.953419,
+            -20.985503
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-21T17:07:56Z",
+        "start_date_local": "2026-01-21T17:07:56Z",
+        "start_index": 1687,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17130172147,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 67.1,
+        "average_heartrate": 163.8,
+        "device_watts": false,
+        "distance": 264.8,
+        "elapsed_time": 91,
+        "end_index": 1979,
+        "hidden": false,
+        "id": 3449121584458930000,
+        "kom_rank": null,
+        "max_heartrate": 168,
+        "moving_time": 90,
+        "name": "Brekkuspretturinn",
+        "pr_rank": 1,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 4.4,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 264.8,
+          "elevation_high": 27.4,
+          "elevation_low": 15.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.952549,
+            -20.990454
+          ],
+          "hazardous": false,
+          "id": 35569698,
+          "maximum_grade": 13.8,
+          "name": "Brekkuspretturinn",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.953419,
+            -20.985503
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-21T17:11:17Z",
+        "start_date_local": "2026-01-21T17:11:17Z",
+        "start_index": 1888,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17130172147,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 73.5,
+        "average_heartrate": 148.7,
+        "device_watts": false,
+        "distance": 264.8,
+        "elapsed_time": 93,
+        "end_index": 2248,
+        "hidden": false,
+        "id": 3449121584460370000,
+        "kom_rank": null,
+        "max_heartrate": 158,
+        "moving_time": 89,
+        "name": "Brekkuspretturinn",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 4.4,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 264.8,
+          "elevation_high": 27.4,
+          "elevation_low": 15.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.952549,
+            -20.990454
+          ],
+          "hazardous": false,
+          "id": 35569698,
+          "maximum_grade": 13.8,
+          "name": "Brekkuspretturinn",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.953419,
+            -20.985503
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-21T17:15:44Z",
+        "start_date_local": "2026-01-21T17:15:44Z",
+        "start_index": 2155,
+        "visibility": "everyone"
+      }
+    ],
     "similar_activities": {
       "average_speed": 2.31363535911602,
       "effort_count": 1,
@@ -1854,17 +2111,19 @@
     "upload_id_str": "18225110217",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1769019457,
+    "aspect_type": "update",
+    "event_time": 1769019510,
     "object_id": 17130172147,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Hill repeat"
+    }
   },
-  "received_at": "2026-01-21T18:17:37.851Z",
+  "received_at": "2026-01-21T18:18:30.714Z",
   "source": "strava"
 }
