@@ -157,7 +157,7 @@
     "calories": 408,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "Calf feels worse so I quit. Need to figure it out",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 5268.6,
@@ -380,18 +380,202 @@
     "max_heartrate": 176,
     "max_speed": 3.96,
     "moving_time": 1955,
-    "name": "Afternoon Run",
+    "name": "Cut it short once again",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "af430144-c6a6-4f6a-8e58-bfb58fe3eaac",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/og_Rmn-78g200WZq0xGj7MrvRRE_XqZoxVri_rsQi68-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/og_Rmn-78g200WZq0xGj7MrvRRE_XqZoxVri_rsQi68-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
-    "segment_efforts": [],
+    "segment_efforts": [
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17150681702,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.8,
+        "average_heartrate": 153,
+        "device_watts": false,
+        "distance": 359.3,
+        "elapsed_time": 131,
+        "end_index": 643,
+        "hidden": false,
+        "id": 3449801624878470000,
+        "kom_rank": null,
+        "max_heartrate": 161,
+        "moving_time": 131,
+        "name": "Ölfusáarsprettur",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.5,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 359.3,
+          "elevation_high": 9,
+          "elevation_low": 5.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.934177,
+            -21.024042
+          ],
+          "hazardous": false,
+          "id": 37084715,
+          "maximum_grade": 5.3,
+          "name": "Ölfusáarsprettur",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.93209,
+            -21.029062
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-23T14:54:19Z",
+        "start_date_local": "2026-01-23T14:54:19Z",
+        "start_index": 512,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17150681702,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.2,
+        "average_heartrate": 160.8,
+        "device_watts": false,
+        "distance": 312.5,
+        "elapsed_time": 112,
+        "end_index": 1253,
+        "hidden": false,
+        "id": 3449801624878880000,
+        "kom_rank": null,
+        "max_heartrate": 166,
+        "moving_time": 112,
+        "name": "Árvegur (Brú að Bankavegi)",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.5,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 312.5,
+          "elevation_high": 7.2,
+          "elevation_low": 5.4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.939115,
+            -20.997266
+          ],
+          "hazardous": false,
+          "id": 35647239,
+          "maximum_grade": 2.1,
+          "name": "Árvegur (Brú að Bankavegi)",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.938246,
+            -21.003276
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-23T15:04:48Z",
+        "start_date_local": "2026-01-23T15:04:48Z",
+        "start_index": 1141,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17150681702,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.1,
+        "average_heartrate": 163.1,
+        "device_watts": false,
+        "distance": 476.8,
+        "elapsed_time": 175,
+        "end_index": 1810,
+        "hidden": false,
+        "id": 3449801624878410000,
+        "kom_rank": null,
+        "max_heartrate": 170,
+        "moving_time": 174,
+        "name": "Langholt 3 (Austurvegur-Engjavegur)",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 476.8,
+          "elevation_high": 21.8,
+          "elevation_low": 19.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.9339,
+            -20.978993
+          ],
+          "hazardous": false,
+          "id": 35666396,
+          "maximum_grade": 5.6,
+          "name": "Langholt 3 (Austurvegur-Engjavegur)",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.938081,
+            -20.979047
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-23T15:13:02Z",
+        "start_date_local": "2026-01-23T15:13:02Z",
+        "start_index": 1635,
+        "visibility": "everyone"
+      }
+    ],
     "similar_activities": {
       "average_speed": 2.69493606138107,
       "effort_count": 1,
@@ -558,24 +742,26 @@
     "suffer_score": 50,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 8,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 18245765424,
     "upload_id_str": "18245765424",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1769181605,
+    "aspect_type": "update",
+    "event_time": 1769181686,
     "object_id": 17150681702,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Cut it short once again"
+    }
   },
-  "received_at": "2026-01-23T15:20:06.489Z",
+  "received_at": "2026-01-23T15:21:27.690Z",
   "source": "strava"
 }
