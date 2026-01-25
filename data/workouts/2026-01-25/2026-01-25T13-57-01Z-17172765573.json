@@ -180,7 +180,7 @@
     "calories": 933,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "The calf feels better. Not sure why it feels better on the long runs and not the short easy runs. Maybe the strength training, foam rolling and reduced distances is working and it’s getting better.\n\nFirst time in a while where I’ve had to try to keep up to be in zone 2. Normally I short up to zone 3/4 and then have to slow down dramatically to get down to zone 2.\n\nHappy if this is the start of the calf healing and being better 😊",
     "device_name": "Garmin fēnix 5",
     "display_hide_heartrate_option": true,
     "distance": 12006.7,
@@ -589,12 +589,21 @@
     "max_heartrate": 176,
     "max_speed": 5.42,
     "moving_time": 4857,
-    "name": "Lunch Run",
+    "name": "Ríkishringurinn",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 2,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "a9ada78c-771e-4b0d-b780-c6262f065cdf",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/6g1KivKSttMVDctFkupRTB96pObFH-aQKIrWt2yncK8-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/6g1KivKSttMVDctFkupRTB96pObFH-aQKIrWt2yncK8-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -1469,24 +1478,26 @@
     "suffer_score": 117,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 163,
-    "total_photo_count": 0,
+    "total_photo_count": 2,
     "trainer": false,
     "type": "Run",
     "upload_id": 18268055899,
     "upload_id_str": "18268055899",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1769349421,
+    "aspect_type": "update",
+    "event_time": 1769350075,
     "object_id": 17172765573,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Ríkishringurinn"
+    }
   },
-  "received_at": "2026-01-25T13:57:01.934Z",
+  "received_at": "2026-01-25T14:07:56.667Z",
   "source": "strava"
 }
