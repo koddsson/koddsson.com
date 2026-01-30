@@ -1,0 +1,1943 @@
+{
+  "activity": {
+    "achievement_count": 18,
+    "athlete": {
+      "id": 370718,
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "available_zones": [
+      "heartrate",
+      "pace"
+    ],
+    "average_cadence": 78.5,
+    "average_heartrate": 174.2,
+    "average_speed": 2.524,
+    "average_temp": 21,
+    "best_efforts": [
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 400,
+        "elapsed_time": 139,
+        "end_index": 3052,
+        "id": 72486428183,
+        "moving_time": 139,
+        "name": "400m",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-01-30T08:22:44Z",
+        "start_date_local": "2026-01-30T09:22:44Z",
+        "start_index": 2913
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 805,
+        "elapsed_time": 297,
+        "end_index": 2514,
+        "id": 72486428184,
+        "moving_time": 297,
+        "name": "1/2 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-01-30T08:22:44Z",
+        "start_date_local": "2026-01-30T09:22:44Z",
+        "start_index": 2217
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 1000,
+        "elapsed_time": 371,
+        "end_index": 2577,
+        "id": 72486428185,
+        "moving_time": 371,
+        "name": "1K",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-01-30T08:22:44Z",
+        "start_date_local": "2026-01-30T09:22:44Z",
+        "start_index": 2206
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 1609,
+        "elapsed_time": 611,
+        "end_index": 2043,
+        "id": 72486428180,
+        "moving_time": 611,
+        "name": "1 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-01-30T08:22:44Z",
+        "start_date_local": "2026-01-30T09:22:44Z",
+        "start_index": 1432
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 3219,
+        "elapsed_time": 1247,
+        "end_index": 2071,
+        "id": 72486428181,
+        "moving_time": 1247,
+        "name": "2 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-01-30T08:22:44Z",
+        "start_date_local": "2026-01-30T09:22:44Z",
+        "start_index": 824
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 5000,
+        "elapsed_time": 1952,
+        "end_index": 2076,
+        "id": 72486428182,
+        "moving_time": 1952,
+        "name": "5K",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-01-30T08:22:44Z",
+        "start_date_local": "2026-01-30T09:22:44Z",
+        "start_index": 124
+      }
+    ],
+    "calories": 845,
+    "comment_count": 0,
+    "commute": false,
+    "description": null,
+    "device_name": "Garmin fēnix 5",
+    "display_hide_heartrate_option": true,
+    "distance": 9020.3,
+    "elapsed_time": 3749,
+    "elev_high": -13.2,
+    "elev_low": -25,
+    "embed_token": "5850d7df4f9fddb53253bd9b402f941c4b1e17ed",
+    "end_latlng": [
+      41.39,
+      2.19
+    ],
+    "external_id": "garmin_ping_529580208709",
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear": {
+      "converted_distance": 5.9,
+      "distance": 5858,
+      "id": "g28655202",
+      "name": "Kiprun KD-900",
+      "nickname": null,
+      "primary": false,
+      "resource_state": 2,
+      "retired": false
+    },
+    "gear_id": "g28655202",
+    "has_heartrate": true,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "hide_from_home": false,
+    "id": 17225183802,
+    "kudos_count": 0,
+    "laps": [
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 77.6,
+        "average_heartrate": 173.3,
+        "average_speed": 2.35,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 426,
+        "end_index": 427,
+        "id": 61494777617,
+        "lap_index": 1,
+        "max_heartrate": 182,
+        "max_speed": 12.42,
+        "moving_time": 426,
+        "name": "Lap 1",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 1,
+        "start_date": "2026-01-30T08:22:44Z",
+        "start_date_local": "2026-01-30T09:22:44Z",
+        "start_index": 0,
+        "total_elevation_gain": 3.8
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 78.8,
+        "average_heartrate": 179.2,
+        "average_speed": 2.56,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 390,
+        "end_index": 818,
+        "id": 61494777620,
+        "lap_index": 2,
+        "max_heartrate": 183,
+        "max_speed": 3.24,
+        "moving_time": 390,
+        "name": "Lap 2",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 2,
+        "start_date": "2026-01-30T08:29:52Z",
+        "start_date_local": "2026-01-30T09:29:52Z",
+        "start_index": 428,
+        "total_elevation_gain": 2.4
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.7,
+        "average_heartrate": 179.2,
+        "average_speed": 2.53,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 396,
+        "end_index": 1214,
+        "id": 61494777624,
+        "lap_index": 3,
+        "max_heartrate": 188,
+        "max_speed": 3.36,
+        "moving_time": 396,
+        "name": "Lap 3",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 3,
+        "start_date": "2026-01-30T08:36:23Z",
+        "start_date_local": "2026-01-30T09:36:23Z",
+        "start_index": 819,
+        "total_elevation_gain": 3.4
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.9,
+        "average_heartrate": 162,
+        "average_speed": 2.56,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 391,
+        "end_index": 1606,
+        "id": 61494777629,
+        "lap_index": 4,
+        "max_heartrate": 177,
+        "max_speed": 3.18,
+        "moving_time": 391,
+        "name": "Lap 4",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 4,
+        "start_date": "2026-01-30T08:42:59Z",
+        "start_date_local": "2026-01-30T09:42:59Z",
+        "start_index": 1215,
+        "total_elevation_gain": 4.8
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.1,
+        "average_heartrate": 166.4,
+        "average_speed": 2.65,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 378,
+        "end_index": 1985,
+        "id": 61494777633,
+        "lap_index": 5,
+        "max_heartrate": 187,
+        "max_speed": 4,
+        "moving_time": 378,
+        "name": "Lap 5",
+        "pace_zone": 2,
+        "resource_state": 2,
+        "split": 5,
+        "start_date": "2026-01-30T08:49:31Z",
+        "start_date_local": "2026-01-30T09:49:31Z",
+        "start_index": 1607,
+        "total_elevation_gain": 5.8
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 77.7,
+        "average_heartrate": 173,
+        "average_speed": 2.29,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 436,
+        "end_index": 2422,
+        "id": 61494777638,
+        "lap_index": 6,
+        "max_heartrate": 195,
+        "max_speed": 4.44,
+        "moving_time": 436,
+        "name": "Lap 6",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 6,
+        "start_date": "2026-01-30T08:55:50Z",
+        "start_date_local": "2026-01-30T09:55:50Z",
+        "start_index": 1986,
+        "total_elevation_gain": 2.2
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 74.8,
+        "average_heartrate": 172.8,
+        "average_speed": 2.08,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 480,
+        "end_index": 2902,
+        "id": 61494777643,
+        "lap_index": 7,
+        "max_heartrate": 191,
+        "max_speed": 4.52,
+        "moving_time": 480,
+        "name": "Lap 7",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 7,
+        "start_date": "2026-01-30T09:03:07Z",
+        "start_date_local": "2026-01-30T10:03:07Z",
+        "start_index": 2423,
+        "total_elevation_gain": 6
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.4,
+        "average_heartrate": 182.2,
+        "average_speed": 2.43,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 412,
+        "end_index": 3314,
+        "id": 61494777648,
+        "lap_index": 8,
+        "max_heartrate": 192,
+        "max_speed": 7.34,
+        "moving_time": 412,
+        "name": "Lap 8",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 8,
+        "start_date": "2026-01-30T09:11:07Z",
+        "start_date_local": "2026-01-30T10:11:07Z",
+        "start_index": 2903,
+        "total_elevation_gain": 13
+      },
+      {
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 77.8,
+        "average_heartrate": 180.5,
+        "average_speed": 2.3,
+        "device_watts": false,
+        "distance": 1000,
+        "elapsed_time": 434,
+        "end_index": 3748,
+        "id": 61494777655,
+        "lap_index": 9,
+        "max_heartrate": 192,
+        "max_speed": 7.52,
+        "moving_time": 434,
+        "name": "Lap 9",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 9,
+        "start_date": "2026-01-30T09:17:59Z",
+        "start_date_local": "2026-01-30T10:17:59Z",
+        "start_index": 3315,
+        "total_elevation_gain": 13.4
+      }
+    ],
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": false,
+    "map": {
+      "id": "a17225183802",
+      "polyline": "mqs{FuhkLFcBCOKMQCBKHKHS?GHO@I?g@AS@]Gs@F}@EY?QEW?o@H{@@e@b@iCBi@Ae@G{@GaB@mABa@FQRINM?GE?AKE@DURWd@_@BIFERk@^[LYBMXUBMNKBKCOAWIUJSDOp@gAb@a@HQH?HCx@g@Ce@WaAIa@Ca@M[i@oBKm@Ui@Ia@[q@CQe@iA_AkAi@a@OKCIIGsBs@]Y{As@{@u@a@e@u@cA_@_@Ug@[]m@gAu@w@m@eAY]]m@SKIMo@w@m@aAWiA_@}@Kg@Sa@Kc@KWi@u@Wi@m@c@cAg@KOSSYIUBYGq@k@w@a@aAq@a@OOKKS_@_@AGEImAiAg@y@EQ@SBOLYCOIKSKy@_@EA@DTJv@ZVP?HQRITCR@XFTfAjBTJ\\Xl@\\\\Xz@b@dBhAf@XfAx@fAh@r@j@XZj@`AV|@Rf@|@rADRBn@H\\X`@Vb@X\\JFLBHHf@x@VVp@~@Vh@^^v@lAJZ`@f@z@`Aj@f@zAbAlAh@b@Vb@N`@TnAhA\\`@R^r@hAh@hAb@lAVt@b@nBLXNr@n@nBb@t@`@b@T\\\\Z`@Pb@VVXREp@PJ@HATD|A|B`@x@t@lAhAxAj@bAPGd@jAJPNLHDN@JAJGLKbAcBTAPFPRLXLJT\\JZBRPNd@t@Xb@h@j@lBpC`@`@VZnA|@p@Xb@ZRFv@\\f@^hBfACCCBDH}@u@GAw@m@c@_@UMMQc@UMQ]Ig@[s@YSSQS]g@USCKq@cAMIS]QKKQMOUi@c@k@MUCUGIQu@[_@YYMCQDKHc@b@SXa@|@g@t@AFYZAHGDELGBc@KQ@MHOX?BEBm@PUf@QjAM`@?LDRNTVPF@Vb@^ZJBNLDFD@@VT^DLPHFHXPDJPFBAHTDABFDAJ^NNPXBJF?HNNj@IAYWc@GCE?SOASBOMIB?HMAIBQSK@E@ACIAI@?KEMMTBBAFOd@KLOb@CR]j@SHWDCCABOOGAC@MVY\\QRUNCRIHKBQR?Ra@nAYLAHIFERo@h@AHOJ[FSPEFKFCFCAOPEJMH_@d@GLSLO\\Ux@]x@a@l@MHUBGDQ~@MZE@CNGHCZKDUr@MDY@GEALCCI\\G?ERo@p@IVGFADIDCNG@C@ADE?CBCNKRK^QXYRKBGAA\\QDSFU?BGHC@DDl@?NCHGBINSL[b@WCQGK\\GHDEEHCJ@JCFYTk@|@s@z@GRJt@BVARFLLL`@n@d@`A^`@^l@VRVZp@Z^B^KJMDQAOBSC]GUOOWOg@e@QIIMEMWSKSCOECAOGIS?OGa@A]HAUBGAGDQ?KGQGEAEICI?_@Qa@a@_@o@YQIAOUQO?BIEGCI?IEAc@g@g@YEYMWE[CQGEG?YMYHM@SJEJM?IDE?CFAHQFEPFJIXi@BIBA[oATQHAFILGHIv@]LO^g@@@NON[NGb@gAC??ABIPIHIDBf@SB[DIH@@CNDF?NsAFKICFG?EZUNWBOF?HE?IVMJKIOKi@Te@h@qBOI",
+      "resource_state": 3,
+      "summary_polyline": "mqs{FuhkLFcBCOKMQCLWTu@?yAGs@F}@KcA?o@H{@@e@b@iCBi@QcE@mABa@FQb@W?GE?AKE@DUx@w@^{@^[Pg@XUBMNKBKO}@Pc@p@gAb@a@HQRCx@g@Ce@WaAMcAw@kCKm@_@kA[q@i@{A_AkAy@m@CIIGsBs@]Y{As@{@u@wAiB_@_@Ug@[]m@gAu@w@eBqCSKy@eAm@aAWiA_@}@Kg@Sa@Kc@u@mAWi@qBkA_@c@YIUBYGq@k@yBsAq@[KS_@_@GQmAiAg@y@EQ@SPi@CO]W_Aa@fB~@[r@CR@XFTfAjBTJhBpAz@b@lCbBfAx@fAh@lAfAj@`AV|@Rf@|@rAHbAH\\jAbBb@TpBpCVh@^^v@lAJZ`@f@fBhBzAbAvDfBlBjBfAhBlAvCVt@b@nBLXNr@n@nBb@t@v@`A\\ZdAh@VXRE|AV|A|BvAfChAxAj@bAPGd@jAZ^XFVIpAoBTAPFbAvAJZBRPN~@xAh@j@lBpCx@|@nA|@p@Xb@ZjAd@pCfBG?DHwDsCMQq@g@]I{Au@SSeAoACKq@cAMIS]k@m@Ui@q@aACUY_Au@y@MCQDo@l@}AlCAFYZAHMRGBc@KQ@MHU`@m@PUf@QjAM`@D`@NT^RVb@fAv@@VZl@r@d@DJTDHTDAHDJ^NNTd@F?HNNj@IAYWc@GCE?Sc@@OMIB?HW@QS]AI@EYMT@JOd@[p@CR]j@q@NOOK?g@t@g@b@CRULQR?Ra@nAYLAHOZo@h@AHk@Rm@f@kAzASLe@vA]x@a@l@k@RQ~@_@v@CZKDUr@MDa@CALCCI\\G?ERo@p@IVSRCNWLCNi@lAYRS@A\\e@LU?BGJ@Dl@CXe@`@[b@i@KSf@DEEHAVCFYTk@|@s@z@GRJt@@j@v@jAd@`A^`@^l@n@n@p@Z^B^KP_@AaAGUaBoAO[WSUg@AOGIeAI]HAUFm@Q]SC_@Qa@a@_@o@c@Sa@e@e@KAc@g@g@yBe@EG?YMYHM@SJEPa@FAPWPFJI\\s@BA[oA~@o@v@]LOp@u@N[NGb@gACABIZSDBf@SHe@b@BNsAFKICFMZUNWBOPE?IVMJKIOKi@Te@h@qBOI"
+    },
+    "max_heartrate": 195,
+    "max_speed": 12.42,
+    "moving_time": 3574,
+    "name": "Morning Run",
+    "perceived_exertion": null,
+    "photo_count": 0,
+    "photos": {
+      "count": 0,
+      "primary": null
+    },
+    "pr_count": 3,
+    "prefer_perceived_exertion": null,
+    "private": false,
+    "resource_state": 3,
+    "segment_efforts": [
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 78.7,
+        "average_heartrate": 179.3,
+        "device_watts": false,
+        "distance": 587.3,
+        "elapsed_time": 214,
+        "end_index": 639,
+        "hidden": false,
+        "id": 3452249928073380000,
+        "kom_rank": null,
+        "max_heartrate": 183,
+        "moving_time": 214,
+        "name": "@P3DRY47 ENTRENADOR TRIATLÓN",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.5,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 587.3,
+          "elevation_high": 11.2,
+          "elevation_low": 7.9,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.395272,
+            2.207098
+          ],
+          "hazardous": false,
+          "id": 35619479,
+          "maximum_grade": 5.6,
+          "name": "@P3DRY47 ENTRENADOR TRIATLÓN",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.391328,
+            2.203326
+          ],
+          "state": "Catalonia"
+        },
+        "start_date": "2026-01-30T08:29:49Z",
+        "start_date_local": "2026-01-30T09:29:49Z",
+        "start_index": 425,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 78.7,
+        "average_heartrate": 179.9,
+        "device_watts": false,
+        "distance": 703.7,
+        "elapsed_time": 274,
+        "end_index": 730,
+        "hidden": false,
+        "id": 3452249928074460000,
+        "kom_rank": null,
+        "max_heartrate": 183,
+        "moving_time": 274,
+        "name": "De espigon a espigon(bogatell-marbela",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.3,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 703.7,
+          "elevation_high": 15.4,
+          "elevation_low": 9.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.396723,
+            2.209289
+          ],
+          "hazardous": false,
+          "id": 15840826,
+          "maximum_grade": 5.6,
+          "name": "De espigon a espigon(bogatell-marbela",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.391903,
+            2.204036
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:30:20Z",
+        "start_date_local": "2026-01-30T09:30:20Z",
+        "start_index": 456,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 78.5,
+        "average_heartrate": 179.9,
+        "device_watts": false,
+        "distance": 322,
+        "elapsed_time": 130,
+        "end_index": 622,
+        "hidden": false,
+        "id": 3452249928071470000,
+        "kom_rank": null,
+        "max_heartrate": 183,
+        "moving_time": 130,
+        "name": "Beach north-easterly",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.3,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 322,
+          "elevation_high": -48,
+          "elevation_low": -49,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.394927,
+            2.20685
+          ],
+          "hazardous": false,
+          "id": 19437401,
+          "maximum_grade": 7.1,
+          "name": "Beach north-easterly",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.39246,
+            2.204704
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-30T08:30:56Z",
+        "start_date_local": "2026-01-30T09:30:56Z",
+        "start_index": 492,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.4,
+        "average_heartrate": 176.5,
+        "device_watts": false,
+        "distance": 1607.6,
+        "elapsed_time": 674,
+        "end_index": 1338,
+        "hidden": false,
+        "id": 3452249928070360000,
+        "kom_rank": null,
+        "max_heartrate": 188,
+        "moving_time": 672,
+        "name": "Milla del Drac 2016",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.1,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 1607.6,
+          "elevation_high": 13.2,
+          "elevation_low": 6.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.395722,
+            2.207655
+          ],
+          "hazardous": false,
+          "id": 13154768,
+          "maximum_grade": 9.9,
+          "name": "Milla del Drac 2016",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.395711,
+            2.207655
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:33:48Z",
+        "start_date_local": "2026-01-30T09:33:48Z",
+        "start_index": 664,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.8,
+        "average_heartrate": 184.4,
+        "device_watts": false,
+        "distance": 234.6,
+        "elapsed_time": 88,
+        "end_index": 915,
+        "hidden": false,
+        "id": 3452249928072020000,
+        "kom_rank": null,
+        "max_heartrate": 188,
+        "moving_time": 88,
+        "name": "200m up",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 2,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 234.6,
+          "elevation_high": 9.2,
+          "elevation_low": 0,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.399848,
+            2.212528
+          ],
+          "hazardous": false,
+          "id": 10593542,
+          "maximum_grade": 10.7,
+          "name": "200m up",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.398035,
+            2.211224
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:36:31Z",
+        "start_date_local": "2026-01-30T09:36:31Z",
+        "start_index": 827,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.6,
+        "average_heartrate": 171.4,
+        "device_watts": false,
+        "distance": 563.5,
+        "elapsed_time": 220,
+        "end_index": 1265,
+        "hidden": false,
+        "id": 3452249928072210000,
+        "kom_rank": null,
+        "max_heartrate": 185,
+        "moving_time": 220,
+        "name": "Platja de la Mar Bella",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.5,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 563.5,
+          "elevation_high": 7.9,
+          "elevation_low": 3,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.396613,
+            2.209244
+          ],
+          "hazardous": false,
+          "id": 19433309,
+          "maximum_grade": 2.7,
+          "name": "Platja de la Mar Bella",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.400525,
+            2.213221
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-30T08:40:09Z",
+        "start_date_local": "2026-01-30T09:40:09Z",
+        "start_index": 1045,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.6,
+        "average_heartrate": 166.5,
+        "device_watts": false,
+        "distance": 1004.4,
+        "elapsed_time": 401,
+        "end_index": 1458,
+        "hidden": false,
+        "id": 3452249928073460000,
+        "kom_rank": null,
+        "max_heartrate": 185,
+        "moving_time": 401,
+        "name": "1 KM farleck",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.3,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 1004.4,
+          "elevation_high": 9,
+          "elevation_low": 1.5,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.393481,
+            2.205488
+          ],
+          "hazardous": false,
+          "id": 22700271,
+          "maximum_grade": 2.7,
+          "name": "1 KM farleck",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.400385,
+            2.21294
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:40:21Z",
+        "start_date_local": "2026-01-30T09:40:21Z",
+        "start_index": 1057,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.9,
+        "average_heartrate": 164.5,
+        "device_watts": false,
+        "distance": 1969.5,
+        "elapsed_time": 755,
+        "end_index": 1826,
+        "hidden": false,
+        "id": 3452249928074460000,
+        "kom_rank": null,
+        "max_heartrate": 185,
+        "moving_time": 755,
+        "name": "Beach (reversed)",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.3,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 1969.5,
+          "elevation_high": 14.7,
+          "elevation_low": 0,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.387307,
+            2.197902
+          ],
+          "hazardous": false,
+          "id": 10955265,
+          "maximum_grade": 20.5,
+          "name": "Beach (reversed)",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.400167,
+            2.212705
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:40:35Z",
+        "start_date_local": "2026-01-30T09:40:35Z",
+        "start_index": 1071,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.4,
+        "average_heartrate": 172.2,
+        "device_watts": false,
+        "distance": 225,
+        "elapsed_time": 91,
+        "end_index": 1171,
+        "hidden": false,
+        "id": 3452249928073590000,
+        "kom_rank": null,
+        "max_heartrate": 180,
+        "moving_time": 91,
+        "name": "200m down",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.7,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 225,
+          "elevation_high": 9.5,
+          "elevation_low": 0,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.398193,
+            2.211266
+          ],
+          "hazardous": false,
+          "id": 10593550,
+          "maximum_grade": 11.4,
+          "name": "200m down",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.399969,
+            2.212547
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:40:44Z",
+        "start_date_local": "2026-01-30T09:40:44Z",
+        "start_index": 1080,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79.5,
+        "average_heartrate": 164.6,
+        "device_watts": false,
+        "distance": 749,
+        "elapsed_time": 166,
+        "end_index": 1382,
+        "hidden": false,
+        "id": 3452249928072130000,
+        "kom_rank": null,
+        "max_heartrate": 177,
+        "moving_time": 166,
+        "name": "@P3DRY47 ENTRENADOR TRIATLÓN",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.2,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 749,
+          "elevation_high": 9.2,
+          "elevation_low": 7.5,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.394839,
+            2.206959
+          ],
+          "hazardous": false,
+          "id": 35613535,
+          "maximum_grade": 0.5,
+          "name": "@P3DRY47 ENTRENADOR TRIATLÓN",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.397336,
+            2.210512
+          ],
+          "state": "Catalonia"
+        },
+        "start_date": "2026-01-30T08:43:00Z",
+        "start_date_local": "2026-01-30T09:43:00Z",
+        "start_index": 1216,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80,
+        "average_heartrate": 161.8,
+        "device_watts": false,
+        "distance": 981.9,
+        "elapsed_time": 381,
+        "end_index": 1684,
+        "hidden": false,
+        "id": 3452249928074340000,
+        "kom_rank": null,
+        "max_heartrate": 177,
+        "moving_time": 381,
+        "name": "Mar encabritada - K1 Ràpid",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.4,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 981.9,
+          "elevation_high": 15,
+          "elevation_low": 0.1,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.390039,
+            2.200387
+          ],
+          "hazardous": false,
+          "id": 14027998,
+          "maximum_grade": 19.3,
+          "name": "Mar encabritada - K1 Ràpid",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.396133,
+            2.208358
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:44:27Z",
+        "start_date_local": "2026-01-30T09:44:27Z",
+        "start_index": 1303,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.1,
+        "average_heartrate": 159.8,
+        "device_watts": false,
+        "distance": 447.7,
+        "elapsed_time": 175,
+        "end_index": 1535,
+        "hidden": false,
+        "id": 3452249928070530000,
+        "kom_rank": null,
+        "max_heartrate": 174,
+        "moving_time": 175,
+        "name": "Beach South-Westerly",
+        "pr_rank": 1,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 447.7,
+          "elevation_high": -52,
+          "elevation_low": -53,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.391947,
+            2.204411
+          ],
+          "hazardous": false,
+          "id": 19437409,
+          "maximum_grade": 7.5,
+          "name": "Beach South-Westerly",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.395188,
+            2.207435
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-30T08:45:24Z",
+        "start_date_local": "2026-01-30T09:45:24Z",
+        "start_index": 1360,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.1,
+        "average_heartrate": 164,
+        "device_watts": false,
+        "distance": 877.6,
+        "elapsed_time": 337,
+        "end_index": 1840,
+        "hidden": false,
+        "id": 3452249928074120000,
+        "kom_rank": null,
+        "max_heartrate": 180,
+        "moving_time": 337,
+        "name": "McDonald-Torre Mapfre",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.5,
+          "city": null,
+          "climb_category": 0,
+          "country": null,
+          "distance": 877.6,
+          "elevation_high": 14,
+          "elevation_low": 5,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.387053,
+            2.197741
+          ],
+          "hazardous": false,
+          "id": 15332622,
+          "maximum_grade": 9,
+          "name": "McDonald-Torre Mapfre",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.392548,
+            2.204895
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-30T08:47:47Z",
+        "start_date_local": "2026-01-30T09:47:47Z",
+        "start_index": 1503,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.2,
+        "average_heartrate": 163.3,
+        "device_watts": false,
+        "distance": 401.4,
+        "elapsed_time": 150,
+        "end_index": 1684,
+        "hidden": false,
+        "id": 3452249928070600000,
+        "kom_rank": null,
+        "max_heartrate": 177,
+        "moving_time": 150,
+        "name": "SERIES 400 FR (PARKING S. CASINO 2/2)",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.2,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 401.4,
+          "elevation_high": 4.4,
+          "elevation_low": 3.5,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.390047,
+            2.200313
+          ],
+          "hazardous": false,
+          "id": 28300235,
+          "maximum_grade": 7.4,
+          "name": "SERIES 400 FR (PARKING S. CASINO 2/2)",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.392137,
+            2.204113
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:48:18Z",
+        "start_date_local": "2026-01-30T09:48:18Z",
+        "start_index": 1534,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80.1,
+        "average_heartrate": 166.4,
+        "device_watts": false,
+        "distance": 674.7,
+        "elapsed_time": 266,
+        "end_index": 1931,
+        "hidden": false,
+        "id": 3452249928071310000,
+        "kom_rank": null,
+        "max_heartrate": 187,
+        "moving_time": 263,
+        "name": "Pujada abans pg. Maritim fins el peix",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.7,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 674.7,
+          "elevation_high": 13.4,
+          "elevation_low": 7.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.385613,
+            2.197389
+          ],
+          "hazardous": false,
+          "id": 12172695,
+          "maximum_grade": 4,
+          "name": "Pujada abans pg. Maritim fins el peix",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.390227,
+            2.201149
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:50:29Z",
+        "start_date_local": "2026-01-30T09:50:29Z",
+        "start_index": 1665,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 80,
+        "average_heartrate": 164.2,
+        "device_watts": false,
+        "distance": 241.7,
+        "elapsed_time": 118,
+        "end_index": 1834,
+        "hidden": false,
+        "id": 3452249928072770000,
+        "kom_rank": null,
+        "max_heartrate": 180,
+        "moving_time": 118,
+        "name": "Sprint Torre Mapfre",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 1.5,
+          "city": null,
+          "climb_category": 0,
+          "country": null,
+          "distance": 241.7,
+          "elevation_high": 11.9,
+          "elevation_low": 8.2,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.387234,
+            2.197644
+          ],
+          "hazardous": false,
+          "id": 21500341,
+          "maximum_grade": 4.8,
+          "name": "Sprint Torre Mapfre",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.389226,
+            2.200181
+          ],
+          "state": null
+        },
+        "start_date": "2026-01-30T08:51:20Z",
+        "start_date_local": "2026-01-30T09:51:20Z",
+        "start_index": 1716,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 70.2,
+        "average_heartrate": 170,
+        "device_watts": false,
+        "distance": 532.4,
+        "elapsed_time": 224,
+        "end_index": 2122,
+        "hidden": false,
+        "id": 3452249928070710000,
+        "kom_rank": null,
+        "max_heartrate": 183,
+        "moving_time": 191,
+        "name": "Sprint homenaje Ramoneda Hospital",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.2,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 532.4,
+          "elevation_high": 19,
+          "elevation_low": 11.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.382247,
+            2.194407
+          ],
+          "hazardous": false,
+          "id": 15840809,
+          "maximum_grade": 5.4,
+          "name": "Sprint homenaje Ramoneda Hospital",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.386079,
+            2.198013
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T08:54:22Z",
+        "start_date_local": "2026-01-30T09:54:22Z",
+        "start_index": 1898,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 68.2,
+        "average_heartrate": 177.2,
+        "device_watts": false,
+        "distance": 421.6,
+        "elapsed_time": 167,
+        "end_index": 3529,
+        "hidden": false,
+        "id": 3452249928070980000,
+        "kom_rank": null,
+        "max_heartrate": 191,
+        "moving_time": 162,
+        "name": "Series GAS GAS",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.6,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 421.6,
+          "elevation_high": 19,
+          "elevation_low": 14,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.396269,
+            2.186545
+          ],
+          "hazardous": false,
+          "id": 7118867,
+          "maximum_grade": 3.6,
+          "name": "Series GAS GAS",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.394076,
+            2.184128
+          ],
+          "state": "CT"
+        },
+        "start_date": "2026-01-30T09:18:46Z",
+        "start_date_local": "2026-01-30T10:18:46Z",
+        "start_index": 3362,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17225183802,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 61.2,
+        "average_heartrate": 166.7,
+        "device_watts": false,
+        "distance": 136.3,
+        "elapsed_time": 71,
+        "end_index": 3534,
+        "hidden": false,
+        "id": 3452249928073040000,
+        "kom_rank": null,
+        "max_heartrate": 182,
+        "moving_time": 69,
+        "name": "Parc de l'Estacio - Subida a Meridiana",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 4.2,
+          "city": "Barcelona",
+          "climb_category": 0,
+          "country": "Spain",
+          "distance": 136.3,
+          "elevation_high": 22.2,
+          "elevation_low": 16.4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            41.39635,
+            2.186677
+          ],
+          "hazardous": false,
+          "id": 29942910,
+          "maximum_grade": 7.7,
+          "name": "Parc de l'Estacio - Subida a Meridiana",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            41.395267,
+            2.18606
+          ],
+          "state": "Catalunya"
+        },
+        "start_date": "2026-01-30T09:20:27Z",
+        "start_date_local": "2026-01-30T10:20:27Z",
+        "start_index": 3463,
+        "visibility": "everyone"
+      }
+    ],
+    "similar_activities": {
+      "average_speed": 2.52386681589256,
+      "effort_count": 1,
+      "frequency_milestone": null,
+      "max_average_speed": 2.52386681589256,
+      "mid_average_speed": 2.52386681589256,
+      "min_average_speed": 2.52386681589256,
+      "pr_rank": null,
+      "resource_state": 2,
+      "trend": {
+        "current_activity_index": 0,
+        "direction": 0,
+        "max_speed": 2.52386681589256,
+        "mid_speed": 2.52386681589256,
+        "min_speed": 2.52386681589256,
+        "speeds": [
+          2.52386681589256
+        ]
+      }
+    },
+    "splits_metric": [
+      {
+        "average_grade_adjusted_speed": 2.49,
+        "average_heartrate": 173.329113924051,
+        "average_speed": 2.47,
+        "distance": 1001.2,
+        "elapsed_time": 426,
+        "elevation_difference": -8,
+        "moving_time": 405,
+        "pace_zone": 1,
+        "split": 1
+      },
+      {
+        "average_grade_adjusted_speed": 2.58,
+        "average_heartrate": 179.181585677749,
+        "average_speed": 2.56,
+        "distance": 1000,
+        "elapsed_time": 391,
+        "elevation_difference": -0.6,
+        "moving_time": 391,
+        "pace_zone": 1,
+        "split": 2
+      },
+      {
+        "average_grade_adjusted_speed": 2.56,
+        "average_heartrate": 179.213197969543,
+        "average_speed": 2.52,
+        "distance": 998.9,
+        "elapsed_time": 396,
+        "elevation_difference": -1,
+        "moving_time": 396,
+        "pace_zone": 1,
+        "split": 3
+      },
+      {
+        "average_grade_adjusted_speed": 2.6,
+        "average_heartrate": 162.040816326531,
+        "average_speed": 2.55,
+        "distance": 1000.6,
+        "elapsed_time": 392,
+        "elevation_difference": 1.4,
+        "moving_time": 392,
+        "pace_zone": 2,
+        "split": 4
+      },
+      {
+        "average_grade_adjusted_speed": 2.7,
+        "average_heartrate": 166.38829787234,
+        "average_speed": 2.64,
+        "distance": 1001.6,
+        "elapsed_time": 379,
+        "elevation_difference": 4.2,
+        "moving_time": 379,
+        "pace_zone": 2,
+        "split": 5
+      },
+      {
+        "average_grade_adjusted_speed": 2.6,
+        "average_heartrate": 172.959493670886,
+        "average_speed": 2.53,
+        "distance": 1000.4,
+        "elapsed_time": 437,
+        "elevation_difference": -0.6,
+        "moving_time": 395,
+        "pace_zone": 2,
+        "split": 6
+      },
+      {
+        "average_grade_adjusted_speed": 2.31,
+        "average_heartrate": 172.841121495327,
+        "average_speed": 2.25,
+        "distance": 997.5,
+        "elapsed_time": 478,
+        "elevation_difference": -5.8,
+        "moving_time": 444,
+        "pace_zone": 1,
+        "split": 7
+      },
+      {
+        "average_grade_adjusted_speed": 2.73,
+        "average_heartrate": 182.207547169811,
+        "average_speed": 2.63,
+        "distance": 1002.3,
+        "elapsed_time": 414,
+        "elevation_difference": 2.2,
+        "moving_time": 381,
+        "pace_zone": 2,
+        "split": 8
+      },
+      {
+        "average_grade_adjusted_speed": 2.71,
+        "average_heartrate": 180.464,
+        "average_speed": 2.6,
+        "distance": 1010,
+        "elapsed_time": 434,
+        "elevation_difference": -0.4,
+        "moving_time": 389,
+        "pace_zone": 2,
+        "split": 9
+      },
+      {
+        "average_grade_adjusted_speed": 4.75,
+        "average_heartrate": 188,
+        "average_speed": 4.65,
+        "distance": 9.3,
+        "elapsed_time": 2,
+        "elevation_difference": 0.2,
+        "moving_time": 2,
+        "pace_zone": 6,
+        "split": 10
+      }
+    ],
+    "splits_standard": [
+      {
+        "average_grade_adjusted_speed": 2.54,
+        "average_heartrate": 175.609523809524,
+        "average_speed": 2.52,
+        "distance": 1610.6,
+        "elapsed_time": 661,
+        "elevation_difference": -7.2,
+        "moving_time": 640,
+        "pace_zone": 1,
+        "split": 1
+      },
+      {
+        "average_grade_adjusted_speed": 2.57,
+        "average_heartrate": 177.156151419558,
+        "average_speed": 2.53,
+        "distance": 1609,
+        "elapsed_time": 636,
+        "elevation_difference": -1.4,
+        "moving_time": 636,
+        "pace_zone": 1,
+        "split": 2
+      },
+      {
+        "average_grade_adjusted_speed": 2.6,
+        "average_heartrate": 163.626794258373,
+        "average_speed": 2.55,
+        "distance": 1608.9,
+        "elapsed_time": 630,
+        "elevation_difference": 5,
+        "moving_time": 630,
+        "pace_zone": 2,
+        "split": 3
+      },
+      {
+        "average_grade_adjusted_speed": 2.68,
+        "average_heartrate": 176.25,
+        "average_speed": 2.61,
+        "distance": 1609.8,
+        "elapsed_time": 662,
+        "elevation_difference": -1,
+        "moving_time": 616,
+        "pace_zone": 2,
+        "split": 4
+      },
+      {
+        "average_grade_adjusted_speed": 2.47,
+        "average_heartrate": 174.989263803681,
+        "average_speed": 2.39,
+        "distance": 1608.7,
+        "elapsed_time": 737,
+        "elevation_difference": -3.6,
+        "moving_time": 674,
+        "pace_zone": 1,
+        "split": 5
+      },
+      {
+        "average_grade_adjusted_speed": 2.69,
+        "average_heartrate": 180.379120879121,
+        "average_speed": 2.58,
+        "distance": 974.8,
+        "elapsed_time": 423,
+        "elevation_difference": -0.2,
+        "moving_time": 378,
+        "pace_zone": 2,
+        "split": 6
+      }
+    ],
+    "sport_type": "Run",
+    "start_date": "2026-01-30T08:22:44Z",
+    "start_date_local": "2026-01-30T09:22:44Z",
+    "start_latlng": [
+      41.39,
+      2.19
+    ],
+    "stats_visibility": [
+      {
+        "type": "heart_rate",
+        "visibility": "everyone"
+      },
+      {
+        "type": "pace",
+        "visibility": "everyone"
+      },
+      {
+        "type": "power",
+        "visibility": "everyone"
+      },
+      {
+        "type": "speed",
+        "visibility": "everyone"
+      },
+      {
+        "type": "calories",
+        "visibility": "everyone"
+      }
+    ],
+    "suffer_score": 185,
+    "timezone": "(GMT+01:00) Europe/Madrid",
+    "total_elevation_gain": 34,
+    "total_photo_count": 0,
+    "trainer": false,
+    "type": "Run",
+    "upload_id": 18320810722,
+    "upload_id_str": "18320810722",
+    "utc_offset": 3600,
+    "visibility": "everyone",
+    "workout_type": null
+  },
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1769765328,
+    "object_id": 17225183802,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2026-01-30T09:28:49.451Z",
+  "source": "strava"
+}
