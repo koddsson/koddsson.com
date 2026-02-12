@@ -1,39 +1,82 @@
 /* ==========================================================================
+   Windows 98 Theme + Apple Animations
+   ========================================================================== */
+
+/* -- Apple-style spring animation keyframes -- */
+
+@keyframes windowOpen {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(1.02);
+  }
+  80% {
+    transform: scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes taskbarSlide {
+  0% {
+    transform: translateY(100%);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
    Design Tokens
    ========================================================================== */
 
 :root {
-  --brand: var(--indigo-7);
-  --brand-light: var(--indigo-4);
-  --link-visited: var(--purple-10);
-  --surface-bg: var(--gray-0);
-  --surface-card: white;
-  --text-primary: var(--gray-9);
-  --text-secondary: var(--gray-7);
-  --text-muted: var(--gray-5);
-  --border-subtle: var(--gray-3);
-  --border-hover: var(--gray-5);
-  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
-  --content-width: 38rem;
-  --nav-height: 3.5rem;
-}
+  /* Win98 palette */
+  --win-bg: #008080;
+  --win-surface: #c0c0c0;
+  --win-surface-dark: #808080;
+  --win-surface-light: #dfdfdf;
+  --win-white: #ffffff;
+  --win-black: #000000;
+  --win-title-start: #000080;
+  --win-title-end: #1084d0;
+  --win-title-text: #ffffff;
+  --win-highlight: #000080;
+  --win-highlight-text: #ffffff;
+  --win-link: #0000ff;
+  --win-link-visited: #800080;
+  --win-btn-face: #c0c0c0;
+  --win-btn-highlight: #ffffff;
+  --win-btn-shadow: #808080;
+  --win-btn-dark-shadow: #000000;
+  --win-field-bg: #ffffff;
+  --win-taskbar: #c0c0c0;
+  --win-start-green: #008000;
+  --content-width: 48rem;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --brand: var(--indigo-3);
-    --brand-light: var(--indigo-5);
-    --link-visited: var(--purple-3);
-    --surface-bg: var(--gray-9);
-    --surface-card: var(--gray-8);
-    --text-primary: var(--gray-1);
-    --text-secondary: var(--gray-3);
-    --text-muted: var(--gray-5);
-    --border-subtle: var(--gray-7);
-    --border-hover: var(--gray-5);
-    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
-    --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+  /* Apple animation curves */
+  --apple-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --apple-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --apple-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --apple-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 /* ==========================================================================
@@ -41,113 +84,213 @@
    ========================================================================== */
 
 html {
-  font-size: var(--font-size-2);
+  font-size: 13px;
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--surface-bg);
-  color: var(--text-primary);
-  padding: 0;
+  font-family: 'Tahoma', 'Segoe UI', 'Geneva', 'Verdana', sans-serif;
+  background: var(--win-bg);
+  color: var(--win-black);
   margin: 0;
+  padding: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
 
 ::selection {
-  background: var(--brand);
-  color: white;
+  background: var(--win-highlight);
+  color: var(--win-highlight-text);
 }
 
 /* ==========================================================================
-   Site Navigation
+   Desktop
    ========================================================================== */
 
-.site-nav {
+.desktop {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 16px;
+  padding-bottom: 16px;
+}
+
+/* ==========================================================================
+   Window
+   ========================================================================== */
+
+.window {
+  width: 100%;
+  max-width: var(--content-width);
+  background: var(--win-surface);
+  border: 2px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  box-shadow:
+    inset 1px 1px 0 var(--win-surface-light),
+    inset -1px -1px 0 var(--win-btn-shadow);
+  animation: windowOpen 0.5s var(--apple-spring) both;
+}
+
+/* ==========================================================================
+   Title Bar
+   ========================================================================== */
+
+.title-bar {
+  background: linear-gradient(90deg, var(--win-title-start), var(--win-title-end));
+  color: var(--win-title-text);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: var(--content-width);
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--size-3) var(--size-3);
-  height: var(--nav-height);
+  padding: 2px 3px;
+  gap: 4px;
+  height: 22px;
+  user-select: none;
 }
 
-.site-nav__home {
-  font-weight: 700;
-  font-size: var(--font-size-3);
-  text-decoration: none;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
-  transition: color 0.2s ease;
-}
-
-.site-nav__home:hover {
-  color: var(--brand);
-}
-
-.site-nav__links {
+.title-bar__icon {
   display: flex;
-  gap: var(--size-1);
+  align-items: center;
+  flex-shrink: 0;
 }
 
-.site-nav__links a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  padding: var(--size-1) var(--size-2);
-  border-radius: var(--radius-2);
-  font-size: var(--font-size-1);
-  transition: color 0.2s ease, background-color 0.2s ease;
+.title-bar__icon img {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
 }
 
-.site-nav__links a:hover {
-  color: var(--brand);
-  background: var(--surface-card);
+.title-bar__text {
+  flex: 1;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0;
+}
+
+.title-bar__controls {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.title-bar__btn {
+  width: 16px;
+  height: 14px;
+  background: var(--win-btn-face);
+  border: 1px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  box-shadow: inset 1px 1px 0 var(--win-surface-light), inset -1px -1px 0 var(--win-btn-shadow);
+  font-size: 9px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  color: var(--win-black);
+  transition: transform 0.15s var(--apple-spring);
+}
+
+.title-bar__btn:hover {
+  transform: scale(1.15);
+}
+
+.title-bar__btn:active {
+  border-color: var(--win-btn-dark-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-dark-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-shadow), inset -1px -1px 0 var(--win-surface-light);
+  transform: scale(0.95);
 }
 
 /* ==========================================================================
-   Header
+   Menu Bar
    ========================================================================== */
 
-header, main, footer {
-  max-width: var(--content-width);
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--size-3);
-  padding-right: var(--size-3);
+.menu-bar {
+  display: flex;
+  background: var(--win-surface);
+  border-bottom: 1px solid var(--win-btn-shadow);
+  padding: 1px 0;
+  animation: fadeSlideIn 0.4s var(--apple-ease) 0.15s both;
 }
 
+.menu-bar__item {
+  padding: 3px 10px;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--win-black);
+  transition: all 0.2s var(--apple-smooth);
+  position: relative;
+}
+
+.menu-bar__item:visited {
+  color: var(--win-black);
+}
+
+.menu-bar__item:hover {
+  background: var(--win-highlight);
+  color: var(--win-highlight-text);
+}
+
+.menu-bar__item:active {
+  transform: scale(0.96);
+}
+
+.menu-bar__item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--win-highlight);
+  transition: all 0.3s var(--apple-spring);
+  transform: translateX(-50%);
+}
+
+.menu-bar__item:hover::after {
+  width: calc(100% - 20px);
+}
+
+/* ==========================================================================
+   Window Content Area
+   ========================================================================== */
+
+.window__content {
+  background: var(--win-field-bg);
+  border: 2px solid;
+  border-color: var(--win-btn-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-dark-shadow), inset -1px -1px 0 var(--win-surface-light);
+  margin: 3px;
+  padding: 16px 20px;
+  min-height: 300px;
+  overflow: auto;
+  animation: fadeSlideIn 0.5s var(--apple-ease) 0.25s both;
+}
+
+/* ==========================================================================
+   Header (inside window)
+   ========================================================================== */
+
 header {
-  padding-top: var(--size-6);
-  padding-bottom: var(--size-3);
+  margin-bottom: 16px;
 }
 
 header h1 {
-  font-size: var(--font-size-7);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin: 0;
-  color: var(--text-primary);
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--win-black);
+  animation: fadeSlideIn 0.4s var(--apple-ease) 0.35s both;
 }
 
 header time {
   display: block;
-  margin-top: var(--size-2);
-  color: var(--text-muted);
-  font-size: var(--font-size-1);
-}
-
-@media only screen and (max-width: 600px) {
-  header h1 {
-    font-size: var(--font-size-6);
-  }
+  color: var(--win-surface-dark);
+  font-size: 11px;
 }
 
 /* ==========================================================================
@@ -155,17 +298,17 @@ header time {
    ========================================================================== */
 
 main {
-  flex: 1;
-  padding-bottom: var(--size-10);
+  animation: fadeSlideIn 0.5s var(--apple-ease) 0.4s both;
 }
 
 main h2 {
-  font-size: var(--font-size-5);
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-top: var(--size-8);
-  margin-bottom: var(--size-3);
-  color: var(--text-primary);
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--win-title-start);
+  border-bottom: 1px solid var(--win-surface);
+  padding-bottom: 4px;
 }
 
 main h2:first-child {
@@ -173,30 +316,29 @@ main h2:first-child {
 }
 
 main h3 {
-  font-size: var(--font-size-4);
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }
 
 main p {
-  margin-bottom: var(--size-4);
-  color: var(--text-primary);
-  max-inline-size: 65ch;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  max-inline-size: unset;
 }
 
 main a {
-  color: var(--brand);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.15em;
-  transition: color 0.15s ease;
+  color: var(--win-link);
+  text-decoration: underline;
+  transition: color 0.2s var(--apple-smooth);
 }
 
 main a:visited {
-  color: var(--link-visited);
+  color: var(--win-link-visited);
 }
 
 main a:hover {
-  text-decoration-thickness: 2px;
+  color: var(--win-highlight);
 }
 
 /* ==========================================================================
@@ -204,11 +346,15 @@ main a:hover {
    ========================================================================== */
 
 blockquote {
-  border-left: 3px solid var(--brand);
-  margin: 0 0 var(--size-4);
-  padding: var(--size-2) var(--size-4);
-  color: var(--text-secondary);
+  border-left: 3px solid var(--win-highlight);
+  margin: 0 0 12px;
+  padding: 8px 12px;
+  background: var(--win-surface-light);
+  color: var(--win-black);
   font-style: italic;
+  border-right: 1px solid var(--win-btn-shadow);
+  border-bottom: 1px solid var(--win-btn-shadow);
+  border-top: 1px solid var(--win-btn-highlight);
 }
 
 blockquote p {
@@ -216,28 +362,34 @@ blockquote p {
 }
 
 /* ==========================================================================
-   Code Blocks
+   Code Blocks (sunken field style)
    ========================================================================== */
 
 pre[class*="language-"] {
-  border-radius: var(--radius-3);
-  padding: var(--size-4);
+  background: var(--win-field-bg);
+  border: 2px solid;
+  border-color: var(--win-btn-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-dark-shadow);
+  padding: 12px;
   overflow: auto;
   max-inline-size: unset;
-  font-size: 0.9em;
-  border: 1px solid var(--border-subtle);
+  font-size: 12px;
+  font-family: 'Courier New', 'Lucida Console', monospace;
+  border-radius: 0;
 }
 
 pre.highlight {
-  background: var(--surface-card);
-  border-radius: var(--radius-3);
-  padding: var(--size-4);
+  background: var(--win-field-bg);
+  border: 2px solid;
+  border-color: var(--win-btn-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-dark-shadow);
+  padding: 12px;
   overflow: auto;
   max-inline-size: unset;
-  border: 1px solid var(--border-subtle);
+  border-radius: 0;
 }
 
-/* The syntax highlighting theme - accessible overrides */
+/* Syntax highlighting theme - accessible overrides */
 .token.url, .token.symbol, .token.number, .token.boolean, .token.variable, .token.constant, .token.inserted {
   color: #23706f;
 }
@@ -251,15 +403,20 @@ pre.highlight {
    ========================================================================== */
 
 .hero {
-  font-size: var(--font-size-3);
-  color: var(--text-secondary);
+  font-size: 13px;
+  color: var(--win-black);
   line-height: 1.6;
-  margin-bottom: var(--size-6);
-  max-inline-size: 55ch;
+  margin-bottom: 16px;
+  padding: 8px 10px;
+  background: var(--win-surface);
+  border: 2px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  box-shadow: inset 1px 1px 0 var(--win-surface-light), inset -1px -1px 0 var(--win-btn-shadow);
+  animation: fadeSlideIn 0.5s var(--apple-ease) 0.5s both;
 }
 
 /* ==========================================================================
-   Social Links
+   Social Links (old nav - hide it)
    ========================================================================== */
 
 nav.vertical {
@@ -267,64 +424,102 @@ nav.vertical {
 }
 
 /* ==========================================================================
-   Post List
+   Post List (items)
    ========================================================================== */
 
 .items {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: var(--size-4);
+  margin-bottom: 12px;
+  background: var(--win-field-bg);
+  border: 2px solid;
+  border-color: var(--win-btn-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-dark-shadow);
 }
 
 .items > li {
   margin: 0;
-  padding: var(--size-3) 0;
+  padding: 6px 8px;
   max-inline-size: unset;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--win-surface);
+  transition: all 0.25s var(--apple-smooth);
+  cursor: default;
+}
+
+.items > li:last-child {
+  border-bottom: none;
+}
+
+.items > li:hover {
+  background: var(--win-highlight);
+  color: var(--win-highlight-text);
+}
+
+.items > li:hover a,
+.items > li:hover small {
+  color: var(--win-highlight-text) !important;
 }
 
 .items > li:first-child {
-  border-top: 1px solid var(--border-subtle);
+  border-top: none;
 }
 
 .items > li > a {
   display: block;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: var(--win-black);
   text-decoration: none;
-  transition: color 0.15s ease;
+  font-size: 12px;
+  transition: color 0.2s var(--apple-smooth);
 }
 
 .items > li > a:hover {
-  color: var(--brand);
+  color: var(--win-highlight-text);
 }
 
 .items > li > small {
-  color: var(--text-secondary);
+  color: var(--win-surface-dark);
+  transition: color 0.2s var(--apple-smooth);
 }
 
 /* ==========================================================================
-   "See more" Links
+   "See more" Links (Win98 button style)
    ========================================================================== */
 
 main > p > a[href^="/"] {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3em;
-  font-weight: 500;
+  display: inline-block;
   text-decoration: none;
-  color: var(--brand);
-  padding: var(--size-1) 0;
-  transition: gap 0.2s ease;
+  color: var(--win-black);
+  background: var(--win-btn-face);
+  border: 2px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  box-shadow: inset 1px 1px 0 var(--win-surface-light), inset -1px -1px 0 var(--win-btn-shadow);
+  padding: 3px 16px;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.2s var(--apple-spring);
+}
+
+main > p > a[href^="/"]:visited {
+  color: var(--win-black);
 }
 
 main > p > a[href^="/"]:hover {
-  gap: 0.5em;
+  transform: scale(1.04);
+}
+
+main > p > a[href^="/"]:active {
+  border-color: var(--win-btn-dark-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-dark-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-shadow), inset -1px -1px 0 var(--win-surface-light);
+  transform: scale(0.97);
 }
 
 main > p > a[href^="/"]::after {
-  content: '\2192';
+  content: ' \25B6';
+  font-size: 8px;
+  vertical-align: middle;
 }
 
 /* ==========================================================================
@@ -335,22 +530,13 @@ toot-embed {
   display: block;
 }
 
-#notes > li {
-  padding: var(--size-4) 0;
-  border-bottom: none;
-}
-
-#notes > li:first-child {
-  border-top: none;
-}
-
 #notes > li:not(:last-child)::after {
   content: '';
   display: block;
-  width: 2rem;
+  width: 100%;
   height: 1px;
-  background: var(--border-subtle);
-  margin: var(--size-4) auto 0;
+  background: var(--win-surface);
+  margin-top: 8px;
 }
 
 /* ==========================================================================
@@ -360,26 +546,37 @@ toot-embed {
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--size-2);
-  margin-bottom: var(--size-4);
+  gap: 3px;
+  margin-bottom: 12px;
+  background: var(--win-surface);
+  border: 2px solid;
+  border-color: var(--win-btn-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-dark-shadow);
+  padding: 3px;
 }
 
 .image-grid a {
   display: block;
   overflow: hidden;
-  border-radius: var(--radius-3);
   aspect-ratio: 1;
+  border: 1px solid var(--win-btn-shadow);
 }
 
 .image-grid img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s var(--apple-spring), filter 0.3s var(--apple-ease);
 }
 
 .image-grid a:hover img {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+.image-grid a:active img {
+  transform: scale(0.96);
+  transition-duration: 0.1s;
 }
 
 @media only screen and (max-width: 600px) {
@@ -389,26 +586,21 @@ toot-embed {
 }
 
 /* ==========================================================================
-   Info Box
+   Info Box (Win98 message box style)
    ========================================================================== */
 
 .info {
-  border: 1px solid var(--blue-3);
-  border-radius: var(--radius-3);
-  padding: var(--size-3) var(--size-4);
-  margin-bottom: var(--size-4);
-  background-color: var(--blue-0);
-}
-
-@media (prefers-color-scheme: dark) {
-  .info {
-    background-color: color-mix(in srgb, var(--blue-9) 20%, transparent);
-    border-color: var(--blue-7);
-  }
+  border: 2px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  box-shadow: inset 1px 1px 0 var(--win-surface-light), inset -1px -1px 0 var(--win-btn-shadow);
+  border-radius: 0;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  background: var(--win-surface);
 }
 
 .info > pre {
-  margin-top: var(--size-2);
+  margin-top: 8px;
 }
 
 /* ==========================================================================
@@ -416,10 +608,10 @@ toot-embed {
    ========================================================================== */
 
 small {
-  font-size: var(--font-size-0);
+  font-size: 11px;
   display: block;
   max-inline-size: unset;
-  color: var(--text-secondary);
+  color: var(--win-surface-dark);
 }
 
 /* ==========================================================================
@@ -427,7 +619,7 @@ small {
    ========================================================================== */
 
 :where(ol) {
-  margin-bottom: var(--size-3);
+  margin-bottom: 12px;
 }
 
 /* ==========================================================================
@@ -438,66 +630,186 @@ main > a:has(h3) {
   display: block;
   text-decoration: none;
   color: inherit;
-  padding: var(--size-3) var(--size-4);
-  margin-left: calc(-1 * var(--size-4));
-  margin-right: calc(-1 * var(--size-4));
-  border-radius: var(--radius-3);
-  transition: background-color 0.2s ease;
+  padding: 6px 8px;
+  margin-bottom: 2px;
+  background: var(--win-field-bg);
+  border: 1px solid var(--win-surface);
+  transition: all 0.25s var(--apple-smooth);
 }
 
 main > a:has(h3):hover {
-  background: var(--surface-card);
-  box-shadow: var(--shadow-card);
+  background: var(--win-highlight);
+  color: var(--win-highlight-text);
+  border-color: var(--win-highlight);
+}
+
+main > a:has(h3):hover h3,
+main > a:has(h3):hover small {
+  color: var(--win-highlight-text);
+}
+
+main > a:has(h3):active {
+  transform: scale(0.99);
 }
 
 main > a:has(h3) h3 {
-  margin: 0 0 var(--size-1);
-  color: var(--brand);
+  margin: 0 0 2px;
+  color: var(--win-link);
+  font-size: 13px;
+  transition: color 0.2s var(--apple-smooth);
 }
 
 main > a:has(h3) small {
-  color: var(--text-secondary);
+  color: var(--win-surface-dark);
+  transition: color 0.2s var(--apple-smooth);
 }
 
 /* ==========================================================================
-   Footer
+   Status Bar
    ========================================================================== */
 
-footer {
-  max-width: var(--content-width);
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--size-6) var(--size-3);
-  border-top: 1px solid var(--border-subtle);
-  text-align: center;
-}
-
-.footer__links {
+.status-bar {
   display: flex;
-  justify-content: center;
-  gap: var(--size-3);
-  margin-bottom: var(--size-3);
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--win-surface);
+  border-top: 1px solid var(--win-btn-highlight);
+  padding: 2px 4px;
+  font-size: 11px;
+  gap: 4px;
+  animation: fadeSlideIn 0.3s var(--apple-ease) 0.55s both;
 }
 
-.footer__links a {
-  color: var(--text-secondary);
+.status-bar__section {
+  display: flex;
+  gap: 8px;
+  padding: 1px 4px;
+  border: 1px solid;
+  border-color: var(--win-btn-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-shadow);
+  flex-shrink: 0;
+}
+
+.status-bar__section a {
+  color: var(--win-link);
   text-decoration: none;
-  font-size: var(--font-size-1);
-  transition: color 0.15s ease;
+  font-size: 11px;
+  transition: all 0.2s var(--apple-smooth);
 }
 
-.footer__links a:hover {
-  color: var(--brand);
+.status-bar__section a:visited {
+  color: var(--win-link);
 }
 
-.footer__copy {
-  color: var(--text-muted);
-  font-size: var(--font-size-0);
+.status-bar__section a:hover {
+  color: var(--win-highlight);
+  text-decoration: underline;
+}
+
+.status-bar__section--right {
+  color: var(--win-surface-dark);
+  margin-left: auto;
 }
 
 /* ==========================================================================
-   View Transitions
+   Taskbar
+   ========================================================================== */
+
+.taskbar {
+  background: var(--win-taskbar);
+  border-top: 2px solid var(--win-btn-highlight);
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  height: 30px;
+  position: sticky;
+  bottom: 0;
+  z-index: 100;
+  box-shadow: inset 0 1px 0 var(--win-surface-light);
+  animation: taskbarSlide 0.4s var(--apple-spring) 0.1s both;
+}
+
+.start-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--win-btn-face);
+  border: 2px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  box-shadow: inset 1px 1px 0 var(--win-surface-light), inset -1px -1px 0 var(--win-btn-shadow);
+  padding: 1px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--win-black);
+  height: 22px;
+  transition: transform 0.2s var(--apple-spring);
+}
+
+.start-button:visited {
+  color: var(--win-black);
+}
+
+.start-button:hover {
+  transform: scale(1.04);
+}
+
+.start-button:active {
+  border-color: var(--win-btn-dark-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-dark-shadow);
+  box-shadow: inset 1px 1px 0 var(--win-btn-shadow), inset -1px -1px 0 var(--win-surface-light);
+  transform: scale(0.97);
+}
+
+.start-button__flag {
+  color: var(--win-start-green);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.taskbar__tray {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--win-btn-shadow) var(--win-btn-highlight) var(--win-btn-highlight) var(--win-btn-shadow);
+  padding: 1px 8px;
+  height: 20px;
+  font-size: 11px;
+  color: var(--win-black);
+}
+
+.taskbar__clock {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================================
+   Unordered list styling
+   ========================================================================== */
+
+main ul:not(.items) {
+  padding-left: 20px;
+}
+
+main ul:not(.items) li {
+  margin-bottom: 4px;
+  max-inline-size: unset;
+}
+
+/* ==========================================================================
+   404 Page
+   ========================================================================== */
+
+.not-found {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.not-found p {
+  max-inline-size: unset;
+}
+
+/* ==========================================================================
+   View Transitions (Apple-style cross-fade)
    ========================================================================== */
 
 @supports (view-transition-name: name) {
@@ -511,14 +823,59 @@ footer {
 }
 
 /* ==========================================================================
-   404 Page
+   Mobile Responsive
    ========================================================================== */
 
-.not-found {
-  text-align: center;
-  padding: var(--size-10) 0;
+@media only screen and (max-width: 600px) {
+  .desktop {
+    padding: 8px 4px;
+  }
+
+  .window__content {
+    padding: 10px 12px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .menu-bar {
+    flex-wrap: wrap;
+  }
+
+  .status-bar {
+    flex-wrap: wrap;
+  }
+
+  .status-bar__section {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
 }
 
-.not-found p {
-  max-inline-size: unset;
+/* ==========================================================================
+   Scrollbar (Win98 style)
+   ========================================================================== */
+
+.window__content::-webkit-scrollbar {
+  width: 16px;
+}
+
+.window__content::-webkit-scrollbar-track {
+  background: var(--win-surface-light);
+  border-left: 1px solid var(--win-btn-shadow);
+}
+
+.window__content::-webkit-scrollbar-thumb {
+  background: var(--win-btn-face);
+  border: 2px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  box-shadow: inset 1px 1px 0 var(--win-surface-light), inset -1px -1px 0 var(--win-btn-shadow);
+}
+
+.window__content::-webkit-scrollbar-button {
+  background: var(--win-btn-face);
+  border: 2px solid;
+  border-color: var(--win-btn-highlight) var(--win-btn-dark-shadow) var(--win-btn-dark-shadow) var(--win-btn-highlight);
+  height: 16px;
 }

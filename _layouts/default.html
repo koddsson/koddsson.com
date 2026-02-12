@@ -53,31 +53,75 @@
     </script>
   </head>
   <body>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="/" class="site-nav__home">Kristjan</a>
-      <div class="site-nav__links">
-        <a href="/posts/">Posts</a>
-        <a href="/notes/">Notes</a>
-        <a href="/images/">Images</a>
-        <a href="/reading-list/">Reading</a>
+    <div class="desktop">
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar__icon">
+            <img src="/favicon.ico" alt="" width="16" height="16">
+          </div>
+          <div class="title-bar__text">{{ title }}</div>
+          <div class="title-bar__controls">
+            <button class="title-bar__btn" aria-label="Minimize">_</button>
+            <button class="title-bar__btn" aria-label="Maximize">&#9633;</button>
+            <button class="title-bar__btn title-bar__btn--close" aria-label="Close">&#10005;</button>
+          </div>
+        </div>
+
+        <nav class="menu-bar" aria-label="Main navigation">
+          <a href="/" class="menu-bar__item">Home</a>
+          <a href="/posts/" class="menu-bar__item">Posts</a>
+          <a href="/notes/" class="menu-bar__item">Notes</a>
+          <a href="/images/" class="menu-bar__item">Images</a>
+          <a href="/reading-list/" class="menu-bar__item">Reading</a>
+        </nav>
+
+        <div class="window__content">
+          <header>
+            <h1>{{ title }}</h1>
+            {% if date %}<time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time>{% endif %}
+          </header>
+
+          <main>{{ content }}</main>
+        </div>
+
+        <div class="status-bar">
+          <div class="status-bar__section">
+            <a href="https://github.com/koddsson">GitHub</a>
+            <a href="https://x.com/koddsson">Twitter</a>
+            <a href="https://read.cv/koddsson">ReadCV</a>
+            <a href="https://linkedin.com/in/koddsson">LinkedIn</a>
+          </div>
+          <div class="status-bar__section status-bar__section--right">
+            &copy; Kristjan Oddsson
+          </div>
+        </div>
       </div>
-    </nav>
+    </div>
 
-    <header>
-      <h1>{{ title }}</h1>
-      {% if date %}<time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time>{% endif %}
-    </header>
-
-    <main>{{ content }}</main>
-
-    <footer>
-      <div class="footer__links">
-        <a href="https://github.com/koddsson">GitHub</a>
-        <a href="https://x.com/koddsson">Twitter</a>
-        <a href="https://read.cv/koddsson">ReadCV</a>
-        <a href="https://linkedin.com/in/koddsson">LinkedIn</a>
+    <div class="taskbar">
+      <a href="/" class="start-button">
+        <span class="start-button__flag">&#9776;</span>
+        <span>Start</span>
+      </a>
+      <div class="taskbar__tray">
+        <span class="taskbar__clock" id="taskbar-clock"></span>
       </div>
-      <small class="footer__copy">&copy; Kristjan Oddsson</small>
-    </footer>
+    </div>
+
+    <script>
+      function updateClock() {
+        var el = document.getElementById('taskbar-clock');
+        if (el) {
+          var now = new Date();
+          var h = now.getHours();
+          var m = now.getMinutes();
+          var ampm = h >= 12 ? 'PM' : 'AM';
+          h = h % 12 || 12;
+          el.textContent = h + ':' + (m < 10 ? '0' : '') + m + ' ' + ampm;
+        }
+      }
+      updateClock();
+      setInterval(updateClock, 30000);
+    </script>
   </body>
 </html>

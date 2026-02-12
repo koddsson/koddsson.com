@@ -4,7 +4,7 @@ title: "Kristjan Oddsson"
 description: "The personal web site of Kristjan Oddsson"
 ---
 
-<p class="hero">Software engineer with a penchant for the Web Platform. I build things, write about them sometimes, and share photos from life along the way.</p>
+<p class="hero">Welcome to my personal homepage! I'm a software engineer with a penchant for the Web Platform. I build things, write about them sometimes, and share photos from life along the way.</p>
 
 ## Posts
 
