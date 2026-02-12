@@ -4,7 +4,7 @@ title: "Kristján Oddsson"
 description: "The personal web site of Kristján Oddsson"
 ---
 
-A software engineer with a penchant for working with Web Platform features and hacking on small projects has created posts and notes on this website.
+The greatest person in the world. A software engineer with a penchant for working with Web Platform features and hacking on small projects has created posts and notes on this website.
 
 <nav class="vertical" aria-label="Socials">
   <a href="https://github.com/koddsson">GitHub</a>
