@@ -1,18 +1,10 @@
 ---
 layout: default.html
-title: "Kristján Oddsson"
-description: "The personal web site of Kristján Oddsson"
+title: "Kristjan Oddsson"
+description: "The personal web site of Kristjan Oddsson"
 ---
 
-A software engineer with a penchant for working with Web Platform features and hacking on small projects has created posts and notes on this website.
-
-<nav class="vertical" aria-label="Socials">
-  <a href="https://github.com/koddsson">GitHub</a>
-  <a href="https://x.com/koddsson">Twitter</a>
-  <a href="https://read.cv/koddsson">ReadCV</a>
-  <a href="https://linkedin.com/in/koddsson">LinkedIn</a>
-  <a href="https://github.com/koddsson/cooking">koddsson.cooking</a>
-</nav>
+<p class="hero">Software engineer with a penchant for the Web Platform. I build things, write about them sometimes, and share photos from life along the way.</p>
 
 ## Posts
 

@@ -1,38 +1,243 @@
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+
 :root {
   --brand: var(--indigo-7);
+  --brand-light: var(--indigo-4);
   --link-visited: var(--purple-10);
+  --surface-bg: var(--gray-0);
+  --surface-card: white;
+  --text-primary: var(--gray-9);
+  --text-secondary: var(--gray-7);
+  --text-muted: var(--gray-5);
+  --border-subtle: var(--gray-3);
+  --border-hover: var(--gray-5);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+  --content-width: 38rem;
+  --nav-height: 3.5rem;
 }
-
 
 @media (prefers-color-scheme: dark) {
   :root {
     --brand: var(--indigo-3);
+    --brand-light: var(--indigo-5);
     --link-visited: var(--purple-3);
+    --surface-bg: var(--gray-9);
+    --surface-card: var(--gray-8);
+    --text-primary: var(--gray-1);
+    --text-secondary: var(--gray-3);
+    --text-muted: var(--gray-5);
+    --border-subtle: var(--gray-7);
+    --border-hover: var(--gray-5);
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-card-hover: 0 10px 30px rgba(0, 0, 0, 0.4), 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
 
 html {
   font-size: var(--font-size-2);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface-bg);
+  color: var(--text-primary);
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--brand);
+  color: white;
+}
+
+/* ==========================================================================
+   Site Navigation
+   ========================================================================== */
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--content-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--size-3) var(--size-3);
+  height: var(--nav-height);
+}
+
+.site-nav__home {
+  font-weight: 700;
+  font-size: var(--font-size-3);
+  text-decoration: none;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.site-nav__home:hover {
+  color: var(--brand);
+}
+
+.site-nav__links {
+  display: flex;
+  gap: var(--size-1);
+}
+
+.site-nav__links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  padding: var(--size-1) var(--size-2);
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-1);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-nav__links a:hover {
+  color: var(--brand);
+  background: var(--surface-card);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header, main, footer {
+  max-width: var(--content-width);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--size-3);
+  padding-right: var(--size-3);
+}
+
+header {
+  padding-top: var(--size-6);
+  padding-bottom: var(--size-3);
+}
+
+header h1 {
+  font-size: var(--font-size-7);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+header time {
+  display: block;
+  margin-top: var(--size-2);
+  color: var(--text-muted);
+  font-size: var(--font-size-1);
 }
 
 @media only screen and (max-width: 600px) {
-  h1 {
+  header h1 {
     font-size: var(--font-size-6);
   }
-  h2 {
-    font-size: var(--font-size-4);
-  }
 }
+
+/* ==========================================================================
+   Main Content
+   ========================================================================== */
+
+main {
+  flex: 1;
+  padding-bottom: var(--size-10);
+}
+
+main h2 {
+  font-size: var(--font-size-5);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: var(--size-8);
+  margin-bottom: var(--size-3);
+  color: var(--text-primary);
+}
+
+main h2:first-child {
+  margin-top: 0;
+}
+
+main h3 {
+  font-size: var(--font-size-4);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+main p {
+  margin-bottom: var(--size-4);
+  color: var(--text-primary);
+  max-inline-size: 65ch;
+}
+
+main a {
+  color: var(--brand);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  transition: color 0.15s ease;
+}
+
+main a:visited {
+  color: var(--link-visited);
+}
+
+main a:hover {
+  text-decoration-thickness: 2px;
+}
+
+/* ==========================================================================
+   Blockquotes
+   ========================================================================== */
+
+blockquote {
+  border-left: 3px solid var(--brand);
+  margin: 0 0 var(--size-4);
+  padding: var(--size-2) var(--size-4);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+blockquote p {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Code Blocks
+   ========================================================================== */
 
 pre[class*="language-"] {
-  border-radius: var(--radius-2);
-  padding: var(--size-3);
+  border-radius: var(--radius-3);
+  padding: var(--size-4);
   overflow: auto;
   max-inline-size: unset;
-  font-size: 1em;
+  font-size: 0.9em;
+  border: 1px solid var(--border-subtle);
 }
 
-/* The syntax highlighting theme isn't accessible! */
+pre.highlight {
+  background: var(--surface-card);
+  border-radius: var(--radius-3);
+  padding: var(--size-4);
+  overflow: auto;
+  max-inline-size: unset;
+  border: 1px solid var(--border-subtle);
+}
+
+/* The syntax highlighting theme - accessible overrides */
 .token.url, .token.symbol, .token.number, .token.boolean, .token.variable, .token.constant, .token.inserted {
   color: #23706f;
 }
@@ -41,89 +246,279 @@ pre[class*="language-"] {
   color: #b50000;
 }
 
+/* ==========================================================================
+   Hero / Intro
+   ========================================================================== */
+
+.hero {
+  font-size: var(--font-size-3);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--size-6);
+  max-inline-size: 55ch;
+}
+
+/* ==========================================================================
+   Social Links
+   ========================================================================== */
+
+nav.vertical {
+  display: none;
+}
+
+/* ==========================================================================
+   Post List
+   ========================================================================== */
+
+.items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--size-4);
+}
+
+.items > li {
+  margin: 0;
+  padding: var(--size-3) 0;
+  max-inline-size: unset;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.items > li:first-child {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.items > li > a {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.items > li > a:hover {
+  color: var(--brand);
+}
+
+.items > li > small {
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   "See more" Links
+   ========================================================================== */
+
+main > p > a[href^="/"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--brand);
+  padding: var(--size-1) 0;
+  transition: gap 0.2s ease;
+}
+
+main > p > a[href^="/"]:hover {
+  gap: 0.5em;
+}
+
+main > p > a[href^="/"]::after {
+  content: '\2192';
+}
+
+/* ==========================================================================
+   Notes
+   ========================================================================== */
+
 toot-embed {
   display: block;
 }
 
-#notes > li:not(:last-child):after {
-  content: '⁂'; 
-  text-align: center;
-  margin-bottom: var(--size-3);
-  font-size: var(--size-6);
+#notes > li {
+  padding: var(--size-4) 0;
+  border-bottom: none;
+}
+
+#notes > li:first-child {
+  border-top: none;
+}
+
+#notes > li:not(:last-child)::after {
+  content: '';
   display: block;
-  color: var(--gray-5);
+  width: 2rem;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: var(--size-4) auto 0;
 }
 
-header, main, footer {
-  max-width: 40em;
-  margin: auto;
+/* ==========================================================================
+   Image Grid
+   ========================================================================== */
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--size-2);
+  margin-bottom: var(--size-4);
 }
 
-main {
-  margin-bottom: var(--size-8);
+.image-grid a {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-3);
+  aspect-ratio: 1;
 }
 
-:where(ol) {
-  margin-bottom: var(--size-3);
+.image-grid img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
 }
 
-@supports (view-transition-name: name) {
-  header {
-    view-transition-name: header;
+.image-grid a:hover img {
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  main {
-    view-transition-name: main;
-  }
 }
+
+/* ==========================================================================
+   Info Box
+   ========================================================================== */
 
 .info {
-  border: solid var(--border-size-1) var(--blue-7);
-  border-radius: var(--radius-2);
-  padding: var(--size-3);
-  margin-bottom: var(--size-3);
+  border: 1px solid var(--blue-3);
+  border-radius: var(--radius-3);
+  padding: var(--size-3) var(--size-4);
+  margin-bottom: var(--size-4);
   background-color: var(--blue-0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .info {
+    background-color: color-mix(in srgb, var(--blue-9) 20%, transparent);
+    border-color: var(--blue-7);
+  }
 }
 
 .info > pre {
   margin-top: var(--size-2);
 }
 
+/* ==========================================================================
+   Small / Meta text
+   ========================================================================== */
+
 small {
   font-size: var(--font-size-0);
   display: block;
   max-inline-size: unset;
-  color: var(--text-2);
+  color: var(--text-secondary);
 }
 
-nav.vertical {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* ==========================================================================
+   Ordered Lists
+   ========================================================================== */
+
+:where(ol) {
+  margin-bottom: var(--size-3);
 }
 
-nav.vertical > a {
-  padding: var(--size-2);
+/* ==========================================================================
+   Posts Index (linked cards)
+   ========================================================================== */
+
+main > a:has(h3) {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: var(--size-3) var(--size-4);
+  margin-left: calc(-1 * var(--size-4));
+  margin-right: calc(-1 * var(--size-4));
+  border-radius: var(--radius-3);
+  transition: background-color 0.2s ease;
 }
 
-.items > li {
-  max-inline-size: unset;
+main > a:has(h3):hover {
+  background: var(--surface-card);
+  box-shadow: var(--shadow-card);
 }
 
-.image-grid {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+main > a:has(h3) h3 {
+  margin: 0 0 var(--size-1);
+  color: var(--brand);
 }
 
-.image-grid img {
-  object-fit: cover;
-  height: 250px;
-  width: 250px;
+main > a:has(h3) small {
+  color: var(--text-secondary);
 }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 footer {
+  max-width: var(--content-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--size-6) var(--size-3);
+  border-top: 1px solid var(--border-subtle);
   text-align: center;
-  margin-bottom: var(--size-4);
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: var(--size-3);
+  margin-bottom: var(--size-3);
+  flex-wrap: wrap;
+}
+
+.footer__links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-1);
+  transition: color 0.15s ease;
+}
+
+.footer__links a:hover {
+  color: var(--brand);
+}
+
+.footer__copy {
+  color: var(--text-muted);
+  font-size: var(--font-size-0);
+}
+
+/* ==========================================================================
+   View Transitions
+   ========================================================================== */
+
+@supports (view-transition-name: name) {
+  header {
+    view-transition-name: header;
+  }
+
+  main {
+    view-transition-name: main;
+  }
+}
+
+/* ==========================================================================
+   404 Page
+   ========================================================================== */
+
+.not-found {
+  text-align: center;
+  padding: var(--size-10) 0;
+}
+
+.not-found p {
+  max-inline-size: unset;
 }

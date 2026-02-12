@@ -22,45 +22,6 @@
     <link rel="stylesheet" href="/css/prism-vs.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <style>
-      body {
-        padding: var(--size-1) var(--size-3);
-      }
-
-      blockquote,
-      header,
-      p {
-        margin-bottom: var(--size-3);
-      }
-
-      pre.highlight {
-        background: var(--surface-2);
-        border-radius: var(--radius-2);
-        padding: var(--size-3);
-        overflow: auto;
-        max-inline-size: unset;
-      }
-
-      blockquote p {
-        margin-bottom: 0;
-      }
-
-      .items {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-bottom: var(--size-2);
-      }
-
-      .items > li {
-        margin: 0;
-        padding: 0;
-      }
-
-      .items > li > a {
-        display: block;
-      }
-    </style>
     <script type="importmap">
       {
         "imports": {
@@ -92,11 +53,31 @@
     </script>
   </head>
   <body>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="/" class="site-nav__home">Kristjan</a>
+      <div class="site-nav__links">
+        <a href="/posts/">Posts</a>
+        <a href="/notes/">Notes</a>
+        <a href="/images/">Images</a>
+        <a href="/reading-list/">Reading</a>
+      </div>
+    </nav>
+
     <header>
       <h1>{{ title }}</h1>
-      {% if date %}<time date="{{ date }}">{{ date | date: '%B %d, %Y' }}</time
-      >{% endif %}
+      {% if date %}<time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time>{% endif %}
     </header>
+
     <main>{{ content }}</main>
+
+    <footer>
+      <div class="footer__links">
+        <a href="https://github.com/koddsson">GitHub</a>
+        <a href="https://x.com/koddsson">Twitter</a>
+        <a href="https://read.cv/koddsson">ReadCV</a>
+        <a href="https://linkedin.com/in/koddsson">LinkedIn</a>
+      </div>
+      <small class="footer__copy">&copy; Kristjan Oddsson</small>
+    </footer>
   </body>
 </html>
