@@ -152,6 +152,45 @@ nav.vertical > a {
   height: auto;
 }
 
+#webmentions {
+  max-width: 40em;
+  margin: auto;
+  margin-bottom: var(--size-8);
+  border-top: var(--border-size-1) solid var(--surface-3);
+  padding-top: var(--size-4);
+}
+
+.webmention-faces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-1);
+  padding: var(--size-2) 0;
+}
+
+.webmention-faces img {
+  border-radius: 50%;
+}
+
+.webmention-replies {
+  list-style: none;
+  padding: 0;
+}
+
+.webmention-reply {
+  margin-bottom: var(--size-3);
+  max-inline-size: unset;
+}
+
+.webmention-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--size-1);
+}
+
+.webmention-meta img {
+  border-radius: 50%;
+}
+
 footer {
   text-align: center;
   margin-bottom: var(--size-4);
