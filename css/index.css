@@ -54,6 +54,10 @@ toot-embed {
   color: var(--gray-5);
 }
 
+header nav {
+  margin-bottom: var(--size-3);
+}
+
 header, main, footer {
   max-width: 40em;
   margin: auto;
