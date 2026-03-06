@@ -102,5 +102,7 @@
       >{% endif %}
     </header>
     <main id="main">{{ content }}</main>
+    {% if date %}<section id="webmentions"></section>
+    <script type="module" src="/js/webmentions.js"></script>{% endif %}
   </body>
 </html>
