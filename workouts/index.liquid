@@ -271,6 +271,7 @@ document.querySelectorAll('.workout-carousel').forEach(carousel => {
             if (items[index]) {
                 items[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
             }
+            dots.forEach((d, i) => d.setAttribute('aria-pressed', i === index));
         });
     });
 
@@ -284,6 +285,7 @@ document.querySelectorAll('.workout-carousel').forEach(carousel => {
 
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === activeIndex);
+                dot.setAttribute('aria-pressed', index === activeIndex);
             });
         }, 50);
     });

@@ -26,7 +26,7 @@ async function relativeTime(time) {
   );
 
   if (daysDifference < 29) {
-    return `<time>${formatter.format(-daysDifference, "day")}</time>`;
+    return `<time datetime="${date.toISOString()}">${formatter.format(-daysDifference, "day")}</time>`;
   }
 
   const monthsDifference = Math.round(
@@ -34,14 +34,14 @@ async function relativeTime(time) {
   );
 
   if (monthsDifference < 12) {
-    return `<time>${formatter.format(-monthsDifference, "month")}</time>`;
+    return `<time datetime="${date.toISOString()}">${formatter.format(-monthsDifference, "month")}</time>`;
   }
 
   const yearsDifference = Math.round(
     (new Date().getTime() - date) / YEAR_MILLISECONDS,
   );
 
-  return `<time>${formatter.format(-yearsDifference, "year")}</time>`;
+  return `<time datetime="${date.toISOString()}">${formatter.format(-yearsDifference, "year")}</time>`;
 }
 
 export default async function (eleventyConfig) {
