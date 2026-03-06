@@ -127,7 +127,7 @@ function buildReactionLine(mentions, verb) {
 
     const list = document.createElement("ul");
     list.className = "webmention-dialog-list";
-    for (const m of rest) {
+    for (const m of mentions) {
       const li = document.createElement("li");
       const avatar = buildAvatar(m.author);
       if (avatar) {

@@ -165,6 +165,7 @@ nav.vertical > a {
 }
 
 .webmention-reaction > img {
+  display: inline;
   border-radius: 50%;
   vertical-align: middle;
 }
