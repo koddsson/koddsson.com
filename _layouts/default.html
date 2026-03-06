@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer>
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,11 +92,12 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>{{ title }}</h1>
-      {% if date %}<time date="{{ date }}">{{ date | date: '%B %d, %Y' }}</time
+      {% if date %}<time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time
       >{% endif %}
     </header>
-    <main>{{ content }}</main>
+    <main id="main">{{ content }}</main>
   </body>
 </html>

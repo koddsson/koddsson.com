@@ -2,10 +2,10 @@
 title: My favourite Software Engineering readings
 layout: default.html
 date: 2023-09-22
-description: "I've been reading some solid books and blog posts on Software Engineering that I wan't to share here for reference"
+description: "I've been reading some solid books and blog posts on Software Engineering that I want to share here for reference"
 ---
 
-I have a high standard for books I'll generally reccomend to other software engineering. I read a bunch of more other books but they might be just OK or more specific so I don't want to reccomend it.
+I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.
 
 I plan on updating this list over time
 
@@ -31,13 +31,13 @@ A no-nonsense take on modern day software engineering with a focus on simplicity
 
 https://www.goodreads.com/book/show/48816586-software-engineering-at-google
 
-A great resource for software engineers based off learned lessons from Google. Pretty down-to earth suggestions with great rationals behind each one. Has suggestions on how to implement systems and solutions to your codebase.
+A great resource for software engineers based off learned lessons from Google. Pretty down-to-earth suggestions with great rationales behind each one. Has suggestions on how to implement systems and solutions to your codebase.
 
 ## Building a resilient frontend using progressive enhancement
 
 https://www.gov.uk/service-manual/technology/using-progressive-enhancement
 
-A great resource for why someone might write a service with progressive enhancements. The rational is solid and comes from a trusted source.
+A great resource for why someone might write a service with progressive enhancements. The rationale is solid and comes from a trusted source.
 
 ## How GitHub Engineering communicates
 
