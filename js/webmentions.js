@@ -77,11 +77,27 @@ if (container) {
   }
 }
 
+function buildAvatar(author) {
+  if (!author?.photo) return null;
+  const img = document.createElement("img");
+  img.src = author.photo;
+  img.alt = author?.name || "Anonymous";
+  img.width = 24;
+  img.height = 24;
+  img.loading = "lazy";
+  return img;
+}
+
 function buildReactionLine(mentions, verb) {
   const div = document.createElement("p");
   div.className = "webmention-reaction";
 
   const first = mentions[0];
+  const firstAvatar = buildAvatar(first.author);
+  if (firstAvatar) {
+    div.appendChild(firstAvatar);
+    div.append(" ");
+  }
   const firstLink = document.createElement("a");
   firstLink.href = first.author?.url || "#";
   firstLink.textContent = first.author?.name || "Anonymous";
@@ -95,34 +111,43 @@ function buildReactionLine(mentions, verb) {
     toggle.textContent = `${rest.length} other${rest.length !== 1 ? "s" : ""}`;
     div.appendChild(toggle);
 
-    const faces = document.createElement("span");
-    faces.className = "webmention-faces";
-    faces.hidden = true;
+    const dialog = document.createElement("dialog");
+    dialog.className = "webmention-dialog";
+
+    const header = document.createElement("div");
+    header.className = "webmention-dialog-header";
+    const title = document.createElement("strong");
+    title.textContent = `${mentions.length} people ${verb} this`;
+    header.appendChild(title);
+    const closeBtn = document.createElement("button");
+    closeBtn.textContent = "Close";
+    closeBtn.addEventListener("click", () => dialog.close());
+    header.appendChild(closeBtn);
+    dialog.appendChild(header);
+
+    const list = document.createElement("ul");
+    list.className = "webmention-dialog-list";
     for (const m of rest) {
+      const li = document.createElement("li");
+      const avatar = buildAvatar(m.author);
+      if (avatar) {
+        li.appendChild(avatar);
+        li.append(" ");
+      }
       const a = document.createElement("a");
       a.href = m.author?.url || "#";
-      a.title = m.author?.name || "Anonymous";
-      if (m.author?.photo) {
-        const img = document.createElement("img");
-        img.src = m.author.photo;
-        img.alt = m.author?.name || "Anonymous";
-        img.width = 24;
-        img.height = 24;
-        img.loading = "lazy";
-        a.appendChild(img);
-      } else {
-        a.textContent = m.author?.name || "Anonymous";
-      }
-      faces.appendChild(a);
+      a.textContent = m.author?.name || "Anonymous";
+      li.appendChild(a);
+      list.appendChild(li);
     }
-    div.appendChild(faces);
-
-    toggle.addEventListener("click", () => {
-      faces.hidden = !faces.hidden;
-      toggle.textContent = faces.hidden
-        ? `${rest.length} other${rest.length !== 1 ? "s" : ""}`
-        : "hide";
+    dialog.appendChild(list);
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) dialog.close();
     });
+
+    div.appendChild(dialog);
+
+    toggle.addEventListener("click", () => dialog.showModal());
   }
 
   div.append(` ${verb} this`);
