@@ -94,7 +94,8 @@
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
     <header>
-      <h1>{{ title }}</h1>
+      {% if page.url != '/' %}<nav><a href="{% if page.url contains '/notes/' and page.url != '/notes/' %}/notes/{% elsif page.url contains '/posts/' and page.url != '/posts/' %}/posts/{% else %}/{% endif %}">&larr; Back</a></nav>{% endif %}
+      {% if title %}<h1>{{ title }}</h1>{% endif %}
       {% if date %}<time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time
       >{% endif %}
     </header>

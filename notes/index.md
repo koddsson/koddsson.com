@@ -10,7 +10,7 @@ description: "My notes!"
     {% unless note.url == '/notes/' %}
       <li>
         <a href="{{ note.url }}">
-          {{ note.data.title }}, {% relativeTime note.date %}
+          {% if note.data.title %}{{ note.data.title }}, {% endif %}{% relativeTime note.date %}
         </a>
       </li>
     {%- endunless -%}
