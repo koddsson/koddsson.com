@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,11 +92,12 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>Cool Video</h1>
-      <time date="Thu Dec 15 2022 00:00:00 GMT+0000 (Coordinated Universal Time)">December 15, 2022</time>
+      <time datetime="2022-12-15">December 15, 2022</time>
     </header>
-    <main><p>I recently came across <a href="https://www.youtube.com/watch?v=v0160IirdL4">this video</a> from The Browser Company that caught my attention. While the content of the video wasn't particularly interesting to me, the way it was made was.</p>
+    <main id="main"><p>I recently came across <a href="https://www.youtube.com/watch?v=v0160IirdL4">this video</a> from The Browser Company that caught my attention. While the content of the video wasn't particularly interesting to me, the way it was made was.</p>
 <p>If you are running macOS (or possibly on a different OS), you already have the tools you need to create a presentation. There's a built-in app called &quot;Screenshot&quot; that you can use for screen recording, and you can also use a web cam preview to show your face, just like the person in the video.</p>
 <p>In the past, I've used a similar approach with a Codepen by feeding a webcam video stream directly to a <code>&lt;video&gt;</code> tag and then opening the video in picture-in-picture mode to display it borderless while screen recording. It works really well and allows you to easily open files and websites in your presentation, providing additional context for the topics you're discussing. You probably don't need to get any special tools for this, as it's easy to do with the tools that are already available.</p>
 </main>

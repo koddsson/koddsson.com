@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,14 +92,15 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>This picture is so funny to me </h1>
       
     </header>
-    <main><figure>
+    <main id="main"><figure>
   <picture><source type="image/webp" srcset="/images/d47134bd-ff8b-49e5-cf72-8511a3f3dd00/c9lwAP72qB-576.webp 576w"><img src="/images/d47134bd-ff8b-49e5-cf72-8511a3f3dd00/c9lwAP72qB-576.jpeg" alt="A picture of my dog Tofu. He’s just standing there." width="576" height="768"></picture>
   <figcaption>
-    <time>3 years ago</time>
+    <time datetime="2023-06-16T21:10:29.537Z">3 years ago</time>
   </figcaption>
 </figure>
 </main>

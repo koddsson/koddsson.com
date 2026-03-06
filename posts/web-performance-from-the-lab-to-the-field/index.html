@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,11 +92,12 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>Web Performance — From the Lab to the Field</h1>
-      <time date="Sun Aug 13 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">August 13, 2023</time>
+      <time datetime="2023-08-13">August 13, 2023</time>
     </header>
-    <main><p>The advent of the internet and the rise of digital technologies have transformed the way we live, work, and play. As we find ourselves increasingly reliant on web applications, the importance of Web Performance has never been more evident. In this post, we'll go over some basics of Web Performance, why Web Performance matters, and look at some real production data, how to collect it, and analyse it.</p>
+    <main id="main"><p>The advent of the internet and the rise of digital technologies have transformed the way we live, work, and play. As we find ourselves increasingly reliant on web applications, the importance of Web Performance has never been more evident. In this post, we'll go over some basics of Web Performance, why Web Performance matters, and look at some real production data, how to collect it, and analyse it.</p>
 <h2>Understanding Web Performance and the need for speed</h2>
 <p>Web Performance is the amalgamation of objective measurements and the perceived user experience of load and run time. It encapsulates how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions. It is crucial to minimise the loading and response times, making the experience as available and interactive as possible, as soon as possi​ble. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <p>Improving the loading performance of a web page is often one of the highest value performance optimisations that can be made. Users prefer web experiences that are fast to load and smooth to interact with. Good user experience includes ensuring your page loads quickly. The longer it takes for a site to respond, the more users will abandon the page for better user experiences.</p>

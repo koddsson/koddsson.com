@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,11 +92,12 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>Web Performance Lab Monitoring</h1>
-      <time date="Sun Apr 02 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">April 02, 2023</time>
+      <time datetime="2023-04-02">April 02, 2023</time>
     </header>
-    <main><p>I'm excited about working on some <a href="https://web.dev/lab-and-field-data-differences/">Web Performance &quot;lab monitoring&quot;</a> at work but the initial runs are not great. Hoping that there are easy fixes that get us to be a lot more performant.</p>
+    <main id="main"><p>I'm excited about working on some <a href="https://web.dev/lab-and-field-data-differences/">Web Performance &quot;lab monitoring&quot;</a> at work but the initial runs are not great. Hoping that there are easy fixes that get us to be a lot more performant.</p>
 </main>
   </body>
 </html>

@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,11 +92,12 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>Emojis as favicons</h1>
-      <time date="Sun Mar 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">March 18, 2018</time>
+      <time datetime="2018-03-18">March 18, 2018</time>
     </header>
-    <main><p>So I was working on <a href="https://jsonresume.io">jsonresume.io</a> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</p>
+    <main id="main"><p>So I was working on <a href="https://jsonresume.io">jsonresume.io</a> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</p>
 <p>I really wanted just to drop a 📝 into a <code>&lt;link /&gt;</code> tag and call it a day. As far as I knew this wasn't possible, prompting this tweet:</p>
 <blockquote>
   <p>Which technical committee do I need to submit a proposal to in order to get emojis as favicons?  <a href="https://twitter.com/WHATWG?ref_src=twsrc%5Etfw">@WHATWG</a> ?</p>

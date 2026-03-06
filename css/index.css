@@ -112,15 +112,34 @@ nav.vertical > a {
 
 .image-grid {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--size-2);
 }
 
 .image-grid img {
   object-fit: cover;
-  height: 250px;
-  width: 250px;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: var(--size-2);
+  background: var(--brand);
+  color: white;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
 }
 
 footer {

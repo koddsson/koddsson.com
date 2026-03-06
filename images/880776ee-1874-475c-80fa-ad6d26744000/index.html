@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,14 +92,15 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>Hiking!</h1>
       
     </header>
-    <main><figure>
+    <main id="main"><figure>
   <picture><source type="image/webp" srcset="/images/880776ee-1874-475c-80fa-ad6d26744000/cgd-1pKIP5-576.webp 576w"><img src="/images/880776ee-1874-475c-80fa-ad6d26744000/cgd-1pKIP5-576.jpeg" alt="A path in a forest or a wooden area. There’s a black and white medium sized dog sitting on the path. The dog is wearing a harness and a leash as well as a gray dog-hoodie." width="576" height="768"></picture>
   <figcaption>
-    <time>last year</time>
+    <time datetime="2024-10-03T07:56:52.731Z">last year</time>
   </figcaption>
 </figure>
 </main>

@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,11 +92,12 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>New Personal Page Is Written in Jekyll</h1>
-      <time date="Sun Apr 10 2022 00:00:00 GMT+0000 (Coordinated Universal Time)">April 10, 2022</time>
+      <time datetime="2022-04-10">April 10, 2022</time>
     </header>
-    <main><p>My new personal website is written in Jekyll! I think it's much simpler than the one I had before where I wrote everything from scratch!</p>
+    <main id="main"><p>My new personal website is written in Jekyll! I think it's much simpler than the one I had before where I wrote everything from scratch!</p>
 <p>It draws heavily from <a href="https://muan.co/">Mu-Ans site</a>. I really like Mu-Ans eye for design and web development.</p>
 </main>
   </body>

@@ -71,7 +71,7 @@
     <script type="module">
       import "/js/toot-embed-element.js";
     </script>
-    <script type="module" defer="">
+    <script type="module">
       import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
 
       const endpoint = 'https://vitals.koddsson.workers.dev/';
@@ -92,11 +92,12 @@
     </script>
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to content</a>
     <header>
       <h1>Posts</h1>
       
     </header>
-    <main><a href="/posts/web-performance-from-the-lab-to-the-field/">
+    <main id="main"><a href="/posts/web-performance-from-the-lab-to-the-field/">
 <h3>Web Performance — From the Lab to the Field</h3>
 <small>In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI.</small>
 </a>

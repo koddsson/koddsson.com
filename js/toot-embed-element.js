@@ -205,11 +205,11 @@ class TootEmbedElement extends HTMLElement {
           <time>${await relativeTime(created_at)}</time>
         </a>
         <div part="content">${content}</div>
-        <img
+        ${media_attachments.length > 0 ? `<img
           part="media"
           src="${media_attachments[0].url}"
-          alt="${media_attachments[0].description}"
-        />
+          alt="${media_attachments[0].description || ""}"
+        />` : ""}
       </div>
     `;
     this.#internals.states.add("--ready");
@@ -229,7 +229,7 @@ class TootEmbedElement extends HTMLElement {
       return { handle, tootId };
     }
 
-    if (this.#longPattern.text(this.src)) {
+    if (this.#longPattern.test(this.src)) {
       const [match, handle, tootId] = this.src.match(this.#longPattern);
       return { handle, tootId };
     }
