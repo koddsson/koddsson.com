@@ -164,6 +164,11 @@ nav.vertical > a {
   color: var(--text-2);
 }
 
+.webmention-reaction > img {
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
 .webmention-toggle {
   background: none;
   border: none;
@@ -174,17 +179,49 @@ nav.vertical > a {
   text-decoration: underline;
 }
 
-.webmention-faces {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: var(--size-1);
-  vertical-align: middle;
-  margin: 0 var(--size-1);
+.webmention-dialog {
+  border: var(--border-size-1) solid var(--surface-3);
+  border-radius: var(--radius-2);
+  padding: var(--size-4);
+  max-width: 24em;
+  width: 100%;
 }
 
-.webmention-faces img {
+.webmention-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.webmention-dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--size-3);
+}
+
+.webmention-dialog-header button {
+  background: none;
+  border: none;
+  color: var(--brand);
+  cursor: pointer;
+  font: inherit;
+}
+
+.webmention-dialog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.webmention-dialog-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--size-2);
+  padding: var(--size-1) 0;
+  max-inline-size: unset;
+}
+
+.webmention-dialog-list img {
   border-radius: 50%;
-  vertical-align: middle;
 }
 
 .webmention-replies {
