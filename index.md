@@ -8,6 +8,8 @@ I'm a software engineer with a penchant for working with Web Platform features a
 
 <nav class="vertical" aria-label="Socials">
   <a href="https://github.com/koddsson">GitHub</a>
+  <a rel="me" href="https://fosstodon.org/@koddsson">Mastodon</a>
+  <a rel="me" href="https://bsky.app/profile/koddsson.com">Bluesky</a>
   <a href="https://x.com/koddsson">Twitter</a>
   <a href="https://read.cv/koddsson">ReadCV</a>
   <a href="https://linkedin.com/in/koddsson">LinkedIn</a>
