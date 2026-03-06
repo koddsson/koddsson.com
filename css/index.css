@@ -130,16 +130,26 @@ nav.vertical > a {
 
 .skip-link {
   position: absolute;
-  top: -100%;
   left: 0;
   padding: var(--size-2);
   background: var(--brand);
   color: white;
   z-index: 100;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
 }
 
 .skip-link:focus {
-  top: 0;
+  clip: auto;
+  clip-path: none;
+  overflow: visible;
+  white-space: normal;
+  width: auto;
+  height: auto;
 }
 
 footer {
