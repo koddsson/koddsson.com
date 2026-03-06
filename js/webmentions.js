@@ -19,25 +19,15 @@ if (container) {
       (m) => m["wm-property"] === "in-reply-to" || m["wm-property"] === "mention-of",
     );
 
-    const heading = document.createElement("h2");
-    heading.textContent = "Webmentions";
-    container.appendChild(heading);
-
     if (likes.length > 0) {
-      container.appendChild(buildFacesSection(`${likes.length} like${likes.length !== 1 ? "s" : ""}`, likes));
+      container.appendChild(buildReactionLine(likes, "liked"));
     }
 
     if (reposts.length > 0) {
-      container.appendChild(buildFacesSection(`${reposts.length} repost${reposts.length !== 1 ? "s" : ""}`, reposts));
+      container.appendChild(buildReactionLine(reposts, "reposted"));
     }
 
     if (replies.length > 0) {
-      const details = document.createElement("details");
-      details.open = true;
-      const summary = document.createElement("summary");
-      summary.textContent = `${replies.length} repl${replies.length !== 1 ? "ies" : "y"}`;
-      details.appendChild(summary);
-
       const list = document.createElement("ol");
       list.className = "webmention-replies";
       for (const m of replies) {
@@ -80,41 +70,61 @@ if (container) {
 
         list.appendChild(li);
       }
-      details.appendChild(list);
-      container.appendChild(details);
+      container.appendChild(list);
     }
   } catch {
     container.remove();
   }
 }
 
-function buildFacesSection(label, mentions) {
-  const details = document.createElement("details");
-  details.open = true;
-  const summary = document.createElement("summary");
-  summary.textContent = label;
-  details.appendChild(summary);
+function buildReactionLine(mentions, verb) {
+  const div = document.createElement("p");
+  div.className = "webmention-reaction";
 
-  const div = document.createElement("div");
-  div.className = "webmention-faces";
-  for (const m of mentions) {
-    const a = document.createElement("a");
-    a.href = m.author?.url || "#";
-    a.title = m.author?.name || "Anonymous";
-    if (m.author?.photo) {
-      const img = document.createElement("img");
-      img.src = m.author.photo;
-      img.alt = m.author?.name || "Anonymous";
-      img.width = 32;
-      img.height = 32;
-      img.loading = "lazy";
-      a.appendChild(img);
-    } else {
-      a.textContent = m.author?.name || "Anonymous";
+  const first = mentions[0];
+  const firstLink = document.createElement("a");
+  firstLink.href = first.author?.url || "#";
+  firstLink.textContent = first.author?.name || "Anonymous";
+  div.appendChild(firstLink);
+
+  const rest = mentions.slice(1);
+  if (rest.length > 0) {
+    div.append(" and ");
+    const toggle = document.createElement("button");
+    toggle.className = "webmention-toggle";
+    toggle.textContent = `${rest.length} other${rest.length !== 1 ? "s" : ""}`;
+    div.appendChild(toggle);
+
+    const faces = document.createElement("span");
+    faces.className = "webmention-faces";
+    faces.hidden = true;
+    for (const m of rest) {
+      const a = document.createElement("a");
+      a.href = m.author?.url || "#";
+      a.title = m.author?.name || "Anonymous";
+      if (m.author?.photo) {
+        const img = document.createElement("img");
+        img.src = m.author.photo;
+        img.alt = m.author?.name || "Anonymous";
+        img.width = 24;
+        img.height = 24;
+        img.loading = "lazy";
+        a.appendChild(img);
+      } else {
+        a.textContent = m.author?.name || "Anonymous";
+      }
+      faces.appendChild(a);
     }
-    div.appendChild(a);
-    div.append(" ");
+    div.appendChild(faces);
+
+    toggle.addEventListener("click", () => {
+      faces.hidden = !faces.hidden;
+      toggle.textContent = faces.hidden
+        ? `${rest.length} other${rest.length !== 1 ? "s" : ""}`
+        : "hide";
+    });
   }
-  details.appendChild(div);
-  return details;
+
+  div.append(` ${verb} this`);
+  return div;
 }

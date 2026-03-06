@@ -160,15 +160,31 @@ nav.vertical > a {
   padding-top: var(--size-4);
 }
 
+.webmention-reaction {
+  color: var(--text-2);
+}
+
+.webmention-toggle {
+  background: none;
+  border: none;
+  color: var(--brand);
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+  text-decoration: underline;
+}
+
 .webmention-faces {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   gap: var(--size-1);
-  padding: var(--size-2) 0;
+  vertical-align: middle;
+  margin: 0 var(--size-1);
 }
 
 .webmention-faces img {
   border-radius: 50%;
+  vertical-align: middle;
 }
 
 .webmention-replies {
