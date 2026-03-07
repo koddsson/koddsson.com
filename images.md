@@ -11,6 +11,7 @@ eleventyComputed:
 ---
 
 {% assign url = image.variants[0] %}
+{% assign url = url | replace: "homepage", "public" %}
 <figure>
   <img src="{{ url }}" alt="{{ image.meta.alt }}">
   <figcaption>
