@@ -154,5 +154,19 @@
     "variants": [
       "https://imagedelivery.net/_cB_8zHAYVCKdafMj0Jo_Q/fb708f47-6232-4af8-2811-156176b37a00/public"
     ]
+  },
+  {
+    "uploaded": "2026-03-07T17:46:20.105Z",
+    "id": "5c8336f2-c6b9-41f5-4947-41cbd22f3500",
+    "filename": "IMG_4937.jpeg",
+    "meta": {
+      "caption": "I made a cake",
+      "alt": "A white-colored cake"
+    },
+    "requireSignedURLs": false,
+    "variants": [
+      "https://imagedelivery.net/_cB_8zHAYVCKdafMj0Jo_Q/5c8336f2-c6b9-41f5-4947-41cbd22f3500/homepage",
+      "https://imagedelivery.net/_cB_8zHAYVCKdafMj0Jo_Q/5c8336f2-c6b9-41f5-4947-41cbd22f3500/public"
+    ]
   }
 ]
