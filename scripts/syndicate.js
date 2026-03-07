@@ -80,7 +80,9 @@ const IMAGES_PATH = path.join(ROOT, "_data", "images.json");
 function findSyndicatableImages() {
   if (!fs.existsSync(IMAGES_PATH)) return [];
   const images = JSON.parse(fs.readFileSync(IMAGES_PATH, "utf8"));
-  return images.filter((img) => !img.syndicated_to);
+  return images.filter(
+    (img) => !img.syndicated_to || !img.syndicated_to.mastodon || !img.syndicated_to.bluesky,
+  );
 }
 
 function getPublicUrl(image) {
@@ -346,36 +348,43 @@ async function syndicateImages(blueskySession) {
       continue;
     }
 
-    const syndicated_to = {};
+    const existing = image.syndicated_to || {};
+    const syndicated_to = { ...existing };
 
-    try {
-      const mediaId = await uploadToMastodon(imageBuffer, alt);
-      const mastodonUrl = await postToMastodon(mastodonText, [mediaId]);
-      console.log(`Mastodon: ${mastodonUrl}`);
-      syndicated_to.mastodon = mastodonUrl;
-    } catch (err) {
-      console.error(`Mastodon error: ${err.message}`);
-    }
-
-    try {
-      if (!blueskySession.session) blueskySession.session = await blueskyLogin();
-      const blob = await uploadToBluesky(imageBuffer, blueskySession.session);
-      const embed = {
-        $type: "app.bsky.embed.images",
-        images: [{ alt, image: blob }],
-      };
-      const blueskyUrl = await postToBluesky(blueskyText, blueskySession.session, embed);
-      console.log(`Bluesky: ${blueskyUrl}`);
-      syndicated_to.bluesky = blueskyUrl;
-    } catch (err) {
-      console.error(`Bluesky error: ${err.message}`);
-    }
-
-    if (Object.keys(syndicated_to).length > 0) {
-      const idx = allImages.findIndex((img) => img.id === image.id);
-      if (idx !== -1) {
-        allImages[idx].syndicated_to = syndicated_to;
+    if (!syndicated_to.mastodon) {
+      try {
+        const mediaId = await uploadToMastodon(imageBuffer, alt);
+        const mastodonUrl = await postToMastodon(mastodonText, [mediaId]);
+        console.log(`Mastodon: ${mastodonUrl}`);
+        syndicated_to.mastodon = mastodonUrl;
+      } catch (err) {
+        console.error(`Mastodon error: ${err.message}`);
       }
+    } else {
+      console.log("Mastodon: already syndicated, skipping.");
+    }
+
+    if (!syndicated_to.bluesky) {
+      try {
+        if (!blueskySession.session) blueskySession.session = await blueskyLogin();
+        const blob = await uploadToBluesky(imageBuffer, blueskySession.session);
+        const embed = {
+          $type: "app.bsky.embed.images",
+          images: [{ alt, image: blob }],
+        };
+        const blueskyUrl = await postToBluesky(blueskyText, blueskySession.session, embed);
+        console.log(`Bluesky: ${blueskyUrl}`);
+        syndicated_to.bluesky = blueskyUrl;
+      } catch (err) {
+        console.error(`Bluesky error: ${err.message}`);
+      }
+    } else {
+      console.log("Bluesky: already syndicated, skipping.");
+    }
+
+    const idx = allImages.findIndex((img) => img.id === image.id);
+    if (idx !== -1) {
+      allImages[idx].syndicated_to = syndicated_to;
     }
   }
 
