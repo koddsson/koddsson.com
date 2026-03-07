@@ -3,12 +3,24 @@
   --link-visited: var(--purple-10);
 }
 
-
 @media (prefers-color-scheme: dark) {
   :root {
     --brand: var(--indigo-3);
     --link-visited: var(--purple-3);
   }
+}
+
+/* Accent bar at top of page */
+body::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, var(--brand), var(--purple-7));
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 html {
@@ -22,6 +34,21 @@ html {
   h2 {
     font-size: var(--font-size-4);
   }
+}
+
+/* Links */
+a {
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 2px;
+}
+
+/* Section spacing on homepage */
+main > h2 {
+  margin-top: var(--size-6);
+}
+
+main > h2:first-child {
+  margin-top: 0;
 }
 
 pre[class*="language-"] {
@@ -46,7 +73,7 @@ toot-embed {
 }
 
 #notes > li:not(:last-child):after {
-  content: '⁂'; 
+  content: '\2042';
   text-align: center;
   margin-bottom: var(--size-3);
   font-size: var(--size-6);
@@ -75,7 +102,7 @@ main {
   header {
     view-transition-name: header;
   }
-  
+
   main {
     view-transition-name: main;
   }
@@ -87,6 +114,13 @@ main {
   padding: var(--size-3);
   margin-bottom: var(--size-3);
   background-color: var(--blue-0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .info {
+    background-color: var(--blue-12);
+    border-color: var(--blue-4);
+  }
 }
 
 .info > pre {
@@ -124,6 +158,12 @@ nav.vertical > a {
   object-fit: cover;
   width: 100%;
   aspect-ratio: 1;
+  border-radius: var(--radius-2);
+  transition: transform 0.15s ease;
+}
+
+.image-grid a:hover img {
+  transform: scale(1.03);
 }
 
 @media only screen and (max-width: 600px) {
@@ -252,4 +292,15 @@ nav.vertical > a {
 footer {
   text-align: center;
   margin-bottom: var(--size-4);
+  padding-top: var(--size-4);
+  border-top: var(--border-size-1) solid var(--surface-3);
+  color: var(--text-2);
+  font-size: var(--font-size-0);
+}
+
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--size-3);
+  margin-bottom: var(--size-2);
 }
