@@ -32,18 +32,42 @@ jobs:
           node-version: 20
 
       - name: Run script
-        run: node scripts/index.mjs '${{ inputs.filepath }}' '${{ inputs.filedata }}'
+        env:
+          INPUT_FILEPATH: ${{ inputs.filepath }}
+          INPUT_FILEDATA: ${{ inputs.filedata }}
+        run: node scripts/index.mjs "$INPUT_FILEPATH" "$INPUT_FILEDATA"
 
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build          
+          npm run build
 
       - name: Push changes
+        env:
+          INPUT_EMAIL: ${{ inputs.email }}
+          INPUT_NAME: ${{ inputs.name }}
         run: |
-          git config user.email '${{ inputs.email }}'
-          git config user.name '${{ inputs.name }}'
+          git config user.email "$INPUT_EMAIL"
+          git config user.name "$INPUT_NAME"
           git add .
           git commit -m "Add photo from Apple shortcuts" || echo "Nothing to commit"
           git fetch origin main
           git push origin HEAD:main
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+
+      - name: Run syndication
+        run: node scripts/syndicate.js
+        env:
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+          BLUESKY_PASSWORD: ${{ secrets.BLUESKY_PASSWORD }}
+
+      - name: Commit syndication URLs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (git add -A && git commit -m "Update syndicated_to front matter" && git push)
