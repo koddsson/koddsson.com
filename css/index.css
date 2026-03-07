@@ -49,7 +49,7 @@ a:hover {
 
 /* Section spacing on homepage */
 main > h2 {
-  margin-top: var(--size-8);
+  margin-top: var(--size-6);
 }
 
 main > h2:first-child {
@@ -139,25 +139,14 @@ small {
   color: var(--text-2);
 }
 
-/* Social nav pills */
 nav.vertical {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--size-2);
+  justify-content: space-between;
 }
 
 nav.vertical > a {
-  padding: var(--size-1) var(--size-3);
-  border: var(--border-size-1) solid var(--brand);
-  border-radius: var(--radius-round);
-  text-decoration: none;
-  font-size: var(--font-size-1);
-  transition: background 0.15s ease, color 0.15s ease;
-}
-
-nav.vertical > a:hover {
-  background: var(--brand);
-  color: var(--surface-1);
+  padding: var(--size-2);
 }
 
 .items > li {
