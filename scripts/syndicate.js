@@ -80,9 +80,11 @@ const IMAGES_PATH = path.join(ROOT, "_data", "images.json");
 function findSyndicatableImages() {
   if (!fs.existsSync(IMAGES_PATH)) return [];
   const images = JSON.parse(fs.readFileSync(IMAGES_PATH, "utf8"));
-  return images.filter(
-    (img) => !img.syndicated_to || !img.syndicated_to.mastodon || !img.syndicated_to.bluesky,
-  );
+  return images.filter((img) => {
+    if (!img.syndicated_to) return true;
+    if (Object.keys(img.syndicated_to).length === 0) return false;
+    return !img.syndicated_to.mastodon || !img.syndicated_to.bluesky;
+  });
 }
 
 function getPublicUrl(image) {
