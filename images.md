@@ -8,6 +8,7 @@ pagination:
 permalink: "images/{{ image.id | slugify }}/"
 eleventyComputed:
   title: "{{image.meta.caption}}"
+  date: "{{image.uploaded}}"
 ---
 
 {% assign url = image.variants[0] %}
