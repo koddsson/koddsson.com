@@ -1,0 +1,82 @@
+{
+  "activity": {
+    "achievement_count": 0,
+    "athlete": {
+      "id": 370718,
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "average_cadence": 67.9,
+    "average_heartrate": 164.7,
+    "average_speed": 1.801,
+    "average_watts": 210.4,
+    "comment_count": 0,
+    "commute": false,
+    "device_name": "Garmin Forerunner 970",
+    "device_watts": true,
+    "display_hide_heartrate_option": true,
+    "distance": 19734.5,
+    "elapsed_time": 10959,
+    "elev_high": 258.4,
+    "elev_low": 11,
+    "end_latlng": [
+      63.99,
+      -21.11
+    ],
+    "external_id": "garmin_ping_551957934922",
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear_id": "g28655202",
+    "has_heartrate": true,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "id": 17899506815,
+    "kilojoules": 2258.6,
+    "kudos_count": 4,
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": false,
+    "map": {
+      "id": "a17899506815",
+      "resource_state": 2,
+      "summary_polyline": "cwqeKbix_Cy@}BYIMRk@]mBaCe@s@m@qAu@A{BkAa@c@{@Sw@eAi@Wi@GkAmAw@m@kAu@eAEiDhA{@a@_E{FaAm@i@EqAt@m@ESYaDu@sAoB[aAe@MSUaAPaAUy@^kA@_Cg@s@g@{AeCo@uDU_CUw@aCy@y@q@sBsBq@qAwA}AYk@OiBSSM_@u@{Dx@VPcAVQCw@\\_@Rs@Bm@GiACb@D|AQj@I@OX@x@UNYlAEOk@Ac@{AuAoBGc@WOuAiDUCYk@w@kCm@y@aAmCGIWVs@a@WwA]u@K_AFwE[gDS}@@qC_@qEWJe@fAA\\i@L_AqBw@m@s@qCOESo@UA\\DLj@LANz@j@bB`@Ph@v@Jf@LFJ\\RdB\\p@NEZr@TJ^p@^rDElFHt@^|@Z|Ah@Zb@Q|@dCp@|@RfA^bA~AbChAjC|AvBvApGZb@NjBPd@n@b@nB~CtBpBdAr@bBd@Tv@^pDd@fCpAbCx@l@dCn@rA@h@a@hC?j@Pd@b@d@rAt@jAlD|@lBhAjALh@j@zBl@xAfBx@ZhDkAbAD`HrF|@b@jB`@bB|@hAbBpBtAn@jAh@b@DVr@CdAtCPrA@t@_DtP{@zIiCvv@K`J\\`K|ApPp@~DnEfSvBlHbB`B`A^lHr@Lb@nCn@xC`D|`@|r@tH|LzLrTr@n@hDnHf@dB\\~BHdDMxC]nB{@rBkHrH{HxGqDdEkJvMgAjByCrGcDrJeC|JcKth@oB|LqAlK{BhKi@tAuCkEu@_@gAAg@Tg@j@q@hAsAdDUMkA~BAlBq@jBiBjEQNaE|I[\\}FzUoA|G_@zDqAzH[~Ae@~ASRsAwBMc@_AmAWo@]e@e@Wy@oAo@gBa@[mD_Gg@eDD{CRaBpDuEj@qBH@nBxBbIvL`AkFtGuX`@OR_@zA}CNoAXO~AiDZ[j@oBRAz@hDPK~@aAv@_B\\ExAkDn@cA`Au@r@KzAn@jCbEp@gBtAmGr@eEbCmQjLgm@zBeJxBaHhBsEzBuEtJoNlEkFhKiJlF{Fn@sARy@TyAJgBA_C]kDeAgDeBwD{@aBi@a@eKeR{DeG}CgFcHmM{LsSC{@q@eAU_AmIsN{AuAqAi@yL{A{AoAkAcCo@}BcCiLy@wCqAgHgAmKk@iIMoE@sCrA{g@ZmH"
+    },
+    "max_heartrate": 192,
+    "max_speed": 3.14,
+    "max_watts": 439,
+    "moving_time": 10957,
+    "name": "Tried to go up a mountain but a bit too much snow to run in",
+    "photo_count": 0,
+    "pr_count": 0,
+    "private": false,
+    "resource_state": 2,
+    "sport_type": "Run",
+    "start_date": "2026-03-29T08:11:20Z",
+    "start_date_local": "2026-03-29T08:11:20Z",
+    "start_latlng": [
+      63.99,
+      -21.1
+    ],
+    "suffer_score": 402,
+    "timezone": "(GMT+00:00) Atlantic/Reykjavik",
+    "total_elevation_gain": 385,
+    "total_photo_count": 4,
+    "trainer": false,
+    "type": "Run",
+    "upload_id": 18999252134,
+    "upload_id_str": "18999252134",
+    "utc_offset": 0,
+    "visibility": "everyone",
+    "weighted_average_watts": 238,
+    "workout_type": null
+  },
+  "payload": {
+    "aspect_type": "create",
+    "object_id": 17899506815,
+    "object_type": "activity",
+    "owner_id": 370718
+  },
+  "received_at": "2026-03-30T12:57:08.316Z",
+  "source": "strava"
+}
