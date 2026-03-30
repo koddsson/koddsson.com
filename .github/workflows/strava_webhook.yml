@@ -57,9 +57,13 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Add Strava webhook workout: ${GITHUB_RUN_ID} ${GITHUB_RUN_NUMBER}" || true
-            # Push back to the repository using the provided token
-            # The default checkout should be on the default branch; pushing HEAD is safe.
-            git push origin HEAD
+            # Pull with rebase to handle concurrent workflow runs, then push.
+            # Retry a few times in case of race conditions with other runs.
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin HEAD && break
+              echo "Push attempt $i failed, retrying..."
+              sleep 2
+            done
           fi
 
       - name: Output saved file path (debug)
