@@ -233,6 +233,9 @@
     "variants": [
       "https://imagedelivery.net/_cB_8zHAYVCKdafMj0Jo_Q/cf695cee-c959-44fe-cb25-6ee0f94c5400/public",
       "https://imagedelivery.net/_cB_8zHAYVCKdafMj0Jo_Q/cf695cee-c959-44fe-cb25-6ee0f94c5400/homepage"
-    ]
+    ],
+    "syndicated_to": {
+      "bluesky": "https://bsky.app/profile/koddsson.com/post/3mied5un7xk26"
+    }
   }
 ]
