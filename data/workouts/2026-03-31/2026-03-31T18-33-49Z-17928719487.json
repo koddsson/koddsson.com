@@ -19,7 +19,7 @@
     "calories": 534,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -36,8 +36,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 187.3,
-      "distance": 187319,
+      "converted_distance": 194.3,
+      "distance": 194327,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -325,7 +325,7 @@
     "max_speed": 2.92,
     "max_watts": 345,
     "moving_time": 3378,
-    "name": "Afternoon Run",
+    "name": "Trying to push the pace a little faster but still keep HR low",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
@@ -336,23 +336,154 @@
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
-    "segment_efforts": [],
+    "segment_efforts": [
+      {
+        "achievements": [
+          {
+            "effort_count": 7,
+            "rank": 1,
+            "type": "segment_effort_count_leader",
+            "type_id": 7
+          }
+        ],
+        "activity": {
+          "id": 17928719487,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 77,
+        "average_heartrate": 149.6,
+        "average_watts": 244.5,
+        "device_watts": true,
+        "distance": 981.2,
+        "elapsed_time": 481,
+        "end_index": 1345,
+        "hidden": false,
+        "id": 3474130561423860000,
+        "kom_rank": null,
+        "max_heartrate": 157,
+        "moving_time": 481,
+        "name": "Allsherjargoði 2",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.2,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 981.2,
+          "elevation_high": 16.8,
+          "elevation_low": 14.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.930483,
+            -20.977621
+          ],
+          "hazardous": false,
+          "id": 38970167,
+          "maximum_grade": 1.3,
+          "name": "Allsherjargoði 2",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.923631,
+            -20.989912
+          ],
+          "state": null
+        },
+        "start_date": "2026-03-31T17:32:40Z",
+        "start_date_local": "2026-03-31T17:32:40Z",
+        "start_index": 864,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 17928719487,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 77.3,
+        "average_heartrate": 147.2,
+        "average_watts": 242.6,
+        "device_watts": true,
+        "distance": 295.7,
+        "elapsed_time": 141,
+        "end_index": 1259,
+        "hidden": false,
+        "id": 3474130561421090000,
+        "kom_rank": null,
+        "max_heartrate": 153,
+        "moving_time": 141,
+        "name": "Goðastígur sprettur",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 295.7,
+          "elevation_high": 30.2,
+          "elevation_low": 27.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.929256,
+            -20.979999
+          ],
+          "hazardous": false,
+          "id": 35807302,
+          "maximum_grade": 5.4,
+          "name": "Goðastígur sprettur",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.927233,
+            -20.983848
+          ],
+          "state": null
+        },
+        "start_date": "2026-03-31T17:36:54Z",
+        "start_date_local": "2026-03-31T17:36:54Z",
+        "start_index": 1118,
+        "visibility": "everyone"
+      }
+    ],
     "similar_activities": {
-      "average_speed": 0,
-      "effort_count": 0,
+      "average_speed": 2.61992581320145,
+      "effort_count": 4,
       "frequency_milestone": null,
-      "max_average_speed": 0,
-      "mid_average_speed": 0,
-      "min_average_speed": 0,
+      "max_average_speed": 2.99066496163683,
+      "mid_average_speed": 2.44989968294513,
+      "min_average_speed": 2.07474837181764,
       "pr_rank": null,
       "resource_state": 2,
       "trend": {
-        "current_activity_index": null,
-        "direction": 0,
-        "max_speed": 0,
-        "mid_speed": 0,
-        "min_speed": 0,
-        "speeds": []
+        "current_activity_index": 3,
+        "direction": -1,
+        "max_speed": 2.99066496163683,
+        "mid_speed": 2.44989968294513,
+        "min_speed": 2.07474837181764,
+        "speeds": [
+          2.99066496163683,
+          2.87561693386482,
+          2.87285732010588,
+          2.62081518354935
+        ]
       }
     },
     "splits_metric": [
@@ -542,17 +673,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 259,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1774982028,
+    "aspect_type": "update",
+    "event_time": 1774982354,
     "object_id": 17928719487,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Trying to push the pace a little faster but still keep HR low"
+    }
   },
-  "received_at": "2026-03-31T18:33:49.125Z",
+  "received_at": "2026-03-31T18:39:14.703Z",
   "source": "strava"
 }
