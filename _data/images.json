@@ -220,5 +220,19 @@
       "bluesky": "https://bsky.app/profile/koddsson.com/post/3mgirnuujg424",
       "mastodon": "https://fosstodon.org/@koddsson/116190096520408683"
     }
+  },
+  {
+    "uploaded": "2026-03-31T13:51:43.623Z",
+    "id": "cf695cee-c959-44fe-cb25-6ee0f94c5400",
+    "filename": "F7C69A24-D9CF-4230-BD1D-AA4100F8190D_1_105_c.jpeg",
+    "meta": {
+      "caption": "I AM FED UP",
+      "alt": "A selfie where I'm wearing a running west, a jacket zipped up to my mouth, hood up and a cap. The background is all white with snow and there. I'm also covered in snow."
+    },
+    "requireSignedURLs": false,
+    "variants": [
+      "https://imagedelivery.net/_cB_8zHAYVCKdafMj0Jo_Q/cf695cee-c959-44fe-cb25-6ee0f94c5400/public",
+      "https://imagedelivery.net/_cB_8zHAYVCKdafMj0Jo_Q/cf695cee-c959-44fe-cb25-6ee0f94c5400/homepage"
+    ]
   }
 ]
