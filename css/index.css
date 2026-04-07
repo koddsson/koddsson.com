@@ -300,15 +300,23 @@ nav.vertical > a {
   min-width: 0;
 }
 
-.project-grid picture,
-.project-grid img {
+.project-grid picture {
+  display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
   border-radius: var(--radius-2);
   margin-bottom: var(--size-1);
 }
 
-@media only screen and (max-width: 600px) {
+.project-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media only screen and (max-width: 40em) {
   .project-grid {
     grid-template-columns: 1fr;
   }
