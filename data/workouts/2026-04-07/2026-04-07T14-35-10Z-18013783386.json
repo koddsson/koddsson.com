@@ -158,7 +158,7 @@
     "calories": 559,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -175,8 +175,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 209.9,
-      "distance": 209907,
+      "converted_distance": 217.3,
+      "distance": 217317,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -464,12 +464,21 @@
     "max_speed": 2.66,
     "max_watts": 426,
     "moving_time": 3890,
-    "name": "Afternoon Run",
+    "name": "Had trouble keeping HR down and I have a meeting in 20 so I cut it short",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "f1eb7dd8-1e5a-4bd2-a10e-982f7cc12d45",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/b5dR0E1VAdMfrlov9YgnJXQ8EaqpjZEqXHgS5xJLcn8-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/b5dR0E1VAdMfrlov9YgnJXQ8EaqpjZEqXHgS5xJLcn8-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -795,7 +804,7 @@
     "suffer_score": 78,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 95,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 19114614684,
@@ -803,17 +812,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 230,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1775572508,
+    "aspect_type": "update",
+    "event_time": 1775572616,
     "object_id": 18013783386,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Had trouble keeping HR down and I have a meeting in 20 so I cut it short"
+    }
   },
-  "received_at": "2026-04-07T14:35:10.053Z",
+  "received_at": "2026-04-07T14:36:57.617Z",
   "source": "strava"
 }
