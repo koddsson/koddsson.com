@@ -96,7 +96,7 @@
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
     <header>
-      {% if page.url != '/' %}<nav><a href="{% if page.url contains '/notes/' and page.url != '/notes/' %}/notes/{% elsif page.url contains '/posts/' and page.url != '/posts/' %}/posts/{% elsif page.url contains '/images/' and page.url != '/images/' %}/images/{% else %}/{% endif %}">&larr; Back</a></nav>{% endif %}
+      {% if page.url != '/' %}<nav><a href="{% if page.url contains '/notes/' and page.url != '/notes/' %}/notes/{% elsif page.url contains '/posts/' and page.url != '/posts/' %}/posts/{% elsif page.url contains '/images/' and page.url != '/images/' %}/images/{% elsif page.url contains '/projects/' and page.url != '/projects/' %}/projects/{% else %}/{% endif %}">&larr; Back</a></nav>{% endif %}
       {% if title %}<h1>{{ title }}</h1>{% endif %}
       {% if date %}<time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time
       >{% endif %}
@@ -110,6 +110,7 @@
         <a href="/posts/">Posts</a>
         <a href="/notes/">Notes</a>
         <a href="/images/">Images</a>
+        <a href="/projects/">Projects</a>
       </nav>
     </footer>
     <script data-goatcounter="https://koddsson.goatcounter.com/count"
