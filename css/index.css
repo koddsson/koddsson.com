@@ -297,10 +297,13 @@ nav.vertical > a {
 
 .project-grid a {
   text-decoration: none;
+  min-width: 0;
 }
 
+.project-grid picture,
 .project-grid img {
   width: 100%;
+  height: auto;
   border-radius: var(--radius-2);
   margin-bottom: var(--size-1);
 }
