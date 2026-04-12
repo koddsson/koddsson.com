@@ -1822,7 +1822,7 @@
   },
   "payload": {
     "aspect_type": "update",
-    "event_time": 1775998912,
+    "event_time": 1775999032,
     "object_id": 18079307744,
     "object_type": "activity",
     "owner_id": 370718,
@@ -1831,6 +1831,6 @@
       "title": "Spring is here?"
     }
   },
-  "received_at": "2026-04-12T13:01:55.552Z",
+  "received_at": "2026-04-12T13:03:55.896Z",
   "source": "strava"
 }
