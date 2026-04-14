@@ -181,7 +181,7 @@
     "calories": 776,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -198,8 +198,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 246.4,
-      "distance": 246419,
+      "converted_distance": 256.4,
+      "distance": 256427,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -583,12 +583,21 @@
     "max_speed": 2.72,
     "max_watts": 350,
     "moving_time": 4614,
-    "name": "Evening Run",
+    "name": "Blessed run",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 2,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "AFD7FC9B-312C-41EA-986A-1E69A8B58B26",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/2YhRldkSjWpkfJUqYqzB26nH8RKqpLOx3zTr0jkFbJw-96x128.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/2YhRldkSjWpkfJUqYqzB26nH8RKqpLOx3zTr0jkFbJw-576x768.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -1027,7 +1036,7 @@
     "suffer_score": 116,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 16,
-    "total_photo_count": 0,
+    "total_photo_count": 2,
     "trainer": false,
     "type": "Run",
     "upload_id": 19211288814,
@@ -1038,14 +1047,16 @@
     "workout_type": null
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1776194587,
+    "aspect_type": "update",
+    "event_time": 1776196285,
     "object_id": 18109428196,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Blessed run"
+    }
   },
-  "received_at": "2026-04-14T19:23:08.746Z",
+  "received_at": "2026-04-14T19:51:26.046Z",
   "source": "strava"
 }
