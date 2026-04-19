@@ -15,11 +15,277 @@
     "average_heartrate": 151.1,
     "average_speed": 1.951,
     "average_watts": 237.5,
-    "best_efforts": [],
+    "best_efforts": [
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 400,
+        "elapsed_time": 171,
+        "end_index": 2937,
+        "id": 76409710824,
+        "moving_time": 171,
+        "name": "400m",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 2766
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 805,
+        "elapsed_time": 354,
+        "end_index": 2678,
+        "id": 76409710825,
+        "moving_time": 354,
+        "name": "1/2 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 2324
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 1000,
+        "elapsed_time": 448,
+        "end_index": 2385,
+        "id": 76409710826,
+        "moving_time": 448,
+        "name": "1K",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 1937
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 1609,
+        "elapsed_time": 720,
+        "end_index": 2656,
+        "id": 76409710816,
+        "moving_time": 720,
+        "name": "1 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 1936
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 3219,
+        "elapsed_time": 1515,
+        "end_index": 2945,
+        "id": 76409710817,
+        "moving_time": 1515,
+        "name": "2 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 1430
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 5000,
+        "elapsed_time": 2390,
+        "end_index": 3248,
+        "id": 76409710818,
+        "moving_time": 2390,
+        "name": "5K",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 858
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 10000,
+        "elapsed_time": 5077,
+        "end_index": 5776,
+        "id": 76409710819,
+        "moving_time": 5077,
+        "name": "10K",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 699
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 15000,
+        "elapsed_time": 7816,
+        "end_index": 8022,
+        "id": 76409710820,
+        "moving_time": 7816,
+        "name": "15K",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 206
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 16090,
+        "elapsed_time": 8403,
+        "end_index": 8541,
+        "id": 76409710821,
+        "moving_time": 8403,
+        "name": "10 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 138
+      },
+      {
+        "achievements": [
+          {
+            "rank": 3,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 20000,
+        "elapsed_time": 10615,
+        "end_index": 10635,
+        "id": 76409710822,
+        "moving_time": 10615,
+        "name": "20K",
+        "pr_rank": 3,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 20
+      },
+      {
+        "achievements": [
+          {
+            "rank": 3,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 18177810440,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "distance": 21097,
+        "elapsed_time": 11176,
+        "end_index": 11495,
+        "id": 76409710823,
+        "moving_time": 11176,
+        "name": "Half-Marathon",
+        "pr_rank": 3,
+        "resource_state": 2,
+        "start_date": "2026-04-19T18:01:17Z",
+        "start_date_local": "2026-04-19T18:01:17Z",
+        "start_index": 319
+      }
+    ],
     "calories": 1990,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -36,8 +302,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 256.4,
-      "distance": 256427,
+      "converted_distance": 281.4,
+      "distance": 281439,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -901,12 +1167,21 @@
     "max_speed": 2.82,
     "max_watts": 415,
     "moving_time": 12821,
-    "name": "Evening Run",
+    "name": "🫪🫪",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "486713a6-49bd-4b89-a045-682e2e4f3358",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/32g0d76G_oyP4a-5N9vhYnuzVnYAX6QAlR_mQEKanPY-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/32g0d76G_oyP4a-5N9vhYnuzVnYAX6QAlR_mQEKanPY-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -1845,7 +2120,7 @@
     "suffer_score": 265,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 244,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 19280308844,
@@ -1853,17 +2128,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 250,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1776634980,
+    "aspect_type": "update",
+    "event_time": 1776635281,
     "object_id": 18177810440,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "🫪🫪"
+    }
   },
-  "received_at": "2026-04-19T21:43:01.461Z",
+  "received_at": "2026-04-19T21:48:01.939Z",
   "source": "strava"
 }
