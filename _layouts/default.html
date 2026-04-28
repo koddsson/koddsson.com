@@ -59,7 +59,7 @@
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
     <header class="masthead">
-      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · LONDON</span></a>
+      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
       <nav class="masthead-nav" aria-label="Primary">
         {% assign url = page.url %}
         <a href="/"{% if url == '/' %} class="active" aria-current="page"{% endif %}>HOME</a>
@@ -67,10 +67,10 @@
         <a href="/notes/"{% if url contains '/notes/' %} class="active"{% endif %}>NOTES</a>
         <a href="/projects/"{% if url contains '/projects/' %} class="active"{% endif %}>PROJECTS</a>
         <a href="/images/"{% if url contains '/images/' %} class="active"{% endif %}>IMAGES</a>
+        <a href="/workouts/"{% if url contains '/workouts/' %} class="active"{% endif %}>WORKOUTS</a>
         <a href="/reading-list/"{% if url contains '/reading-list/' %} class="active"{% endif %}>READING</a>
       </nav>
       <span class="masthead-meta">
-        <span class="masthead-date">{{ buildDate | romanNumeral }}</span>
         <a class="rss-link" href="/feed.xml">RSS↗</a>
       </span>
     </header>
