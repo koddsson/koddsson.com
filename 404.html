@@ -3,32 +3,20 @@ permalink: /404.html
 layout: default
 title: "404"
 description: "404 - Page not found"
+noPageHeader: true
 ---
 
-<style type="text/css" media="screen">
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  header, main, footer {
-    margin: initial;
-  }
-
-  footer {
-    margin-top: auto;
-  }
-</style>
-
-<div class="container">
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+<section class="notfound" aria-labelledby="notfound-headline">
+  <div>
+    <div class="notfound-code">404.</div>
+    <div class="notfound-status">HTTP STATUS · NOT FOUND</div>
+  </div>
+  <div>
+    <h2 id="notfound-headline" class="notfound-headline">NOTHING<br>HERE.</h2>
+    <p class="notfound-body">The page you tried to reach has either been moved, deleted, or never existed in the first place. Take it as a small gift of free time.</p>
+    <div class="notfound-actions">
+      <a href="/">← BACK HOME</a>
+      <a href="/posts/">→ ALL POSTS</a>
+    </div>
+  </div>
+</section>
