@@ -66,12 +66,39 @@ export default async function() {
     }
   }
   
+  // Deduplicate by activity ID — Strava webhooks fire multiple times per
+  // activity. Prefer the entry that has an SVG route map; otherwise keep the
+  // most recently received payload.
+  const byActivityId = new Map();
+  for (const w of workouts) {
+    const id = w.data.activity?.id;
+    if (!id) continue;
+    const existing = byActivityId.get(id);
+    if (!existing) {
+      byActivityId.set(id, w);
+      continue;
+    }
+    const existingHasSvg = !!existing.svgPath;
+    const incomingHasSvg = !!w.svgPath;
+    if (incomingHasSvg && !existingHasSvg) {
+      byActivityId.set(id, w);
+    } else if (incomingHasSvg === existingHasSvg) {
+      // tie-break by most recent received_at
+      const existingReceived = existing.data.received_at || '';
+      const incomingReceived = w.data.received_at || '';
+      if (incomingReceived.localeCompare(existingReceived) > 0) {
+        byActivityId.set(id, w);
+      }
+    }
+  }
+  const deduped = Array.from(byActivityId.values());
+
   // Sort workouts by date (newest first)
-  workouts.sort((a, b) => {
+  deduped.sort((a, b) => {
     const dateA = a.data.activity?.start_date || a.data.received_at || '';
     const dateB = b.data.activity?.start_date || b.data.received_at || '';
     return dateB.localeCompare(dateA);
   });
-  
-  return workouts;
+
+  return deduped;
 }
