@@ -1,8 +1,3 @@
-/* Brutalist Swiss — Direction E
- * Red #ff3300 accent, all-caps headlines, Helvetica display,
- * Inter body, JetBrains Mono numerals, 2px primary rules.
- */
-
 :root {
   --ink: #000000;
   --ink-2: #666666;
@@ -14,8 +9,8 @@
   --rule: #000000;
 
   --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-body: "Inter", system-ui, "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
   --rule-2: 2px solid var(--ink);
   --rule-1: 1px solid var(--ink);
@@ -758,7 +753,7 @@ main figure figcaption {
   letter-spacing: 0.08em;
 }
 
-.colophon-col { display: flex; flex-direction: column; gap: 4px; }
+.colophon-col { display: flex; flex-direction: column; gap: 0; }
 .colophon-col-end { text-align: right; align-items: flex-end; }
 
 .colophon-label {
@@ -769,6 +764,10 @@ main figure figcaption {
 .colophon a, .colophon span {
   color: var(--ink);
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding-block: 4px;
 }
 
 .colophon a:hover { color: var(--accent); }
