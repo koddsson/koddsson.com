@@ -1,0 +1,30 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }}</title>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="https://koddsson.com/feed.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://koddsson.com/" rel="alternate" type="text/html"/>
+  <id>https://koddsson.com/</id>
+  {% assign latest = collections.filteredPosts | last %}
+  <updated>{% if latest %}{{ latest.date | date: "%Y-%m-%dT%H:%M:%SZ" }}{% else %}{{ buildDate | date: "%Y-%m-%dT%H:%M:%SZ" }}{% endif %}</updated>
+  <author>
+    <name>Kristján Oddsson</name>
+    <uri>https://koddsson.com/</uri>
+  </author>
+  {% assign posts = collections.filteredPosts | reverse %}
+  {% for post in posts limit: 20 %}
+  <entry>
+    <title>{{ post.data.title | escape }}</title>
+    <link href="https://koddsson.com{{ post.url }}" rel="alternate" type="text/html"/>
+    <id>https://koddsson.com{{ post.url }}</id>
+    <updated>{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>
+    <published>{{ post.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+    {% if post.data.description %}<summary>{{ post.data.description | escape }}</summary>{% endif %}
+    <content type="html">{{ post.templateContent | escape }}</content>
+  </entry>
+  {% endfor %}
+</feed>

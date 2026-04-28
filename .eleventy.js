@@ -9,7 +9,7 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 
-const markdownLib = markdownIt({ html: true }).use(
+const markdownLib = markdownIt({ html: true, linkify: true }).use(
   markdownItFootnote,
 );
 
@@ -18,6 +18,23 @@ const MONTH_MILLISECONDS = DAY_MILLISECONDS * 30;
 const YEAR_MILLISECONDS = MONTH_MILLISECONDS * 12;
 
 const formatter = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+
+function romanNumeral(input) {
+  const d = input instanceof Date ? input : new Date(input);
+  if (Number.isNaN(d.getTime())) return "";
+  const months = ["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"];
+  const lookup = [["M",1000],["CM",900],["D",500],["CD",400],["C",100],["XC",90],["L",50],["XL",40],["X",10],["IX",9],["V",5],["IV",4],["I",1]];
+  let year = d.getUTCFullYear();
+  let yearOut = "";
+  for (const [sym, val] of lookup) { while (year >= val) { yearOut += sym; year -= val; } }
+  return `${String(d.getUTCDate()).padStart(2, "0")}.${months[d.getUTCMonth()]}.${yearOut}`;
+}
+
+function isoDate(input) {
+  const d = input instanceof Date ? input : new Date(input);
+  if (Number.isNaN(d.getTime())) return "";
+  return `${d.getUTCFullYear()}-${String(d.getUTCMonth() + 1).padStart(2, "0")}-${String(d.getUTCDate()).padStart(2, "0")}`;
+}
 
 async function relativeTime(time) {
   const date = new Date(time);
@@ -84,6 +101,11 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter("last", function (array) {
     return array.at(-1);
   });
+
+  eleventyConfig.addFilter("romanNumeral", romanNumeral);
+  eleventyConfig.addFilter("isoDate", isoDate);
+
+  eleventyConfig.addGlobalData("buildDate", () => new Date());
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(postcssPlugin);
