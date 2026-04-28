@@ -9,7 +9,7 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import postcssPlugin from "@jgarber/eleventy-plugin-postcss";
 
-const markdownLib = markdownIt({ html: true }).use(
+const markdownLib = markdownIt({ html: true, linkify: true }).use(
   markdownItFootnote,
 );
 

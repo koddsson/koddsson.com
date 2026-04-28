@@ -84,7 +84,7 @@
           </div>
         {% endif %}
         {% if title %}<h1 class="page-title">{{ title }}</h1>{% endif %}
-        {% if description and date and title %}<p class="page-description">{{ description }}</p>{% endif %}
+        {% if description and tags contains 'posts' and title %}<p class="page-description">{{ description }}</p>{% endif %}
       </section>
     {% endif %}{% endunless %}
 
