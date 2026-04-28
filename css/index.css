@@ -51,7 +51,7 @@ body {
   padding-bottom: 14px;
   margin-bottom: 28px;
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -115,7 +115,7 @@ body {
 }
 
 @media (max-width: 720px) {
-  .masthead { font-size: 10px; gap: 12px; }
+  .masthead { font-size: 12px; gap: 12px; }
   .masthead-nav { gap: 12px; }
   .masthead-nav a.active::after { bottom: -10px; }
 }
@@ -131,7 +131,7 @@ body {
   display: flex;
   justify-content: space-between;
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -266,7 +266,7 @@ main figure {
 
 main figure figcaption {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -282,7 +282,7 @@ main figure figcaption {
   display: grid;
   grid-template-columns: 60px 1fr 100px;
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -315,7 +315,7 @@ main figure figcaption {
 
 .hero-lede__label {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -378,7 +378,7 @@ main figure figcaption {
 
 .indexed-list time {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   text-align: right;
   white-space: nowrap;
 }
@@ -387,7 +387,7 @@ main figure figcaption {
   padding: 10px 0;
   text-align: right;
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -411,7 +411,7 @@ main figure figcaption {
   display: grid;
   grid-template-columns: 40px 1fr 100px;
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -467,7 +467,7 @@ main figure figcaption {
 
 .note-tile-label {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -492,7 +492,7 @@ main figure figcaption {
 
 .rss-card .label {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -530,12 +530,12 @@ main figure figcaption {
 
 .notes-list time {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .notes-list .note-date {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink);
   text-decoration: none;
 }
@@ -553,7 +553,7 @@ main figure figcaption {
 
 .notes-list .relative {
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -694,7 +694,7 @@ main figure figcaption {
 
 .notfound-status {
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -724,7 +724,7 @@ main figure figcaption {
   display: flex;
   gap: 16px;
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -747,7 +747,7 @@ main figure figcaption {
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   font-family: var(--font-display);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -860,7 +860,7 @@ main figure figcaption {
   font-family: var(--font-display);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -906,7 +906,7 @@ main figure figcaption {
   align-items: center;
   gap: 4px;
   font-family: var(--font-display);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--ink-2);
