@@ -115,9 +115,36 @@ body {
 }
 
 @media (max-width: 720px) {
-  .masthead { font-size: 12px; gap: 12px; }
-  .masthead-nav { gap: 12px; }
-  .masthead-nav a.active::after { bottom: -10px; }
+  .masthead {
+    display: grid;
+    grid-template-areas:
+      "brand meta"
+      "nav nav";
+    grid-template-columns: 1fr auto;
+    column-gap: 12px;
+    row-gap: 6px;
+    align-items: baseline;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+  .masthead-brand { grid-area: brand; }
+  .masthead-nav {
+    grid-area: nav;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    gap: 14px;
+    margin-inline: -18px;
+    padding: 0 18px 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .masthead-nav::-webkit-scrollbar { display: none; }
+  .masthead-nav a { white-space: nowrap; }
+  .masthead-nav a.active::after { bottom: 0; }
+  .masthead-meta { grid-area: meta; font-size: 11px; gap: 8px; }
+  .masthead-role { display: none; }
 }
 
 /* ── Page header (post / note / image detail) ──────────── */
@@ -170,7 +197,9 @@ body {
 }
 
 @media (max-width: 720px) {
-  .page-title { font-size: 32px; }
+  .page-title { font-size: clamp(28px, 8vw, 36px); max-width: none; }
+  .page-eyebrow { font-size: 11px; }
+  .page-description { font-size: 15px; }
 }
 
 /* ── Main content ──────────────────────────────────────── */
@@ -303,12 +332,13 @@ main figure figcaption {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(48px, 9vw, 88px);
+  font-size: clamp(36px, 11vw, 88px);
   font-weight: 700;
   line-height: 0.88;
   letter-spacing: -0.045em;
   margin: 0;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 .hero h1 .accent { color: var(--accent); }
@@ -381,6 +411,7 @@ main figure figcaption {
   font-size: 12px;
   text-align: right;
   white-space: nowrap;
+  color: var(--ink-2);
 }
 
 .indexed-list .more {
@@ -422,6 +453,26 @@ main figure figcaption {
 
 .indexed-list-header > :last-child { text-align: right; }
 
+@media (max-width: 720px) {
+  .indexed-list > li,
+  .indexed-list--large > li {
+    grid-template-columns: 32px 1fr;
+    column-gap: 10px;
+    row-gap: 2px;
+  }
+  .indexed-list--large > li { grid-template-columns: 28px 1fr; padding: 14px 0; }
+  .indexed-list .title { font-size: 16px; }
+  .indexed-list--large .title { font-size: 17px; }
+  .indexed-list time {
+    grid-column: 2;
+    text-align: left;
+    color: var(--ink-2);
+  }
+  .indexed-list .description { grid-column: 2; }
+  .indexed-list-header { grid-template-columns: 28px 1fr 80px; gap: 6px; }
+  .section-rule { grid-template-columns: 36px 1fr 80px; }
+}
+
 /* ── Index page hero (POSTS. NOTES. etc.) ──────────────── */
 .index-hero {
   display: flex;
@@ -436,7 +487,7 @@ main figure figcaption {
 
 .index-hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(48px, 9vw, 88px);
+  font-size: clamp(40px, 11vw, 88px);
   font-weight: 700;
   line-height: 0.9;
   letter-spacing: -0.045em;
