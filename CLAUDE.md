@@ -34,7 +34,7 @@ Personal website for Kristján Oddsson built with **Eleventy (11ty) v3**. It fol
 - `toot-embed-element.js` — custom element for Mastodon embeds
 - Web Vitals tracking sent to `vitals.koddsson.workers.dev`
 
-**CSS:** Open Props utility framework + custom styles in `css/index.css`, processed by PostCSS with cssnano minification.
+**CSS:** Custom brutalist design system in `css/index.css`, processed by PostCSS with cssnano minification. Prism syntax-highlight theme in `css/prism-vs.css`.
 
 ## Eleventy Configuration (.eleventy.js)
 
