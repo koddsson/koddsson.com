@@ -331,8 +331,10 @@ main figure figcaption {
 .hero-lede p {
   font-size: 15px;
   line-height: 1.5;
-  margin: 0;
+  margin: 0 0 10px;
 }
+
+.hero-lede p:last-child { margin-bottom: 0; }
 
 @media (max-width: 720px) {
   .hero { grid-template-columns: 1fr; gap: 18px; }

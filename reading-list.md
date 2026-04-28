@@ -3,11 +3,17 @@ title: My favourite Software Engineering readings
 layout: default.html
 date: 2023-09-22
 description: "I've been reading some solid books and blog posts on Software Engineering that I want to share here for reference"
+noPageHeader: true
 ---
 
-I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.
-
-I plan on updating this list over time
+<section class="hero">
+  <h1>READING<br><span class="accent">LIST.</span></h1>
+  <div class="hero-lede">
+    <div class="hero-lede__label">№ 01 · INTRODUCTION</div>
+    <p>I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.</p>
+    <p>I plan on updating this list over time.</p>
+  </div>
+</section>
 
 ## Crafting Interpreters
 
