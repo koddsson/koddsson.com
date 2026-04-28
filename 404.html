@@ -19,50 +19,9 @@
     <title>404</title>
     <meta property="og:title" content="404">
 
-    <link rel="stylesheet" href="/css/open-props.min.css">
-    <link rel="stylesheet" href="/css/normalize.min.css">
     <link rel="stylesheet" href="/css/prism-vs.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <style>
-      body {
-        padding: var(--size-2) var(--size-3);
-      }
-
-      blockquote,
-      header,
-      p {
-        margin-bottom: var(--size-3);
-      }
-
-      pre.highlight {
-        background: var(--surface-2);
-        border-radius: var(--radius-2);
-        padding: var(--size-3);
-        overflow: auto;
-        max-inline-size: unset;
-      }
-
-      blockquote p {
-        margin-bottom: 0;
-      }
-
-      .items {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-bottom: var(--size-2);
-      }
-
-      .items > li {
-        margin: 0;
-        padding: 0;
-      }
-
-      .items > li > a {
-        display: block;
-      }
-    </style>
     <script type="importmap">
       {
         "imports": {
@@ -95,50 +54,70 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header>
-      <nav><a href="/">&larr; Back</a></nav>
-      <h1>404</h1>
-      
-    </header>
-    <main id="main">
-<style type="text/css" media="screen">
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  header, main, footer {
-    margin: initial;
-  }
-
-  footer {
-    margin-top: auto;
-  }
-</style>
-
-<div class="container">
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
-</main>
-    
-    <footer>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/posts/">Posts</a>
-        <a href="/notes/">Notes</a>
-        <a href="/images/">Images</a>
-        <a href="/projects/">Projects</a>
+    <header class="masthead">
+      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
+      <nav class="masthead-nav" aria-label="Primary">
+        
+        <a href="/">HOME</a>
+        <a href="/posts/">POSTS</a>
+        <a href="/notes/">NOTES</a>
+        <a href="/projects/">PROJECTS</a>
+        <a href="/images/">IMAGES</a>
+        <a href="/workouts/">WORKOUTS</a>
+        <a href="/reading-list/">READING</a>
       </nav>
+      <span class="masthead-meta">
+        <a class="rss-link" href="/feed.xml">RSS↗</a>
+      </span>
+    </header>
+
+    
+
+    <main id="main">
+<section class="notfound" aria-labelledby="notfound-headline">
+  <div>
+    <div class="notfound-code">404.</div>
+    <div class="notfound-status">HTTP STATUS · NOT FOUND</div>
+  </div>
+  <div>
+    <h2 id="notfound-headline" class="notfound-headline">NOTHING<br>HERE.</h2>
+    <p class="notfound-body">The page you tried to reach has either been moved, deleted, or never existed in the first place. Take it as a small gift of free time.</p>
+    <div class="notfound-actions">
+      <a href="/">← BACK HOME</a>
+      <a href="/posts/">→ ALL POSTS</a>
+    </div>
+  </div>
+</section>
+</main>
+
+    
+
+    <footer class="colophon">
+      <div class="colophon-col">
+        <div class="colophon-label">ELSEWHERE</div>
+        <a href="https://github.com/koddsson">→ GITHUB</a>
+        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
+        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
+        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">FEEDS</div>
+        <a href="/feed.xml">→ /FEED.XML</a>
+        <a href="/notes/feed.xml">→ /NOTES.XML</a>
+        <span>→ WEBMENTIONS</span>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">COLOPHON</div>
+        <span>HELVETICA NEUE</span>
+        <span>SYSTEM-UI · UI-MONOSPACE</span>
+        <span>BUILT WITH ELEVENTY</span>
+      </div>
+      <div class="colophon-col colophon-col-end">
+        <div class="colophon-label">© 2026</div>
+        <span>KRISTJÁN ODDSSON</span>
+      </div>
     </footer>
+
     <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>
   </body>
 </html>

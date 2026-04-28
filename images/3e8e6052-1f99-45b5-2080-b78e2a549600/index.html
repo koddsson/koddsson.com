@@ -19,50 +19,9 @@
     <title>This guy has been gaming a lot</title>
     <meta property="og:title" content="This guy has been gaming a lot">
 
-    <link rel="stylesheet" href="/css/open-props.min.css">
-    <link rel="stylesheet" href="/css/normalize.min.css">
     <link rel="stylesheet" href="/css/prism-vs.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <style>
-      body {
-        padding: var(--size-2) var(--size-3);
-      }
-
-      blockquote,
-      header,
-      p {
-        margin-bottom: var(--size-3);
-      }
-
-      pre.highlight {
-        background: var(--surface-2);
-        border-radius: var(--radius-2);
-        padding: var(--size-3);
-        overflow: auto;
-        max-inline-size: unset;
-      }
-
-      blockquote p {
-        margin-bottom: 0;
-      }
-
-      .items {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-bottom: var(--size-2);
-      }
-
-      .items > li {
-        margin: 0;
-        padding: 0;
-      }
-
-      .items > li > a {
-        display: block;
-      }
-    </style>
     <script type="importmap">
       {
         "imports": {
@@ -95,11 +54,36 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header>
-      <nav><a href="/images/">&larr; Back</a></nav>
-      <h1>This guy has been gaming a lot</h1>
-      <time datetime="2024-01-02">January 02, 2024</time>
+    <header class="masthead">
+      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
+      <nav class="masthead-nav" aria-label="Primary">
+        
+        <a href="/">HOME</a>
+        <a href="/posts/">POSTS</a>
+        <a href="/notes/">NOTES</a>
+        <a href="/projects/">PROJECTS</a>
+        <a href="/images/" class="active">IMAGES</a>
+        <a href="/workouts/">WORKOUTS</a>
+        <a href="/reading-list/">READING</a>
+      </nav>
+      <span class="masthead-meta">
+        <a class="rss-link" href="/feed.xml">RSS↗</a>
+      </span>
     </header>
+
+    
+      <section class="page-header">
+        
+          <div class="page-eyebrow">
+            <a href="/images/">← BACK</a>
+            <time datetime="2024-01-02">2024-01-02</time>
+          </div>
+        
+        <h1 class="page-title">This guy has been gaming a lot</h1>
+        
+      </section>
+    
+
     <main id="main"><figure>
   <picture><source type="image/webp" srcset="/images/3e8e6052-1f99-45b5-2080-b78e2a549600/43-vFrui-0-576.webp 576w"><img src="/images/3e8e6052-1f99-45b5-2080-b78e2a549600/43-vFrui-0-576.jpeg" alt="A black and white dog asleep on a sofa. He's resting his head on a pillow. The dog is wearing a camouflage shirt with orange accents. There's a Nintendo Switch controller below his head on the pillow. " width="576" height="768"></picture>
   <figcaption>
@@ -107,17 +91,38 @@
   </figcaption>
 </figure>
 </main>
-    <section id="webmentions"></section>
-    <script type="module" src="/js/webmentions.js"></script>
-    <footer>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/posts/">Posts</a>
-        <a href="/notes/">Notes</a>
-        <a href="/images/">Images</a>
-        <a href="/projects/">Projects</a>
-      </nav>
+
+    
+      <section id="webmentions"></section>
+      <script type="module" src="/js/webmentions.js"></script>
+    
+
+    <footer class="colophon">
+      <div class="colophon-col">
+        <div class="colophon-label">ELSEWHERE</div>
+        <a href="https://github.com/koddsson">→ GITHUB</a>
+        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
+        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
+        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">FEEDS</div>
+        <a href="/feed.xml">→ /FEED.XML</a>
+        <a href="/notes/feed.xml">→ /NOTES.XML</a>
+        <span>→ WEBMENTIONS</span>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">COLOPHON</div>
+        <span>HELVETICA NEUE</span>
+        <span>SYSTEM-UI · UI-MONOSPACE</span>
+        <span>BUILT WITH ELEVENTY</span>
+      </div>
+      <div class="colophon-col colophon-col-end">
+        <div class="colophon-label">© 2026</div>
+        <span>KRISTJÁN ODDSSON</span>
+      </div>
     </footer>
+
     <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>
   </body>
 </html>

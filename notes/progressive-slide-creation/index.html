@@ -19,50 +19,9 @@
     <title>Progressive Slide Creation</title>
     <meta property="og:title" content="Progressive Slide Creation">
 
-    <link rel="stylesheet" href="/css/open-props.min.css">
-    <link rel="stylesheet" href="/css/normalize.min.css">
     <link rel="stylesheet" href="/css/prism-vs.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <style>
-      body {
-        padding: var(--size-2) var(--size-3);
-      }
-
-      blockquote,
-      header,
-      p {
-        margin-bottom: var(--size-3);
-      }
-
-      pre.highlight {
-        background: var(--surface-2);
-        border-radius: var(--radius-2);
-        padding: var(--size-3);
-        overflow: auto;
-        max-inline-size: unset;
-      }
-
-      blockquote p {
-        margin-bottom: 0;
-      }
-
-      .items {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-bottom: var(--size-2);
-      }
-
-      .items > li {
-        margin: 0;
-        padding: 0;
-      }
-
-      .items > li > a {
-        display: block;
-      }
-    </style>
     <script type="importmap">
       {
         "imports": {
@@ -95,26 +54,72 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header>
-      <nav><a href="/notes/">&larr; Back</a></nav>
-      <h1>Progressive Slide Creation</h1>
-      <time datetime="2025-03-07">March 07, 2025</time>
+    <header class="masthead">
+      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
+      <nav class="masthead-nav" aria-label="Primary">
+        
+        <a href="/">HOME</a>
+        <a href="/posts/">POSTS</a>
+        <a href="/notes/" class="active">NOTES</a>
+        <a href="/projects/">PROJECTS</a>
+        <a href="/images/">IMAGES</a>
+        <a href="/workouts/">WORKOUTS</a>
+        <a href="/reading-list/">READING</a>
+      </nav>
+      <span class="masthead-meta">
+        <a class="rss-link" href="/feed.xml">RSS↗</a>
+      </span>
     </header>
+
+    
+      <section class="page-header">
+        
+          <div class="page-eyebrow">
+            <a href="/notes/">← BACK</a>
+            <time datetime="2025-03-07">2025-03-07</time>
+          </div>
+        
+        <h1 class="page-title">Progressive Slide Creation</h1>
+        
+      </section>
+    
+
     <main id="main"><p>I hate starting to create slides for a project or presentation. In most situations, I’ve forgotten context or other things which makes it time consuming to finish. I try to avoid the last-minute rush by starting my slides early. Instead of waiting until I have everything perfectly planned out, I open Google Slides right away and create a new deck. Then, I just start tossing in context, data and bits and bobs as soon as I experience or find it. As I go, I loosely group related content together, moving slides around as the structure starts to take shape. It doesn’t have to make sense at first.</p>
 <p>As the days pass, I gradually refine the content. By the time the presentation is close, I’m not scrambling to put everything together—I’m just making small improvements and fine-tuning the details.</p>
 <p>This way of working feels much easier than the stress of procrastinating and then rushing to throw everything together at the last minute. Instead of feeling overwhelmed, I can gradually shape the slides over time, making the process far more manageable. Plus, by the time I present, I already feel comfortable with the material since I’ve been engaging with it over time, rather than rushing through it at the last minute. If you tend to procrastinate on slides and then stress about them at the last minute, give this approach a try. I find it makes the whole process a lot more manageable.</p>
 </main>
-    <section id="webmentions"></section>
-    <script type="module" src="/js/webmentions.js"></script>
-    <footer>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/posts/">Posts</a>
-        <a href="/notes/">Notes</a>
-        <a href="/images/">Images</a>
-        <a href="/projects/">Projects</a>
-      </nav>
+
+    
+      <section id="webmentions"></section>
+      <script type="module" src="/js/webmentions.js"></script>
+    
+
+    <footer class="colophon">
+      <div class="colophon-col">
+        <div class="colophon-label">ELSEWHERE</div>
+        <a href="https://github.com/koddsson">→ GITHUB</a>
+        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
+        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
+        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">FEEDS</div>
+        <a href="/feed.xml">→ /FEED.XML</a>
+        <a href="/notes/feed.xml">→ /NOTES.XML</a>
+        <span>→ WEBMENTIONS</span>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">COLOPHON</div>
+        <span>HELVETICA NEUE</span>
+        <span>SYSTEM-UI · UI-MONOSPACE</span>
+        <span>BUILT WITH ELEVENTY</span>
+      </div>
+      <div class="colophon-col colophon-col-end">
+        <div class="colophon-label">© 2026</div>
+        <span>KRISTJÁN ODDSSON</span>
+      </div>
     </footer>
+
     <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>
   </body>
 </html>
