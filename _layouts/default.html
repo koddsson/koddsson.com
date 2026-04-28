@@ -19,50 +19,13 @@
     <title>{{ title }}</title>
     <meta property="og:title" content="{{ title }}" />
 
-    <link rel="stylesheet" href="/css/open-props.min.css">
-    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/prism-vs.css">
     <link rel="stylesheet" href="/css/index.css">
 
-    <style>
-      body {
-        padding: var(--size-2) var(--size-3);
-      }
-
-      blockquote,
-      header,
-      p {
-        margin-bottom: var(--size-3);
-      }
-
-      pre.highlight {
-        background: var(--surface-2);
-        border-radius: var(--radius-2);
-        padding: var(--size-3);
-        overflow: auto;
-        max-inline-size: unset;
-      }
-
-      blockquote p {
-        margin-bottom: 0;
-      }
-
-      .items {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        margin-bottom: var(--size-2);
-      }
-
-      .items > li {
-        margin: 0;
-        padding: 0;
-      }
-
-      .items > li > a {
-        display: block;
-      }
-    </style>
     <script type="importmap">
       {
         "imports": {
@@ -95,24 +58,70 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header>
-      {% if page.url != '/' %}<nav><a href="{% if page.url contains '/notes/' and page.url != '/notes/' %}/notes/{% elsif page.url contains '/posts/' and page.url != '/posts/' %}/posts/{% elsif page.url contains '/images/' and page.url != '/images/' %}/images/{% elsif page.url contains '/projects/' and page.url != '/projects/' %}/projects/{% else %}/{% endif %}">&larr; Back</a></nav>{% endif %}
-      {% if title %}<h1>{{ title }}</h1>{% endif %}
-      {% if date %}<time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | date: '%B %d, %Y' }}</time
-      >{% endif %}
-    </header>
-    <main id="main">{{ content }}</main>
-    {% if date %}<section id="webmentions"></section>
-    <script type="module" src="/js/webmentions.js"></script>{% endif %}
-    <footer>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/posts/">Posts</a>
-        <a href="/notes/">Notes</a>
-        <a href="/images/">Images</a>
-        <a href="/projects/">Projects</a>
+    <header class="masthead">
+      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · LONDON</span></a>
+      <nav class="masthead-nav" aria-label="Primary">
+        {% assign url = page.url %}
+        <a href="/"{% if url == '/' %} class="active" aria-current="page"{% endif %}>HOME</a>
+        <a href="/posts/"{% if url contains '/posts/' %} class="active"{% endif %}>POSTS</a>
+        <a href="/notes/"{% if url contains '/notes/' %} class="active"{% endif %}>NOTES</a>
+        <a href="/projects/"{% if url contains '/projects/' %} class="active"{% endif %}>PROJECTS</a>
+        <a href="/images/"{% if url contains '/images/' %} class="active"{% endif %}>IMAGES</a>
+        <a href="/reading-list/"{% if url contains '/reading-list/' %} class="active"{% endif %}>READING</a>
       </nav>
+      <span class="masthead-meta">
+        <span class="masthead-date">{{ buildDate | romanNumeral }}</span>
+        <a class="rss-link" href="/feed.xml">RSS↗</a>
+      </span>
+    </header>
+
+    {% unless noPageHeader %}{% if page.url != '/' and title or date %}
+      <section class="page-header">
+        {% if date %}
+          <div class="page-eyebrow">
+            <a href="{% if page.url contains '/notes/' and page.url != '/notes/' %}/notes/{% elsif page.url contains '/posts/' and page.url != '/posts/' %}/posts/{% elsif page.url contains '/images/' and page.url != '/images/' %}/images/{% elsif page.url contains '/projects/' and page.url != '/projects/' %}/projects/{% else %}/{% endif %}">← BACK</a>
+            <time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | isoDate }}</time>
+          </div>
+        {% endif %}
+        {% if title %}<h1 class="page-title">{{ title }}</h1>{% endif %}
+        {% if description and date and title %}<p class="page-description">{{ description }}</p>{% endif %}
+      </section>
+    {% endif %}{% endunless %}
+
+    <main id="main"{% if tags contains 'posts' and date %} class="reading"{% endif %}>{{ content }}</main>
+
+    {% if date %}
+      <section id="webmentions"></section>
+      <script type="module" src="/js/webmentions.js"></script>
+    {% endif %}
+
+    <footer class="colophon">
+      <div class="colophon-col">
+        <div class="colophon-label">ELSEWHERE</div>
+        <a href="https://github.com/koddsson">→ GITHUB</a>
+        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
+        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
+        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">FEEDS</div>
+        <a href="/feed.xml">→ /FEED.XML</a>
+        <a href="/notes/feed.xml">→ /NOTES.XML</a>
+        <span>→ WEBMENTIONS</span>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">COLOPHON</div>
+        <span>HELVETICA NEUE</span>
+        <span>INTER · JETBRAINS MONO</span>
+        <span>BUILT WITH ELEVENTY</span>
+      </div>
+      <div class="colophon-col colophon-col-end">
+        <div class="colophon-label">© {{ buildDate | date: '%Y' }}</div>
+        <span>KRISTJÁN ODDSSON</span>
+        <span class="colophon-date">{{ buildDate | romanNumeral }}</span>
+      </div>
     </footer>
+
     <script data-goatcounter="https://koddsson.goatcounter.com/count"
             async src="https://gc.zgo.at/count.js"></script>
   </body>
