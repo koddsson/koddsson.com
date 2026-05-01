@@ -112,7 +112,7 @@
     "calories": 158,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -129,8 +129,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 301.7,
-      "distance": 301679,
+      "converted_distance": 303.5,
+      "distance": 303539,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -226,7 +226,7 @@
     "max_speed": 3.14,
     "max_watts": 432,
     "moving_time": 794,
-    "name": "Evening Run",
+    "name": "Shake out 🫪",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
@@ -346,17 +346,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 316,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1777659375,
+    "aspect_type": "update",
+    "event_time": 1777660808,
     "object_id": 18336654818,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Shake out 🫪"
+    }
   },
-  "received_at": "2026-05-01T18:16:16.075Z",
+  "received_at": "2026-05-01T18:40:08.574Z",
   "source": "strava"
 }
