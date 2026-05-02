@@ -5,7 +5,7 @@
       "id": 370718,
       "resource_state": 1
     },
-    "athlete_count": 3,
+    "athlete_count": 4,
     "available_zones": [
       "heartrate",
       "pace",
@@ -227,7 +227,7 @@
     "calories": 1766,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -244,8 +244,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 57.7,
-      "distance": 57710,
+      "converted_distance": 77.6,
+      "distance": 77577,
       "id": "g29163210",
       "name": "Salomon Pulsar Trail",
       "nickname": null,
@@ -917,7 +917,7 @@
     "max_speed": 3.6,
     "max_watts": 555,
     "moving_time": 8902,
-    "name": "Lunch Trail Run",
+    "name": "Puffin Run 2026",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
@@ -928,7 +928,598 @@
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
-    "segment_efforts": [],
+    "segment_efforts": [
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 79,
+        "average_heartrate": 182.9,
+        "average_watts": 405.5,
+        "device_watts": true,
+        "distance": 866.9,
+        "elapsed_time": 302,
+        "end_index": 316,
+        "hidden": false,
+        "id": 3485671844975470000,
+        "kom_rank": null,
+        "max_heartrate": 190,
+        "moving_time": 302,
+        "name": "Puffin Run - Malbikið í byrjun",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0.3,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 866.9,
+          "elevation_high": 15.2,
+          "elevation_low": 8.4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.444462,
+            -20.283148
+          ],
+          "hazardous": false,
+          "id": 36853001,
+          "maximum_grade": 5.3,
+          "name": "Puffin Run - Malbikið í byrjun",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.443168,
+            -20.268248
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T12:21:01Z",
+        "start_date_local": "2026-05-02T12:21:01Z",
+        "start_index": 14,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 65.9,
+        "average_heartrate": 181.5,
+        "average_watts": 270.8,
+        "device_watts": true,
+        "distance": 5010.3,
+        "elapsed_time": 2347,
+        "end_index": 4299,
+        "hidden": false,
+        "id": 3485671844975550000,
+        "kom_rank": null,
+        "max_heartrate": 194,
+        "moving_time": 2342,
+        "name": "Puffin part 2",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 5010.3,
+          "elevation_high": 102.4,
+          "elevation_low": 2.4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.398822,
+            -20.284172
+          ],
+          "hazardous": false,
+          "id": 38724279,
+          "maximum_grade": 35.3,
+          "name": "Puffin part 2",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.427057,
+            -20.300556
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T12:53:19Z",
+        "start_date_local": "2026-05-02T12:53:19Z",
+        "start_index": 1952,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 47.7,
+        "average_heartrate": 184,
+        "average_watts": 248.7,
+        "device_watts": true,
+        "distance": 1022.5,
+        "elapsed_time": 632,
+        "end_index": 3989,
+        "hidden": false,
+        "id": 3485671844974960000,
+        "kom_rank": null,
+        "max_heartrate": 189,
+        "moving_time": 628,
+        "name": "Puffin Run 2022 - Stórhöfðinn upp",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 9.3,
+          "city": "Stórhöfði",
+          "climb_category": 1,
+          "country": "Iceland",
+          "distance": 1022.5,
+          "elevation_high": 89,
+          "elevation_low": -7,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.401062,
+            -20.293356
+          ],
+          "hazardous": false,
+          "id": 31713131,
+          "maximum_grade": 36.4,
+          "name": "Puffin Run 2022 - Stórhöfðinn upp",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.40494,
+            -20.280306
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T13:16:44Z",
+        "start_date_local": "2026-05-02T13:16:44Z",
+        "start_index": 3357,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 61.2,
+        "average_heartrate": 179.1,
+        "average_watts": 254.5,
+        "device_watts": true,
+        "distance": 2463.6,
+        "elapsed_time": 1230,
+        "end_index": 4599,
+        "hidden": false,
+        "id": 3485671844977840000,
+        "kom_rank": null,
+        "max_heartrate": 189,
+        "moving_time": 1222,
+        "name": "Stórhöfðinn - Puffinrun",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -1.7,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 2463.6,
+          "elevation_high": 158.8,
+          "elevation_low": 4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.403879,
+            -20.277792
+          ],
+          "hazardous": false,
+          "id": 38092492,
+          "maximum_grade": 34.5,
+          "name": "Stórhöfðinn - Puffinrun",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.404726,
+            -20.280899
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T13:16:56Z",
+        "start_date_local": "2026-05-02T13:16:56Z",
+        "start_index": 3369,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 73.4,
+        "average_heartrate": 176.6,
+        "average_watts": 319.2,
+        "device_watts": true,
+        "distance": 2762,
+        "elapsed_time": 1259,
+        "end_index": 5944,
+        "hidden": false,
+        "id": 3485671844974420000,
+        "kom_rank": null,
+        "max_heartrate": 188,
+        "moving_time": 1219,
+        "name": "Puffin Run 2022 - Hækkun upp að Flugvelli",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 3.5,
+          "city": "Stórhöfði",
+          "climb_category": 1,
+          "country": "Iceland",
+          "distance": 2762,
+          "elevation_high": 114,
+          "elevation_low": 15,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.422257,
+            -20.263218
+          ],
+          "hazardous": false,
+          "id": 31713145,
+          "maximum_grade": 21.4,
+          "name": "Puffin Run 2022 - Hækkun upp að Flugvelli",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.405855,
+            -20.276489
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T13:38:52Z",
+        "start_date_local": "2026-05-02T13:38:52Z",
+        "start_index": 4685,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 74.7,
+        "average_heartrate": 176.4,
+        "average_watts": 332.9,
+        "device_watts": true,
+        "distance": 429.4,
+        "elapsed_time": 202,
+        "end_index": 5406,
+        "hidden": false,
+        "id": 3485671844974780000,
+        "kom_rank": null,
+        "max_heartrate": 182,
+        "moving_time": 202,
+        "name": "Höfðavegur Climb",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 11,
+          "city": "South, Iceland",
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 429.4,
+          "elevation_high": 71.1,
+          "elevation_low": 23.7,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.419066,
+            -20.280935
+          ],
+          "hazardous": false,
+          "id": 6028234,
+          "maximum_grade": 32.8,
+          "name": "Höfðavegur Climb",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.41525,
+            -20.280831
+          ],
+          "state": "South"
+        },
+        "start_date": "2026-05-02T13:47:31Z",
+        "start_date_local": "2026-05-02T13:47:31Z",
+        "start_index": 5204,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 61.1,
+        "average_heartrate": 174.5,
+        "average_watts": 238.1,
+        "device_watts": true,
+        "distance": 5042.8,
+        "elapsed_time": 2541,
+        "end_index": 9012,
+        "hidden": false,
+        "id": 3485671844975350000,
+        "kom_rank": null,
+        "max_heartrate": 188,
+        "moving_time": 2440,
+        "name": "Puffin part 4",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -1.1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 5042.8,
+          "elevation_high": 90.8,
+          "elevation_low": -13.4,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.443213,
+            -20.267984
+          ],
+          "hazardous": false,
+          "id": 38724304,
+          "maximum_grade": 47.1,
+          "name": "Puffin part 4",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.42768,
+            -20.244241
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T14:08:38Z",
+        "start_date_local": "2026-05-02T14:08:38Z",
+        "start_index": 6471,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 57.6,
+        "average_heartrate": 177.9,
+        "average_watts": 257.4,
+        "device_watts": true,
+        "distance": 998.5,
+        "elapsed_time": 527,
+        "end_index": 7081,
+        "hidden": false,
+        "id": 3485671844976540000,
+        "kom_rank": null,
+        "max_heartrate": 186,
+        "moving_time": 521,
+        "name": "Kross í oss",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 4.3,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 998.5,
+          "elevation_high": 76.2,
+          "elevation_low": 33,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.434997,
+            -20.24853
+          ],
+          "hazardous": false,
+          "id": 39086398,
+          "maximum_grade": 50,
+          "name": "Kross í oss",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.429537,
+            -20.24435
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T14:10:01Z",
+        "start_date_local": "2026-05-02T14:10:01Z",
+        "start_index": 6554,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 51.5,
+        "average_heartrate": 176.8,
+        "average_watts": 178.7,
+        "device_watts": true,
+        "distance": 1278,
+        "elapsed_time": 860,
+        "end_index": 8574,
+        "hidden": false,
+        "id": 3485671844976680000,
+        "kom_rank": null,
+        "max_heartrate": 188,
+        "moving_time": 814,
+        "name": "Puffin Run - Hraunið í restina",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -3.9,
+          "city": "Vestmannaeyjabær",
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 1278,
+          "elevation_high": 33,
+          "elevation_low": -17,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.445795,
+            -20.254982
+          ],
+          "hazardous": false,
+          "id": 31713166,
+          "maximum_grade": 30,
+          "name": "Puffin Run - Hraunið í restina",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.443987,
+            -20.239434
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T14:29:21Z",
+        "start_date_local": "2026-05-02T14:29:21Z",
+        "start_index": 7714,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 18347581494,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 81.2,
+        "average_heartrate": 179.3,
+        "average_watts": 377.5,
+        "device_watts": true,
+        "distance": 276.4,
+        "elapsed_time": 95,
+        "end_index": 8989,
+        "hidden": false,
+        "id": 3485671844973960000,
+        "kom_rank": null,
+        "max_heartrate": 185,
+        "moving_time": 95,
+        "name": "Puffin Run 24 - endasprettur",
+        "pr_rank": null,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 0,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 276.4,
+          "elevation_high": 8.6,
+          "elevation_low": 3.1,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.443268,
+            -20.26744
+          ],
+          "hazardous": false,
+          "id": 36823414,
+          "maximum_grade": 6.6,
+          "name": "Puffin Run 24 - endasprettur",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.443522,
+            -20.262368
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-02T14:49:01Z",
+        "start_date_local": "2026-05-02T14:49:01Z",
+        "start_index": 8894,
+        "visibility": "everyone"
+      }
+    ],
     "similar_activities": {
       "average_speed": 2.23175690855987,
       "effort_count": 1,
@@ -1356,17 +1947,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 303,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1777733729,
+    "aspect_type": "update",
+    "event_time": 1777733821,
     "object_id": 18347581494,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Puffin Run 2026"
+    }
   },
-  "received_at": "2026-05-02T14:55:30.523Z",
+  "received_at": "2026-05-02T14:57:02.670Z",
   "source": "strava"
 }
