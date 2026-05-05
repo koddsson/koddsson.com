@@ -1,0 +1,103 @@
+{
+  "activity": {
+    "achievement_count": 0,
+    "athlete": {
+      "id": 370718,
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "available_zones": [],
+    "average_speed": 0,
+    "calories": 0,
+    "comment_count": 0,
+    "commute": false,
+    "description": "Laugavegur Ultra Marathon 55km Plan (Week 17/26)\r\n\r\n• Sl Db Rdl Knee Drive: 8 reps @ 8kg, 8 reps @ 8kg\r\n• Incline Barbell Bench Press: 8 reps @ 20kg, 8 reps @ 30kg\r\n• Single Leg Calf Raise: 8 reps @ 10kg, 8 reps @ 10kg\r\n• Lunge And Press: 8 reps @ 10kg, 8 reps @ 10kg\r\n• Step Up And Knee Drive: 8 reps, 8 reps\r\n• Single Arm Clean And Press: 8 reps @ 12kg, 8 reps @ 12kg\r\n• Single Arm Bench Press: 8 reps @ 20kg, 8 reps @ 20kg\r\n• Straight Leg Deadlift: 8 reps @ 35kg, 8 reps @ 40kg\r\n• Hanging Knee Raise: 7 reps, 9 reps\r\n• Hip Drop: 10 reps, 10 reps",
+    "device_name": "Runna",
+    "display_hide_heartrate_option": false,
+    "distance": 0,
+    "elapsed_time": 3437,
+    "embed_token": "8c19a3ad452f62cead84ecf8bb2a7da0d8058033",
+    "end_latlng": [],
+    "external_id": "5b84bf82-2680-4e91-a08f-107fb2b4bf39",
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear_id": null,
+    "has_heartrate": false,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "hide_from_home": false,
+    "id": 18389893234,
+    "kudos_count": 0,
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": false,
+    "map": {
+      "id": "a18389893234",
+      "polyline": "",
+      "resource_state": 3,
+      "summary_polyline": ""
+    },
+    "max_speed": 0,
+    "moving_time": 3437,
+    "name": "Strength Supersets with Runna ✅",
+    "perceived_exertion": null,
+    "photo_count": 0,
+    "photos": {
+      "count": 0,
+      "primary": null
+    },
+    "pr_count": 0,
+    "prefer_perceived_exertion": null,
+    "private": false,
+    "resource_state": 3,
+    "segment_efforts": [],
+    "sport_type": "WeightTraining",
+    "start_date": "2026-05-05T18:09:26Z",
+    "start_date_local": "2026-05-05T18:09:26Z",
+    "start_latlng": [],
+    "stats_visibility": [
+      {
+        "type": "heart_rate",
+        "visibility": "everyone"
+      },
+      {
+        "type": "pace",
+        "visibility": "everyone"
+      },
+      {
+        "type": "power",
+        "visibility": "everyone"
+      },
+      {
+        "type": "speed",
+        "visibility": "everyone"
+      },
+      {
+        "type": "calories",
+        "visibility": "everyone"
+      }
+    ],
+    "timezone": "(GMT+00:00) Africa/Abidjan",
+    "total_elevation_gain": 0,
+    "total_photo_count": 0,
+    "trainer": true,
+    "type": "WeightTraining",
+    "upload_id": 19494334485,
+    "upload_id_str": "19494334485",
+    "utc_offset": 0,
+    "visibility": "everyone",
+    "workout_type": 30
+  },
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1778008011,
+    "object_id": 18389893234,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2026-05-05T19:06:52.292Z",
+  "source": "strava"
+}
