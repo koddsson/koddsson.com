@@ -1,6 +1,6 @@
 {
   "activity": {
-    "achievement_count": 0,
+    "achievement_count": 3,
     "athlete": {
       "id": 370718,
       "resource_state": 1
@@ -158,7 +158,7 @@
     "calories": 596,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "I’m kind of happy that I’m able to quit before my legs hurt and I injure myself. I wish I could execute better but I feel like that is built on top of not being injured and running sensibly.",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -175,8 +175,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 305,
-      "distance": 304970,
+      "converted_distance": 312.7,
+      "distance": 312667,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -528,18 +528,223 @@
     "max_speed": 5.26,
     "max_watts": 540,
     "moving_time": 3001,
-    "name": "Afternoon Run",
+    "name": "Wasn’t feeling like my day",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "c01f3e1b-c620-4d03-b94c-02a8d915b35c",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/oyQOHHmuTmkuemzZW-snkeD4QFu1m2Eerf9be8x3lzg-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/oyQOHHmuTmkuemzZW-snkeD4QFu1m2Eerf9be8x3lzg-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
-    "pr_count": 0,
+    "pr_count": 1,
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
-    "segment_efforts": [],
+    "segment_efforts": [
+      {
+        "achievements": [
+          {
+            "rank": 3,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 18402490841,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 70.8,
+        "average_heartrate": 148.2,
+        "average_watts": 287.8,
+        "device_watts": true,
+        "distance": 383,
+        "elapsed_time": 158,
+        "end_index": 973,
+        "hidden": false,
+        "id": 3487167669834600000,
+        "kom_rank": null,
+        "max_heartrate": 181,
+        "moving_time": 158,
+        "name": "Fríski",
+        "pr_rank": 3,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 1,
+          "city": "Selfoss",
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 383,
+          "elevation_high": 6.6,
+          "elevation_low": 2.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.932668,
+            -21.008016
+          ],
+          "hazardous": false,
+          "id": 23559632,
+          "maximum_grade": 4,
+          "name": "Fríski",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.930278,
+            -21.013548
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-06T17:19:58Z",
+        "start_date_local": "2026-05-06T17:19:58Z",
+        "start_index": 815,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 18402490841,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 81.1,
+        "average_heartrate": 178.4,
+        "average_watts": 374.5,
+        "device_watts": true,
+        "distance": 565.5,
+        "elapsed_time": 174,
+        "end_index": 1615,
+        "hidden": false,
+        "id": 3487167669833140000,
+        "kom_rank": null,
+        "max_heartrate": 185,
+        "moving_time": 174,
+        "name": "Helmingurinn af slatta",
+        "pr_rank": 2,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": -0.1,
+          "city": null,
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 565.5,
+          "elevation_high": 27.2,
+          "elevation_low": 25.8,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.927913,
+            -21.007615
+          ],
+          "hazardous": false,
+          "id": 35666027,
+          "maximum_grade": 4,
+          "name": "Helmingurinn af slatta",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.931491,
+            -20.999869
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-06T17:30:24Z",
+        "start_date_local": "2026-05-06T17:30:24Z",
+        "start_index": 1441,
+        "visibility": "everyone"
+      },
+      {
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
+        "activity": {
+          "id": 18402490841,
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "resource_state": 1
+        },
+        "average_cadence": 81.2,
+        "average_heartrate": 182.4,
+        "average_watts": 428.8,
+        "device_watts": true,
+        "distance": 383,
+        "elapsed_time": 122,
+        "end_index": 1908,
+        "hidden": false,
+        "id": 3487167669833560000,
+        "kom_rank": null,
+        "max_heartrate": 186,
+        "moving_time": 122,
+        "name": "Fríski",
+        "pr_rank": 1,
+        "resource_state": 2,
+        "segment": {
+          "activity_type": "Run",
+          "average_grade": 1,
+          "city": "Selfoss",
+          "climb_category": 0,
+          "country": "Iceland",
+          "distance": 383,
+          "elevation_high": 6.6,
+          "elevation_low": 2.6,
+          "elevation_profile": null,
+          "elevation_profiles": null,
+          "end_latlng": [
+            63.932668,
+            -21.008016
+          ],
+          "hazardous": false,
+          "id": 23559632,
+          "maximum_grade": 4,
+          "name": "Fríski",
+          "private": false,
+          "resource_state": 2,
+          "starred": false,
+          "start_latlng": [
+            63.930278,
+            -21.013548
+          ],
+          "state": null
+        },
+        "start_date": "2026-05-06T17:36:09Z",
+        "start_date_local": "2026-05-06T17:36:09Z",
+        "start_index": 1786,
+        "visibility": "everyone"
+      }
+    ],
     "similar_activities": {
       "average_speed": 2.56501166277907,
       "effort_count": 1,
@@ -739,7 +944,7 @@
     "suffer_score": 107,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 25,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 19507030018,
@@ -747,17 +952,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 348,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1778090352,
+    "aspect_type": "update",
+    "event_time": 1778090945,
     "object_id": 18402490841,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Wasn’t feeling like my day"
+    }
   },
-  "received_at": "2026-05-06T17:59:13.322Z",
+  "received_at": "2026-05-06T18:09:06.210Z",
   "source": "strava"
 }
