@@ -1,6 +1,6 @@
 {
   "activity": {
-    "achievement_count": 0,
+    "achievement_count": 12,
     "athlete": {
       "id": 370718,
       "resource_state": 1
@@ -302,7 +302,7 @@
     "calories": 2998,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "It’s just so very very slow 😭",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -319,8 +319,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 77.6,
-      "distance": 77577,
+      "converted_distance": 110.6,
+      "distance": 110585,
       "id": "g29163210",
       "name": "Salomon Pulsar Trail",
       "nickname": null,
@@ -335,7 +335,7 @@
     "hide_from_home": false,
     "id": 18453704354,
     "kilojoules": 3942.9,
-    "kudos_count": 0,
+    "kudos_count": 2,
     "laps": [
       {
         "activity": {
@@ -1440,14 +1440,23 @@
     "max_speed": 3.76,
     "max_watts": 532,
     "moving_time": 17764,
-    "name": "Morning Trail Run",
+    "name": "Kind of amazed that I’m doing this",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 5,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "44757043-26f5-4f82-82b5-a4cad4b417ce",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/_u9t6rKEXFLy_e0_nO28JLXrSuqSq6oioTN2FggkUuI-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/_u9t6rKEXFLy_e0_nO28JLXrSuqSq6oioTN2FggkUuI-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
-    "pr_count": 0,
+    "pr_count": 2,
     "prefer_perceived_exertion": null,
     "private": false,
     "resource_state": 3,
@@ -1512,7 +1521,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1535,7 +1550,7 @@
         "max_heartrate": 182,
         "moving_time": 2110,
         "name": "Reykjadalur upp að laug",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1571,7 +1586,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1594,7 +1615,7 @@
         "max_heartrate": 182,
         "moving_time": 1164,
         "name": "1 mile TT UP from Reykjadalur trail juncture.",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1630,7 +1651,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1653,7 +1680,7 @@
         "max_heartrate": 185,
         "moving_time": 221,
         "name": "Bratta brekka fyrir ofan laugar",
-        "pr_rank": null,
+        "pr_rank": 1,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1689,7 +1716,19 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 1,
+            "type": "pr",
+            "type_id": 3
+          },
+          {
+            "effort_count": 2,
+            "rank": 1,
+            "type": "segment_effort_count_leader",
+            "type_id": 7
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1712,7 +1751,7 @@
         "max_heartrate": 182,
         "moving_time": 448,
         "name": "Fyrsta beygja eftir klambratún",
-        "pr_rank": null,
+        "pr_rank": 1,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1748,7 +1787,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1771,7 +1816,7 @@
         "max_heartrate": 164,
         "moving_time": 125,
         "name": "Ölkelduháls - lausir steinar niður",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1807,7 +1852,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1830,7 +1881,7 @@
         "max_heartrate": 173,
         "moving_time": 257,
         "name": "Steinn hæd og áin",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1866,7 +1917,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1889,7 +1946,7 @@
         "max_heartrate": 184,
         "moving_time": 1538,
         "name": "Nýjaleiðin í Reykjadal - niður",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1925,7 +1982,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 2,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -1948,7 +2011,7 @@
         "max_heartrate": 179,
         "moving_time": 637,
         "name": "Suđurlandsvegur uppruna",
-        "pr_rank": null,
+        "pr_rank": 2,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -1984,7 +2047,13 @@
         "visibility": "everyone"
       },
       {
-        "achievements": [],
+        "achievements": [
+          {
+            "rank": 3,
+            "type": "pr",
+            "type_id": 3
+          }
+        ],
         "activity": {
           "id": 18453704354,
           "resource_state": 1,
@@ -2007,7 +2076,7 @@
         "max_heartrate": 179,
         "moving_time": 382,
         "name": "Reykjadalur downhill 1K",
-        "pr_rank": null,
+        "pr_rank": 3,
         "resource_state": 2,
         "segment": {
           "activity_type": "Run",
@@ -2763,7 +2832,7 @@
     "suffer_score": 669,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 997,
-    "total_photo_count": 0,
+    "total_photo_count": 5,
     "trainer": false,
     "type": "Run",
     "upload_id": 19558772346,
@@ -2774,14 +2843,16 @@
     "workout_type": null
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1778424488,
+    "aspect_type": "update",
+    "event_time": 1778427904,
     "object_id": 18453704354,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Kind of amazed that I’m doing this"
+    }
   },
-  "received_at": "2026-05-10T14:48:09.598Z",
+  "received_at": "2026-05-10T15:45:05.490Z",
   "source": "strava"
 }
