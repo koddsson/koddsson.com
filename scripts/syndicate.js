@@ -9,6 +9,8 @@ const SITE_URL = "https://koddsson.com";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
+const errors = [];
+
 // Character limits
 const MASTODON_LIMIT = 500;
 const BLUESKY_LIMIT = 300;
@@ -34,7 +36,8 @@ function findSyndicatable() {
       const { data, content } = matter(raw);
 
       if (!data.syndicate) continue;
-      if (data.syndicated_to && Object.keys(data.syndicated_to).length > 0) continue;
+      const syndicated = data.syndicated_to || {};
+      if (syndicated.mastodon && syndicated.bluesky) continue;
 
       files.push({ filePath, data, content: content.trim(), dir });
     }
@@ -43,7 +46,11 @@ function findSyndicatable() {
 }
 
 function buildCanonicalUrl(dir, filePath) {
-  const slug = path.basename(filePath, ".md");
+  const basename = path.basename(filePath, ".md");
+  // Mirror Eleventy's `page.fileSlug`: strip a leading YYYY-MM-DD- date prefix,
+  // but keep filenames that are *only* a date (e.g. notes/2026-03-06.md).
+  const match = basename.match(/^\d{4}-\d{2}-\d{2}-(.+)$/);
+  const slug = match ? match[1] : basename;
   return `${SITE_URL}/${dir}/${slug}/`;
 }
 
@@ -279,23 +286,34 @@ async function syndicateMarkdownPosts(blueskySession) {
       continue;
     }
 
-    const syndicated_to = {};
+    const existing = data.syndicated_to || {};
+    const syndicated_to = { ...existing };
 
-    try {
-      const mastodonUrl = await postToMastodon(mastodonText);
-      console.log(`Mastodon: ${mastodonUrl}`);
-      syndicated_to.mastodon = mastodonUrl;
-    } catch (err) {
-      console.error(`Mastodon error: ${err.message}`);
+    if (!syndicated_to.mastodon) {
+      try {
+        const mastodonUrl = await postToMastodon(mastodonText);
+        console.log(`Mastodon: ${mastodonUrl}`);
+        syndicated_to.mastodon = mastodonUrl;
+      } catch (err) {
+        console.error(`Mastodon error: ${err.message}`);
+        errors.push(`${path.relative(ROOT, filePath)} → Mastodon: ${err.message}`);
+      }
+    } else {
+      console.log("Mastodon: already syndicated, skipping.");
     }
 
-    try {
-      if (!blueskySession.session) blueskySession.session = await blueskyLogin();
-      const blueskyUrl = await postToBluesky(blueskyText, blueskySession.session);
-      console.log(`Bluesky: ${blueskyUrl}`);
-      syndicated_to.bluesky = blueskyUrl;
-    } catch (err) {
-      console.error(`Bluesky error: ${err.message}`);
+    if (!syndicated_to.bluesky) {
+      try {
+        if (!blueskySession.session) blueskySession.session = await blueskyLogin();
+        const blueskyUrl = await postToBluesky(blueskyText, blueskySession.session);
+        console.log(`Bluesky: ${blueskyUrl}`);
+        syndicated_to.bluesky = blueskyUrl;
+      } catch (err) {
+        console.error(`Bluesky error: ${err.message}`);
+        errors.push(`${path.relative(ROOT, filePath)} → Bluesky: ${err.message}`);
+      }
+    } else {
+      console.log("Bluesky: already syndicated, skipping.");
     }
 
     if (Object.keys(syndicated_to).length > 0) {
@@ -361,6 +379,7 @@ async function syndicateImages(blueskySession) {
         syndicated_to.mastodon = mastodonUrl;
       } catch (err) {
         console.error(`Mastodon error: ${err.message}`);
+        errors.push(`image ${image.id} → Mastodon: ${err.message}`);
       }
     } else {
       console.log("Mastodon: already syndicated, skipping.");
@@ -379,6 +398,7 @@ async function syndicateImages(blueskySession) {
         syndicated_to.bluesky = blueskyUrl;
       } catch (err) {
         console.error(`Bluesky error: ${err.message}`);
+        errors.push(`image ${image.id} → Bluesky: ${err.message}`);
       }
     } else {
       console.log("Bluesky: already syndicated, skipping.");
@@ -398,6 +418,12 @@ async function main() {
   const blueskySession = { session: null };
   await syndicateMarkdownPosts(blueskySession);
   await syndicateImages(blueskySession);
+
+  if (errors.length > 0) {
+    console.error(`\nSyndication completed with ${errors.length} error(s):`);
+    for (const err of errors) console.error(`  - ${err}`);
+    process.exit(1);
+  }
 }
 
 main().catch((err) => {
