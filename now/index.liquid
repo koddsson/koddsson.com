@@ -1,0 +1,64 @@
+---
+permalink: /now/index.html
+layout: default
+title: "Now"
+description: "What I'm currently doing — latest run, current book, now playing — built from live feeds."
+noPageHeader: true
+---
+
+<section class="now-grid">
+  <div class="now-lead">
+    <h1 class="now-title">NOW.<br><span class="accent">CURRENTLY.</span></h1>
+    <div class="now-asof">
+      AS OF {{ buildDate | date: '%Y-%m-%d' }} · {{ buildDate | date: '%H:%M' }} UTC · BUILT FROM {{ now.feeds.size }} FEEDS
+    </div>
+    <div class="now-lead-foot">
+      <a href="/">← BACK TO HOME</a>
+      <a href="https://github.com/koddsson/koddsson.com">SOURCE · GITHUB/KODDSSON/KODDSSON.COM</a>
+    </div>
+  </div>
+
+  <div class="now-col">
+    {% if latestRun %}
+      <section class="now-panel">
+        <div class="now-head">
+          <span>§ 01 · LATEST RUN</span>
+          <span class="num">STRAVA{% if latestRun.ago %} · {{ latestRun.ago }}{% endif %}</span>
+        </div>
+        <h2 class="now-h2">{{ latestRun.name }}</h2>
+        {% if latestRun.device or latestRun.plan %}
+          <div class="now-sub">{% if latestRun.device %}{{ latestRun.device | upcase }}{% endif %}{% if latestRun.device and latestRun.plan %} · {% endif %}{% if latestRun.plan %}{{ latestRun.plan }}{% endif %}</div>
+        {% endif %}
+        {% if latestRun.routeSvg %}
+          <div class="now-route">{{ latestRun.routeSvg }}</div>
+        {% endif %}
+        <div class="now-stats">
+          <div class="stat"><b>{{ latestRun.distanceKm }}</b><span>KM</span></div>
+          <div class="stat"><b>{{ latestRun.pacePerKm }}</b><span>/KM PACE</span></div>
+          <div class="stat"><b>{{ latestRun.movingTime }}</b><span>MOVING</span></div>
+          <div class="stat"><b>+{{ latestRun.elevGain }}</b><span>ELEV M</span></div>
+        </div>
+      </section>
+    {% endif %}
+
+    {% if reading %}
+      <section class="now-panel">
+        <div class="now-head">
+          <span>§ 02 · READING</span>
+          <span class="num">GOODREADS{% if reading.pct %} · {{ reading.pct }}%{% endif %}</span>
+        </div>
+        <h2 class="now-h2">{{ reading.title }}</h2>
+        {% if reading.startedAt %}
+          <div class="now-sub">STARTED {{ reading.startedAt | date: '%b %-d' | upcase }}</div>
+        {% endif %}
+        {% if reading.pct %}
+          <div class="now-reading-bar">
+            <div class="bar"><i style="width: {{ reading.pct }}%"></i></div>
+            <div class="now-meta">{{ reading.pct }}% COMPLETE{% if reading.updatedAt %} · UPDATED {{ reading.updatedAt | date: '%b %-d' | upcase }}{% endif %}</div>
+          </div>
+        {% endif %}
+      </section>
+    {% endif %}
+
+  </div>
+</section>
