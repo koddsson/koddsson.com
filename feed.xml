@@ -242,4 +242,29 @@ chrome://flags#view-transition-on-navigation
 </content>
   </entry>
   
+  <entry>
+    <title>how to MITM your own phone for fun and profit</title>
+    <link href="https://koddsson.com/posts/how-to-mitm-your-own-phone-for-fun-and-profit/" rel="alternate" type="text/html"/>
+    <id>https://koddsson.com/posts/how-to-mitm-your-own-phone-for-fun-and-profit/</id>
+    <updated>2026-05-13T00:00:00Z</updated>
+    <published>2026-05-13T00:00:00Z</published>
+    <summary>I recently found out how to sniff network requests from apps using `mitmproxy`</summary>
+    <content type="html">&lt;p&gt;I recently discovered that you are able to use a combination of the &lt;a href=&#34;https://www.wireguard.com/&#34;&gt;WireGuard&lt;/a&gt; vpn app on your iPhone and &lt;a href=&#34;https://www.mitmproxy.org/&#34;&gt;&lt;code&gt;mitmproxy&lt;/code&gt;&lt;/a&gt; on your macOS to listen to network requests that your phone is making to the wider network.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/imgs/wireguard-screenshot.png&#34; alt=&#34;mitmproxy&#39;s WireGuard server setup screen, showing the generated peer config and a QR code for the iPhone WireGuard app&#34;&gt;&lt;/p&gt;
+&lt;p&gt;It&#39;s pretty easy to set up:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;brew install mitmproxy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install WireGuard on your phone&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mitmproxy --mode regular@8081 --mode wireguard&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open up &lt;code&gt;http://localhost:8081&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Scan the generated QR code in the WireGuard app to set up the VPN connection&lt;/li&gt;
+&lt;li&gt;Visit &lt;code&gt;mitm.it&lt;/code&gt; to install a root certificate (to decrypt TLS traffic)&lt;/li&gt;
+&lt;li&gt;Open up the app you would like to sniff the traffic from and get sniffin&#39;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/imgs/wireguard-screenshot2.png&#34; alt=&#34;mitmproxy&#39;s flow list view showing intercepted HTTPS requests from the iPhone, including hostnames, methods, status codes, and timings&#34;&gt;&lt;/p&gt;
+&lt;p&gt;This is really useful to look at what APIs the apps on your phone are talking to and what the requests and responses look like. You wouldn’t BELIEVE the insecure and weird stuff that apps are doing just because they don’t expect hackers to sniff out the requests like this. On browsers it’s trivial to look at the network panel on devtools so web app authors are almost forced to think about security in a more concrete way whereas app developers might not need to as much.&lt;/p&gt;
+&lt;p&gt;Check out &lt;code&gt;mitmproxy&lt;/code&gt; if this is interesting to you.&lt;/p&gt;
+</content>
+  </entry>
+  
 </feed>
