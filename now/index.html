@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="What I'm currently doing — latest run, current book, now playing — built from live feeds.">
+    <meta name="view-transition" content="same-origin">
+    <meta name="generator" content="Eleventy v3.1.5">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/now/">
+    <meta property="og:image" content="https://koddsson.com/img/079a3c3546a8794a43ba155b1f1c2a6e-576w.jpeg">
+    <meta property="og:logo" content="/favicon.ico">
+
+    <link rel="webmention" href="https://webmention.io/koddsson.com/webmention">
+    <link rel="pingback" href="https://webmention.io/koddsson.com/xmlrpc">
+    <link rel="icon" href="/favicon.ico">
+
+    <title>Now</title>
+    <meta property="og:title" content="Now">
+
+    <link rel="stylesheet" href="/css/prism-vs.css?v=49ac0393">
+    <link rel="stylesheet" href="/css/index.css?v=9a03162d">
+
+    <script type="importmap">
+      {
+        "imports": {
+          "web-vitals": "/assets/web-vitals.js"
+        }
+      }
+    </script>
+    <script type="module">
+      import "/js/toot-embed-element.js";
+    </script>
+    <script type="module">
+      import {onLCP, onCLS, onINP, onFCP, onTTFB} from 'web-vitals';
+
+      const endpoint = 'https://vitals.koddsson.workers.dev/';
+
+      function sendToAnalytics(metric) {
+        const body = JSON.stringify(metric);
+
+        // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
+        (navigator.sendBeacon && navigator.sendBeacon(endpoint, body)) ||
+          fetch(endpoint, {body, method: 'POST', keepalive: true});
+      }
+
+      onCLS(sendToAnalytics);
+      onLCP(sendToAnalytics);
+      onINP(sendToAnalytics);
+      onFCP(sendToAnalytics);
+      onTTFB(sendToAnalytics);
+    </script>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <header class="masthead">
+      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
+      <nav class="masthead-nav" aria-label="Primary">
+        
+        <a href="/">HOME</a>
+        <a href="/posts/">POSTS</a>
+        <a href="/notes/">NOTES</a>
+        <a href="/projects/">PROJECTS</a>
+        <a href="/images/">IMAGES</a>
+        <a href="/workouts/">WORKOUTS</a>
+        <a href="/reading-list/">READING</a>
+        <a href="/now/" class="active">NOW</a>
+      </nav>
+      <span class="masthead-meta">
+        <a class="rss-link" href="/feed.xml">RSS↗</a>
+      </span>
+    </header>
+
+    
+
+    <main id="main">
+<section class="now-grid">
+  <div class="now-lead">
+    <h1 class="now-title">NOW.<br><span class="accent">CURRENTLY.</span></h1>
+    <div class="now-asof">
+      AS OF 2026-05-13 · 08:23 UTC · BUILT FROM 2 FEEDS
+    </div>
+    <div class="now-lead-foot">
+      <a href="/">← BACK TO HOME</a>
+      <a href="https://github.com/koddsson/koddsson.com">SOURCE · GITHUB/KODDSSON/KODDSSON.COM</a>
+    </div>
+  </div>
+
+  <div class="now-col">
+    
+      <section class="now-panel">
+        <div class="now-head">
+          <span>§ 01 · LATEST RUN</span>
+          <span class="num">STRAVA · TODAY</span>
+        </div>
+        <h2 class="now-h2">Evening Run</h2>
+        
+          <div class="now-sub">GARMIN FORERUNNER 970</div>
+        
+        
+          <div class="now-route"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-60.00 -60.00 1120.00 1120.00">
+  <path pathLength="100" d="M379.66,744.39 L378.89,743.24 L377.93,738.63 L377.35,738.63 L375.62,734.02 L375.43,729.99 L372.74,723.66 L357.75,723.09 L346.41,721.36 L339.10,722.51 L322.57,734.02 L299.50,743.24 L293.16,749.57 L290.08,753.60 L279.51,748.99 L274.70,745.54 L273.55,743.24 L272.78,739.21 L273.16,734.60 L273.93,731.15 L272.01,727.12 L269.70,725.39 L265.09,727.12 L259.90,726.54 L248.94,712.15 L241.83,706.39 L237.22,700.63 L235.10,696.03 L230.87,689.69 L182.62,628.67 L172.24,618.31 L159.17,601.61 L148.21,591.82 L147.83,590.67 L147.06,586.07 L147.06,583.77 L147.64,580.31 L146.87,578.58 L141.68,573.98 L133.79,574.55 L132.45,575.13 L126.87,579.74 L122.65,578.01 L117.65,583.77 L116.49,583.19 L110.73,576.28 L104.77,571.10 L101.50,565.92 L91.31,545.19 L84.01,534.25 L79.78,528.50 L60.17,510.65 L56.32,506.62 L51.71,498.56 L47.87,492.23 L34.99,480.14 L31.33,475.53 L27.49,468.05 L22.11,449.63 L20.38,445.60 L17.49,440.41 L11.53,434.08 L6.15,430.63 L0.77,428.90 L0.00,428.32 L0.00,426.60 L1.35,417.39 L3.08,411.05 L4.61,408.18 L12.88,400.12 L21.91,389.18 L31.14,375.36 L39.79,366.15 L43.44,363.27 L60.17,339.67 L63.63,332.76 L67.28,324.12 L73.05,305.70 L73.24,303.97 L76.32,294.76 L78.82,291.88 L81.70,290.73 L94.77,290.73 L102.46,285.55 L106.31,279.79 L113.61,260.79 L115.72,257.34 L125.34,244.67 L128.60,239.49 L129.95,236.61 L130.53,233.16 L130.33,228.55 L129.57,221.65 L129.76,219.34 L135.52,207.83 L136.87,203.80 L138.99,192.29 L142.25,183.65 L143.02,175.59 L142.83,172.14 L142.25,166.95 L142.25,162.35 L142.83,159.47 L145.14,153.14 L154.75,143.93 L164.17,141.05 L171.47,135.29 L181.47,128.96 L192.04,126.08 L198.96,119.17 L203.00,114.57 L208.38,105.93 L211.46,104.20 L219.53,104.20 L225.11,106.51 L226.64,108.23 L227.60,111.11 L229.14,113.41 L236.83,120.32 L240.29,122.05 L252.40,124.35 L264.71,124.35 L270.67,124.93 L314.30,138.17 L320.45,140.47 L329.30,146.23 L332.18,146.23 L337.37,140.47 L342.56,140.47 L349.67,137.02 L356.40,135.87 L365.24,132.99 L369.86,129.53 L375.43,124.93 L382.16,116.87 L394.27,99.60 L396.19,96.14 L402.15,89.23 L411.96,86.93 L424.84,75.42 L441.56,79.45 L444.06,78.87 L452.33,71.96 L455.98,71.39 L463.67,73.69 L467.32,73.11 L470.01,71.96 L485.39,59.30 L496.73,51.24 L513.26,46.63 L526.91,44.91 L535.95,39.72 L559.40,29.36 L571.90,22.45 L590.93,13.82 L603.61,9.79 L620.92,2.30 L632.06,0.00 L652.63,1.15 L663.01,1.15 L666.86,1.73 L672.63,4.61 L676.86,5.76 L680.51,5.18 L685.89,2.88 L688.77,2.88 L691.66,4.61 L693.39,7.48 L696.85,14.39 L697.42,19.57 L698.58,24.18 L702.61,29.36 L727.22,39.72 L732.22,40.30 L778.55,42.03 L807.77,42.03 L814.11,40.88 L828.53,35.69 L841.02,27.63 L852.75,21.88 L860.82,16.70 L867.55,14.39 L869.28,14.97 L871.40,20.15 L876.97,35.69 L882.16,54.12 L883.12,55.84 L884.47,61.60 L885.24,63.33 L888.50,75.42 L889.66,78.87 L891.00,80.60 L892.73,80.60 L900.42,77.14 L901.19,77.72 L902.15,81.17 L903.50,83.48 L907.34,84.05 L940.41,67.93 L953.09,61.02 L957.52,62.18 L962.51,61.02 L964.82,63.33 L965.78,65.63 L971.55,84.63 L972.13,91.54 L971.55,105.35 L971.36,134.72 L970.97,143.93 L973.86,153.71 L974.43,157.17 L974.63,160.62 L973.86,168.68 L971.55,181.92 L971.36,195.74 L970.59,212.44 L970.40,232.01 L970.59,243.52 L971.74,252.16 L972.13,256.76 L971.74,263.10 L969.05,285.55 L968.67,302.25 L969.43,333.91 L970.40,347.73 L971.16,361.54 L971.16,379.97 L970.40,396.09 L968.47,414.51 L967.90,418.54 L966.94,427.17 L966.74,440.41 L966.36,448.47 L966.36,459.41 L965.59,466.32 L963.67,475.53 L963.67,476.68 L964.82,478.41 L967.51,479.56 L998.27,489.93 L1000.00,491.65 L999.81,492.80 L997.69,499.14 L987.89,509.50 L983.47,515.83 L974.63,534.25 L965.97,549.80 L961.36,556.71 L945.98,574.55 L941.75,580.31 L936.76,591.82 L933.68,597.58 L928.49,606.79 L919.45,618.88 L903.31,647.67 L882.93,672.42 L879.66,678.76 L870.63,700.06 L866.59,708.12 L856.40,724.24 L841.98,745.54 L835.45,761.08 L828.91,770.87 L825.07,781.81 L818.15,796.78 L810.46,805.99 L804.50,820.96 L790.85,848.59 L782.01,863.56 L777.20,870.47 L769.13,884.28 L762.98,891.77 L759.71,894.65 L752.60,896.95 L745.87,901.55 L737.02,909.61 L732.99,912.49 L724.53,916.52 L719.15,917.67 L706.07,915.95 L702.23,915.95 L692.81,919.98 L681.66,919.98 L675.89,921.70 L667.05,927.46 L658.02,929.76 L650.90,929.76 L641.10,925.73 L634.18,925.73 L621.88,930.92 L618.22,931.49 L611.88,930.34 L604.58,932.07 L593.62,938.40 L587.47,940.13 L582.08,940.13 L572.09,936.67 L563.05,936.10 L559.40,937.82 L554.40,943.01 L550.75,944.16 L546.33,943.01 L538.06,943.58 L531.33,945.88 L527.30,948.76 L522.68,949.91 L519.22,949.34 L514.80,947.61 L506.92,946.46 L502.69,947.04 L495.19,949.91 L491.93,949.91 L477.32,943.01 L472.70,942.43 L462.71,943.58 L460.21,942.43 L456.17,937.25 L453.29,934.95 L443.87,932.07 L441.37,934.37 L439.06,941.28 L438.49,945.88 L438.87,949.91 L438.68,951.07 L426.95,956.82 L426.37,957.40 L425.22,963.15 L423.88,966.61 L419.07,970.06 L365.05,979.27 L316.80,988.49 L245.10,999.42 L208.77,1000.00 L189.54,998.27 L168.78,994.24 L159.94,991.94 L151.67,991.36 L138.99,987.91 L135.33,985.61 L98.81,970.06 L97.85,967.76 L99.00,961.43 L100.15,956.82 L106.31,944.16 L108.23,938.98 L109.77,930.34 L110.92,918.83 L114.19,905.58 L116.49,899.25 L122.45,888.31 L124.95,881.98 L125.72,878.53 L126.87,867.01 L126.68,865.86 L128.03,857.80 L130.53,851.47 L139.56,839.95 L143.21,833.05 L145.52,826.14 L146.48,821.53 L146.67,816.93 L146.48,807.71 L146.67,804.26 L147.83,799.65 L151.67,791.59 L156.09,786.41 L158.98,781.23 L159.75,778.93 L161.48,777.78 L165.71,777.20 L195.69,778.93 L198.77,776.63 L201.46,772.60 L203.38,772.02 L208.77,777.20 L225.49,799.08 L227.60,798.50 L229.53,796.78 L235.49,786.99 L237.60,786.99 L243.37,793.32 L260.86,814.62 L267.40,824.41 L269.13,825.56 L272.40,822.68 L289.12,798.50 L289.12,797.35 L288.74,796.20 L284.12,786.99 L282.01,780.66 L279.12,776.05 L278.35,773.75 L280.28,769.72 L285.47,762.23 L289.89,754.17 L294.12,748.99" fill="none" stroke="#fc4c02" stroke-width="2"></path>
+</svg></div>
+        
+        <div class="now-stats">
+          <div class="stat"><b>9.01</b><span>KM</span></div>
+          <div class="stat"><b>7:26</b><span>/KM PACE</span></div>
+          <div class="stat"><b>1:06:57</b><span>MOVING</span></div>
+          <div class="stat"><b>+99</b><span>ELEV M</span></div>
+        </div>
+      </section>
+    
+
+    
+      <section class="now-panel">
+        <div class="now-head">
+          <span>§ 02 · READING</span>
+          <span class="num">GOODREADS · 53%</span>
+        </div>
+        <h2 class="now-h2">Elantris</h2>
+        
+          <div class="now-sub">STARTED MAY 12</div>
+        
+        
+          <div class="now-reading-bar">
+            <div class="bar"><i style="width: 53%"></i></div>
+            <div class="now-meta">53% COMPLETE · UPDATED MAY 12</div>
+          </div>
+        
+      </section>
+    
+
+  </div>
+</section>
+</main>
+
+    
+
+    <footer class="colophon">
+      <div class="colophon-col">
+        <div class="colophon-label">ELSEWHERE</div>
+        <a href="https://github.com/koddsson">→ GITHUB</a>
+        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
+        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
+        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">FEEDS</div>
+        <a href="/feed.xml">→ /FEED.XML</a>
+        <a href="/notes/feed.xml">→ /NOTES.XML</a>
+        <span>→ WEBMENTIONS</span>
+      </div>
+      <div class="colophon-col">
+        <div class="colophon-label">COLOPHON</div>
+        <span>HELVETICA NEUE</span>
+        <span>SYSTEM-UI · UI-MONOSPACE</span>
+        <span>BUILT WITH ELEVENTY</span>
+      </div>
+      <div class="colophon-col colophon-col-end">
+        <div class="colophon-label">© 2026</div>
+        <span>KRISTJÁN ODDSSON</span>
+      </div>
+    </footer>
+
+    <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>
+  </body>
+</html>
