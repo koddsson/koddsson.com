@@ -1,0 +1,103 @@
+{
+  "activity": {
+    "achievement_count": 0,
+    "athlete": {
+      "id": 370718,
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "available_zones": [],
+    "average_speed": 0,
+    "calories": 0,
+    "comment_count": 0,
+    "commute": false,
+    "description": "Laugavegur Ultra Marathon 55km Plan (Week 18/26)\r\n\r\n• Step Up And Knee Drive: 10 reps, 10 reps, 10 reps\r\n• Single Arm Bench Press: 10 reps @ 20kg, 10 reps @ 20kg, 10 reps @ 20kg\r\n• Seated Calf Raise: 15 reps @ 12kg, 15 reps @ 16kg, 15 reps @ 18kg\r\n• Double Arm Snatch: 10 reps @ 12kg, 10 reps @ 20kg, 10 reps @ 20kg\r\n• Incline Dumbbell Bench Press: 10 reps @ 20kg, 10 reps @ 28kg, 10 reps @ 28kg\r\n• Staggered Hip Thursts: 10 reps @ 15kg, 10 reps @ 20kg, 10 reps @ 20kg\r\n• Standing Side Bend: 15 reps @ 16kg, 15 reps @ 16kg, 15 reps @ 16kg\r\n• Box Jump: 10 reps, 10 reps, 10 reps",
+    "device_name": "Runna",
+    "display_hide_heartrate_option": false,
+    "distance": 0,
+    "elapsed_time": 3748,
+    "embed_token": "723f0992e6e1586371edc7e4b007e821569abb43",
+    "end_latlng": [],
+    "external_id": "15b772a8-394e-4ef9-bbfb-dc3071b50415",
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear_id": null,
+    "has_heartrate": false,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "hide_from_home": false,
+    "id": 18495475345,
+    "kudos_count": 0,
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": false,
+    "map": {
+      "id": "a18495475345",
+      "polyline": "",
+      "resource_state": 3,
+      "summary_polyline": ""
+    },
+    "max_speed": 0,
+    "moving_time": 3748,
+    "name": "Full Body Endurance Workout with Runna ✅",
+    "perceived_exertion": null,
+    "photo_count": 0,
+    "photos": {
+      "count": 0,
+      "primary": null
+    },
+    "pr_count": 0,
+    "prefer_perceived_exertion": null,
+    "private": false,
+    "resource_state": 3,
+    "segment_efforts": [],
+    "sport_type": "WeightTraining",
+    "start_date": "2026-05-13T19:07:26Z",
+    "start_date_local": "2026-05-13T19:07:26Z",
+    "start_latlng": [],
+    "stats_visibility": [
+      {
+        "type": "heart_rate",
+        "visibility": "everyone"
+      },
+      {
+        "type": "pace",
+        "visibility": "everyone"
+      },
+      {
+        "type": "power",
+        "visibility": "everyone"
+      },
+      {
+        "type": "speed",
+        "visibility": "everyone"
+      },
+      {
+        "type": "calories",
+        "visibility": "everyone"
+      }
+    ],
+    "timezone": "(GMT+00:00) Africa/Abidjan",
+    "total_elevation_gain": 0,
+    "total_photo_count": 0,
+    "trainer": true,
+    "type": "WeightTraining",
+    "upload_id": 19600903418,
+    "upload_id_str": "19600903418",
+    "utc_offset": 0,
+    "visibility": "everyone",
+    "workout_type": 30
+  },
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1778703001,
+    "object_id": 18495475345,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2026-05-13T20:10:02.174Z",
+  "source": "strava"
+}
