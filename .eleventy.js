@@ -88,6 +88,16 @@ export default async function (eleventyConfig) {
       });
   });
 
+  eleventyConfig.addCollection("voicemails", function (collectionApi) {
+    return collectionApi
+      .getAllSorted()
+      .reverse()
+      .filter((page) => {
+        return page.data.tags?.includes("voicemails") &&
+          page.url !== "/voicemails/";
+      });
+  });
+
   eleventyConfig.setLiquidOptions({
     // Display dates in UTC (so they don't risk being off by one day)
     timezoneOffset: 0,
@@ -117,6 +127,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("CNAME");
   eleventyConfig.addPassthroughCopy("data/workouts/**/*.svg");
+  eleventyConfig.addPassthroughCopy("audio/*.mp3");
   eleventyConfig.addPassthroughCopy({
     "node_modules/web-vitals/dist/web-vitals.js": "assets/web-vitals.js",
   });
