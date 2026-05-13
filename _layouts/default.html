@@ -76,7 +76,7 @@
       <section class="page-header">
         {% if date %}
           <div class="page-eyebrow">
-            <a href="{% if page.url contains '/notes/' and page.url != '/notes/' %}/notes/{% elsif page.url contains '/posts/' and page.url != '/posts/' %}/posts/{% elsif page.url contains '/images/' and page.url != '/images/' %}/images/{% elsif page.url contains '/projects/' and page.url != '/projects/' %}/projects/{% else %}/{% endif %}">← BACK</a>
+            <a href="{% if page.url contains '/notes/' and page.url != '/notes/' %}/notes/{% elsif page.url contains '/posts/' and page.url != '/posts/' %}/posts/{% elsif page.url contains '/voicemails/' and page.url != '/voicemails/' %}/voicemails/{% elsif page.url contains '/images/' and page.url != '/images/' %}/images/{% elsif page.url contains '/projects/' and page.url != '/projects/' %}/projects/{% else %}/{% endif %}">← BACK</a>
             <time datetime="{{ date | date: '%Y-%m-%d' }}">{{ date | isoDate }}</time>
           </div>
         {% endif %}
