@@ -267,15 +267,4 @@ chrome://flags#view-transition-on-navigation
 </content>
   </entry>
   
-  <entry>
-    <title>Voicemail</title>
-    <link href="https://koddsson.com/posts/2026-05-13T1329-voicemail/" rel="alternate" type="text/html"/>
-    <id>https://koddsson.com/posts/2026-05-13T1329-voicemail/</id>
-    <updated>2026-05-13T13:29:33Z</updated>
-    <published>2026-05-13T13:29:33Z</published>
-    <summary>A voicemail.</summary>
-    <content type="html">&lt;p&gt;&lt;audio controls src=&#34;/audio/2026-05-13T1329-voicemail.mp3&#34;&gt;&lt;/audio&gt;&lt;/p&gt;
-</content>
-  </entry>
-  
 </feed>
