@@ -5,6 +5,9 @@ layout: default.html
 date: 2026-05-13T00:00:00.000Z
 description: I recently found out how to sniff network requests from apps using `mitmproxy`
 syndicate: true
+syndicated_to:
+  mastodon: 'https://fosstodon.org/@koddsson/116566590978472762'
+  bluesky: 'https://bsky.app/profile/koddsson.com/post/3mlpywipyds23'
 ---
 
 I recently discovered that you are able to use a combination of the [WireGuard](https://www.wireguard.com/) vpn app on your iPhone and [`mitmproxy`](https://www.mitmproxy.org/) on your macOS to listen to network requests that your phone is making to the wider network.
