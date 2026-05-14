@@ -158,7 +158,7 @@
     "calories": 772,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -175,8 +175,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 329.7,
-      "distance": 329680,
+      "converted_distance": 338.4,
+      "distance": 338424,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -1904,12 +1904,21 @@
     "max_speed": 4.3,
     "max_watts": 731,
     "moving_time": 3944,
-    "name": "Afternoon Run",
+    "name": "Dýrafjörður hill repeats",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 2,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "2D1B64B0-1761-4704-9217-9DD906A2C5DE",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/_daaU48B72C4JNG92i3xkrPdSVJ9uRdh4EDSZnTVf2g-128x96.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/_daaU48B72C4JNG92i3xkrPdSVJ9uRdh4EDSZnTVf2g-768x576.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -2137,7 +2146,7 @@
     "suffer_score": 99,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 150,
-    "total_photo_count": 0,
+    "total_photo_count": 2,
     "trainer": false,
     "type": "Run",
     "upload_id": 19612591766,
@@ -2148,14 +2157,16 @@
     "workout_type": null
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1778779653,
+    "aspect_type": "update",
+    "event_time": 1778780419,
     "object_id": 18507061732,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Dýrafjörður hill repeats"
+    }
   },
-  "received_at": "2026-05-14T17:27:34.032Z",
+  "received_at": "2026-05-14T17:40:20.390Z",
   "source": "strava"
 }
