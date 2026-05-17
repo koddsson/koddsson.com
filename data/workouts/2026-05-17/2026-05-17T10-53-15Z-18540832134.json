@@ -204,7 +204,7 @@
     "calories": 1257,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -221,8 +221,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 338.4,
-      "distance": 338424,
+      "converted_distance": 353.7,
+      "distance": 353742,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -237,7 +237,7 @@
     "hide_from_home": false,
     "id": 18540832134,
     "kilojoules": 1884.1,
-    "kudos_count": 0,
+    "kudos_count": 2,
     "laps": [
       {
         "activity": {
@@ -766,12 +766,21 @@
     "max_speed": 3.32,
     "max_watts": 483,
     "moving_time": 6372,
-    "name": "Morning Run",
+    "name": "Started too fast and kept doing fast and then I didn’t wanna run anymore",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 1,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "b11ef5f6-1a8b-41df-9078-c43b583e7771",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/OeK7uvnDVMVxK8OOvDZGFiAzjckfzGDH1msU3eswORA-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/OeK7uvnDVMVxK8OOvDZGFiAzjckfzGDH1msU3eswORA-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -1120,7 +1129,7 @@
     "suffer_score": 272,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 69,
-    "total_photo_count": 0,
+    "total_photo_count": 1,
     "trainer": false,
     "type": "Run",
     "upload_id": 19646732962,
@@ -1128,17 +1137,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 308,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1779015194,
+    "aspect_type": "update",
+    "event_time": 1779022955,
     "object_id": 18540832134,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Started too fast and kept doing fast and then I didn’t wanna run anymore"
+    }
   },
-  "received_at": "2026-05-17T10:53:15.050Z",
+  "received_at": "2026-05-17T13:02:37.168Z",
   "source": "strava"
 }
