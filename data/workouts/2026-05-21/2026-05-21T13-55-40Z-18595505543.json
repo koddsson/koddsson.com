@@ -1,0 +1,260 @@
+{
+  "activity": {
+    "achievement_count": 0,
+    "athlete": {
+      "id": 370718,
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "available_zones": [],
+    "average_speed": 0,
+    "calories": 0,
+    "comment_count": 0,
+    "commute": false,
+    "description": "Laugavegur Ultra Marathon 55km Plan (Week 19/26)\r\n\r\n• Single Leg Glute Bridge: 12 reps, 12 reps, 12 reps\r\n• Kb Swings: 12 reps @ 20kg, 12 reps @ 24kg, 12 reps @ 24kg\r\n• Tricep Dip: 10 reps, 10 reps, 10 reps\r\n• Barbell Squat: 10 reps @ 20kg, 10 reps @ 25kg, 10 reps @ 25kg\r\n• Single Arm Row: 10 reps @ 10kg, 10 reps @ 12kg, 10 reps @ 14kg\r\n• Single Leg Calf Raise: 10 reps @ 10kg, 10 reps @ 10kg",
+    "device_name": "Runna",
+    "display_hide_heartrate_option": false,
+    "distance": 0,
+    "elapsed_time": 2770,
+    "embed_token": "0c77b945e8f8f75810d012b601dca4b8e3b4481a",
+    "end_latlng": [],
+    "external_id": "6ff2c47f-c743-479d-89fe-572d7d55109e",
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear_id": null,
+    "has_heartrate": false,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "hide_from_home": false,
+    "id": 18595505543,
+    "kudos_count": 0,
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": false,
+    "map": {
+      "id": "a18595505543",
+      "polyline": "",
+      "resource_state": 3,
+      "summary_polyline": ""
+    },
+    "max_speed": 0,
+    "moving_time": 2770,
+    "name": "Full Body Endurance Session with Runna ✅",
+    "perceived_exertion": null,
+    "photo_count": 0,
+    "photos": {
+      "count": 0,
+      "primary": null
+    },
+    "pr_count": 0,
+    "prefer_perceived_exertion": null,
+    "private": false,
+    "resource_state": 3,
+    "segment_efforts": [],
+    "sport_type": "WeightTraining",
+    "start_date": "2026-05-21T13:08:51Z",
+    "start_date_local": "2026-05-21T13:08:51Z",
+    "start_latlng": [],
+    "stats_visibility": [
+      {
+        "type": "heart_rate",
+        "visibility": "everyone"
+      },
+      {
+        "type": "pace",
+        "visibility": "everyone"
+      },
+      {
+        "type": "power",
+        "visibility": "everyone"
+      },
+      {
+        "type": "speed",
+        "visibility": "everyone"
+      },
+      {
+        "type": "calories",
+        "visibility": "everyone"
+      }
+    ],
+    "strength_details": {
+      "sets": [
+        {
+          "duration": null,
+          "exercise_name": "Single Leg Glute Bridge",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 12,
+          "start_time": "2026-05-21T13:17:40Z",
+          "superset_id": 2,
+          "weight": null
+        },
+        {
+          "duration": null,
+          "exercise_name": "Single Leg Glute Bridge",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 12,
+          "start_time": null,
+          "superset_id": 2,
+          "weight": null
+        },
+        {
+          "duration": null,
+          "exercise_name": "Single Leg Glute Bridge",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 12,
+          "start_time": null,
+          "superset_id": 2,
+          "weight": null
+        },
+        {
+          "duration": null,
+          "exercise_name": "Kettlebell Swing",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 12,
+          "start_time": "2026-05-21T13:25:55Z",
+          "superset_id": 3,
+          "weight": 20
+        },
+        {
+          "duration": null,
+          "exercise_name": "Tricep Dip",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": null,
+          "superset_id": 3,
+          "weight": null
+        },
+        {
+          "duration": null,
+          "exercise_name": "Kettlebell Swing",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 12,
+          "start_time": "2026-05-21T13:28:16Z",
+          "superset_id": 3,
+          "weight": 24
+        },
+        {
+          "duration": null,
+          "exercise_name": "Tricep Dip",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": null,
+          "superset_id": 3,
+          "weight": null
+        },
+        {
+          "duration": null,
+          "exercise_name": "Kettlebell Swing",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 12,
+          "start_time": null,
+          "superset_id": 3,
+          "weight": 24
+        },
+        {
+          "duration": null,
+          "exercise_name": "Tricep Dip",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": null,
+          "superset_id": 3,
+          "weight": null
+        },
+        {
+          "duration": null,
+          "exercise_name": "Barbell Squat",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": "2026-05-21T13:33:16Z",
+          "superset_id": 4,
+          "weight": 20
+        },
+        {
+          "duration": null,
+          "exercise_name": "Row",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": null,
+          "superset_id": 4,
+          "weight": 10
+        },
+        {
+          "duration": null,
+          "exercise_name": "Barbell Squat",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": "2026-05-21T13:41:49Z",
+          "superset_id": 4,
+          "weight": 25
+        },
+        {
+          "duration": null,
+          "exercise_name": "Row",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": null,
+          "superset_id": 4,
+          "weight": 12
+        },
+        {
+          "duration": null,
+          "exercise_name": "Barbell Squat",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": null,
+          "superset_id": 4,
+          "weight": 25
+        },
+        {
+          "duration": null,
+          "exercise_name": "Row",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": "2026-05-21T13:47:02Z",
+          "superset_id": 4,
+          "weight": 14
+        },
+        {
+          "duration": null,
+          "exercise_name": "Single Leg Standing Calf Raise",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": null,
+          "superset_id": 5,
+          "weight": 10
+        },
+        {
+          "duration": null,
+          "exercise_name": "Single Leg Standing Calf Raise",
+          "rate_of_perceived_exertion": null,
+          "repetitions": 10,
+          "start_time": "2026-05-21T13:54:58Z",
+          "superset_id": 5,
+          "weight": 10
+        }
+      ]
+    },
+    "timezone": "(GMT+00:00) Africa/Abidjan",
+    "total_elevation_gain": 0,
+    "total_photo_count": 0,
+    "trainer": true,
+    "type": "WeightTraining",
+    "upload_id": 19702060718,
+    "upload_id_str": "19702060718",
+    "utc_offset": 0,
+    "visibility": "everyone",
+    "workout_type": 30
+  },
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1779371739,
+    "object_id": 18595505543,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2026-05-21T13:55:40.357Z",
+  "source": "strava"
+}
