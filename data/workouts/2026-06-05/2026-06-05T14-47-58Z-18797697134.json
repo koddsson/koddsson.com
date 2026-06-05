@@ -14,7 +14,7 @@
     "calories": 47,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "display_hide_heartrate_option": true,
     "distance": 0,
@@ -77,7 +77,7 @@
     "max_heartrate": 180,
     "max_speed": 0,
     "moving_time": 340,
-    "name": "Afternoon Ride",
+    "name": "Heart doctor endurance test",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
@@ -125,17 +125,19 @@
     "upload_id_str": "19908105674",
     "utc_offset": 0,
     "visibility": "everyone",
-    "workout_type": null
+    "workout_type": 10
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1780670877,
+    "aspect_type": "update",
+    "event_time": 1780671142,
     "object_id": 18797697134,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Heart doctor endurance test"
+    }
   },
-  "received_at": "2026-06-05T14:47:58.219Z",
+  "received_at": "2026-06-05T14:52:23.253Z",
   "source": "strava"
 }
