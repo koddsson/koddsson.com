@@ -273,7 +273,7 @@
     "calories": 2324,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -290,8 +290,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 400.1,
-      "distance": 400139,
+      "converted_distance": 424.6,
+      "distance": 424647,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -1123,12 +1123,21 @@
     "max_speed": 3.86,
     "max_watts": 536,
     "moving_time": 13096,
-    "name": "Morning Run",
+    "name": "Cramped out but it was nice",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 2,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "941d25cd-b5c0-43b9-985a-d538538ef3ae",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/esiWcI7HMaSqT-AHLKKrg4OVnD75P7EviqErY7OApnY-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/esiWcI7HMaSqT-AHLKKrg4OVnD75P7EviqErY7OApnY-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -2004,7 +2013,7 @@
     "suffer_score": 569,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 919,
-    "total_photo_count": 0,
+    "total_photo_count": 2,
     "trainer": false,
     "type": "Run",
     "upload_id": 19936700775,
@@ -2012,17 +2021,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 246,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1780844767,
+    "aspect_type": "update",
+    "event_time": 1780845909,
     "object_id": 18825756370,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Cramped out but it was nice"
+    }
   },
-  "received_at": "2026-06-07T15:06:08.131Z",
+  "received_at": "2026-06-07T15:25:10.089Z",
   "source": "strava"
 }
