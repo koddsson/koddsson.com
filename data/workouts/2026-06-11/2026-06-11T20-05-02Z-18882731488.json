@@ -158,7 +158,7 @@
     "calories": 558,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -175,8 +175,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 431.2,
-      "distance": 431179,
+      "converted_distance": 437.6,
+      "distance": 437567,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -1168,12 +1168,21 @@
     "max_speed": 3.9,
     "max_watts": 736,
     "moving_time": 2606,
-    "name": "Evening Run",
+    "name": "Hill repeats in veeeery good weather",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 3,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "706cbdce-37f1-4c33-9379-4fad07ffe4fd",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/0iWp4uFgL3CZvEhcevFEFsmGOOQAkuwOBvlOqFRQPMM-128x85.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/0iWp4uFgL3CZvEhcevFEFsmGOOQAkuwOBvlOqFRQPMM-768x512.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -1422,7 +1431,7 @@
     "suffer_score": 72,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 98,
-    "total_photo_count": 0,
+    "total_photo_count": 3,
     "trainer": false,
     "type": "Run",
     "upload_id": 19994631137,
@@ -1430,17 +1439,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 317,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1781208301,
+    "aspect_type": "update",
+    "event_time": 1781208455,
     "object_id": 18882731488,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Hill repeats in veeeery good weather"
+    }
   },
-  "received_at": "2026-06-11T20:05:02.075Z",
+  "received_at": "2026-06-11T20:07:36.124Z",
   "source": "strava"
 }
