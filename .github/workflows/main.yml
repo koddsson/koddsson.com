@@ -19,7 +19,10 @@ jobs:
       - name: Install dependencies & build
         run: |
           npm ci
-          npm run build          
+          npm run build
+
+      - name: Install Chrome for Lighthouse
+        run: npx puppeteer browsers install chrome
 
       - name: run Lighthouse CI
         run: |
