@@ -5,7 +5,7 @@
       "id": 370718,
       "resource_state": 1
     },
-    "athlete_count": 2,
+    "athlete_count": 3,
     "available_zones": [
       "heartrate",
       "pace",
@@ -30,7 +30,7 @@
         "distance": 400,
         "elapsed_time": 123,
         "end_index": 9911,
-        "id": 79805325733,
+        "id": 79815286336,
         "moving_time": 123,
         "name": "400m",
         "pr_rank": null,
@@ -53,7 +53,7 @@
         "distance": 805,
         "elapsed_time": 265,
         "end_index": 9911,
-        "id": 79805325734,
+        "id": 79815286337,
         "moving_time": 265,
         "name": "1/2 mile",
         "pr_rank": null,
@@ -76,7 +76,7 @@
         "distance": 1000,
         "elapsed_time": 331,
         "end_index": 9002,
-        "id": 79805325735,
+        "id": 79815286338,
         "moving_time": 331,
         "name": "1K",
         "pr_rank": null,
@@ -99,7 +99,7 @@
         "distance": 1609,
         "elapsed_time": 538,
         "end_index": 9101,
-        "id": 79805325725,
+        "id": 79815286328,
         "moving_time": 538,
         "name": "1 mile",
         "pr_rank": null,
@@ -122,7 +122,7 @@
         "distance": 3219,
         "elapsed_time": 1088,
         "end_index": 9464,
-        "id": 79805325726,
+        "id": 79815286329,
         "moving_time": 1088,
         "name": "2 mile",
         "pr_rank": null,
@@ -145,7 +145,7 @@
         "distance": 5000,
         "elapsed_time": 1699,
         "end_index": 9911,
-        "id": 79805325727,
+        "id": 79815286330,
         "moving_time": 1699,
         "name": "5K",
         "pr_rank": null,
@@ -168,7 +168,7 @@
         "distance": 10000,
         "elapsed_time": 3527,
         "end_index": 9912,
-        "id": 79805325728,
+        "id": 79815286331,
         "moving_time": 3527,
         "name": "10K",
         "pr_rank": null,
@@ -191,7 +191,7 @@
         "distance": 15000,
         "elapsed_time": 5924,
         "end_index": 9912,
-        "id": 79805325729,
+        "id": 79815286332,
         "moving_time": 5924,
         "name": "15K",
         "pr_rank": null,
@@ -214,7 +214,7 @@
         "distance": 16090,
         "elapsed_time": 6564,
         "end_index": 9913,
-        "id": 79805325730,
+        "id": 79815286333,
         "moving_time": 6564,
         "name": "10 mile",
         "pr_rank": null,
@@ -237,7 +237,7 @@
         "distance": 20000,
         "elapsed_time": 9010,
         "end_index": 9913,
-        "id": 79805325731,
+        "id": 79815286334,
         "moving_time": 9010,
         "name": "20K",
         "pr_rank": null,
@@ -260,7 +260,7 @@
         "distance": 21097,
         "elapsed_time": 9518,
         "end_index": 9912,
-        "id": 79805325732,
+        "id": 79815286335,
         "moving_time": 9518,
         "name": "Half-Marathon",
         "pr_rank": null,
@@ -273,7 +273,7 @@
     "calories": 1966,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "Elsa  Thorisdottir  got second in her group\nMe, Ívar Oddsson and Oddur Kristjansson all won in the raffle so the whole squad walked away with prizes!",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -290,23 +290,23 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 474.5,
-      "distance": 474471,
-      "id": "g28655202",
-      "name": "Kiprun KD-900",
+      "converted_distance": 140.6,
+      "distance": 140590,
+      "id": "g29163210",
+      "name": "Salomon Pulsar Trail",
       "nickname": null,
       "primary": false,
       "resource_state": 2,
       "retired": false
     },
-    "gear_id": "g28655202",
+    "gear_id": "g29163210",
     "has_heartrate": true,
     "has_kudoed": false,
     "heartrate_opt_out": false,
     "hide_from_home": false,
     "id": 18998313284,
     "kilojoules": 2886.2,
-    "kudos_count": 0,
+    "kudos_count": 2,
     "laps": [
       {
         "activity": {
@@ -1059,17 +1059,26 @@
     "max_speed": 4.46,
     "max_watts": 578,
     "moving_time": 9895,
-    "name": "Lunch Run",
+    "name": "Snæfellsjökullhlaupið. Chip time: 02:45:04",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 8,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "EF50FC2C-8BA8-426E-BD58-CF8EBE83632F",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/Cw3O-0xl5yr0xsEMEOYkXplOayN_niiM-_jAU-Em7J8-96x128.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/Cw3O-0xl5yr0xsEMEOYkXplOayN_niiM-_jAU-Em7J8-576x768.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
     "private": false,
-    "resource_state": 3,
+    "resource_state": -1,
     "segment_efforts": [
       {
         "achievements": [],
@@ -1681,7 +1690,7 @@
       }
     ],
     "sport_image_visibility": "everyone",
-    "sport_type": "Run",
+    "sport_type": "TrailRun",
     "start_date": "2026-06-20T12:00:36Z",
     "start_date_local": "2026-06-20T12:00:36Z",
     "start_latlng": [
@@ -1717,7 +1726,7 @@
     "suffer_score": 495,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 782,
-    "total_photo_count": 0,
+    "total_photo_count": 8,
     "trainer": false,
     "type": "Run",
     "upload_id": 20111946831,
@@ -1728,14 +1737,16 @@
     "workout_type": null
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1781967572,
+    "aspect_type": "update",
+    "event_time": 1781982479,
     "object_id": 18998313284,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Snæfellsjökullhlaupið. Chip time: 02:45:04"
+    }
   },
-  "received_at": "2026-06-20T14:59:33.277Z",
+  "received_at": "2026-06-20T19:07:59.940Z",
   "source": "strava"
 }
