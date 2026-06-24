@@ -171,7 +171,7 @@
     "calories": 642,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -1446,12 +1446,21 @@
     "max_speed": 3.74,
     "max_watts": 692,
     "moving_time": 2883,
-    "name": "Afternoon Run",
+    "name": "Hill repeats",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 2,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "D5CAC6D2-E7EE-49D3-9867-6B54F952E355",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/SoKIlQZDZDbbFqFnl-yQHyAFf_ViyJpcPmTUdFp1C84-96x128.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/SoKIlQZDZDbbFqFnl-yQHyAFf_ViyJpcPmTUdFp1C84-576x768.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 1,
     "prefer_perceived_exertion": null,
@@ -2513,7 +2522,7 @@
     "suffer_score": 84,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 225,
-    "total_photo_count": 0,
+    "total_photo_count": 2,
     "trainer": false,
     "type": "Run",
     "upload_id": 20169402122,
@@ -2521,17 +2530,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 310,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1782339378,
+    "aspect_type": "update",
+    "event_time": 1782339411,
     "object_id": 19054883659,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Hill repeats"
+    }
   },
-  "received_at": "2026-06-24T22:16:19.627Z",
+  "received_at": "2026-06-24T22:16:52.032Z",
   "source": "strava"
 }
