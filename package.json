@@ -23,7 +23,7 @@
     "cssnano": "^8.0.2",
     "markdown-it": "^14.2.0",
     "markdown-it-footnote": "^4.0.0",
-    "puppeteer": "24.43.1"
+    "puppeteer": "25.2.1"
   },
   "dependencies": {
     "@mapbox/polyline": "^1.2.1",
