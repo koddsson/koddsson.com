@@ -1,14 +1,16 @@
 {
   "activity": null,
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1783254336,
+    "aspect_type": "update",
+    "event_time": 1783254424,
     "object_id": 19188745423,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Most fun I’ve had in a while 😍"
+    }
   },
-  "received_at": "2026-07-05T12:25:38.074Z",
+  "received_at": "2026-07-05T12:27:04.746Z",
   "source": "strava"
 }
