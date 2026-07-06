@@ -21,7 +21,7 @@
     "@jgarber/eleventy-plugin-postcss": "^3.0.1",
     "@lhci/cli": "^0.15.1",
     "cssnano": "^8.0.2",
-    "markdown-it": "^14.2.0",
+    "markdown-it": "^14.3.0",
     "markdown-it-footnote": "^4.0.0",
     "puppeteer": "24.43.1"
   },
