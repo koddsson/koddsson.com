@@ -1,14 +1,16 @@
 {
   "activity": null,
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1783532984,
+    "aspect_type": "update",
+    "event_time": 1783537085,
     "object_id": 19232029169,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Last before Laugavegurinn"
+    }
   },
-  "received_at": "2026-07-08T17:49:44.740Z",
+  "received_at": "2026-07-08T18:58:06.366Z",
   "source": "strava"
 }
