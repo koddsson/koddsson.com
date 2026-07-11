@@ -1,14 +1,16 @@
 {
   "activity": null,
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1783810668,
+    "aspect_type": "update",
+    "event_time": 1783810712,
     "object_id": 19274815363,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Laugavegur Ultra 2026"
+    }
   },
-  "received_at": "2026-07-11T22:57:48.729Z",
+  "received_at": "2026-07-11T22:58:32.972Z",
   "source": "strava"
 }
