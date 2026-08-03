@@ -1,0 +1,14 @@
+{
+  "activity": null,
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1785768056,
+    "object_id": 19583668866,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2026-08-03T14:40:57.663Z",
+  "source": "strava"
+}
