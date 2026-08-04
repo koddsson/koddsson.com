@@ -86,7 +86,7 @@
     
 
     <main id="main" class="reading"><p>I recently discovered that you are able to use a combination of the <a href="https://www.wireguard.com/">WireGuard</a> vpn app on your iPhone and <a href="https://www.mitmproxy.org/"><code>mitmproxy</code></a> on your macOS to listen to network requests that your phone is making to the wider network.</p>
-<p><picture><source type="image/webp" srcset="/img/R5WdHP7YAG-2064.webp 2064w"><img src="/img/R5WdHP7YAG-2064.jpeg" alt="mitmproxy's WireGuard server setup screen, showing the generated peer config and a QR code for the iPhone WireGuard app" width="2064" height="1366"></picture></p>
+<p><picture><source type="image/webp" srcset="/img/R5WdHP7YAG-2064.webp"><img src="/img/R5WdHP7YAG-2064.jpeg" alt="mitmproxy's WireGuard server setup screen, showing the generated peer config and a QR code for the iPhone WireGuard app" width="2064" height="1366"></picture></p>
 <p>It's pretty easy to set up:</p>
 <ul>
 <li><code>brew install mitmproxy</code></li>
@@ -97,7 +97,7 @@
 <li>Visit <code>mitm.it</code> to install a root certificate (to decrypt TLS traffic)</li>
 <li>Open up the app you would like to sniff the traffic from and get sniffin'</li>
 </ul>
-<p><picture><source type="image/webp" srcset="/img/SquWpUkpq7-2334.webp 2334w"><img src="/img/SquWpUkpq7-2334.jpeg" alt="mitmproxy's flow list view showing intercepted HTTPS requests from the iPhone, including hostnames, methods, status codes, and timings" width="2334" height="1660"></picture></p>
+<p><picture><source type="image/webp" srcset="/img/SquWpUkpq7-2334.webp"><img src="/img/SquWpUkpq7-2334.jpeg" alt="mitmproxy's flow list view showing intercepted HTTPS requests from the iPhone, including hostnames, methods, status codes, and timings" width="2334" height="1660"></picture></p>
 <p>This is really useful to look at what APIs the apps on your phone are talking to and what the requests and responses look like. You wouldn’t BELIEVE the insecure and weird stuff that apps are doing just because they don’t expect hackers to sniff out the requests like this. On browsers it’s trivial to look at the network panel on devtools so web app authors are almost forced to think about security in a more concrete way whereas app developers might not need to as much.</p>
 <p>Check out <code>mitmproxy</code> if this is interesting to you.</p>
 </main>
