@@ -16,7 +16,7 @@
     "calories": 1335,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "",
     "device_name": "Garmin Forerunner 970",
     "display_hide_heartrate_option": true,
     "distance": 15144.3,
@@ -86,12 +86,21 @@
     "max_heartrate": 189,
     "max_speed": 2.117,
     "moving_time": 11112,
-    "name": "Afternoon Hike",
+    "name": "Sunday hike 🙏",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 5,
+      "primary": {
+        "media_type": 2,
+        "source": 1,
+        "unique_id": "43998B82-59E4-47CA-9499-0904BD672BE9",
+        "urls": {
+          "100": "https://d35tn3x5zm6xrc.cloudfront.net/2r0OjnBnWP9-Zavqs5NA6-4z7nFTsKMO_3odbbf-Cyc/thumbnails/2r0OjnBnWP9-Zavqs5NA6-4z7nFTsKMO_3odbbf-Cyc_600x600.jpg",
+          "600": "https://d35tn3x5zm6xrc.cloudfront.net/2r0OjnBnWP9-Zavqs5NA6-4z7nFTsKMO_3odbbf-Cyc/thumbnails/2r0OjnBnWP9-Zavqs5NA6-4z7nFTsKMO_3odbbf-Cyc_600x600.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -425,7 +434,7 @@
     "suffer_score": 109,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 442,
-    "total_photo_count": 0,
+    "total_photo_count": 5,
     "trainer": false,
     "type": "Hike",
     "upload_id": 20801626031,
@@ -434,14 +443,16 @@
     "visibility": "everyone"
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1786300069,
+    "aspect_type": "update",
+    "event_time": 1786302997,
     "object_id": 19672529784,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Sunday hike 🙏"
+    }
   },
-  "received_at": "2026-08-09T18:27:49.952Z",
+  "received_at": "2026-08-09T19:16:39.396Z",
   "source": "strava"
 }
