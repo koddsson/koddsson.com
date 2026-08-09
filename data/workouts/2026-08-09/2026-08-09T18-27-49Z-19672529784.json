@@ -444,7 +444,7 @@
   },
   "payload": {
     "aspect_type": "update",
-    "event_time": 1786302997,
+    "event_time": 1786303117,
     "object_id": 19672529784,
     "object_type": "activity",
     "owner_id": 370718,
@@ -453,6 +453,6 @@
       "title": "Sunday hike 🙏"
     }
   },
-  "received_at": "2026-08-09T19:16:39.396Z",
+  "received_at": "2026-08-09T19:18:38.099Z",
   "source": "strava"
 }
