@@ -28,6 +28,6 @@
   "dependencies": {
     "@mapbox/polyline": "^1.2.1",
     "gray-matter": "^4.0.3",
-    "web-vitals": "^6.0.1"
+    "web-vitals": "^6.1.0"
   }
 }
