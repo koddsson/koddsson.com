@@ -146,7 +146,7 @@
     "calories": 344,
     "comment_count": 0,
     "commute": false,
-    "description": null,
+    "description": "One of my favorite little runs to escape the house when visiting my partners family ❤️",
     "device_name": "Garmin Forerunner 970",
     "device_watts": true,
     "display_hide_heartrate_option": true,
@@ -163,8 +163,8 @@
     "flagged": false,
     "from_accepted_tag": false,
     "gear": {
-      "converted_distance": 522.2,
-      "distance": 522171,
+      "converted_distance": 526.1,
+      "distance": 526080,
       "id": "g28655202",
       "name": "Kiprun KD-900",
       "nickname": null,
@@ -333,12 +333,21 @@
     "max_speed": 3.08,
     "max_watts": 519,
     "moving_time": 1484,
-    "name": "Afternoon Run",
+    "name": "Lækjarós",
     "perceived_exertion": null,
     "photo_count": 0,
     "photos": {
-      "count": 0,
-      "primary": null
+      "count": 2,
+      "primary": {
+        "media_type": 1,
+        "source": 1,
+        "unique_id": "1C0B7BA9-CF69-4F4B-A873-BAC3F544BC3C",
+        "urls": {
+          "100": "https://dgtzuqphqg23d.cloudfront.net/KnzeYDli3qWUPLj42ckjCKgmqu0j6COtLpHMIkEyalw-128x96.jpg",
+          "600": "https://dgtzuqphqg23d.cloudfront.net/KnzeYDli3qWUPLj42ckjCKgmqu0j6COtLpHMIkEyalw-768x576.jpg"
+        }
+      },
+      "use_primary_photo": true
     },
     "pr_count": 0,
     "prefer_perceived_exertion": null,
@@ -483,7 +492,7 @@
     "suffer_score": 81,
     "timezone": "(GMT+00:00) Atlantic/Reykjavik",
     "total_elevation_gain": 73,
-    "total_photo_count": 0,
+    "total_photo_count": 2,
     "trainer": false,
     "type": "Run",
     "upload_id": 20946409418,
@@ -491,17 +500,19 @@
     "utc_offset": 0,
     "visibility": "everyone",
     "weighted_average_watts": 354,
-    "workout_type": null
+    "workout_type": 0
   },
   "payload": {
-    "aspect_type": "create",
-    "event_time": 1787163458,
+    "aspect_type": "update",
+    "event_time": 1787163812,
     "object_id": 19812947795,
     "object_type": "activity",
     "owner_id": 370718,
     "subscription_id": 314269,
-    "updates": {}
+    "updates": {
+      "title": "Lækjarós"
+    }
   },
-  "received_at": "2026-08-19T18:17:39.008Z",
+  "received_at": "2026-08-19T18:23:34.231Z",
   "source": "strava"
 }
