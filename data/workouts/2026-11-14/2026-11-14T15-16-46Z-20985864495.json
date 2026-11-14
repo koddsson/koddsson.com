@@ -1,0 +1,546 @@
+{
+  "activity": {
+    "achievement_count": 0,
+    "athlete": {
+      "id": 370718,
+      "id_str": "370718",
+      "resource_state": 1
+    },
+    "athlete_count": 1,
+    "available_zones": [
+      "heartrate",
+      "pace",
+      "power"
+    ],
+    "average_cadence": 70.5,
+    "average_heartrate": 138.4,
+    "average_speed": 2.005,
+    "average_watts": 234.5,
+    "best_efforts": [
+      {
+        "achievements": [],
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "distance": 400,
+        "elapsed_time": 161,
+        "end_index": 415,
+        "id": 87756040080,
+        "moving_time": 161,
+        "name": "400m",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-11-14T14:44:11Z",
+        "start_date_local": "2026-11-14T14:44:11Z",
+        "start_index": 254
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "distance": 805,
+        "elapsed_time": 333,
+        "end_index": 414,
+        "id": 87756040081,
+        "moving_time": 333,
+        "name": "1/2 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-11-14T14:44:11Z",
+        "start_date_local": "2026-11-14T14:44:11Z",
+        "start_index": 81
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "distance": 1000,
+        "elapsed_time": 428,
+        "end_index": 440,
+        "id": 87756040082,
+        "moving_time": 428,
+        "name": "1K",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-11-14T14:44:11Z",
+        "start_date_local": "2026-11-14T14:44:11Z",
+        "start_index": 12
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "distance": 1609,
+        "elapsed_time": 753,
+        "end_index": 798,
+        "id": 87756040078,
+        "moving_time": 753,
+        "name": "1 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-11-14T14:44:11Z",
+        "start_date_local": "2026-11-14T14:44:11Z",
+        "start_index": 45
+      },
+      {
+        "achievements": [],
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "distance": 3219,
+        "elapsed_time": 1592,
+        "end_index": 1604,
+        "id": 87756040079,
+        "moving_time": 1592,
+        "name": "2 mile",
+        "pr_rank": null,
+        "resource_state": 2,
+        "start_date": "2026-11-14T14:44:11Z",
+        "start_date_local": "2026-11-14T14:44:11Z",
+        "start_index": 12
+      }
+    ],
+    "calories": 291,
+    "comment_count": 0,
+    "commute": false,
+    "description": null,
+    "device_name": "Garmin Forerunner 970",
+    "device_watts": true,
+    "display_hide_heartrate_option": true,
+    "distance": 3516.3,
+    "elapsed_time": 1804,
+    "elev_high": 25,
+    "elev_low": 17.4,
+    "embed_token": "c2134103c8092d3b60294b59ed667330d3d8a928",
+    "end_latlng": [
+      63.93,
+      -21.01
+    ],
+    "external_id": "garmin_ping_657427064318",
+    "flagged": false,
+    "from_accepted_tag": false,
+    "gear": {
+      "converted_distance": 642.7,
+      "distance": 642688,
+      "id": "g28655202",
+      "name": "Kiprun KD-900",
+      "nickname": null,
+      "primary": false,
+      "resource_state": 2,
+      "retired": false
+    },
+    "gear_id": "g28655202",
+    "has_heartrate": true,
+    "has_kudoed": false,
+    "heartrate_opt_out": false,
+    "hide_from_home": false,
+    "id": 20985864495,
+    "id_str": "20985864495",
+    "kilojoules": 412.2,
+    "kudos_count": 0,
+    "laps": [
+      {
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "average_cadence": 76.6,
+        "average_heartrate": 117.5,
+        "average_speed": 2.28,
+        "average_watts": 298.8,
+        "device_watts": true,
+        "distance": 1000,
+        "elapsed_time": 438,
+        "end_index": 439,
+        "id": 74851180508,
+        "lap_index": 0,
+        "max_heartrate": 173,
+        "max_speed": 2.68,
+        "moving_time": 438,
+        "name": "Lap 0",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 0,
+        "start_date": "2026-11-14T14:44:11Z",
+        "start_date_local": "2026-11-14T14:44:11Z",
+        "start_index": 0,
+        "total_elevation_gain": 4.4
+      },
+      {
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "average_cadence": 68.9,
+        "average_heartrate": 147.2,
+        "average_speed": 1.89,
+        "average_watts": 224.5,
+        "device_watts": true,
+        "distance": 1000,
+        "elapsed_time": 527,
+        "end_index": 966,
+        "id": 74851180509,
+        "lap_index": 1,
+        "max_heartrate": 165,
+        "max_speed": 2.54,
+        "moving_time": 528,
+        "name": "Lap 1",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 1,
+        "start_date": "2026-11-14T14:51:31Z",
+        "start_date_local": "2026-11-14T14:51:31Z",
+        "start_index": 440,
+        "total_elevation_gain": 12.4
+      },
+      {
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "average_cadence": 68.4,
+        "average_heartrate": 145.9,
+        "average_speed": 1.9,
+        "average_watts": 215.5,
+        "device_watts": true,
+        "distance": 1000,
+        "elapsed_time": 525,
+        "end_index": 1491,
+        "id": 74851180510,
+        "lap_index": 2,
+        "max_heartrate": 162,
+        "max_speed": 2.7,
+        "moving_time": 525,
+        "name": "Lap 2",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 2,
+        "start_date": "2026-11-14T15:00:18Z",
+        "start_date_local": "2026-11-14T15:00:18Z",
+        "start_index": 967,
+        "total_elevation_gain": 4.2
+      },
+      {
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "average_cadence": 67.6,
+        "average_heartrate": 140.1,
+        "average_speed": 1.63,
+        "average_watts": 192.9,
+        "device_watts": true,
+        "distance": 505.02,
+        "elapsed_time": 309,
+        "end_index": 1800,
+        "id": 74851180511,
+        "lap_index": 3,
+        "max_heartrate": 160,
+        "max_speed": 2.42,
+        "moving_time": 310,
+        "name": "Lap 3",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 3,
+        "start_date": "2026-11-14T15:09:03Z",
+        "start_date_local": "2026-11-14T15:09:03Z",
+        "start_index": 1492,
+        "total_elevation_gain": 6.2
+      },
+      {
+        "activity": {
+          "id": 20985864495,
+          "id_str": "20985864495",
+          "resource_state": 1,
+          "visibility": "everyone"
+        },
+        "athlete": {
+          "id": 370718,
+          "id_str": "370718",
+          "resource_state": 1
+        },
+        "average_cadence": 0,
+        "average_heartrate": 134.3,
+        "average_speed": 2.26,
+        "average_watts": 0,
+        "device_watts": true,
+        "distance": 11.29,
+        "elapsed_time": 5,
+        "end_index": 1804,
+        "id": 74851180512,
+        "lap_index": 4,
+        "max_heartrate": 135,
+        "max_speed": 2.2,
+        "moving_time": 5,
+        "name": "Lap 4",
+        "pace_zone": 1,
+        "resource_state": 2,
+        "split": 4,
+        "start_date": "2026-11-14T15:14:12Z",
+        "start_date_local": "2026-11-14T15:14:12Z",
+        "start_index": 1801,
+        "total_elevation_gain": 0
+      }
+    ],
+    "location_city": null,
+    "location_country": null,
+    "location_state": null,
+    "manual": false,
+    "map": {
+      "id": "a20985864495",
+      "polyline": "oqdeKflf_CCBEIE@c@r@Q@QRADAvDCxBHrA`@tCThDHz@Nt@J\\FFBATYb@[HQNo@f@kAb@{Ad@aAb@aBLUZYVk@b@qBZi@Ps@LwADc@V{@XyAf@eALe@No@TcB^yAR{AF{@LkAFqAD[Ne@D[?oCT}C?u@IiCJqCCa@Q}BAcDQ_AC]A}ALoA@aAIyAOoAGu@?mCAg@KeAC_ALkC@o@ImBK{@IgAC}BEa@@@?K?@A?EoA?}CAgAOgBg@_CSuBIi@So@c@mA]o@}@sBSW[g@O]m@cAg@k@k@aBe@{@e@e@a@gAKKGN@~C[zBGn@@rAJlB@d@Cl@QfAGn@Ch@?~@Br@ThDAv@MtB@jBFzA@dA?r@Cj@DTNTDPHfA@t@\\~BBr@XdA@X@|EDfHA~@Cb@Id@Ah@BPFDd@FRCVBBBf@dC^|CJxAFvAB|AA~BA`@GPCn@Xd@RrAJ^b@`ADl@E`AOfAe@xBe@fBs@vBo@zAE@KMCBG`@BRMh@i@bAEPe@r@GLBhACG@D?IBRABJd@",
+      "resource_state": 3,
+      "summary_polyline": "oqdeKflf_CCBEIE@c@r@Q@QRADAvDCxBHrA`@tCThDHz@Nt@J\\FFBATYb@[HQNo@f@kAb@{Ad@aAb@aBLUZYVk@b@qBZi@Ps@PsBXcAPeAPg@\\q@Le@No@TcB^yAR{AF{@LkAFqAD[Ne@D[?oCFeALoA?}@IiCJqCCa@Q}BAcDQ_AC]A}ALoA@aAIyAOoAGu@?mCAg@KeAC_ALkC@o@ImBK{@IgAC}BEa@@@?K?@A?EoA?}CAgAOgBg@_CSuBIi@So@c@mA]o@}@sBSW[g@O]m@cAg@k@k@aBe@{@e@e@a@gAKKGN@~C[zBGn@@rAJlB@d@Cl@QfAGn@Ch@?~@Br@ThDAv@MtB@jBFzA@dA?r@Cj@DTNTDPHfA@t@\\~BBr@XdA@X@|EDfHA~@Cb@Id@Ah@BPFDd@FRCVBBBf@dC^|CJxAFvAB|AA~BA`@GPCn@Xd@RrAJ^b@`ADl@E`AOfAe@xBe@fBs@vBo@zAE@KMCBG`@BRMh@i@bAEPe@r@GLBhACG@D?IBRABJd@"
+    },
+    "max_heartrate": 173,
+    "max_speed": 2.7,
+    "max_watts": 375,
+    "moving_time": 1754,
+    "name": "Afternoon Run",
+    "perceived_exertion": null,
+    "photo_count": 0,
+    "photos": {
+      "count": 0,
+      "primary": null
+    },
+    "pr_count": 0,
+    "prefer_perceived_exertion": null,
+    "private": false,
+    "resource_state": 3,
+    "segment_efforts": [],
+    "similar_activities": {
+      "average_speed": 2.10499843211038,
+      "effort_count": 9,
+      "frequency_milestone": null,
+      "max_average_speed": 2.41133257403189,
+      "mid_average_speed": 2.11267456015814,
+      "min_average_speed": 1.87984453081621,
+      "pr_rank": null,
+      "resource_state": 2,
+      "trend": {
+        "current_activity_index": 4,
+        "direction": 1,
+        "max_speed": 2.41133257403189,
+        "mid_speed": 2.11267456015814,
+        "min_speed": 1.87984453081621,
+        "speeds": [
+          2.17781077060519,
+          2.09638550561901,
+          2.03489013472959,
+          1.96429357176623,
+          1.98080207394312
+        ]
+      }
+    },
+    "splits_metric": [
+      {
+        "average_grade_adjusted_speed": 2.38,
+        "average_heartrate": 117.259953161593,
+        "average_speed": 2.33,
+        "distance": 1000,
+        "elapsed_time": 437,
+        "elevation_difference": 2.6,
+        "moving_time": 430,
+        "pace_zone": 1,
+        "split": 1
+      },
+      {
+        "average_grade_adjusted_speed": 2.06,
+        "average_heartrate": 147.240310077519,
+        "average_speed": 1.93,
+        "distance": 1000.8,
+        "elapsed_time": 528,
+        "elevation_difference": 0.4,
+        "moving_time": 518,
+        "pace_zone": 1,
+        "split": 2
+      },
+      {
+        "average_grade_adjusted_speed": 1.95,
+        "average_heartrate": 145.906666666667,
+        "average_speed": 1.91,
+        "distance": 1000.9,
+        "elapsed_time": 525,
+        "elevation_difference": -2.8,
+        "moving_time": 525,
+        "pace_zone": 1,
+        "split": 3
+      },
+      {
+        "average_grade_adjusted_speed": 1.95,
+        "average_heartrate": 140.064748201439,
+        "average_speed": 1.83,
+        "distance": 514.6,
+        "elapsed_time": 314,
+        "elevation_difference": -1,
+        "moving_time": 281,
+        "pace_zone": 1,
+        "split": 4
+      }
+    ],
+    "splits_standard": [
+      {
+        "average_grade_adjusted_speed": 2.26,
+        "average_heartrate": 130.302949061662,
+        "average_speed": 2.15,
+        "distance": 1611.7,
+        "elapsed_time": 767,
+        "elevation_difference": 4.8,
+        "moving_time": 750,
+        "pace_zone": 1,
+        "split": 1
+      },
+      {
+        "average_grade_adjusted_speed": 1.98,
+        "average_heartrate": 145.601918465228,
+        "average_speed": 1.93,
+        "distance": 1608.7,
+        "elapsed_time": 835,
+        "elevation_difference": -3.6,
+        "moving_time": 835,
+        "pace_zone": 1,
+        "split": 2
+      },
+      {
+        "average_grade_adjusted_speed": 1.86,
+        "average_heartrate": 138.234939759036,
+        "average_speed": 1.75,
+        "distance": 295.9,
+        "elapsed_time": 202,
+        "elevation_difference": -2,
+        "moving_time": 169,
+        "pace_zone": 1,
+        "split": 3
+      }
+    ],
+    "sport_image_visibility": "everyone",
+    "sport_type": "Run",
+    "start_date": "2026-11-14T14:44:11Z",
+    "start_date_local": "2026-11-14T14:44:11Z",
+    "start_latlng": [
+      63.93,
+      -21.01
+    ],
+    "stats_visibility": [
+      {
+        "type": "heart_rate",
+        "visibility": "everyone"
+      },
+      {
+        "type": "pace",
+        "visibility": "everyone"
+      },
+      {
+        "type": "power",
+        "visibility": "everyone"
+      },
+      {
+        "type": "speed",
+        "visibility": "everyone"
+      },
+      {
+        "type": "calories",
+        "visibility": "everyone"
+      },
+      {
+        "type": "weight_lifted",
+        "visibility": "everyone"
+      }
+    ],
+    "suffer_score": 19,
+    "tags": [],
+    "timezone": "(GMT+00:00) Atlantic/Reykjavik",
+    "total_elevation_gain": 22,
+    "total_photo_count": 0,
+    "trainer": false,
+    "type": "Run",
+    "upload_id": 22153397541,
+    "upload_id_str": "22153397541",
+    "utc_offset": 0,
+    "visibility": "everyone",
+    "weighted_average_watts": 250,
+    "workout_type": null
+  },
+  "payload": {
+    "aspect_type": "create",
+    "event_time": 1794669405,
+    "object_id": 20985864495,
+    "object_type": "activity",
+    "owner_id": 370718,
+    "subscription_id": 314269,
+    "updates": {}
+  },
+  "received_at": "2026-11-14T15:16:46.803Z",
+  "source": "strava"
+}
