@@ -14,9 +14,6 @@ async function hash(relativePath) {
 }
 
 export default async function () {
-  const [index, prism] = await Promise.all([
-    hash("css/index.css"),
-    hash("css/prism-vs.css"),
-  ]);
-  return { css: { index, prism } };
+  const index = await hash("css/index.css");
+  return { css: { index } };
 }

@@ -7,12 +7,10 @@ noPageHeader: true
 ---
 
 <style>
-  .rl-hero { grid-template-columns: minmax(0, 1fr) auto; margin-bottom: 0; gap: 40px 64px; }
-  .rl-intro { display: flex; flex-direction: column; gap: 28px; padding-bottom: 28px; }
   .rl-entry { scroll-margin-top: 24px; }
-  .rl-entry:first-of-type h2 { margin-top: 0; }
-  .rl-entry:target h2 { color: var(--accent); }
-  .rl-meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-2); margin: -4px 0 10px; }
+  .rl-entry:target h2 { background: #ffff00; color: #000; }
+  .rl-shelf { margin-bottom: 40px; }
+  .rl-meta { color: var(--muted); margin-bottom: 0; }
 
   .rl-shelf {
     --wm: vertical-rl; --across: to right; --along: to bottom;
@@ -31,7 +29,7 @@ noPageHeader: true
   .rl-shelf .lift { position: absolute; inset: 0; writing-mode: var(--wm); transition: translate 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
   @media (hover: hover) { .rl-shelf .book:hover .lift { translate: 0 -10px; } }
   .rl-shelf .book:focus-visible .lift { translate: 0 -10px; }
-  .rl-shelf .book:focus-visible .spine { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .rl-shelf .book:focus-visible .spine { outline: 2px solid var(--fg); outline-offset: 3px; }
 
   .rl-shelf .spine {
     position: absolute; inset: 0; overflow: hidden;
@@ -139,12 +137,11 @@ noPageHeader: true
   .rl-shelf .s-mag .a { font-family: var(--font-mono); font-weight: 500; font-size: min(8.5px, calc(var(--t) * 0.36)); letter-spacing: 0.1em; text-transform: uppercase; max-inline-size: none; }
 
   @media (max-width: 720px) {
-    .rl-hero { grid-template-columns: 1fr; gap: 32px; }
     .rl-shelf {
       --wm: horizontal-tb; --across: to bottom; --along: to right;
-      flex-direction: column; align-items: center; gap: 0; padding-top: 0; padding-bottom: 28px; zoom: 1;
+      flex-direction: column; align-items: center; gap: 2px; padding-top: 0; padding-bottom: 28px; zoom: 1;
     }
-    .rl-shelf .book { width: var(--h); max-width: 100%; height: var(--t); translate: var(--dx) 0; rotate: var(--tilt); }
+    .rl-shelf .book { width: var(--h); max-width: 100%; height: max(24px, var(--t)); translate: var(--dx) 0; rotate: var(--tilt); }
     .rl-shelf .book::after { left: 2%; right: 2%; bottom: -4px; height: 7px; background: radial-gradient(closest-side, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)); }
     .rl-shelf .spine { box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.35); }
     .rl-shelf .s-bold .a { align-self: center; }
@@ -157,15 +154,10 @@ noPageHeader: true
 {% assign dxs = "-6,9,-3,7,-10,4,-8,5" | split: "," %}
 {% assign tilts = "0.5,-0.7,0.3,-0.4,0.8,-0.2,0.6,-0.5" | split: "," %}
 
-<section class="hero rl-hero">
-  <div class="rl-intro">
-    <h1>READING<br><span class="accent">LIST.</span></h1>
-    <div class="hero-lede">
-      <div class="hero-lede__label">№ 01 · INTRODUCTION</div>
-      <p>I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.</p>
-      <p>I plan on updating this list over time.</p>
-    </div>
-  </div>
+<h1>Reading list</h1>
+
+<p>I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.</p>
+<p>I plan on updating this list over time.</p>
 
   <nav class="rl-shelf" aria-label="Shelf">
     {%- for item in readingList -%}
@@ -200,12 +192,11 @@ noPageHeader: true
       </a>
     {%- endfor -%}
   </nav>
-</section>
 
 {% for item in readingList %}
 <article class="rl-entry" id="{{ item.slug }}">
   <h2>{{ item.title }}</h2>
-  <p class="rl-meta">{{ item.kind | upcase }} · {{ item.author | upcase }}{% if item.pages %} · {{ item.pages }} PAGES{% endif %}{% if item.minutes %} · {{ item.minutes }} MIN READ{% endif %}</p>
+  <p class="rl-meta">{{ item.kind | capitalize }} · {{ item.author }}{% if item.pages %} · {{ item.pages }} pages{% endif %}{% if item.minutes %} · {{ item.minutes }} min read{% endif %}</p>
   <p><a href="{{ item.url }}">{{ item.url }}</a></p>
   <p>{{ item.note | markdownInline }}</p>
 </article>
