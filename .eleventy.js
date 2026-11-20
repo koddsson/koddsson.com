@@ -112,6 +112,14 @@ export default async function (eleventyConfig) {
     return array.at(-1);
   });
 
+  eleventyConfig.addFilter("markdownInline", (value) => markdownLib.renderInline(String(value ?? "")));
+
+  eleventyConfig.addFilter("spineThickness", (item) => {
+    const raw = item.kind === "article" ? 17 + (item.minutes || 15) * 0.16 : 15 + (item.pages || 300) * 0.064;
+    const [lo, hi] = item.kind === "article" ? [20, 30] : [22, 74];
+    return Math.round(Math.min(hi, Math.max(lo, raw)));
+  });
+
   eleventyConfig.addFilter("romanNumeral", romanNumeral);
   eleventyConfig.addFilter("isoDate", isoDate);
 
