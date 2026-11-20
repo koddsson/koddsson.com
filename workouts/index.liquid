@@ -6,262 +6,53 @@ description: "My Strava activities"
 noPageHeader: true
 ---
 
-<style>
-  .workout-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 2px solid var(--ink);
-  }
+<h1>Workouts</h1>
 
-  .workout-stat-card {
-    padding: 20px 16px 20px 0;
-    border-right: 1px solid var(--ink);
-  }
-  .workout-stat-card:nth-child(n+2) { padding-left: 16px; }
-  .workout-stat-card:last-child { border-right: 0; }
+<p class="muted">{{ workouts.size }} activities, via Strava.</p>
 
-  .workout-stat-card .label {
-    font-family: var(--font-display);
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--ink-2);
-    margin-bottom: 8px;
-  }
-  .workout-stat-card .value {
-    font-family: var(--font-display);
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.02em;
-  }
-  .workout-stat-card .unit {
-    font-size: 18px;
-    color: var(--ink-2);
-    margin-left: 4px;
-    letter-spacing: 0;
-  }
-  .workout-stat-card .sub {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--ink-2);
-    margin-top: 6px;
-  }
+<dl>
+  <dt>Total distance</dt><dd>{{ workoutStats.totalDistanceKm }} km</dd>
+  <dt>Total runs</dt><dd>{{ workoutStats.totalRuns }}</dd>
+  <dt>Average pace</dt><dd>{{ workoutStats.avgPace }} /km</dd>
+  <dt>Longest</dt><dd>{{ workoutStats.longestKm }} km</dd>
+</dl>
 
-  .workout-grid-cols {
-    grid-template-columns: 36px 64px 1fr 90px 80px 80px 70px;
-  }
+<h2>Log</h2>
 
-  .workout-table-header {
-    display: grid;
-    font-family: var(--font-display);
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    border-bottom: 2px solid var(--ink);
-    padding: 8px 0;
-    gap: 12px;
-    margin-top: 32px;
-    color: var(--ink-2);
-  }
-  .workout-table-header > :nth-child(n+4) { text-align: right; }
-
-  .workout-rows { border-bottom: 2px solid var(--ink); }
-
-  .workout-row {
-    display: grid;
-    align-items: center;
-    padding: 12px 0;
-    gap: 12px;
-  }
-  .workout-row + .workout-row { border-top: 1px dashed var(--ink-3); }
-
-  .workout-row .num {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--ink-2);
-  }
-
-  .workout-thumb {
-    width: 56px;
-    height: 56px;
-    border: 1px solid var(--ink);
-    background: #fff;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-  }
-  .workout-thumb svg {
-    width: 100%;
-    height: 100%;
-    padding: 4px;
-  }
-  .workout-thumb svg path {
-    stroke: var(--accent);
-    stroke-width: 12px;
-    fill: none;
-  }
-  .workout-thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .workout-thumb.empty {
-    background: repeating-linear-gradient(
-      45deg,
-      var(--bg),
-      var(--bg) 4px,
-      var(--surface) 4px,
-      var(--surface) 8px
-    );
-    color: var(--ink-3);
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .workout-row .activity-title {
-    font-family: var(--font-display);
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: -0.005em;
-    color: var(--ink);
-    text-decoration: none;
-    line-height: 1.2;
-    display: block;
-  }
-  .workout-row .activity-title:hover { color: var(--accent); }
-  .workout-row .activity-time {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--ink-2);
-    margin-top: 4px;
-    display: block;
-  }
-
-  .workout-row .stat-cell {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    text-align: right;
-  }
-  .workout-row .stat-cell.muted {
-    color: var(--ink-3);
-  }
-
-  @media (max-width: 720px) {
-    .workout-stats-grid { grid-template-columns: 1fr 1fr; }
-    .workout-stat-card { border-right: 0; border-bottom: 1px solid var(--ink); }
-    .workout-stat-card:nth-child(odd) { border-right: 1px solid var(--ink); }
-    .workout-stat-card:nth-last-child(-n+2) { border-bottom: 0; }
-    .workout-stat-card:nth-child(n+1) { padding: 16px; }
-
-    .workout-table-header { display: none; }
-    .workout-grid-cols { grid-template-columns: 56px 1fr; }
-    .workout-row { grid-template-columns: 56px 1fr; row-gap: 4px; }
-    .workout-row .num { display: none; }
-    .workout-row .stat-cell {
-      grid-column: 2;
-      text-align: left;
-      font-size: 12px;
-    }
-    .workout-row .stat-cell::before {
-      font-family: var(--font-display);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      color: var(--ink-2);
-      margin-right: 6px;
-    }
-    .workout-row .stat-cell.distance::before { content: 'DIST'; }
-    .workout-row .stat-cell.duration::before { content: 'TIME'; }
-    .workout-row .stat-cell.pace::before { content: 'PACE'; }
-    .workout-row .stat-cell.hr::before { content: 'HR'; }
-  }
-</style>
-
-<header class="index-hero">
-  <h1>WORKOUTS.</h1>
-  <span class="meta">N = {{ workouts.size }} · VIA STRAVA</span>
-</header>
-
-<div class="workout-stats-grid">
-  <div class="workout-stat-card">
-    <div class="label">TOTAL DISTANCE</div>
-    <div class="value">{{ workoutStats.totalDistanceKm }}<span class="unit">KM</span></div>
-    <div class="sub">ALL ACTIVITIES</div>
-  </div>
-  <div class="workout-stat-card">
-    <div class="label">TOTAL RUNS</div>
-    <div class="value">{{ workoutStats.totalRuns }}</div>
-    <div class="sub">LOGGED</div>
-  </div>
-  <div class="workout-stat-card">
-    <div class="label">AVG PACE</div>
-    <div class="value">{{ workoutStats.avgPace }}</div>
-    <div class="sub">MIN/KM</div>
-  </div>
-  <div class="workout-stat-card">
-    <div class="label">LONGEST</div>
-    <div class="value">{{ workoutStats.longestKm }}<span class="unit">KM</span></div>
-    <div class="sub">SINGLE ACTIVITY</div>
-  </div>
-</div>
-
-<div class="workout-table-header workout-grid-cols">
-  <span>№</span>
-  <span>ROUTE</span>
-  <span>ACTIVITY / DATE</span>
-  <span>DISTANCE</span>
-  <span>TIME</span>
-  <span>PACE</span>
-  <span>HR</span>
-</div>
-
-<div class="workout-rows">
+<div class="table-wrap">
+<table class="workouts">
+  <thead>
+    <tr><th class="c-route"><span class="sr-only">Route</span></th><th>Activity</th><th class="num">Dist</th><th class="num">Time</th><th class="num">Pace</th><th class="num">HR</th></tr>
+  </thead>
+  <tbody>
 {%- for workout in workouts -%}
 {%- assign activity = workout.data.activity -%}
-{%- if activity -%}
-<div class="workout-row workout-grid-cols">
-  <span class="num">{{ forloop.index | prepend: "00" | slice: -2, 2 }}</span>
-  <div class="workout-thumb{% unless workout.svgPath %} empty{% endunless %}">
-    {% if workout.svgPath %}{% include workout.svgPath %}{% else %}NO MAP{% endif %}
-  </div>
-  <div>
-    <a class="activity-title" href="https://www.strava.com/activities/{{ activity.id }}" target="_blank" rel="noopener noreferrer">{{ activity.name }}</a>
-    <time class="activity-time">{{ activity.start_date | date: '%Y-%m-%d · %H:%M' }} UTC</time>
-  </div>
-  {% if activity.distance %}
-    <span class="stat-cell distance">{{ activity.distance | divided_by: 1000.0 | round: 2 }} km</span>
-  {% else %}
-    <span class="stat-cell distance muted">—</span>
-  {% endif %}
-  {% if activity.moving_time %}
-    {%- assign total_seconds = activity.moving_time -%}
-    {%- assign minutes = total_seconds | divided_by: 60 | floor -%}
-    {%- assign seconds = total_seconds | modulo: 60 | round -%}
-    {%- assign padded_seconds = seconds | prepend: "0" | slice: -2, 2 -%}
-    <span class="stat-cell duration">{{ minutes }}:{{ padded_seconds }}</span>
-  {% else %}
-    <span class="stat-cell duration muted">—</span>
-  {% endif %}
-  {% if activity.average_speed %}
-    {%- assign pace = 1000 | divided_by: activity.average_speed | divided_by: 60 -%}
-    {%- assign paceMin = pace | floor -%}
-    {%- assign paceSec = pace | minus: paceMin | times: 60 | round -%}
-    <span class="stat-cell pace">{{ paceMin }}:{{ paceSec | prepend: "0" | slice: -2, 2 }}</span>
-  {% else %}
-    <span class="stat-cell pace muted">—</span>
-  {% endif %}
-  {% if activity.average_heartrate %}
-    <span class="stat-cell hr">{{ activity.average_heartrate | round }}</span>
-  {% else %}
-    <span class="stat-cell hr muted">—</span>
-  {% endif %}
-</div>
+{%- if activity %}
+    <tr>
+      <td class="c-route">{% if workout.svgPath %}<div class="route route--thumb" aria-hidden="true">{% include workout.svgPath %}</div>{% endif %}</td>
+      <td><a href="https://www.strava.com/activities/{{ activity.id }}" rel="noopener noreferrer">{{ activity.name }}</a><br><time class="muted" datetime="{{ activity.start_date }}">{{ activity.start_date | date: '%Y-%m-%d %H:%M' }}</time></td>
+      <td class="num">{% if activity.distance %}{{ activity.distance | divided_by: 1000.0 | round: 2 }}{% else %}<span class="muted">-</span>{% endif %}</td>
+      {%- if activity.moving_time -%}
+        {%- assign total_seconds = activity.moving_time -%}
+        {%- assign minutes = total_seconds | divided_by: 60 | floor -%}
+        {%- assign seconds = total_seconds | modulo: 60 | round -%}
+        {%- assign padded_seconds = seconds | prepend: "0" | slice: -2, 2 %}
+      <td class="num">{{ minutes }}:{{ padded_seconds }}</td>
+      {%- else %}
+      <td class="num muted">-</td>
+      {%- endif -%}
+      {%- if activity.average_speed -%}
+        {%- assign pace = 1000 | divided_by: activity.average_speed | divided_by: 60 -%}
+        {%- assign paceMin = pace | floor -%}
+        {%- assign paceSec = pace | minus: paceMin | times: 60 | round %}
+      <td class="num">{{ paceMin }}:{{ paceSec | prepend: "0" | slice: -2, 2 }}</td>
+      {%- else %}
+      <td class="num muted">-</td>
+      {%- endif %}
+      <td class="num">{% if activity.average_heartrate %}{{ activity.average_heartrate | round }}{% else %}<span class="muted">-</span>{% endif %}</td>
+    </tr>
 {%- endif -%}
-{%- endfor -%}
+{%- endfor %}
+  </tbody>
+</table>
 </div>

@@ -4,28 +4,18 @@ layout: default
 title: "Posts"
 description: "A list of posts I've written"
 noPageHeader: true
+templateEngineOverride: liquid
 ---
 
-<header class="index-hero">
-  <h1>POSTS.</h1>
-  <span class="meta">N = {{ collections.filteredPosts.size | prepend: '0' | slice: -2, 2 }} · ESSAYS</span>
-</header>
+<h1>Posts</h1>
 
-<div class="indexed-list-header">
-  <span>№</span>
-  <span>TITLE / SUBTITLE</span>
-  <span>DATE</span>
-</div>
+<p class="muted">{{ collections.filteredPosts.size }} essays, newest first.</p>
 
-<ul class="indexed-list indexed-list--large">
-  {%- for post in collections.filteredPosts -%}
-    <li>
-      <span class="num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
-      <div>
-        <a class="title" href="{{ post.url }}">{{ post.data.title }}</a>
-        <span class="description">{{ post.data.description }}</span>
-      </div>
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | isoDate }}</time>
-    </li>
-  {%- endfor -%}
+<ul class="index">
+  {%- for post in collections.filteredPosts %}
+  <li>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | isoDate }}</time><a href="{{ post.url }}">{{ post.data.title }}</a>
+    {%- if post.data.description %}<span class="d">{{ post.data.description }}</span>{% endif %}
+  </li>
+  {%- endfor %}
 </ul>
