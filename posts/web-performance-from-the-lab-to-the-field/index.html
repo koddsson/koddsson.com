@@ -19,8 +19,7 @@
     <title>Web Performance — From the Lab to the Field</title>
     <meta property="og:title" content="Web Performance — From the Lab to the Field">
 
-    <link rel="stylesheet" href="/css/prism-vs.css?v=49ac0393">
-    <link rel="stylesheet" href="/css/index.css?v=ea820fe9">
+    <link rel="stylesheet" href="/css/index.css?v=ef1e0d44">
 
     <script type="importmap">
       {
@@ -54,38 +53,28 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header class="masthead">
-      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
-      <nav class="masthead-nav" aria-label="Primary">
-        
-        <a href="/">HOME</a>
-        <a href="/posts/" class="active">POSTS</a>
-        <a href="/notes/">NOTES</a>
-        <a href="/projects/">PROJECTS</a>
-        <a href="/images/">IMAGES</a>
-        <a href="/workouts/">WORKOUTS</a>
-        <a href="/reading-list/">READING</a>
-        <a href="/now/">NOW</a>
+    <header class="site-header">
+      <p class="brand"><a href="/">KRISTJÁN ODDSSON</a> <span class="cursor" aria-hidden="true">█</span><br>SOFTWARE ENGINEER<br>ICELAND, 2026</p>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts/" aria-current="true">Posts</a></li>
+          <li><a href="/notes/">Notes</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/images/">Images</a></li>
+          <li><a href="/workouts/">Workouts</a></li>
+          <li><a href="/reading-list/">Reading</a></li>
+          <li><a href="/now/">Now</a></li>
+        </ul>
       </nav>
-      <span class="masthead-meta">
-        <a class="rss-link" href="/feed.xml">RSS↗</a>
-      </span>
     </header>
 
-    
-      <section class="page-header">
-        
-          <div class="page-eyebrow">
-            <a href="/posts/">← BACK</a>
-            <time datetime="2023-08-13">2023-08-13</time>
-          </div>
-        
-        <h1 class="page-title">Web Performance — From the Lab to the Field</h1>
-        <p class="page-description">In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI.</p>
-      </section>
-    
-
-    <main id="main" class="reading"><p>The advent of the internet and the rise of digital technologies have transformed the way we live, work, and play. As we find ourselves increasingly reliant on web applications, the importance of Web Performance has never been more evident. In this post, we'll go over some basics of Web Performance, why Web Performance matters, and look at some real production data, how to collect it, and analyse it.</p>
+    <main id="main">
+          <p class="page-meta"><a href="/posts/">← Back</a> · <time datetime="2023-08-13">2023-08-13</time></p>
+          <h1>Web Performance — From the Lab to the Field</h1>
+          <p class="lede">In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI.</p>
+      
+      <p>The advent of the internet and the rise of digital technologies have transformed the way we live, work, and play. As we find ourselves increasingly reliant on web applications, the importance of Web Performance has never been more evident. In this post, we'll go over some basics of Web Performance, why Web Performance matters, and look at some real production data, how to collect it, and analyse it.</p>
 <h2>Understanding Web Performance and the need for speed</h2>
 <p>Web Performance is the amalgamation of objective measurements and the perceived user experience of load and run time. It encapsulates how long a site takes to load, become interactive and responsive, and how smooth the content is during user interactions. It is crucial to minimise the loading and response times, making the experience as available and interactive as possible, as soon as possi​ble. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
 <p>Improving the loading performance of a web page is often one of the highest value performance optimisations that can be made. Users prefer web experiences that are fast to load and smooth to interact with. Good user experience includes ensuring your page loads quickly. The longer it takes for a site to respond, the more users will abandon the page for better user experiences.</p>
@@ -199,37 +188,23 @@
 </li>
 </ol>
 </section>
-</main>
+
+    </main>
 
     
       <section id="webmentions"></section>
       <script type="module" src="/js/webmentions.js"></script>
     
 
-    <footer class="colophon">
-      <div class="colophon-col">
-        <div class="colophon-label">ELSEWHERE</div>
-        <a href="https://github.com/koddsson">→ GITHUB</a>
-        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
-        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
-        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">FEEDS</div>
-        <a href="/feed.xml">→ /FEED.XML</a>
-        <a href="/notes/feed.xml">→ /NOTES.XML</a>
-        <span>→ WEBMENTIONS</span>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">COLOPHON</div>
-        <span>HELVETICA NEUE</span>
-        <span>SYSTEM-UI · UI-MONOSPACE</span>
-        <span>BUILT WITH ELEVENTY</span>
-      </div>
-      <div class="colophon-col colophon-col-end">
-        <div class="colophon-label">© 2026</div>
-        <span>KRISTJÁN ODDSSON</span>
-      </div>
+    <footer class="site-footer">
+      <p>~*~ © 2026 Kristján Oddsson ~*~</p>
+      <ul class="nav">
+        <li><a href="https://github.com/koddsson">GitHub</a></li>
+        <li><a rel="me" href="https://fosstodon.org/@koddsson">Mastodon</a></li>
+        <li><a rel="me" href="https://bsky.app/profile/koddsson.com">Bluesky</a></li>
+        <li><a href="https://linkedin.com/in/koddsson">LinkedIn</a></li>
+        <li><a href="/feed.xml">RSS</a></li>
+      </ul>
     </footer>
 
     <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>

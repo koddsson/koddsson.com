@@ -19,8 +19,7 @@
     <title>My favourite Software Engineering readings</title>
     <meta property="og:title" content="My favourite Software Engineering readings">
 
-    <link rel="stylesheet" href="/css/prism-vs.css?v=49ac0393">
-    <link rel="stylesheet" href="/css/index.css?v=ea820fe9">
+    <link rel="stylesheet" href="/css/index.css?v=ef1e0d44">
 
     <script type="importmap">
       {
@@ -54,34 +53,29 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header class="masthead">
-      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
-      <nav class="masthead-nav" aria-label="Primary">
-        
-        <a href="/">HOME</a>
-        <a href="/posts/">POSTS</a>
-        <a href="/notes/">NOTES</a>
-        <a href="/projects/">PROJECTS</a>
-        <a href="/images/">IMAGES</a>
-        <a href="/workouts/">WORKOUTS</a>
-        <a href="/reading-list/" class="active">READING</a>
-        <a href="/now/">NOW</a>
+    <header class="site-header">
+      <p class="brand"><a href="/">KRISTJÁN ODDSSON</a> <span class="cursor" aria-hidden="true">█</span><br>SOFTWARE ENGINEER<br>ICELAND, 2026</p>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts/">Posts</a></li>
+          <li><a href="/notes/">Notes</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/images/">Images</a></li>
+          <li><a href="/workouts/">Workouts</a></li>
+          <li><a href="/reading-list/" aria-current="page">Reading</a></li>
+          <li><a href="/now/">Now</a></li>
+        </ul>
       </nav>
-      <span class="masthead-meta">
-        <a class="rss-link" href="/feed.xml">RSS↗</a>
-      </span>
     </header>
 
-    
-
     <main id="main">
+      
 <style>
-  .rl-hero { grid-template-columns: minmax(0, 1fr) auto; margin-bottom: 0; gap: 40px 64px; }
-  .rl-intro { display: flex; flex-direction: column; gap: 28px; padding-bottom: 28px; }
   .rl-entry { scroll-margin-top: 24px; }
-  .rl-entry:first-of-type h2 { margin-top: 0; }
-  .rl-entry:target h2 { color: var(--accent); }
-  .rl-meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-2); margin: -4px 0 10px; }
+  .rl-entry:target h2 { background: #ffff00; color: #000; }
+  .rl-shelf { margin-bottom: 40px; }
+  .rl-meta { color: var(--muted); margin-bottom: 0; }
 
   .rl-shelf {
     --wm: vertical-rl; --across: to right; --along: to bottom;
@@ -100,7 +94,7 @@
   .rl-shelf .lift { position: absolute; inset: 0; writing-mode: var(--wm); transition: translate 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
   @media (hover: hover) { .rl-shelf .book:hover .lift { translate: 0 -10px; } }
   .rl-shelf .book:focus-visible .lift { translate: 0 -10px; }
-  .rl-shelf .book:focus-visible .spine { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .rl-shelf .book:focus-visible .spine { outline: 2px solid var(--fg); outline-offset: 3px; }
 
   .rl-shelf .spine {
     position: absolute; inset: 0; overflow: hidden;
@@ -208,12 +202,11 @@
   .rl-shelf .s-mag .a { font-family: var(--font-mono); font-weight: 500; font-size: min(8.5px, calc(var(--t) * 0.36)); letter-spacing: 0.1em; text-transform: uppercase; max-inline-size: none; }
 
   @media (max-width: 720px) {
-    .rl-hero { grid-template-columns: 1fr; gap: 32px; }
     .rl-shelf {
       --wm: horizontal-tb; --across: to bottom; --along: to right;
-      flex-direction: column; align-items: center; gap: 0; padding-top: 0; padding-bottom: 28px; zoom: 1;
+      flex-direction: column; align-items: center; gap: 2px; padding-top: 0; padding-bottom: 28px; zoom: 1;
     }
-    .rl-shelf .book { width: var(--h); max-width: 100%; height: var(--t); translate: var(--dx) 0; rotate: var(--tilt); }
+    .rl-shelf .book { width: var(--h); max-width: 100%; height: max(24px, var(--t)); translate: var(--dx) 0; rotate: var(--tilt); }
     .rl-shelf .book::after { left: 2%; right: 2%; bottom: -4px; height: 7px; background: radial-gradient(closest-side, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)); }
     .rl-shelf .spine { box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.35); }
     .rl-shelf .s-bold .a { align-self: center; }
@@ -226,15 +219,10 @@
 
 
 
-<section class="hero rl-hero">
-  <div class="rl-intro">
-    <h1>READING<br><span class="accent">LIST.</span></h1>
-    <div class="hero-lede">
-      <div class="hero-lede__label">№ 01 · INTRODUCTION</div>
-      <p>I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.</p>
-      <p>I plan on updating this list over time.</p>
-    </div>
-  </div>
+<h1>Reading list</h1>
+
+<p>I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.</p>
+<p>I plan on updating this list over time.</p>
 
   <nav class="rl-shelf" aria-label="Shelf"><a class="book" href="#crafting-interpreters" aria-label="Crafting Interpreters, book by Robert Nystrom" style="--h:254px;--t:56px;--dx:-6px;--tilt:0.5deg;--bg:#f4f1e8;--ink:#1f1f1f;--acc:#262626">
         <span class="lift"><span class="spine s-tech" aria-hidden="true"><span class="m"><svg viewBox="0 0 14 14" fill="currentColor"><rect x="3" y="3" width="8" height="8"></rect></svg></span><span class="t">Crafting Interpreters</span><span class="a">Nystrom</span></span></span>
@@ -249,47 +237,46 @@
       </a><a class="book" href="#how-github-engineering-communicates" aria-label="How GitHub Engineering communicates, article by GitHub" style="--h:264px;--t:23px;--dx:4px;--tilt:-0.2deg;--bg:#111111;--ink:#efefef;--acc:#cc2900;--mh-ink:#ffffff">
         <span class="lift"><span class="spine s-mag" aria-hidden="true"><span class="mh">github.com</span><span class="t">How GitHub Communicates</span><span class="a">35 min</span></span></span>
       </a></nav>
-</section>
 
 
 <article class="rl-entry" id="crafting-interpreters">
   <h2>Crafting Interpreters</h2>
-  <p class="rl-meta">BOOK · ROBERT NYSTROM · 640 PAGES</p>
+  <p class="rl-meta">Book · Robert Nystrom · 640 pages</p>
   <p><a href="https://craftinginterpreters.com">https://craftinginterpreters.com</a></p>
   <p>Free-to-read-online book on writing your own interpreter from tokenizing to evaluating code. The book walks you through writing a interpreter for the &quot;Lox&quot; programming language. My implementation is located at <a href="https://github.com/koddsson/lox-interpreter">https://github.com/koddsson/lox-interpreter</a>.</p>
 </article>
 
 <article class="rl-entry" id="site-reliability-engineering">
   <h2>Site Reliability Engineering</h2>
-  <p class="rl-meta">BOOK · BETSY BEYER, CHRIS JONES, JENNIFER PETOFF & NIALL RICHARD MURPHY · 552 PAGES</p>
+  <p class="rl-meta">Book · Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy · 552 pages</p>
   <p><a href="https://www.goodreads.com/book/show/27968891-site-reliability-engineering">https://www.goodreads.com/book/show/27968891-site-reliability-engineering</a></p>
   <p>Probably the origin of the term &quot;Site Reliability Engineering&quot;. Useful to most software engineering and not just SREs.</p>
 </article>
 
 <article class="rl-entry" id="grug-brained-developer">
   <h2>The Grug Brained Developer</h2>
-  <p class="rl-meta">ARTICLE · CARSON GROSS · 25 MIN READ</p>
+  <p class="rl-meta">Article · Carson Gross · 25 min read</p>
   <p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
   <p>A no-nonsense take on modern day software engineering with a focus on simplicity and how to handle communication with different stakeholders.</p>
 </article>
 
 <article class="rl-entry" id="software-engineering-at-google">
   <h2>Software Engineering at Google</h2>
-  <p class="rl-meta">BOOK · TITUS WINTERS, TOM MANSHRECK & HYRUM WRIGHT · 599 PAGES</p>
+  <p class="rl-meta">Book · Titus Winters, Tom Manshreck & Hyrum Wright · 599 pages</p>
   <p><a href="https://www.goodreads.com/book/show/48816586-software-engineering-at-google">https://www.goodreads.com/book/show/48816586-software-engineering-at-google</a></p>
   <p>A great resource for software engineers based off learned lessons from Google. Pretty down-to-earth suggestions with great rationales behind each one. Has suggestions on how to implement systems and solutions to your codebase.</p>
 </article>
 
 <article class="rl-entry" id="progressive-enhancement">
   <h2>Building a resilient frontend using progressive enhancement</h2>
-  <p class="rl-meta">ARTICLE · GOV.UK SERVICE MANUAL · 8 MIN READ</p>
+  <p class="rl-meta">Article · GOV.UK Service Manual · 8 min read</p>
   <p><a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement">https://www.gov.uk/service-manual/technology/using-progressive-enhancement</a></p>
   <p>A great resource for why someone might write a service with progressive enhancements. The rationale is solid and comes from a trusted source.</p>
 </article>
 
 <article class="rl-entry" id="how-github-engineering-communicates">
   <h2>How GitHub Engineering communicates</h2>
-  <p class="rl-meta">ARTICLE · GITHUB · 35 MIN READ</p>
+  <p class="rl-meta">Article · GitHub · 35 min read</p>
   <p><a href="https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md">https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md</a></p>
   <p>My time as a GitHub engineer really shaped my professional (and personal) life. While mostly focused on the work at GitHub the guide has a ton of good information that you can adapt to your organization. The guide is a especially great resource on asynchronous work which often gets conflated with remote work.</p>
 </article>
@@ -324,37 +311,23 @@
   fitAll();
   matchMedia("(max-width: 720px)").addEventListener("change", fitAll);
 </script>
-</main>
+
+    </main>
 
     
       <section id="webmentions"></section>
       <script type="module" src="/js/webmentions.js"></script>
     
 
-    <footer class="colophon">
-      <div class="colophon-col">
-        <div class="colophon-label">ELSEWHERE</div>
-        <a href="https://github.com/koddsson">→ GITHUB</a>
-        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
-        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
-        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">FEEDS</div>
-        <a href="/feed.xml">→ /FEED.XML</a>
-        <a href="/notes/feed.xml">→ /NOTES.XML</a>
-        <span>→ WEBMENTIONS</span>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">COLOPHON</div>
-        <span>HELVETICA NEUE</span>
-        <span>SYSTEM-UI · UI-MONOSPACE</span>
-        <span>BUILT WITH ELEVENTY</span>
-      </div>
-      <div class="colophon-col colophon-col-end">
-        <div class="colophon-label">© 2026</div>
-        <span>KRISTJÁN ODDSSON</span>
-      </div>
+    <footer class="site-footer">
+      <p>~*~ © 2026 Kristján Oddsson ~*~</p>
+      <ul class="nav">
+        <li><a href="https://github.com/koddsson">GitHub</a></li>
+        <li><a rel="me" href="https://fosstodon.org/@koddsson">Mastodon</a></li>
+        <li><a rel="me" href="https://bsky.app/profile/koddsson.com">Bluesky</a></li>
+        <li><a href="https://linkedin.com/in/koddsson">LinkedIn</a></li>
+        <li><a href="/feed.xml">RSS</a></li>
+      </ul>
     </footer>
 
     <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>

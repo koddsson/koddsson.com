@@ -19,8 +19,7 @@
     <title>Posts</title>
     <meta property="og:title" content="Posts">
 
-    <link rel="stylesheet" href="/css/prism-vs.css?v=49ac0393">
-    <link rel="stylesheet" href="/css/index.css?v=ea820fe9">
+    <link rel="stylesheet" href="/css/index.css?v=ef1e0d44">
 
     <script type="importmap">
       {
@@ -54,99 +53,59 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header class="masthead">
-      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
-      <nav class="masthead-nav" aria-label="Primary">
-        
-        <a href="/">HOME</a>
-        <a href="/posts/" class="active">POSTS</a>
-        <a href="/notes/">NOTES</a>
-        <a href="/projects/">PROJECTS</a>
-        <a href="/images/">IMAGES</a>
-        <a href="/workouts/">WORKOUTS</a>
-        <a href="/reading-list/">READING</a>
-        <a href="/now/">NOW</a>
+    <header class="site-header">
+      <p class="brand"><a href="/">KRISTJÁN ODDSSON</a> <span class="cursor" aria-hidden="true">█</span><br>SOFTWARE ENGINEER<br>ICELAND, 2026</p>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts/" aria-current="page">Posts</a></li>
+          <li><a href="/notes/">Notes</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/images/">Images</a></li>
+          <li><a href="/workouts/">Workouts</a></li>
+          <li><a href="/reading-list/">Reading</a></li>
+          <li><a href="/now/">Now</a></li>
+        </ul>
       </nav>
-      <span class="masthead-meta">
-        <a class="rss-link" href="/feed.xml">RSS↗</a>
-      </span>
     </header>
 
-    
+    <main id="main">
+      
+<h1>Posts</h1>
 
-    <main id="main"><header class="index-hero">
-  <h1>POSTS.</h1>
-  <span class="meta">N = 05 · ESSAYS</span>
-</header>
-<div class="indexed-list-header">
-  <span>№</span>
-  <span>TITLE / SUBTITLE</span>
-  <span>DATE</span>
-</div>
-<ul class="indexed-list indexed-list--large"><li>
-      <span class="num">01</span>
-      <div>
-        <a class="title" href="/posts/how-to-mitm-your-own-phone-for-fun-and-profit/">how to MITM your own phone for fun and profit</a>
-        <span class="description">I recently found out how to sniff network requests from apps using `mitmproxy`</span>
-      </div>
-      <time datetime="2026-05-13">2026-05-13</time>
-    </li><li>
-      <span class="num">02</span>
-      <div>
-        <a class="title" href="/posts/web-performance-from-the-lab-to-the-field/">Web Performance — From the Lab to the Field</a>
-        <span class="description">In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI.</span>
-      </div>
-      <time datetime="2023-08-13">2023-08-13</time>
-    </li><li>
-      <span class="num">03</span>
-      <div>
-        <a class="title" href="/posts/implementing-view-transitions-on-koddsson.com/">Implementing View Transitions on koddsson.com</a>
-        <span class="description">How I implemented MPA View Transitions on koddsson.com</span>
-      </div>
-      <time datetime="2023-05-31">2023-05-31</time>
-    </li><li>
-      <span class="num">04</span>
-      <div>
-        <a class="title" href="/posts/stop-trying-to-make-things-perfect/">Stop trying to make things perfect</a>
-        <span class="description">A blog post with some thoughts on perfectionism</span>
-      </div>
-      <time datetime="2022-12-13">2022-12-13</time>
-    </li><li>
-      <span class="num">05</span>
-      <div>
-        <a class="title" href="/posts/emoji-as-favicons/">Emojis as favicons</a>
-        <span class="description">A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji</span>
-      </div>
-      <time datetime="2018-03-18">2018-03-18</time>
-    </li></ul>
-</main>
+<p class="muted">5 essays, newest first.</p>
+
+<ul class="index">
+  <li>
+    <time datetime="2026-05-13">2026-05-13</time><a href="/posts/how-to-mitm-your-own-phone-for-fun-and-profit/">how to MITM your own phone for fun and profit</a><span class="d">I recently found out how to sniff network requests from apps using `mitmproxy`</span>
+  </li>
+  <li>
+    <time datetime="2023-08-13">2023-08-13</time><a href="/posts/web-performance-from-the-lab-to-the-field/">Web Performance — From the Lab to the Field</a><span class="d">In this post, I delve into the world of web performance and its profound influence on user experience. I share my experiences of optimizing my website, koddsson.com, by using real user monitoring and tools like Lighthouse CI.</span>
+  </li>
+  <li>
+    <time datetime="2023-05-31">2023-05-31</time><a href="/posts/implementing-view-transitions-on-koddsson.com/">Implementing View Transitions on koddsson.com</a><span class="d">How I implemented MPA View Transitions on koddsson.com</span>
+  </li>
+  <li>
+    <time datetime="2022-12-13">2022-12-13</time><a href="/posts/stop-trying-to-make-things-perfect/">Stop trying to make things perfect</a><span class="d">A blog post with some thoughts on perfectionism</span>
+  </li>
+  <li>
+    <time datetime="2018-03-18">2018-03-18</time><a href="/posts/emoji-as-favicons/">Emojis as favicons</a><span class="d">A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji</span>
+  </li>
+</ul>
+
+    </main>
 
     
 
-    <footer class="colophon">
-      <div class="colophon-col">
-        <div class="colophon-label">ELSEWHERE</div>
-        <a href="https://github.com/koddsson">→ GITHUB</a>
-        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
-        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
-        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">FEEDS</div>
-        <a href="/feed.xml">→ /FEED.XML</a>
-        <a href="/notes/feed.xml">→ /NOTES.XML</a>
-        <span>→ WEBMENTIONS</span>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">COLOPHON</div>
-        <span>HELVETICA NEUE</span>
-        <span>SYSTEM-UI · UI-MONOSPACE</span>
-        <span>BUILT WITH ELEVENTY</span>
-      </div>
-      <div class="colophon-col colophon-col-end">
-        <div class="colophon-label">© 2026</div>
-        <span>KRISTJÁN ODDSSON</span>
-      </div>
+    <footer class="site-footer">
+      <p>~*~ © 2026 Kristján Oddsson ~*~</p>
+      <ul class="nav">
+        <li><a href="https://github.com/koddsson">GitHub</a></li>
+        <li><a rel="me" href="https://fosstodon.org/@koddsson">Mastodon</a></li>
+        <li><a rel="me" href="https://bsky.app/profile/koddsson.com">Bluesky</a></li>
+        <li><a href="https://linkedin.com/in/koddsson">LinkedIn</a></li>
+        <li><a href="/feed.xml">RSS</a></li>
+      </ul>
     </footer>
 
     <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>

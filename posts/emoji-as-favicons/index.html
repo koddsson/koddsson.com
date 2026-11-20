@@ -19,8 +19,7 @@
     <title>Emojis as favicons</title>
     <meta property="og:title" content="Emojis as favicons">
 
-    <link rel="stylesheet" href="/css/prism-vs.css?v=49ac0393">
-    <link rel="stylesheet" href="/css/index.css?v=ea820fe9">
+    <link rel="stylesheet" href="/css/index.css?v=ef1e0d44">
 
     <script type="importmap">
       {
@@ -54,38 +53,28 @@
   </head>
   <body>
     <a href="#main" class="skip-link">Skip to content</a>
-    <header class="masthead">
-      <a class="masthead-brand" href="/">KRISTJÁN ODDSSON<span class="masthead-role"> · SOFTWARE ENGINEER · ICELAND</span></a>
-      <nav class="masthead-nav" aria-label="Primary">
-        
-        <a href="/">HOME</a>
-        <a href="/posts/" class="active">POSTS</a>
-        <a href="/notes/">NOTES</a>
-        <a href="/projects/">PROJECTS</a>
-        <a href="/images/">IMAGES</a>
-        <a href="/workouts/">WORKOUTS</a>
-        <a href="/reading-list/">READING</a>
-        <a href="/now/">NOW</a>
+    <header class="site-header">
+      <p class="brand"><a href="/">KRISTJÁN ODDSSON</a> <span class="cursor" aria-hidden="true">█</span><br>SOFTWARE ENGINEER<br>ICELAND, 2026</p>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/posts/" aria-current="true">Posts</a></li>
+          <li><a href="/notes/">Notes</a></li>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/images/">Images</a></li>
+          <li><a href="/workouts/">Workouts</a></li>
+          <li><a href="/reading-list/">Reading</a></li>
+          <li><a href="/now/">Now</a></li>
+        </ul>
       </nav>
-      <span class="masthead-meta">
-        <a class="rss-link" href="/feed.xml">RSS↗</a>
-      </span>
     </header>
 
-    
-      <section class="page-header">
-        
-          <div class="page-eyebrow">
-            <a href="/posts/">← BACK</a>
-            <time datetime="2018-03-18">2018-03-18</time>
-          </div>
-        
-        <h1 class="page-title">Emojis as favicons</h1>
-        <p class="page-description">A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji</p>
-      </section>
-    
-
-    <main id="main" class="reading"><p>So I was working on <a href="https://jsonresume.io">jsonresume.io</a> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</p>
+    <main id="main">
+          <p class="page-meta"><a href="/posts/">← Back</a> · <time datetime="2018-03-18">2018-03-18</time></p>
+          <h1>Emojis as favicons</h1>
+          <p class="lede">A blog post describing how to use JavaScript to quickly set a websites favicon to a emoji</p>
+      
+      <p>So I was working on <a href="https://jsonresume.io">jsonresume.io</a> this weekend and really wanted a favicon for the page. I don't know about you but I kind of dislike having to add a favicon. I don't really know how to make a icon and so I keep reaching more and more into the ever expanding unicode emoji sets.</p>
 <p>I really wanted just to drop a 📝 into a <code>&lt;link /&gt;</code> tag and call it a day. As far as I knew this wasn't possible, prompting this tweet:</p>
 <blockquote>
   <p>Which technical committee do I need to submit a proposal to in order to get emojis as favicons?  <a href="https://twitter.com/WHATWG?ref_src=twsrc%5Etfw">@WHATWG</a> ?</p>
@@ -131,37 +120,23 @@ favicon<span class="token punctuation">.</span>href <span class="token operator"
 <script src="https://unpkg.com/open-heart-element" type="module" defer=""></script>
 <!-- Render `<open-heart>` -->
 <p><open-heart href="https://open-heart-endpoint.koddsson.workers.dev/?id=" emoji="❤️">♥</open-heart></p>
-</main>
+
+    </main>
 
     
       <section id="webmentions"></section>
       <script type="module" src="/js/webmentions.js"></script>
     
 
-    <footer class="colophon">
-      <div class="colophon-col">
-        <div class="colophon-label">ELSEWHERE</div>
-        <a href="https://github.com/koddsson">→ GITHUB</a>
-        <a rel="me" href="https://fosstodon.org/@koddsson">→ MASTODON</a>
-        <a rel="me" href="https://bsky.app/profile/koddsson.com">→ BLUESKY</a>
-        <a href="https://linkedin.com/in/koddsson">→ LINKEDIN</a>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">FEEDS</div>
-        <a href="/feed.xml">→ /FEED.XML</a>
-        <a href="/notes/feed.xml">→ /NOTES.XML</a>
-        <span>→ WEBMENTIONS</span>
-      </div>
-      <div class="colophon-col">
-        <div class="colophon-label">COLOPHON</div>
-        <span>HELVETICA NEUE</span>
-        <span>SYSTEM-UI · UI-MONOSPACE</span>
-        <span>BUILT WITH ELEVENTY</span>
-      </div>
-      <div class="colophon-col colophon-col-end">
-        <div class="colophon-label">© 2026</div>
-        <span>KRISTJÁN ODDSSON</span>
-      </div>
+    <footer class="site-footer">
+      <p>~*~ © 2026 Kristján Oddsson ~*~</p>
+      <ul class="nav">
+        <li><a href="https://github.com/koddsson">GitHub</a></li>
+        <li><a rel="me" href="https://fosstodon.org/@koddsson">Mastodon</a></li>
+        <li><a rel="me" href="https://bsky.app/profile/koddsson.com">Bluesky</a></li>
+        <li><a href="https://linkedin.com/in/koddsson">LinkedIn</a></li>
+        <li><a href="/feed.xml">RSS</a></li>
+      </ul>
     </footer>
 
     <script data-goatcounter="https://koddsson.goatcounter.com/count" async="" src="https://gc.zgo.at/count.js"></script>
