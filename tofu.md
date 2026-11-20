@@ -18,11 +18,11 @@ Tofu knows hot to sit, lay, spin, roll over, "touch" and come between my legs an
 
 <style>
     .tofu-grid {
-        display: flex; flex-wrap: wrap; justify-content: space-between;
+        display: grid; grid-template-columns: repeat(3, 1fr);
         gap: 4px;
         margin-bottom: 20px;
     }
-    .tofu-grid picture, .tofu-grid img { max-width: 31%; }
+    .tofu-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
 </style>
 <div class="tofu-grid">
 <img src="/imgs/tofu/tofu_1.jpeg" alt="Tofu" loading="lazy">
