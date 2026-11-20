@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "crafting-interpreters",
+    "kind": "book",
+    "title": "Crafting Interpreters",
+    "author": "Robert Nystrom",
+    "url": "https://craftinginterpreters.com",
+    "pages": 640,
+    "note": "Free-to-read-online book on writing your own interpreter from tokenizing to evaluating code. The book walks you through writing a interpreter for the \"Lox\" programming language. My implementation is located at https://github.com/koddsson/lox-interpreter.",
+    "spine": {
+      "style": "tech",
+      "h": 254,
+      "bg": "#f4f1e8",
+      "ink": "#1f1f1f",
+      "acc": "#262626",
+      "mark": "square",
+      "sa": "Nystrom"
+    }
+  },
+  {
+    "slug": "site-reliability-engineering",
+    "kind": "book",
+    "title": "Site Reliability Engineering",
+    "author": "Betsy Beyer, Chris Jones, Jennifer Petoff & Niall Richard Murphy",
+    "url": "https://www.goodreads.com/book/show/27968891-site-reliability-engineering",
+    "pages": 552,
+    "note": "Probably the origin of the term \"Site Reliability Engineering\". Useful to most software engineering and not just SREs.",
+    "spine": {
+      "style": "jacket",
+      "h": 233,
+      "bg": "#1b2b44",
+      "ink": "#f2ece0",
+      "acc": "#cc2900",
+      "mark": "ring",
+      "sa": "Beyer et al."
+    }
+  },
+  {
+    "slug": "grug-brained-developer",
+    "kind": "article",
+    "title": "The Grug Brained Developer",
+    "author": "Carson Gross",
+    "url": "https://grugbrain.dev/",
+    "source": "grugbrain.dev",
+    "minutes": 25,
+    "note": "A no-nonsense take on modern day software engineering with a focus on simplicity and how to handle communication with different stakeholders.",
+    "spine": {
+      "bg": "#f2d04a",
+      "ink": "#151515",
+      "acc": "#151515"
+    }
+  },
+  {
+    "slug": "software-engineering-at-google",
+    "kind": "book",
+    "title": "Software Engineering at Google",
+    "author": "Titus Winters, Tom Manshreck & Hyrum Wright",
+    "url": "https://www.goodreads.com/book/show/48816586-software-engineering-at-google",
+    "pages": 599,
+    "note": "A great resource for software engineers based off learned lessons from Google. Pretty down-to-earth suggestions with great rationales behind each one. Has suggestions on how to implement systems and solutions to your codebase.",
+    "spine": {
+      "style": "cloth",
+      "h": 235,
+      "bg": "#5a1d22",
+      "mark": "diamond",
+      "sa": "Winters et al."
+    }
+  },
+  {
+    "slug": "progressive-enhancement",
+    "kind": "article",
+    "title": "Building a resilient frontend using progressive enhancement",
+    "author": "GOV.UK Service Manual",
+    "url": "https://www.gov.uk/service-manual/technology/using-progressive-enhancement",
+    "source": "gov.uk",
+    "minutes": 8,
+    "note": "A great resource for why someone might write a service with progressive enhancements. The rationale is solid and comes from a trusted source.",
+    "spine": {
+      "bg": "#e3e8ea",
+      "ink": "#17202c",
+      "acc": "#17202c",
+      "title": "Progressive Enhancement"
+    }
+  },
+  {
+    "slug": "how-github-engineering-communicates",
+    "kind": "article",
+    "title": "How GitHub Engineering communicates",
+    "author": "GitHub",
+    "url": "https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md",
+    "source": "github.com",
+    "minutes": 35,
+    "note": "My time as a GitHub engineer really shaped my professional (and personal) life. While mostly focused on the work at GitHub the guide has a ton of good information that you can adapt to your organization. The guide is a especially great resource on asynchronous work which often gets conflated with remote work.",
+    "spine": {
+      "bg": "#111111",
+      "ink": "#efefef",
+      "acc": "#cc2900",
+      "mhInk": "#ffffff",
+      "title": "How GitHub Communicates"
+    }
+  }
+]
