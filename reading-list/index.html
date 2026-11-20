@@ -74,32 +74,256 @@
 
     
 
-    <main id="main"><section class="hero">
-  <h1>READING<br><span class="accent">LIST.</span></h1>
-  <div class="hero-lede">
-    <div class="hero-lede__label">№ 01 · INTRODUCTION</div>
-    <p>I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.</p>
-    <p>I plan on updating this list over time.</p>
+    <main id="main">
+<style>
+  .rl-hero { grid-template-columns: minmax(0, 1fr) auto; margin-bottom: 0; gap: 40px 64px; }
+  .rl-intro { display: flex; flex-direction: column; gap: 28px; padding-bottom: 28px; }
+  .rl-entry { scroll-margin-top: 24px; }
+  .rl-entry:first-of-type h2 { margin-top: 0; }
+  .rl-entry:target h2 { color: var(--accent); }
+  .rl-meta { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-2); margin: -4px 0 10px; }
+
+  .rl-shelf {
+    --wm: vertical-rl; --across: to right; --along: to bottom;
+    --rl-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --rl-serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+    --rl-didone: Didot, "Bodoni 72", "Bodoni MT", Georgia, serif;
+    --rl-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    display: flex; align-items: flex-end; gap: 2px; padding-top: 30px; zoom: 1.3;
+  }
+  .rl-shelf .book { position: relative; flex: none; display: block; isolation: isolate; width: var(--t); height: var(--h); color: inherit; text-decoration: none; outline: none; }
+  .rl-shelf .book::after {
+    content: ""; position: absolute; z-index: -2; pointer-events: none;
+    left: -4px; right: -9px; bottom: -5px; height: 10px;
+    background: radial-gradient(closest-side, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0));
+  }
+  .rl-shelf .lift { position: absolute; inset: 0; writing-mode: var(--wm); transition: translate 0.5s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  @media (hover: hover) { .rl-shelf .book:hover .lift { translate: 0 -10px; } }
+  .rl-shelf .book:focus-visible .lift { translate: 0 -10px; }
+  .rl-shelf .book:focus-visible .spine { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .rl-shelf .spine {
+    position: absolute; inset: 0; overflow: hidden;
+    display: flex; align-items: center; gap: var(--gap, 8px);
+    padding-inline: var(--pi, 11px); padding-block: 3px;
+    background: var(--bg); color: var(--ink); border-radius: 2px;
+    box-shadow: 9px 0 14px -8px rgba(0, 0, 0, 0.4);
+  }
+  .rl-shelf .spine::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background:
+      linear-gradient(var(--along), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 4px, rgba(0, 0, 0, 0) 76%, rgba(0, 0, 0, 0.24)),
+      var(--shade, linear-gradient(transparent, transparent));
+  }
+  .rl-shelf .spine::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit;
+    background: var(--rl-grain); opacity: 0.3; mix-blend-mode: overlay;
+  }
+  .rl-shelf .t {
+    flex: 1 1 auto; min-inline-size: 0; max-block-size: 100%;
+    white-space: nowrap; overflow: hidden; line-height: 1.08; text-align: center;
+    font-size: min(var(--tfs, 16px), calc(var(--t) * var(--tr, 0.42)));
+  }
+  .rl-shelf .t.wrap { white-space: normal; text-wrap: balance; line-height: 1; }
+  .rl-shelf .a {
+    flex: none; max-inline-size: 44%; white-space: nowrap; overflow: hidden; line-height: 1.1;
+    font-size: min(var(--afs, 10.5px), calc(var(--t) * 0.3));
+  }
+  .rl-shelf .m { flex: none; display: grid; place-items: center; color: var(--acc); }
+  .rl-shelf .m svg { display: block; width: min(13px, calc(var(--t) * 0.42)); height: min(13px, calc(var(--t) * 0.42)); }
+
+  .rl-shelf .s-cloth {
+    --pi: 9px; --gap: 9px; border-radius: 3px;
+    --shade: linear-gradient(var(--across), rgba(0,0,0,.55) 0, rgba(0,0,0,.16) 6%, rgba(255,255,255,.07) 19%, rgba(255,255,255,.13) 29%, rgba(255,255,255,.02) 47%, rgba(0,0,0,0) 62%, rgba(0,0,0,.18) 86%, rgba(0,0,0,.55) 100%);
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, rgba(255,255,255,0) 1px 2px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,.1) 0 1px, rgba(0,0,0,0) 1px 2px),
+      var(--bg);
+  }
+  .rl-shelf .foil {
+    background: linear-gradient(var(--along), #7a5c25, #e9cf88 32%, #a88236 54%, #f3de9f 74%, #8c6a2a);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 0.7px 0 rgba(0, 0, 0, 0.6));
+  }
+  .rl-shelf .s-cloth .t { font-family: var(--rl-serif); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; --tfs: 14px; --tr: 0.34; }
+  .rl-shelf .s-cloth .a { font-family: var(--rl-serif); font-style: italic; font-weight: 600; --afs: 11.5px; }
+  .rl-shelf .s-cloth .m { color: #d6b46a; filter: drop-shadow(0 0.7px 0 rgba(0, 0, 0, 0.6)); }
+  .rl-shelf .rule2 { flex: none; inline-size: 5px; align-self: stretch; margin-block: 3px; border-inline: 1px solid #c8a65a; opacity: 0.85; }
+  .rl-shelf .orn { flex: none; inline-size: 4px; block-size: 4px; background: #cfae63; rotate: 45deg; opacity: 0.85; }
+
+  .rl-shelf .s-jacket {
+    --pi: 10px; --gap: 10px;
+    --shade: linear-gradient(var(--across), rgba(0,0,0,.45) 0, rgba(0,0,0,.1) 5%, rgba(255,255,255,.05) 13%, rgba(255,255,255,.26) 21%, rgba(255,255,255,.06) 29%, rgba(255,255,255,0) 50%, rgba(0,0,0,.12) 86%, rgba(0,0,0,.44) 100%);
+  }
+  .rl-shelf .cap { flex: none; align-self: stretch; inline-size: 13%; margin-inline-start: calc(var(--pi) * -1); margin-block: -3px; background: var(--acc); }
+  .rl-shelf .s-jacket .t { font-family: var(--rl-sans); font-weight: 800; font-stretch: 75%; text-transform: uppercase; letter-spacing: 0.015em; --tfs: 17px; --tr: 0.46; }
+  .rl-shelf .s-jacket .a { font-family: var(--rl-sans); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink); }
+
+  .rl-shelf .s-paper {
+    --pi: 9px;
+    --shade: linear-gradient(var(--across), rgba(0,0,0,.38) 0, rgba(0,0,0,.08) 4%, rgba(255,255,255,.11) 11%, rgba(255,255,255,.02) 38%, rgba(0,0,0,0) 70%, rgba(0,0,0,.1) 93%, rgba(0,0,0,.38) 100%);
+  }
+  .rl-shelf .s-paper .t { font-family: var(--rl-sans); font-weight: 700; font-stretch: 87.5%; --tfs: 15px; --tr: 0.42; }
+  .rl-shelf .s-paper .a { font-family: var(--rl-sans); font-weight: 400; text-transform: uppercase; letter-spacing: 0.08em; --afs: 9.5px; }
+
+  .rl-shelf .s-minimal {
+    --pi: 12px; --gap: 9px;
+    --shade: linear-gradient(var(--across), rgba(0,0,0,.34) 0, rgba(0,0,0,.07) 5%, rgba(255,255,255,.14) 20%, rgba(255,255,255,.03) 42%, rgba(0,0,0,0) 66%, rgba(0,0,0,.08) 90%, rgba(0,0,0,.32) 100%);
+  }
+  .rl-shelf .s-minimal .t { font-family: var(--rl-didone); font-weight: 500; --tfs: 16.5px; --tr: 0.44; }
+  .rl-shelf .s-minimal .a { font-family: var(--rl-didone); font-style: italic; --afs: 11px; }
+  .rl-shelf .dash { flex: none; inline-size: 14px; block-size: 1px; background: currentColor; opacity: 0.55; }
+
+  .rl-shelf .s-tech {
+    --pi: 10px;
+    --shade: linear-gradient(var(--across), rgba(0,0,0,.3) 0, rgba(0,0,0,.06) 4%, rgba(255,255,255,.12) 14%, rgba(255,255,255,0) 40%, rgba(0,0,0,.06) 92%, rgba(0,0,0,.3) 100%);
+  }
+  .rl-shelf .s-tech .m { color: var(--ink); }
+  .rl-shelf .s-tech .t {
+    align-self: stretch; margin-block: -3px; padding-inline: 9px; background: var(--acc); color: #fff;
+    display: flex; align-items: center; justify-content: safe center;
+    font-family: var(--rl-sans); font-weight: 600; font-stretch: 87.5%; --tfs: 14.5px; --tr: 0.36;
+  }
+  .rl-shelf .s-tech .a { font-family: var(--rl-sans); font-weight: 700; --afs: 10.5px; }
+
+  .rl-shelf .s-bold {
+    --pi: 9px; --gap: 6px;
+    --shade: linear-gradient(var(--across), rgba(0,0,0,.42) 0, rgba(0,0,0,.1) 5%, rgba(255,255,255,.18) 19%, rgba(255,255,255,.03) 34%, rgba(0,0,0,0) 62%, rgba(0,0,0,.12) 88%, rgba(0,0,0,.42) 100%);
+  }
+  .rl-shelf .s-bold .t { font-family: var(--rl-sans); font-weight: 900; font-stretch: 62.5%; text-transform: uppercase; line-height: 0.92; --tfs: 44px; --tr: 0.72; text-align: start; }
+  .rl-shelf .s-bold .a { writing-mode: horizontal-tb; align-self: stretch; max-inline-size: none; text-align: center; padding: 0 2px; font-family: var(--rl-sans); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; font-size: 9.5px; }
+
+  .rl-shelf .s-mag {
+    --pi: 0 10px; --gap: 10px; border-radius: 1px;
+    --shade: linear-gradient(var(--across), rgba(0,0,0,.36) 0, rgba(0,0,0,.06) 6%, rgba(255,255,255,.34) 15%, rgba(255,255,255,.08) 24%, rgba(255,255,255,0) 52%, rgba(0,0,0,.08) 88%, rgba(0,0,0,.34) 100%);
+  }
+  .rl-shelf .s-mag .mh {
+    flex: none; align-self: stretch; margin-block: -3px; padding-inline: 9px 8px; max-inline-size: 46%;
+    display: flex; align-items: center; overflow: hidden; white-space: nowrap;
+    background: var(--acc); color: var(--mh-ink, var(--bg));
+    font-family: var(--rl-sans); font-weight: 800; font-stretch: 75%; text-transform: uppercase; letter-spacing: 0.07em; line-height: 1;
+    font-size: min(11px, calc(var(--t) * 0.44));
+  }
+  .rl-shelf .s-mag .t { font-family: var(--rl-serif); font-style: italic; font-weight: 500; --tfs: 14px; --tr: 0.5; text-align: start; }
+  .rl-shelf .s-mag .a { font-family: var(--font-mono); font-weight: 500; font-size: min(8.5px, calc(var(--t) * 0.36)); letter-spacing: 0.1em; text-transform: uppercase; max-inline-size: none; }
+
+  @media (max-width: 720px) {
+    .rl-hero { grid-template-columns: 1fr; gap: 32px; }
+    .rl-shelf {
+      --wm: horizontal-tb; --across: to bottom; --along: to right;
+      flex-direction: column; align-items: center; gap: 0; padding-top: 0; padding-bottom: 28px; zoom: 1;
+    }
+    .rl-shelf .book { width: var(--h); max-width: 100%; height: var(--t); translate: var(--dx) 0; rotate: var(--tilt); }
+    .rl-shelf .book::after { left: 2%; right: 2%; bottom: -4px; height: 7px; background: radial-gradient(closest-side, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)); }
+    .rl-shelf .spine { box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.35); }
+    .rl-shelf .s-bold .a { align-self: center; }
+    @media (hover: hover) { .rl-shelf .book:hover .lift { translate: 12px 0; } }
+    .rl-shelf .book:focus-visible .lift { translate: 12px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .rl-shelf .lift { transition: none; } }
+</style>
+
+
+
+
+<section class="hero rl-hero">
+  <div class="rl-intro">
+    <h1>READING<br><span class="accent">LIST.</span></h1>
+    <div class="hero-lede">
+      <div class="hero-lede__label">№ 01 · INTRODUCTION</div>
+      <p>I have a high standard for books I'll generally recommend to other software engineers. I read a bunch of other books but they might be just OK or more specific so I don't want to recommend them.</p>
+      <p>I plan on updating this list over time.</p>
+    </div>
   </div>
+
+  <nav class="rl-shelf" aria-label="Shelf"><a class="book" href="#crafting-interpreters" aria-label="Crafting Interpreters, book by Robert Nystrom" style="--h:254px;--t:56px;--dx:-6px;--tilt:0.5deg;--bg:#f4f1e8;--ink:#1f1f1f;--acc:#262626">
+        <span class="lift"><span class="spine s-tech" aria-hidden="true"><span class="m"><svg viewBox="0 0 14 14" fill="currentColor"><rect x="3" y="3" width="8" height="8"></rect></svg></span><span class="t">Crafting Interpreters</span><span class="a">Nystrom</span></span></span>
+      </a><a class="book" href="#site-reliability-engineering" aria-label="Site Reliability Engineering, book by Betsy Beyer, Chris Jones, Jennifer Petoff &amp; Niall Richard Murphy" style="--h:233px;--t:50px;--dx:9px;--tilt:-0.7deg;--bg:#1b2b44;--ink:#f2ece0;--acc:#cc2900">
+        <span class="lift"><span class="spine s-jacket" aria-hidden="true"><span class="cap"></span><span class="t">Site Reliability Engineering</span><span class="a">Beyer et al.</span><span class="m"><svg viewBox="0 0 14 14" fill="currentColor"><circle cx="7" cy="7" r="4.3" fill="none" stroke="currentColor" stroke-width="1.7"></circle></svg></span></span></span>
+      </a><a class="book" href="#grug-brained-developer" aria-label="The Grug Brained Developer, article by Carson Gross" style="--h:264px;--t:21px;--dx:-3px;--tilt:0.3deg;--bg:#f2d04a;--ink:#151515;--acc:#151515">
+        <span class="lift"><span class="spine s-mag" aria-hidden="true"><span class="mh">grugbrain.dev</span><span class="t">The Grug Brained Developer</span><span class="a">25 min</span></span></span>
+      </a><a class="book" href="#software-engineering-at-google" aria-label="Software Engineering at Google, book by Titus Winters, Tom Manshreck &amp; Hyrum Wright" style="--h:235px;--t:53px;--dx:7px;--tilt:-0.4deg;--bg:#5a1d22;--ink:#f3ead6;--acc:#c9a14a">
+        <span class="lift"><span class="spine s-cloth" aria-hidden="true"><span class="rule2"></span><span class="t foil">Software Engineering at Google</span><span class="orn"></span><span class="a foil">Winters et al.</span><span class="rule2"></span><span class="m"><svg viewBox="0 0 14 14" fill="currentColor"><path d="M7 1.6 12.4 7 7 12.4 1.6 7z"></path></svg></span></span></span>
+      </a><a class="book" href="#progressive-enhancement" aria-label="Building a resilient frontend using progressive enhancement, article by GOV.UK Service Manual" style="--h:264px;--t:20px;--dx:-10px;--tilt:0.8deg;--bg:#e3e8ea;--ink:#17202c;--acc:#17202c">
+        <span class="lift"><span class="spine s-mag" aria-hidden="true"><span class="mh">gov.uk</span><span class="t">Progressive Enhancement</span><span class="a">8 min</span></span></span>
+      </a><a class="book" href="#how-github-engineering-communicates" aria-label="How GitHub Engineering communicates, article by GitHub" style="--h:264px;--t:23px;--dx:4px;--tilt:-0.2deg;--bg:#111111;--ink:#efefef;--acc:#cc2900;--mh-ink:#ffffff">
+        <span class="lift"><span class="spine s-mag" aria-hidden="true"><span class="mh">github.com</span><span class="t">How GitHub Communicates</span><span class="a">35 min</span></span></span>
+      </a></nav>
 </section>
-<h2>Crafting Interpreters</h2>
-<p><a href="https://craftinginterpreters.com">https://craftinginterpreters.com</a></p>
-<p>Free-to-read-online book on writing your own interpreter from tokenizing to evaluating code. The book walks you through writing a interpreter for the &quot;Lox&quot; programming language. My implementation is located at <a href="https://github.com/koddsson/lox-interpreter">https://github.com/koddsson/lox-interpreter</a>.</p>
-<h2>Site Reliability Engineering</h2>
-<p><a href="https://www.goodreads.com/book/show/27968891-site-reliability-engineering">https://www.goodreads.com/book/show/27968891-site-reliability-engineering</a></p>
-<p>Probably the origin of the term &quot;Site Reliability Engineering&quot;. Useful to most software engineering and not just SREs.</p>
-<h2>The Grug Brained Developer</h2>
-<p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
-<p>A no-nonsense take on modern day software engineering with a focus on simplicity and how to handle communication with different stakeholders.</p>
-<h2>Software Engineering at Google</h2>
-<p><a href="https://www.goodreads.com/book/show/48816586-software-engineering-at-google">https://www.goodreads.com/book/show/48816586-software-engineering-at-google</a></p>
-<p>A great resource for software engineers based off learned lessons from Google. Pretty down-to-earth suggestions with great rationales behind each one. Has suggestions on how to implement systems and solutions to your codebase.</p>
-<h2>Building a resilient frontend using progressive enhancement</h2>
-<p><a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement">https://www.gov.uk/service-manual/technology/using-progressive-enhancement</a></p>
-<p>A great resource for why someone might write a service with progressive enhancements. The rationale is solid and comes from a trusted source.</p>
-<h2>How GitHub Engineering communicates</h2>
-<p><a href="https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md">https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md</a></p>
-<p>My time as a GitHub engineer really shaped my professional (and personal) life. While mostly focused on the work at GitHub the guide has a ton of good information that you can adapt to your organization. The guide is a especially great resource on asynchronous work which often gets conflated with remote work.</p>
+
+
+<article class="rl-entry" id="crafting-interpreters">
+  <h2>Crafting Interpreters</h2>
+  <p class="rl-meta">BOOK · ROBERT NYSTROM · 640 PAGES</p>
+  <p><a href="https://craftinginterpreters.com">https://craftinginterpreters.com</a></p>
+  <p>Free-to-read-online book on writing your own interpreter from tokenizing to evaluating code. The book walks you through writing a interpreter for the &quot;Lox&quot; programming language. My implementation is located at <a href="https://github.com/koddsson/lox-interpreter">https://github.com/koddsson/lox-interpreter</a>.</p>
+</article>
+
+<article class="rl-entry" id="site-reliability-engineering">
+  <h2>Site Reliability Engineering</h2>
+  <p class="rl-meta">BOOK · BETSY BEYER, CHRIS JONES, JENNIFER PETOFF & NIALL RICHARD MURPHY · 552 PAGES</p>
+  <p><a href="https://www.goodreads.com/book/show/27968891-site-reliability-engineering">https://www.goodreads.com/book/show/27968891-site-reliability-engineering</a></p>
+  <p>Probably the origin of the term &quot;Site Reliability Engineering&quot;. Useful to most software engineering and not just SREs.</p>
+</article>
+
+<article class="rl-entry" id="grug-brained-developer">
+  <h2>The Grug Brained Developer</h2>
+  <p class="rl-meta">ARTICLE · CARSON GROSS · 25 MIN READ</p>
+  <p><a href="https://grugbrain.dev/">https://grugbrain.dev/</a></p>
+  <p>A no-nonsense take on modern day software engineering with a focus on simplicity and how to handle communication with different stakeholders.</p>
+</article>
+
+<article class="rl-entry" id="software-engineering-at-google">
+  <h2>Software Engineering at Google</h2>
+  <p class="rl-meta">BOOK · TITUS WINTERS, TOM MANSHRECK & HYRUM WRIGHT · 599 PAGES</p>
+  <p><a href="https://www.goodreads.com/book/show/48816586-software-engineering-at-google">https://www.goodreads.com/book/show/48816586-software-engineering-at-google</a></p>
+  <p>A great resource for software engineers based off learned lessons from Google. Pretty down-to-earth suggestions with great rationales behind each one. Has suggestions on how to implement systems and solutions to your codebase.</p>
+</article>
+
+<article class="rl-entry" id="progressive-enhancement">
+  <h2>Building a resilient frontend using progressive enhancement</h2>
+  <p class="rl-meta">ARTICLE · GOV.UK SERVICE MANUAL · 8 MIN READ</p>
+  <p><a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement">https://www.gov.uk/service-manual/technology/using-progressive-enhancement</a></p>
+  <p>A great resource for why someone might write a service with progressive enhancements. The rationale is solid and comes from a trusted source.</p>
+</article>
+
+<article class="rl-entry" id="how-github-engineering-communicates">
+  <h2>How GitHub Engineering communicates</h2>
+  <p class="rl-meta">ARTICLE · GITHUB · 35 MIN READ</p>
+  <p><a href="https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md">https://github.com/github/how-engineering-communicates/blob/main/how-github-engineering-communicates.md</a></p>
+  <p>My time as a GitHub engineer really shaped my professional (and personal) life. While mostly focused on the work at GitHub the guide has a ton of good information that you can adapt to your organization. The guide is a especially great resource on asynchronous work which often gets conflated with remote work.</p>
+</article>
+
+
+<script type="module">
+  const over = (el) => el.scrollWidth > el.clientWidth + 1 || el.scrollHeight > el.clientHeight + 1;
+  const shrink = (el) => {
+    let fs = parseFloat(getComputedStyle(el).fontSize);
+    while (over(el) && fs > 6) { fs -= 0.5; el.style.fontSize = `${fs}px`; }
+    return fs;
+  };
+  const fit = (el) => {
+    el.removeAttribute("style");
+    el.classList.remove("wrap");
+    if (!over(el)) return;
+    const start = parseFloat(getComputedStyle(el).fontSize);
+    let stretch = parseFloat(getComputedStyle(el).fontStretch) || 100;
+    while (over(el) && stretch > 62.5) { stretch = Math.max(62.5, stretch - 12.5); el.style.fontStretch = `${stretch}%`; }
+    const single = shrink(el);
+    if (el.classList.contains("t") && single < start * 0.72) {
+      const saved = el.getAttribute("style");
+      el.classList.add("wrap");
+      el.style.fontSize = "";
+      if (shrink(el) <= single + 0.5) { el.classList.remove("wrap"); el.setAttribute("style", saved); }
+    }
+  };
+  const fitAll = () => {
+    document.querySelectorAll(".rl-shelf .a, .rl-shelf .mh").forEach(fit);
+    document.querySelectorAll(".rl-shelf .t").forEach(fit);
+  };
+  fitAll();
+  matchMedia("(max-width: 720px)").addEventListener("change", fitAll);
+</script>
 </main>
 
     
